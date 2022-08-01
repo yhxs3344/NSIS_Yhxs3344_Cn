@@ -12,7 +12,11 @@
 -	NSIS_UI_Examples  #Some NSIS UI Examples
 -	NSIS_Plugins_Examples  #Some NSIS Plugins Examples
 -	NSIS_Other_Examples  #Some NSIS Other Examples
-
+-
+- NSIS_Steup
+-	NSIS_Steup_Version_2.x  #NSIS 2.X Version Steup
+-	NSIS_Steup_Version_3.x  #NSIS 3.X Version Steup Anti-cracking Anti-unpacking
+-
 - BY:yhxs344
 - WEB:www.yhxs344.net
 - QQ Group:436741130
