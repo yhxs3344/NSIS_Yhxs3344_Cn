@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<div pos="80,20,-0,-0" >
+	<wkeview name="webkit_ctrl" show="1"
+				delaycreate="true"
+				transparent="0"
+				
+				url="http://www1.rjguanjia.com/"
+				pos="0,0,-0,-0"
+				show-contextmenu="0" >
+			</wkeview>
+</div>

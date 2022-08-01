@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg name="dlg_main" title="[APP_NAME]" width="0" height="0" translucent="255"
+	frame="" bkimg="" crbk="FFFFFF" appwin="0" resize="0" topmost="0"
+	img-shadow="" shadow-wlt="0" shadow-hlt="0" shadow-wrb="0" shadow-hrb="0">
+
+  <base>
+  </base>
+
+  <body>
+  </body>
+
+</dlg>

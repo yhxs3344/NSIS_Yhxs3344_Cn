@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="470,350" caption="0,0,0,35" showshadow="true" shadowsize="4" shadowcorner="23,13,23,33" shadowposition="0,1" shadowdarkness="70">
+  <Include source="Default.xml" />
+  <VerticalLayout  name="LayoutTitle" enabled="true" width="470" height="350" bkimage="updateWndBk.png">
+    <Label name="title" text="版本更新" font="0" float="true" pos="8,5,0,0" enabled="true" width="190" height="25" textcolor="#FFCCCCCC" />
+    <Button name="ButClose" float="true" pos="442,0,0,0" enabled="true" width="31" height="32" normalimage="file=&apos;close1.png&apos; source=&apos;0,0,31,32&apos;" hotimage="file=&apos;close1.png&apos; source=&apos;31,0,62,32&apos;" pushedimage="file=&apos;close1.png&apos; source=&apos;62,0,93,32&apos;" />
+    <VerticalLayout float="true" enabled="true" pos="0,35,0,0" width="470" height="315">
+      <Label name="LabVersion" text="V3.0.1.2015.06.25.545622" float="true" pos="90,5,0,0" enabled="true" width="300" height="25" textcolor="#FFCCCCCC" font="1" align="center" />
+      <VerticalLayout name="LayoutVerInfo" vscrollbar="true" float="true" enabled="true" pos="30,50,0,0" width="410" height="120" />
+      <Progress name="ProgDownload" float="true" pos="20,190,0,0" enabled="true" width="430" height="5" bkimage="updateProgBk.png" textcolor="#FF000000" foreimage="updateProgFore.png" disabledtextcolor="#FFA7A6AA" align="center" min="0" max="100" value="0" hor="true" />
+      <Button name="btnToHost" text="更新遇到问题？请到 www.dadajiasu.com 下载新版本！" float="true" pos="60,210,0,0" enabled="true" width="410" height="20" textcolor="#FF999999" font="0" align="left" />
+      <Button name="ButUnUpdate" float="true" pos="105,255,0,0" textcolor="#FF999999" font="1" text="取消更新" enabled="true" width="110" height="36" normalimage="file=&apos;Cancel110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Cancel110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;Cancel110_36.png&apos; source=&apos;220,0,330,36&apos;"/>
+      <Button name="ButUpdateToHost" float="true" pos="265,255,0,0" textcolor="#FFFFFFFF" font="1" text="手动更新" enabled="true" width="110" height="36" normalimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Ok110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;Ok110_36.png&apos; source=&apos;220,0,330,36&apos;"/>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>

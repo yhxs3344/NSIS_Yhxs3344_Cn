@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+
+<div pos="80,-575,-0,-0" >
+	<img pos="0,45,-1,46" image="skin:IDB_TAB_BACK_RJGJ" mode="frame" framesize="1" show="1" />
+	<img pos="0,85,-1,86" image="skin:IDB_TAB_BACK_RJGJ" mode="frame" framesize="1" show="1" />
+	<img pos="0,500,-1,501" image="skin:IDB_TAB_BACK_RJGJ" mode="frame" framesize="1" show="1" />
+	<imgbtn name="setting.download"  pos="640,520,730,552" img-count="3" skin="IDB_DOWN_SETTING_RJGJ" show="1"/>
+	<!--imgbtn name="cleanlist.download"  pos="600,520,710,552" img-count="3" skin="IDB_DOWN_CLEANLIST_RJGJ" show="1"/-->
+	<imgbtn name="openpath.download"  pos="750,520,860,552" img-count="3" skin="IDB_DOWN_OPENPATH_RJGJ" show="1"/>
+
+	<tabctrl name="tabctrl.download" img-sep="skin:IDB_TAB_SEPERATOR" img-hover="skin:IDB_TAB_BACK-"
+		img-tabbtn-="skins\default\btn_close.png" tabbtnpos="21,3"
+		font="bold" item-width="105" tab-height="29" img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H"
+		crtext="838B8B" crpush="00FF00" crrowhover="33FF33" animate="0"
+		pos="2,51,-0,-110">
+
+		<tab name="tab.all"   title="全部软件(0)"   pos="2,51,-0,-1" show="1">
+			<!--combobox name="combobox1" skin="IDB_BT_RJGJ_EDIT" small-image="skin:IDB_DROP_DOWN"
+					value="local" tip="默认排序"
+					pos="760,11,850,37"
+					list-height="78" 
+					title="默认排序" crtext="00FF00" crhover="00FF00">
+				<item name="默认排序" value="1" />
+				<item name="下载量" value="2" />
+				<item name="软件评分" value="3" />
+			</combobox-->
+			<gridctrl name="gridctrl_all" pos="20,50,-0,-0" show="1" img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_RP_LINE_RJGJ" img-check="skin:IDB_CHECK_BOX_RJGJ"
+				 img-header="skin:IDB_TOOLBAR_BG" img-colsep="skin:IDB_TAB_SEPERATOR" img-count="12" image="skin:IDB_LIST_IMG" left-pos="50" row-height="75" header-height="0" bk-transparent="10"
+				 font="default" align="left" valign="middle" crtext="255,64,64,64" crhover="128,0,0" crpush="0,112,235" crtitle="32,32,32" crsep="200,160,160,160"
+				 down-row="0" scroll-width="4">
+				<column title="列1" width="400" align="top"/>
+				<column title="列2" width="80" />
+				<column title="列3" width="100" align="center" />
+				<column title="列4" width="80" align="left"/>
+				<column title="列5" width="185" />
+					<!--row image="skin:IDB_SOFT_MGR" check="1">
+						<item title="安全管家" content="安全防护，系统优化和软件管理，适合上网用户每天使用" font-title="1" >
+							<img pos="60,0" width="46" height="18" image="skins\SoftMgr\icon\have_plugin.png" mode="normal" tip="" />							
+						</item>
+						<item title="125.5M" />
+						<item title="已装：2.2.1.0" />						
+						<item title="点击下载" />
+						<item>
+							<button name="grid_btn1" pos="50,9,140,41" img-count="3" skin="IDB_ONE_KEY_RJGJ" tip="" />
+						</item>				
+					</row>
+					<row image="skins\icon\softmgr.png" check="1">
+						<item title="腾讯软件管理" content="1.新的界面，丰富的内容；2.海量软件搜索；3.功能分类清晰呈现，更易选择" font-title="1" />
+						<item title="16.5M" />
+						<item title="已装：8.7.0.1" />						
+						<item link="一键安装" linkaction="dlg:dlg_option"/>
+						<item>
+							<button name="grid_btn2" pos="50,9,140,41" img-count="3" skin="IDB_ONE_KEY_RJGJ" tip="" />
+						</item>
+					</row-->
+			</gridctrl>		
+		</tab>
+		<tab name="tab.downloading"   title="正在下载(0)"   pos="2,51,-0,-1" show="1">
+			<!--combobox name="combobox1" skin="IDB_BT_RJGJ_EDIT" small-image="skin:IDB_DROP_DOWN"
+					value="local" tip="默认排序"
+					pos="760,11,850,37"
+					list-height="78" 
+					title="默认排序" crtext="00FF00" crhover="00FF00">
+				<item name="默认排序" value="1" />
+				<item name="下载量" value="2" />
+				<item name="软件评分" value="3" />
+			</combobox-->
+			<gridctrl name="gridctrl_downing" pos="20,50,-0,-0" show="1" img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_RP_LINE_RJGJ" img-check="skin:IDB_CHECK_BOX_RJGJ"
+				 img-header="skin:IDB_TOOLBAR_BG" img-colsep="skin:IDB_TAB_SEPERATOR" img-count="12" image="skin:IDB_LIST_IMG" left-pos="50" row-height="75" header-height="0" bk-transparent="10"
+				 font="default" align="left" valign="middle" crtext="255,64,64,64" crhover="128,0,0" crpush="0,112,235" crtitle="32,32,32" crsep="200,160,160,160"
+				 down-row="0" scroll-width="4">
+				<column title="列1" width="400" align="top"/>
+				<column title="列2" width="80" />
+				<column title="列3" width="100" align="center" />
+				<column title="列4" width="80" align="left"/>
+				<column title="列5" width="185" />
+					<!--row image="skin:IDB_SOFT_MGR" check="1">
+						<item title="安全管家" content="安全防护，系统优化和软件管理，适合上网用户每天使用" font-title="1" >
+							<img pos="60,0" width="46" height="18" image="skins\SoftMgr\icon\have_plugin.png" mode="normal" tip="" />							
+						</item>
+						<item title="125.5M" />
+						<item title="已装：2.2.1.0" />						
+						<item title="点击下载" />
+						<item>
+							<button name="grid_btn1" pos="50,9,140,41" img-count="3" skin="IDB_ONE_KEY_RJGJ" tip="" />
+						</item>				
+					</row>
+					<row image="skins\icon\softmgr.png" check="1">
+						<item title="腾讯软件管理" content="1.新的界面，丰富的内容；2.海量软件搜索；3.功能分类清晰呈现，更易选择" font-title="1" />
+						<item title="16.5M" />
+						<item title="已装：8.7.0.1" />						
+						<item link="一键安装" linkaction="dlg:dlg_option"/>
+						<item>
+							<button name="grid_btn2" pos="50,9,140,41" img-count="3" skin="IDB_ONE_KEY_RJGJ" tip="" />
+						</item>
+					</row-->
+			</gridctrl>		
+		</tab>
+		<tab name="tab.EndDownload"   title="下载完成(0)"   pos="2,51,-0,-1" show="1">
+			<!--combobox name="combobox1" skin="IDB_BT_RJGJ_EDIT" small-image="skin:IDB_DROP_DOWN"
+					value="local" tip="默认排序"
+					pos="760,11,850,37"
+					list-height="78" 
+					title="默认排序" crtext="00FF00" crhover="00FF00">
+				<item name="默认排序" value="1" />
+				<item name="下载量" value="2" />
+				<item name="软件评分" value="3" />
+			</combobox-->
+			<gridctrl name="gridctrl_endDown" pos="20,50,-0,-0" show="1" img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_RP_LINE_RJGJ" img-check="skin:IDB_CHECK_BOX_RJGJ"
+				 img-header="skin:IDB_TOOLBAR_BG" img-colsep="skin:IDB_TAB_SEPERATOR" img-count="12" image="skin:IDB_LIST_IMG" left-pos="50" row-height="75" header-height="0" bk-transparent="10"
+				 font="default" align="left" valign="middle" crtext="255,64,64,64" crhover="128,0,0" crpush="0,112,235" crtitle="32,32,32" crsep="200,160,160,160"
+				 down-row="0" scroll-width="4">
+				<column title="列1" width="400" align="top"/>
+				<column title="列2" width="80" />
+				<column title="列3" width="100" align="center" />
+				<column title="列4" width="80" align="left"/>
+				<column title="列5" width="185" />
+					<!--row image="skin:IDB_SOFT_MGR" check="1">
+						<item title="安全管家" content="安全防护，系统优化和软件管理，适合上网用户每天使用" font-title="1" >
+							<img pos="60,0" width="46" height="18" image="skins\SoftMgr\icon\have_plugin.png" mode="normal" tip="" />							
+						</item>
+						<item title="125.5M" />
+						<item title="已装：2.2.1.0" />						
+						<item title="点击下载" />
+						<item>
+							<button name="grid_btn1" pos="50,9,140,41" img-count="3" skin="IDB_ONE_KEY_RJGJ" tip="" />
+						</item>				
+					</row>
+					<row image="skins\icon\softmgr.png" check="1">
+						<item title="腾讯软件管理" content="1.新的界面，丰富的内容；2.海量软件搜索；3.功能分类清晰呈现，更易选择" font-title="1" />
+						<item title="16.5M" />
+						<item title="已装：8.7.0.1" />						
+						<item link="一键安装" linkaction="dlg:dlg_option"/>
+						<item>
+							<button name="grid_btn2" pos="50,9,140,41" img-count="3" skin="IDB_ONE_KEY_RJGJ" tip="" />
+						</item>
+					</row-->
+			</gridctrl>		
+		</tab>
+		
+	</tabctrl>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<List>
+
+  <ListContainerElement height="35">
+  <Icon mouse="false"  name="icon" padding="10,10" width="16" height="16" />
+  <Label mouse="false"  name="name" width="150" textpadding="10" font="1" textcolor="#FF999999" />
+  <Label mouse="false"  name="download" text="0M/s" width="85" align="center" font="1" textcolor="#FFFF7F00" />
+  <Label mouse="false" name="upload" text="0M/S" width="85" align="center" font="1" textcolor="#FFFF7F00" />
+  <Label mouse="false" name="cpu" text="0%" width="85" align="center" font="1" textcolor="#FF999999" />
+  <Label mouse="false" name="memory" text="0%" width="85" align="center" font="1" textcolor="#FF999999" />
+  <Label mouse="false" name="advise" text="" width="100" align="center" font="1" textcolor="#FF999999" />
+</ListContainerElement>
+
+</List>

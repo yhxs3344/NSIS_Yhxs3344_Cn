@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg title="" width="430" height="220" translucent="255"
+	frame="skins\exit\exit_bkgnd.png" crbk="" appwin="0" resize="0" topmost="1"
+	img-shadow="skins\image\window_shadow.png" shadow-wlt="5" shadow-hlt="3" shadow-wrb="5" shadow-hrb="7">
+
+  <base>
+    <button name="button.close" pos="-29,5" width="24" height="24" skin="IDB_BOOTTIME_BT_CLOSE" showfocus="0" cursor="hand" shortcut="ESC" action="hide-window" />
+    <text pos="10,5,200,25" crtext="FFFFFF" font="big" title="[APP_NAME]" response="0" />
+  </base>
+
+  <body>
+    <img pos="20,60" width="40" height="40" image="skins\exit\icon_question.png" mode="normal" response="0" />
+    <text pos="80,60" width="300" height="30" crtext="e74543" font="bigbigbold" valign="top" title="您确定要退出铠甲安全卫士吗？" response="0" />
+    <text pos="80,95" width="300" height="30" crtext="666666" font="big" valign="top" title="退出后，您的电脑将不能被优化和保护。" response="0" />
+    <button name="button.confirm_exit" pos="-240,-50" width="64" height="23" img-count="3" image="skins\exit\bt_confirm_exit.png" showfocus="0" cursor="hand" />
+    <button name="button.cancel_exit" pos="-165,-55" width="139" height="32" img-count="3" image="skins\exit\bt_cancel_exit.png" showfocus="0" cursor="hand" />
+  </body>
+
+</dlg>

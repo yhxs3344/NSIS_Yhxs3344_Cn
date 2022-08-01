@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+
+<div pos="120,0,-0,-0" >  
+
+    <img pos="0,0" width="760" height="122" img-count="1" image="KJMainUI\skins\kaijiaweishi\jindutiaobeijing.png"
+         mode="frame" framesize="1" show="1" />
+    <progressKaijia name="LoudongxiufuPgr" img-back-clr="FFFFFF" img-fore-clr="EDFBED" draw-by-color="1" 
+                    pos="0,0" width="760" height="120" value="0" run="false" process-msg="0" response="0" />
+    <img pos="38,12" width="96" height="96" img-count="1" image="KJMainUI\skins\kaijiaweishi\loudongxiufutubiao.png" 
+         mode="frame" framesize="1" show="1" />
+
+    <text name="LoudongxiufuCheckTip" crtext="000000" pos="150,25" width="420" height="40" 
+          title=""  font="big25"/>
+    <text name="LoudongxiufuCheckResult" crtext="CCCCCC" pos="150,70" width="400" height="30"
+          title=""/>
+
+    <textbtn name="LoudongxiufuChongxinsaomiao" crtext="2EA2E5" align="center" pos="-240,65"
+             width="100" height="22" show="1" title="重新扫描" show="0" />
+    <textbtn name="LoudongxiufuQuxiao" crtext="2EA2E5" align="center" pos="-200,65" width="60"
+             height="22" show="1" title="取消" show="0" />
+    <imgbtn name="LoudongxiufuYijianxiufu" pos="-150,50" width="135" height="42" img-count="3" 
+            image="KJMainUI\skins\kaijiaweishi\yijianxiufu.png" tip="" show="0" showfocus="0"/>
+    <imgbtn name="LoudongxiufuHoutaixiufu" pos="-150,50" width="135" height="42" img-count="3" 
+            image="KJMainUI\skins\kaijiaweishi\houtaixiufu.png" tip="" show="0" showfocus="0"/>
+    <imgbtn name="LoudongxiufuChongqidiannao" pos="-150,50" width="135" height="42" img-count="3" 
+            image="KJMainUI\skins\kaijiaweishi\chongqidiannao.png" tip="" show="0" showfocus="0"/>
+    <imgbtn name="LoudongxiufuQuxiaoxiufu" pos="-130,50" width="105" height="37" img-count="3"
+            image="KJMainUI\skins\kaijiaweishi\quxiaoxiufu.png" tip="" show="1" showfocus="0"/>
+
+    <imgbtn name="LoudongxiufuGuanbi" pos="-25,0,-0,22" img-count="3" skin="SKIN_PIC_GUANBI" 
+            tip="关闭" showfocus="0"/>
+    <imgbtn name="LoudongxiufuZuixiaohua" pos="-51,0,-26,22" img-count="3" skin="SKIN_PIC_ZUIXIAOHUA" 
+            tip="最小化" showfocus="0" />
+    <imgbtn name="LoudongxiufuXialakuang" pos="-77,0,-52,22" img-count="3" skin="SKIN_PIC_XIALAKUANG"
+            tip="菜单" action="menu:menu_main" menupos="-105,-0" showfocus="0" />
+    <imgbtn name="LoudongxiufuFankui" pos="-103,0,-78,22" img-count="3" skin="SKIN_PIC_XIAOXI" 
+            tip="反馈建议" showfocus="0"/>
+      
+      <treectrlkaijia name="treectrlLoudongxiufu" pos="25,130" width="730" height="375" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-sep="KJMainUI\skins\default\rp_line1.png" tree-status="1"
+        img-check="KJMainUI\skins\kaijiaweishi\CHECK_BOX.png" img-check-small="KJMainUI\skins\kaijiaweishi\CHECK_BOX_SMALL.png" img-colsep=""
+        img-collapse="KJMainUI\skins\kaijiaweishi\tree_collapse.png" scroll-width="5"
+        img-toggle="KJMainUI\skins\kaijiaweishi\tree_toggle.png"
+        img-count="12" image="skin:IDB_LIST_IMG"
+        left-pos="0" row-height="50" bk-transparent="10"
+        font-title="big" font="default"
+        valign="middle" down-row="0"
+        crtext="255,64,64,64" crhover="255,64,64,64" crpush="0,112,235"
+        level1-row-height="30" level2-row-height="20" tab-num="2"
+        crtitle="32,32,32" crsep="200,160,160,160" crrowhover="128,245,245,245" >
+        <column title="列1" width="600" />
+        <column title="列2" width="80" />
+        <column title="列3" width="70" />
+        <!--<node id="1"  check="1" image-left-show="1" title="" leftimage-pos-x="25" checkbox-pos-x="7" collapse-pos-x="680"  hovercolor-pos-x="0" hovercolor-width="720">
+          <item title="高危漏洞" font-title="1" image="KJMainUI\skins\kaijiaweishi\gaoweiloudongtubiao.png" 
+                content="这些漏洞可能会被木马、病毒利用，破坏您的电脑，请立即修复" />
+          <node id="1-0"   image-left-show="1" collapse="1" check="1" title="" show="0" checkbox-pos-x="30"  hovercolor-pos-x="25" hovercolor-width="695">
+            <item title="Windows漏洞修复" show="0"  disable="1">
+              <text pos="350,5" name="item1" width="100" height="18" crtext="CCCCCC" title="2016-08-08" tip="" sub-show="1" response="0"/>
+              <text pos="450,5" name="item2" width="60" height="18" crtext="CCCCCC" title="13.9M" tip="" show="1" sub-show="1" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="CCCCCC" title="未修复" tip="" sub-show="0" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="00CC00" title="正在安装" tip="" sub-show="0" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="00CC00" title="下载90%" tip="" sub-show="1" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="00CC00" title="已修复" tip="" sub-show="0" response="0"/>
+            </item>
+            <item/>
+            <item/>
+          </node>          
+          <node id="1-1"   image-left-show="1" collapse="1" check="1" checkbox-pos-x="30" hovercolor-pos-x="25" hovercolor-width="695">
+            <item title="IE缓存123M" >
+              <text pos="350,5" width="100" height="18" crtext="CCCCCC" title="2016-08-08" tip="" sub-show="1"  response="0"/>
+              <text pos="450,5" width="60" height="18" crtext="CCCCCC" title="13.9M" tip="" sub-show="1" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="CCCCCC" title="未修复" tip="" sub-show="0" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="00CC00" title="正在安装" tip="" sub-show="0" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="00CC00" title="下载90%" tip="" sub-show="0" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="00CC00" title="已修复" tip="" sub-show="1" response="0"/>
+            </item>
+            <item/>
+            <item/>
+          </node>
+          <node id="1-12"   image-left-show="1" collapse="1" check="1" checkbox-pos-x="30" hovercolor-pos-x="25" hovercolor-width="695">
+            <item title="IE缓存123M" >
+              <text pos="350,5" width="100" height="18" crtext="CCCCCC" title="2016-08-08" tip="" sub-show="1"  response="0"/>
+              <text pos="450,5" width="60" height="18" crtext="CCCCCC" title="13.9M" tip="" sub-show="1" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="CCCCCC" title="未修复" tip="" sub-show="0" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="00CC00" title="正在安装" tip="" sub-show="1" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="00CC00" title="下载90%" tip="" sub-show="0" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="00CC00" title="已修复" tip="" sub-show="0" response="0"/>
+            </item>
+            <item/>
+            <item/>
+          </node>
+          <item title="共174个" font-title="1" />
+          <item collapse="1" />
+        </node>
+        <node id="2" check="1" image-left-show="1" title="节点2222222" leftimage-pos-x="25" checkbox-pos-x="7"  collapse-pos-x="680"  hovercolor-pos-x="0" hovercolor-width="720">
+          <item title="" font-title="1" image="KJMainUI\skins\kaijiaweishi\kexuanloudongtubiao.png">
+          </item>
+
+          <node id="1-12"   image-left-show="1" collapse="1" check="1" checkbox-pos-x="30" hovercolor-pos-x="25" hovercolor-width="695">
+            <item title="IE缓存123M" >
+              <text pos="350,5" width="100" height="18" crtext="CCCCCC" title="2016-08-08" tip="" sub-show="1"  response="0"/>
+              <text pos="450,5" width="60" height="18" crtext="CCCCCC" title="13.9M" tip="" sub-show="1" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="CCCCCC" title="未修复" tip="" sub-show="1" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="00CC00" title="正在安装" tip="" sub-show="0" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="00CC00" title="下载90%" tip="" sub-show="0" response="0"/>
+              <text pos="510,5" width="60" height="18" crtext="00CC00" title="已修复" tip="" sub-show="0" response="0"/>
+            </item>
+            <item/>
+            <item/>
+          </node>
+          <node id="2-1"  image-left-show="1" collapse="1" check="1" checkbox-pos-x="30">
+            <item title="系统帐号" font-title="1" />
+          </node>
+          <node id="2-2"  image-left-show="1" check="1" checkbox-pos-x="30">
+            <item title="邮箱帐号" />
+          </node>
+          <node id="2-3"  image-left-show="1" check="1" checkbox-pos-x="30">
+            <item title="即时通信帐号" check="1" />
+          </node>
+          <item title="共174个" font-title="1" />
+          <item collapse="1" />
+        </node>-->
+
+      </treectrlkaijia>
+
+  
+  <!--QQ群-->
+  <buttonkaijia name="QQ" pos="30,540" width="165" height="39" img-count="3" image="KJMainUI\skins\kaijiaweishi\QQqun.png" mode="frame" framesize="0" showfocus="0" />
+  <text name="QQnumber_loudongxiufu" crtext="808080" pos="110,550" width="90"  height="16" show="1" title="1234567890" align="left" font="big14" response="0"/>
+  
+  <!--右下角的按钮-->
+  <imgbtn name="btnruanjianguanjia" pos="410,520" width="70" height="70" img-count="3" image="KJMainUI\skins\kaijiaweishi\ruanjianguanjia.png" showfocus="0"/>
+  <imgbtn name="btnbingduchasha" pos="480,520" width="70" height="70" img-count="3" image="KJMainUI\skins\kaijiaweishi\bingduchasha.png" showfocus="0"/>
+  <imgbtn name="btnzhuyefanghu" pos="550,520" width="70" height="70" img-count="3" image="KJMainUI\skins\kaijiaweishi\zhuyefanghu.png" showfocus="0"/>
+  <imgbtn name="btnkaijijiashu" pos="620,520" width="70" height="70" img-count="3" image="KJMainUI\skins\kaijiaweishi\kaijijiashu.png" showfocus="0"/>
+  <imgbtn name="btngengduo" pos="690,520" width="55" height="70" img-count="3" image="KJMainUI\skins\kaijiaweishi\gengduo.png" showfocus="0"/>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg name="dlg_main" title="[APP_NAME]托盘程序" width="0" height="0" translucent="255"
+	frame="" bkimg="" crbk="FFFFFF" appwin="0" resize="0" topmost="0"
+	img-shadow="" shadow-wlt="0" shadow-hlt="0" shadow-wrb="0" shadow-hrb="0">
+
+  <base>
+    <button name="button.close" pos="-24,0" width="24" height="24" skin="IDB_BOOTTIME_BT_CLOSE" showfocus="0" cursor="hand" show="0" />
+  </base>
+
+  <body>
+  </body>
+
+</dlg>

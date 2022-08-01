@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<div pos="80,-560,-0,-110" >
+
+	<text name="update.dsc" crtext="808080" crmark="800000" 
+		pos="14,30,-0,70" title="" font="bold" show="1" />
+	
+	<mytreectrl name="treectrl_update" pos="0,60,-0,-5" show="1"
+		img-scroll="skin:IDB_SCROLL_V" scroll-width="4" img-sep="skins\SoftMgr\default\rjgj_seperator_back.png"
+		img-check="skin:IDB_CHECK_BOX_RJGJ" img-colsep=""
+		img-collapse=""
+		img-toggle="skin:IDB_TREE_TOGGLE"
+		show-Toggle="false"
+		img-count="12" image="skin:IDB_LIST_IMG"
+		left-pos="40" row-height="70" bk-transparent="10"
+		font-title="big" font="default"
+		valign="middle" down-row="0"
+		crtext="255,64,64,64" crhover="128,0,0" crpush="0,112,235"
+		crtitle="32,32,32" crsep="200,160,160,160" crrowhover="60,0,255,0" 
+		primer-Height="30">
+		<column title="列1" width="100" />
+		<column title="列2" width="150" />
+		<column title="列3" width="150" />
+		<column title="列4" width="100" />
+		<column title="列5" width="150" />
+		<column title="列6" width="160" />
+		<column title="列7" width="20" />
+		<!--node id="1" show="0">
+			<item title="" font-title="1"/-->
+			
+			
+		</mytreectrl>
+
+</div>

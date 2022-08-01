@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="640,585">
+  <Include source="Default.xml" />
+  <VerticalLayout enabled="true" width="640" height="585" bkimage="file=&apos;RightMainBk.png&apos; source=&apos;0,35,640,620&apos;">
+    <HorizontalLayout float="true" pos="0,545,0,0" enabled="true" width="640" height="40" bkcolor="#FF292D33">
+      <Label text="没有我要玩的区服?" float="true" pos="425,10,0,0" enabled="true" width="125" height="20" textcolor="#FF999999" />
+      <Button name="ButHelp" text="如何选择游戏分区？" float="true" pos="15,10,0,0" enabled="true" width="130" height="20" textcolor="#FFFF7F00" hottextcolor="#FF07D569"/>
+      <Button name="ButReport" textcolor="FFFFFFFF" text="上报区服" float="true" pos="555,10,0,0" enabled="true" width="70" height="22" normalimage="file=&apos;report70-22.png&apos; source=&apos;0,0,70,22&apos;" hotimage="file=&apos;report70-22.png&apos; source=&apos;70,0,140,22&apos;" pushedimage="file=&apos;report70-22.png&apos; source=&apos;140,0,210,22&apos;" />
+    </HorizontalLayout>
+    <VerticalLayout enabled="true" width="640" height="545" bkcolor="#FF1F2226">
+      <TabLayout name="TabWorld" enabled="true" idth="640" height="545" selectedid="0">
+        <VerticalLayout enabled="true" width="640" height="545" bkcolor="#FF1F2226">
+            <VerticalLayout float="true" pos="0,0,0,0" vscrollbar="true" enabled="true" width="648" height="70" bottombordersize="2" bordercolor="#FF404040">
+              <Label name="LabGameLog1" float="true" pos="20,15,0,0" width="45" height="45" />
+              <Label name="LabGameName1" float="true" pos="80,25,0,0" font="1" align="left" width="250" height="20" text="游戏名称" textcolor="#FFCCCCCC"/>
+            </VerticalLayout>
+            <TileLayout name="MainWorldLay" inset="10,10,3,20" columns="5" vscrollbar="true" float="true" pos="0,70,0,0" enabled="true" width="640" height="475" >
+            </TileLayout>
+        </VerticalLayout>
+        <VerticalLayout float="true" pos="0,0,0,0" enabled="true" width="640" height="545">
+            <VerticalLayout float="true" pos="0,0,0,0" vscrollbar="true" enabled="true" width="640" height="70" bottombordersize="3" bordercolor="#FF404040">
+              <Label name="LabGameLog2" float="true" pos="20,15,0,0" width="45" height="45" />
+              <Label name="LabGameName2" float="true" pos="80,25,0,0" font="1" align="left" width="250" height="20" text="游戏名称" textcolor="#FFCCCCCC"/>
+              <Label name="LabMainWorld" textpadding="15,0,0,2" float="true" pos="260,25,0,0" font="1" align="left" width="180" height="20" text="游戏区服" textcolor="#FFFF7F00" leftbordersize="1" bordercolor="#FF333333"/>
+              <Button name="ButBackMain" float="true" pos="545,15,0,0" enabled="true" width="80" height="30" normalimage="file=&apos;BackMainWorld.png&apos; source=&apos;0,0,80,30&apos;" hotimage="file=&apos;BackMainWorld.png&apos; source=&apos;80,0,160,30&apos;" pushedimage="file=&apos;BackMainWorld.png&apos; source=&apos;160,0,240,30&apos;" />
+            </VerticalLayout>
+            <TileLayout name="SubWorldLay"   inset="10,20,3,20" columns="1" float="true" vscrollbar="true" pos="0,70,0,0" enabled="true" width="640" height="475">
+            </TileLayout>
+        </VerticalLayout>
+        <VerticalLayout float="true" pos="0,0,0,0" enabled="true" width="640" height="545">
+          <GifAnim bkimage="dadaLoading.gif" autoplay="true" enabled="true" float="true" pos="272,190,0,0" width="100" height="101" autosize="ture" />
+          <Label text="加载中……" float="true" pos="272,310,0,0" width="100" height="40" font="3" enabled="true" textcolor="#FF999999" />
+        </VerticalLayout>
+      </TabLayout>
+    </VerticalLayout>
+   </VerticalLayout>
+</Window>

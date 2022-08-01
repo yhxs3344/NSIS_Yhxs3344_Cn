@@ -8,7 +8,12 @@
 - NSIS_Pugins_Code:
 -	Nsis_Ui_Pugins_Code  #一些UI和一些辅助程序的源码
 -	Nsis_Pugins_Code  #一些官方插件和第三方插件源码
-	
+- 
+- NSIS_Examples
+-	NSIS_UI_Examples  #一些NSIS UI 例子
+-	NSIS_Plugins_Examples  #一些NSIS 插件 例子
+-	NSIS_Other_Examples  #一些NSIS 其它 例子
+
 - BY:yhxs344
 - WEB:www.yhxs344.net
 - QQ Group:436741130

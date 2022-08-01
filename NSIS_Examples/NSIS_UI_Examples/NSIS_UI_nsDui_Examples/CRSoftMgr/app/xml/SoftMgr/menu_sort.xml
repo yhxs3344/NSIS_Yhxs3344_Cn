@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<menu title="SortMenu" bkmod="frame" width="90" item-height="25" framesize="3" left="15" frame-width="0" bkimg="skin:IDB_NMENU_BACK" crrowhover="33FF33" >
+
+	<menuitem name="item_setting"  title="默认排序" />
+	<menuitem name="item_setup"  title="下载量" taskmsg="1" />
+	<menuitem name="item_update"  title="软件评分" />
+</menu>

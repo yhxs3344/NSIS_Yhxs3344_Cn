@@ -1,0 +1,60 @@
+<!--?xml version="1.0" encoding="utf-8"?>
+<div pos="80,-550,970,-0" >
+	<tabctrl name="tabctrl.browser" img-sep="skin:IDB_TAB_SEPERATOR--" 
+			img-hover="skin:IDB_TAB_HOVER_V"
+			font="bold" item-height="1" tab-width="1" animate="0"
+			pos="1,1,-1,-1">
+			<tab name="tab2" title="Wke" image1="skin:IDB_TAB_ITEM" image="skins\icon\browser_wke.png" img-count="1" active="true" pos="105,0,-0,-0" show="1">
+				<wkeview name="webkit_ctrl" show="1"
+					delaycreate="true"
+					transparent="0"
+					url="http://kjweb.rjguanjia.com"
+					pos="0,0,-0,-0"
+					show-contextmenu="0" >
+				</wkeview>
+			</tab>
+	</tabctrl>
+</div-->
+
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<div pos="80,-575,970,600" >
+	<!--button name="button.back"  pos="15,15,35,35" title=""  img-count="3" skin="IDB_HOME_BACK_RJGJ"  showfocus="1" duimsg="mouseldown" show="1"/-->
+<!--tabctrl name="tabctrl.webbrowser" img-sep="skin:IDB_TAB_SEPERATOR" img-hover="skin:IDB_TAB_BACK-"
+		item-width="1" tab-height="1" 
+		crtext="838B8B" crpush="00FF00" crrowhover="33FF33" animate="0"
+		pos="0,25,-0,-1">
+		<tab name="tab1"  active="false" pos="105,2,-0,-0">
+			<webbrowser name="ie_ctrl" show="false"
+				delaycreate="true"
+				url=""
+				pos="1,1,-1,-1"
+				show-contextmenu="0"
+				show-scroll="1"
+				duimsg="invoke" >
+			</webbrowser>
+		</tab>
+		<tab name="tab_wkeview"   active="true" pos="0,0,-0,-0" show="1">
+		<wkeview name="webkit_soft" show="1"
+				delaycreate="true"
+				transparent="0"
+				url=""
+				pos="0,0,-0,-0"
+				show-contextmenu="0" >
+		</wkeview>
+		<img pos="100,100,200,200" img-count="3" skin="IDB_BT_CLOSE_RJGJ" tip="关闭111" show="1"/>
+	</tab>
+		
+</tabctrl-->
+		<wkeview name="webkit_soft" show="1"
+				delaycreate="true"
+				transparent="0"
+				url=""
+				pos="0,25,-0,-0"
+				show-contextmenu="0" >
+		</wkeview>
+</div>
+
+
+
+

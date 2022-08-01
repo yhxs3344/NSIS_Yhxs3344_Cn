@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dlg name="dlg_main" title="" width="880" height="600" title="铠甲安全卫士"
+	frame="" bkimg="" crbk="000000" appwin="1" resize="0"
+	width-lt="3" height-lt="119" width-rb="3" height-rb="30" shadow-size="5" topmost="0" drag-flag="1">
+
+  <base>
+    <imgbtn name="button.close" pos="-25,0,-0,22" img-count="3" skin="SKIN_PIC_GUANBI" tip="关闭" showfocus="0" show="0"/>
+  </base>
+
+  <body>
+    <tabctrlkaijia tab-type="vertical" name="tabctrl.vertical" image="KJMainUI\skins\tab_image.png" img-count="3"
+			img-sep="skin:IDB_TAB_SEPERATOR--" img-hover=""
+      font="bold" item-width="0" tab-height="0" tab-left-pading="0" animate="0"
+			pos="0,0,-0,-0">
+      <!--前面5个Tab为左侧正常的5个按钮对应的Tab页-->
+      <tab name="tab.lijitijian" title="" image="KJMainUI\skins\kaijiaweishi\kaijiaweishi.png" img-count="3" active="false" pos="120,0,880,600" show="true" div="tab_lijitijian" change-tab-icon="0" />
+      <tab name="tab.loudongxiufu" title="" image="KJMainUI\skins\kaijiaweishi\loudongxiufu.png" img-count="3" active="false" pos="120,0,880,600" show="true" div="tab_loudongxiufu"/>
+      <tab name="tab.xitongxiufu" title="" image="KJMainUI\skins\kaijiaweishi\xitongxiufu.png" img-count="3" active="false" pos="120,0,880,600" show="true" div="tab_xitongxiufu"/>
+      <tab name="tab.youhuajiashu" title="" image="KJMainUI\skins\kaijiaweishi\youhuajiashu.png" img-count="3" active="false" pos="120,0,880,600" show="true" div="tab_youhuajiashu" change-tab-icon="0"/>
+      <tab name="tab.diannaoqingli" title="" image="KJMainUI\skins\kaijiaweishi\diannaoqingli.png" img-count="3" active="false" pos="120,0,880,600" show="true" div="tab_diannaoqingli"/>
+
+      <!--从第6个开始，则为其他的按钮或者事件触发的Tab页-->
+      <tab name="tab.shouye" title=""  img-count="3" active="true" pos="120,0,880,600" show="true" div="tab_shouye" />  <!--首页-->
+      <tab name="tab.kaijijiashu" title="" image="" img-count="3" active="false" pos="120,0,880,600" show="true" div="tab_kaijijiashu" change-tab-icon="0" />     <!--开机加速-->
+      <tab name="tab.youhuajiashuyijianshaomiao" title="" image="KJMainUI\skins\kaijiaweishi\youhuajiashu.png" img-count="3" active="false" pos="120,0,880,600" show="true" div="tab_youhuajiashuyijianshaomiao" show-icon-num="3" />    <!--优化加速扫描-->
+      <tab name="tab.diannaoqingliyijianshaomiao" title="" image="KJMainUI\skins\kaijiaweishi\diannaoqingli.png" img-count="3" active="false" pos="120,0,880,600" show="true" div="tab_diannaoqingliyijianshaomiao" show-icon-num="4" />      <!--电脑清理扫描-->
+    </tabctrlkaijia>
+
+  </body>
+</dlg>

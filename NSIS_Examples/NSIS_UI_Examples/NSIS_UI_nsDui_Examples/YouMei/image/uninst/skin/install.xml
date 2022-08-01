@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="640,400" caption="0,0,0,400" roundcorner="1,1">
+    <Font id="0" name="微软雅黑" size="13" bold="false" italic="false" default="true" />
+    <Font id="1" name="宋体" size="13" bold="true" italic="false" />
+	<Font id="2" name="微软雅黑" size="14" bold="false" italic="false" default="true" />
+	<Font id="3" name="微软雅黑" size="12" bold="false" italic="false" default="true" />
+	<TabLayout name="tab_wizard" >	
+		<VerticalLayout name="vrl_page1"  bkimage="bg1.bmp" >
+            <Option name="opt_agree" float="true" pos="95,158,0,0" width="14" height="14" normalimage="d02.png" selected="true" selectedimage="d01.png" />
+			<Text name="txt_one" text="软件不好用" float="true" pos="113,154,0,0" width="120" height="30"  textcolor="#ffffff" font="2" />			
+			<Option name="opt_agree1" float="true" pos="95,197,0,0" width="14" height="14" normalimage="d02.png" selected="true" selectedimage="d01.png" />
+			<Text name="txt_two" text="壁纸数量太少" float="true" pos="113,193,0,0" width="120" height="30"  textcolor="#ffffff" font="2" />			
+			<Option name="opt_agree2" float="true" pos="95,236,0,0" width="14" height="14" normalimage="d02.png" selected="true" selectedimage="d01.png" />
+			<Text name="txt_three" text="喜欢上了别的" float="true" pos="113,232,0,0" width="120" height="30"  textcolor="#ffffff" font="2" />				
+			<Option name="opt_agree3" float="true" pos="25,360,0,0" width="14" height="14" normalimage="d03.png" default="false" selectedimage="d02.png" />
+			<Text name="txt_four" text="保留用户配置" float="true" pos="42,358,0,0" width="120" height="30"  textcolor="#666666" font="3" />
+			<RichEdit name="txt_five" text="离开我更多理由" float="true" pos="270,145,0,0" width="320" height="120" textcolor="#ffffff" font="2" bkimage="bg.png" normalimage="textarea01.png" hotimage="textarea02.png" />
+			<Button name="btn_unint" float="true" pos="395,350,0,0" width="100" height="36" normalimage="unint01.png" hotimage="unint02.png" pushedimage="unint03.png" disabledimage="unint04.png" />
+			<Button name="btn_cance" float="true" pos="515,350,0,0" width="100" height="36" normalimage="cancel01.png" hotimage="cancel02.png" pushedimage="cancel03.png" disabledimage="cancel04.png" />			
+            <Button name="btn_close"  float="true" pos="608,0,0,0"  width="32" height="32"  normalimage="close01.png" hotimage="close02.png"  pushedimage="close03.png" />         
+		</VerticalLayout>	
+		<VerticalLayout name="vrl_page2" width="640" height="400" bkimage="bg2.bmp"> 
+			<VerticalLayout height="340"/>			
+			<HorizontalLayout padding="588" height="30">
+			<Text name="txt_percent" text="99%" width="340" height="30"  textcolor="#666666" font="2" />					
+			</HorizontalLayout>
+			<Slider name="sld_percent" float="true" pos="25,370,0,0" padding="30" width="590" height="10" bkimage="empty_bg.png"  foreimage="file='full_bg.png' xtiled='true'" min="0" max="100" value="20" hor="true" thumbsize="10,10" mouse="true" /> 
+		</VerticalLayout>
+		<VerticalLayout name="vrl_page3" width="640" height="400" bkimage="bg3.bmp"> 
+            <Button name="btn_close"  float="true" pos="608,0,0,0"  width="32" height="32"  normalimage="close01.png" hotimage="close02.png"  pushedimage="close03.png" /> 
+			<Button name="btn_finish"  float="true" pos="230,280,0,0"  width="180" height="50"  normalimage="bye02.png" hotimage="bye03.png"  pushedimage="bye04.png" />  
+		</VerticalLayout>		
+	</TabLayout>
+</Window>

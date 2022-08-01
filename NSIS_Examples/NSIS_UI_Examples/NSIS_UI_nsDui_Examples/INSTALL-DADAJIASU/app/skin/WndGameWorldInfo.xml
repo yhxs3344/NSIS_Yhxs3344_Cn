@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="640,585">
+  <Include source="Default.xml"/>
+  <VerticalLayout enabled="true" width="640" height="585" bkcolor="#FF1F2226">
+    <VerticalLayout enabled="true" float="true" pos="4,0,0,0" width="635" height="584"  bkcolor="#FF1F2226">
+      <WebBrowser name="ie_gameworldinfo" float="true" pos="0,0,0,0" width="655" height="604" bkcolor="#FFFF00FF"/>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>

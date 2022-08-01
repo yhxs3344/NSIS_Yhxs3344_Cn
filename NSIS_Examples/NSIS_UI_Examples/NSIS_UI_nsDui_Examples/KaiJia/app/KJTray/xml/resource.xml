@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+  <!--系统配置-->
+  <res type="cfg" name="defaultStyle" value="" />
+  <res type="cfg" name="logfile" value="" />
+  <res type="cfg" name="loglevel" value="1" />
+  <res type="cfg" name="appMutex" value="MUTEX_DUIVISION_KJTRAY" />
+  <res type="cfg" name="enableDragFile" value="0" />
+  <res type="cfg" name="trayDbClickMsg" value="1" />
+
+  <!--风格设置-->
+  <res type="style" name="default" value="" />
+
+  <!--XML资源-->
+  <res type="res" lang="zh-cn" file="xml\lang\zh-cn.xml" />
+  <res type="res" lang="en-us" file="xml\lang\en-us.xml" />
+
+  <!--XML资源-默认风格-->
+  <res type="xml" name="dlg_main" file="xml\app\dlg_main.xml" />
+  <res type="xml" name="tab_home" file="xml\app\tab_home.xml" />
+  <res type="xml" name="menu_tray" file="xml\app\menu_tray.xml" />
+  <res type="xml" name="menu_ball" file="xml\app\menu_ball.xml" />
+  <res type="xml" name="dlg_msgbox" file="xml\app\dlg_msgbox.xml" />
+  <res type="xml" name="dlg_boottime" file="xml\app\dlg_boottime.xml" />
+  <res type="xml" name="dlg_defence" file="xml\app\dlg_defence.xml" />
+  <res type="xml" name="dlg_fixbug" file="xml\app\dlg_fixbug.xml" />
+  <res type="xml" name="dlg_exit" file="xml\app\dlg_exit.xml" />
+  <res type="xml" name="dlg_ball_tips" file="xml\app\dlg_ball_tips.xml" />
+  <res type="xml" name="dlg_tray_tips" file="xml\app\dlg_tray_tips.xml" />
+  <res type="xml" name="dlg_upgrade" file="xml\app\dlg_upgrade.xml" />
+  <res type="xml" name="pop_ball" file="xml\app\pop_ball.xml" />
+  <res type="xml" name="pop_rocket" file="xml\app\pop_rocket.xml" />
+  
+  <!--字体资源-->
+  <res type="font" lang="zh-cn" name="default" font="微软雅黑" size="12" bold="false" />
+  <res type="font" lang="zh-cn" name="default" font="Tahoma" size="11" bold="false" os="winxp" />
+  <res type="font" lang="zh-cn" name="bold" font="微软雅黑" size="12" bold="true" />
+  <res type="font" lang="zh-cn" name="bold" font="Tahoma" size="11" bold="true" os="winxp" />
+  <res type="font" lang="zh-cn" name="big" font="微软雅黑" size="14" />
+  <res type="font" lang="zh-cn" name="big" font="Tahoma" size="13" os="winxp" />
+  <res type="font" lang="zh-cn" name="bigbold" font="微软雅黑" size="14" bold="true" />
+  <res type="font" lang="zh-cn" name="bigbold" font="Tahoma" size="13" bold="true" os="winxp" />
+  <res type="font" lang="zh-cn" name="bigbig" font="微软雅黑" size="18" />
+  <res type="font" lang="zh-cn" name="bigbig" font="Tahoma" size="17" os="winxp" />
+  <res type="font" lang="zh-cn" name="bigbigbold" font="微软雅黑" size="18" bold="true" />
+  <res type="font" lang="zh-cn" name="bigbigbold" font="Tahoma" size="17" bold="true" os="winxp" />
+  <res type="font" lang="zh-cn" name="bigbigbig" font="微软雅黑" size="23" />
+  <res type="font" lang="zh-cn" name="bigbigbig" font="Tahoma" size="22" os="winxp" />
+  <res type="font" lang="zh-cn" name="big30" font="微软雅黑" size="30" />
+  <res type="font" lang="zh-cn" name="big30" font="Tahoma" size="29" os="winxp" />
+  <res type="font" lang="zh-cn" name="big16" font="微软雅黑" size="16" />
+  <res type="font" lang="zh-cn" name="big16" font="Tahoma" size="16" os="winxp" />
+
+  <!--图片资源-默认风格-->
+  <res type="img" name="IDB_TRAY_ICON" file="128" />
+  <res type="img" name="IDB_WHITE_BKGND" file="skins\image\white_bkgnd.png" />
+  <res type="img" name="IDB_CHECKBOX" file="skins\image\checkbox.png" />
+  <res type="img" name="IDB_ICON_LOGO" file="skins\image\icon_logo.png" />
+  <res type="img" name="IDB_BT_DEFAULT" file="skins\image\bt_default.png" />
+  <res type="img" name="IDB_BT_CLOSE" file="skins\image\bt_close.png" />
+  <res type="img" name="IDB_SCROLL_V" file="skins\image\scroll_v.png" />
+  <res type="img" name="IDB_PROGRESS" file="skins\image\progress.png" />
+  <!--弹出框图标-->
+  <res type="img" name="IDB_ICON_CHECK" file="skins\image\icon_check.png" />
+  <res type="img" name="IDB_ICON_INFO" file="skins\image\icon_info.png" />
+  <res type="img" name="IDB_ICON_QUESTION" file="skins\image\icon_question.png" />
+  <res type="img" name="IDB_ICON_WARN" file="skins\image\icon_warning.png" />
+  <res type="img" name="IDB_ICON_ERROR" file="skins\image\icon_error.png" />
+  <!--托盘右键弹出菜单-->
+  <res type="img" name="IDB_MENU_BKGND" file="skins\menu\menu_bkgnd.png" />
+  <res type="img" name="IDB_BOTTOM_BKGND" file="skins\menu\bottom_bkgnd.png" />
+  <res type="img" name="IDB_BT_MENU1" file="skins\menu\bt_menu1.png" />
+  <res type="img" name="IDB_BT_MENU2" file="skins\menu\bt_menu2.png" />
+  <res type="img" name="IDB_BT_MENU3" file="skins\menu\bt_menu3.png" />
+  <res type="img" name="IDB_BT_MENU4" file="skins\menu\bt_menu4.png" />
+  <res type="img" name="IDB_BT_MENU5" file="skins\menu\bt_menu5.png" />
+  <res type="img" name="IDB_BT_MENU6" file="skins\menu\bt_menu6.png" />
+  <res type="img" name="IDB_ICON_CIRCLE" file="skins\menu\icon_circle.png" />
+  <res type="img" name="IDB_BT_SETTING" file="skins\menu\bt_setting.png" />
+  <res type="img" name="IDB_BT_EXIT" file="skins\menu\bt_exit.png" />
+  <!--开机时间窗口-->
+  <res type="img" name="IDB_BOOTTIME_BKGND" file="skins\boottime\bkgnd.png" />
+  <res type="img" name="IDB_BOOTTIME_BT_SETTING" file="skins\boottime\bt_setting.png" />
+  <res type="img" name="IDB_BOOTTIME_BT_CLOSE" file="skins\boottime\bt_close.png" />
+  <res type="img" name="IDB_BOOTTIME_BT_OPTIMIZE" file="skins\boottime\bt_optimize.png" />
+  <res type="img" name="IDB_BOOTTIME_NUMBER_0" file="skins\boottime\0.png" />
+  <res type="img" name="IDB_BOOTTIME_NUMBER_1" file="skins\boottime\1.png" />
+  <res type="img" name="IDB_BOOTTIME_NUMBER_2" file="skins\boottime\2.png" />
+  <res type="img" name="IDB_BOOTTIME_NUMBER_3" file="skins\boottime\3.png" />
+  <res type="img" name="IDB_BOOTTIME_NUMBER_4" file="skins\boottime\4.png" />
+  <res type="img" name="IDB_BOOTTIME_NUMBER_5" file="skins\boottime\5.png" />
+  <res type="img" name="IDB_BOOTTIME_NUMBER_6" file="skins\boottime\6.png" />
+  <res type="img" name="IDB_BOOTTIME_NUMBER_7" file="skins\boottime\7.png" />
+  <res type="img" name="IDB_BOOTTIME_NUMBER_8" file="skins\boottime\8.png" />
+  <res type="img" name="IDB_BOOTTIME_NUMBER_9" file="skins\boottime\9.png" />
+  
+  <!--字符串资源-->
+  <res type="str" lang="zh-cn" name="APP_NAME" value="铠甲安全卫士" />
+  <res type="str" lang="zh-cn" name="APP_VER" value="1.0.0" />
+  <res type="str" lang="zh-cn" name="OK" value="确定" />
+  <res type="str" lang="zh-cn" name="CANCEL" value="取消" />
+  <res type="str" lang="zh-cn" name="YES" value="是" />
+  <res type="str" lang="zh-cn" name="NO" value="否" />
+
+</root>

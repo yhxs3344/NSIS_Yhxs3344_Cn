@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="640,620" caption="0,0,0,35" >
+  <Include source="Default.xml"/>
+  <VerticalLayout enabled="true" width="640" height="620" bkimage="RightMainBk.png">
+    <Label name="LabTitle" text="右侧弹框" font="0" float="true" pos="8,5,0,0" enabled="true" width="190" height="25" textcolor="#FFCCCCCC" />
+    <Button name="ButClose" float="true" pos="612,0,0,0" enabled="true" width="31" height="32" normalimage="file=&apos;close1.png&apos; source=&apos;0,0,31,32&apos;" hotimage="file=&apos;close1.png&apos; source=&apos;31,0,62,32&apos;" pushedimage="file=&apos;close1.png&apos; source=&apos;62,0,93,32&apos;" />
+  </VerticalLayout>
+</Window>

@@ -1,0 +1,6 @@
+DEBUG 2016-07-20 21:23:12[7028] : ------------------DuiVision Start-------------------
+DEBUG 2016-07-20 21:23:12[7028] : CDuiHandlerMain::OnDuiMessage:uID=905, name=skin.wnd, msg=1, wParam=8188300, lParam=0
+DEBUG 2016-07-20 21:23:12[7028] : CDuiHandlerMain::OnDuiMessage:uID=905, name=skin.wnd, msg=2, wParam=0, lParam=8188296
+DEBUG 2016-07-20 21:23:15[7028] : CDuiHandlerMain::OnDuiMessage:uID=1000, name=SetClose, msg=1, wParam=0, lParam=0
+DEBUG 2016-07-20 21:23:15[7028] : CDuiHandlerMain::OnDuiMessage:uID=1000, name=SetClose, msg=2, wParam=0, lParam=0
+DEBUG 2016-07-20 21:23:15[7028] : ------------------DuiVision End-------------------

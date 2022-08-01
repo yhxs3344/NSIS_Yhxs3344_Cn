@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--中文字符串资源-->
+  <res type="str" lang="zh-cn" name="SHOW_ACCELERATOR" value="显示加速器" />
+  <res type="str" lang="zh-cn" name="MINUTE" value="分" />
+  <res type="str" lang="zh-cn" name="SECOND" value="秒" />
+  <res type="str" lang="zh-cn" name="BOOTTIME_TITLE" value="铠甲安全卫士开机小助手" />
+  <res type="str" lang="zh-cn" name="BOOTTIME_OPTIMIZE_TIP" value="电脑太慢？请立即优化可提高开机速度" />
+</root>

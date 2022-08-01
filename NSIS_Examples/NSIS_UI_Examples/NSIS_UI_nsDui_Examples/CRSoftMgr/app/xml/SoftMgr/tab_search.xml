@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<div pos="80,-575,-0,-0">
+	<img pos="0,45,-1,85" image="skin:IDB_BT_RJGJ_BKCOLOR" mode="frame" framesize="1" show="1" />
+	<text name="describe_search" pos="20,55,300,75" crtext="808080" font="big14" title="" />
+	<gridctrl name="gridctrl.search" pos="20,95,-0,-95" show="1" img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_TAB_BACK_RJGJ" 
+		img-check="skin:IDB_CHECK_BOX"
+		img-header="skin:IDB_TOOLBAR_BG" img-colsep="skin:IDB_TAB_SEPERATOR" img-count="12" image="skin:IDB_LIST_IMG" left-pos="50" row-height="75" header-height="0" bk-transparent="10"
+		font="custom12" font-title="custom15" align="left" valign="middle" crtext="92,92,92" crhover="0,0,0" crpush="0,112,235" crtitle="24,24,24" crsep="200,160,160,160" 
+		down-row="0" wrap="0" scroll-width="4">
+			<column title="列1" width="400" align="top"/>
+			<column title="列2" width="80" />
+			<column title="列3" width="100" align="center" />
+			<column title="列4" width="80" align="left"/>
+			<column title="列5" width="185" />
+	</gridctrl>	
+
+	<wkeview name="webkit_soft" show="0"
+				delaycreate="true"
+				transparent="0"
+				url=""
+				pos="0,25,-0,600"
+				show-contextmenu="0" >
+	</wkeview>
+
+	<button name="soft.pageupSearch"	pos="520,500,546,526" img-count="4" skin="IDB_PAGEUP_RJGJ" showfocus="1" tip="上一页" duimsg="mouseldown" show="1"/>
+
+	<button name="11"  pos="550,500,576,526" title="1"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="12"  pos="580,500,606,526" title="2"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="13"  pos="610,500,636,526" title="3"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="14"  pos="640,500,666,526" title="4"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="15"  pos="670,500,696,526" title="5"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="16"  pos="700,500,726,526" title="6"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="17"  pos="730,500,756,526" title="7"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="18"  pos="760,500,786,526" title="8"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="19"  pos="790,500,816,526" title="9"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="20"  pos="820,500,846,526" title="10" img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	
+	<button name="soft.pagedownSearch" 	pos="850,500,876,526" img-count="4" skin="IDB_PAGEDOWN_RJGJ" showfocus="1" tip="下一页" duimsg="mouseldown" show="1"/>
+</div>

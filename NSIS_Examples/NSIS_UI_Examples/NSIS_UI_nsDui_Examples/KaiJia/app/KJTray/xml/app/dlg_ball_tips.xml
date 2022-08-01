@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg title="" width="150" height="30" translucent="255"
+	frame="" bkimg="" crbk="FFF4D0" appwin="0" resize="0" topmost="0"
+	img-shadow="skins\image\window_shadow.png" shadow-wlt="5" shadow-hlt="3" shadow-wrb="5" shadow-hrb="7">
+
+  <base>
+  </base>
+
+  <body>
+    <text name="text.tips" pos="10,0,-10,-0" crtext="AA6E35" align="center" valign="middle" font="bigbold" title="" response="1" />
+  </body>
+
+</dlg>

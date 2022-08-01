@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<menu name="main_menu" title="Menu" width="130" item-height="32" framesize="50" left="50" top-height="6" frame-width="3" bkimg="skin:IDB_MENU_BACK"
+      image="KJMainUI\skins\kaijiaweishishezhi\xuanzelujingkuang.png" crrowhover="255,245,245,245" bottom-height="6">
+	<menuitem name="item_shezhi" image="KJMainUI\skins\kaijiaweishi\caidanshezhi.png" img-count="3" title="设置" taskmsg="1" />
+  <menuitem name="item_jiasuqiu" image="KJMainUI\skins\kaijiaweishi\caidanjiashuqiu.png" img-count="3" title="显示加速球"  taskmsg="1" />
+	<menuitem name="item_gengxin" image="KJMainUI\skins\kaijiaweishi\caidangengxin.png" img-count="3" title="检查更新"  taskmsg="1"/>
+  <menuitem name="item_zhuye" image="KJMainUI\skins\kaijiaweishi\caidanzhuye.png" img-count="3" title="官方网站" taskmsg="1" action="link:http://www.kaijiaweishi.com/"/>
+	<menuitem name="item_guanyu" image="KJMainUI\skins\kaijiaweishi\caidanguanyu.png" img-count="3" title="关于我们"  taskmsg="1"/>
+  
+</menu>

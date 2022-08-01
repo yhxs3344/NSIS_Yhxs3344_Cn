@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<menu title="BallMenu" width="144" item-height="32" framesize="50" left="42" top-height="7" bottom-height="7" frame-width="5"
+      bkimg="skins\menu\menu_bkg.png" crrowhover="255,245,245,245">
+  <menuitem name="item.no_ball" image="skins\menu\no_ball.png" img-count="1" title="不再显示加速球" taskmsg="1" />
+  <menuitem name="item.hide_ball" image="skins\menu\hide_ball.png" img-count="1" title="关闭加速球" taskmsg="1" />
+  <menuitem name="item.clean_memory" image="skins\menu\clean_memory.png" img-count="1" title="马上加速" taskmsg="1" />
+</menu>

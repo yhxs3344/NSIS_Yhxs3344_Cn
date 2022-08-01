@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="350,360" caption="0,0,0,35" showshadow="true" shadowsize="4" shadowcorner="23,13,23,33" shadowposition="0,1" shadowdarkness="70">
+  <Include source="Default.xml" />
+  <VerticalLayout enabled="true" width="350" height="360" bkimage="Bkimg350_360.png">
+    <Label name="LabTitle" text="检测网络" font="0" float="true" pos="8,5,0,0" enabled="true" width="190" height="25" textcolor="#FFCCCCCC" />
+    <Button name="BtnClose" float="true" pos="322,0,0,0" enabled="true" width="31" height="32" normalimage="file=&apos;close1.png&apos; source=&apos;0,0,31,32&apos;" hotimage="file=&apos;close1.png&apos; source=&apos;31,0,62,32&apos;" pushedimage="file=&apos;close1.png&apos; source=&apos;62,0,93,32&apos;" />
+    <TabLayout name="TabSwitch" float="true" pos="0,45,0,0" enabled="true" width="350" height="315" selectedid="0">
+      <VerticalLayout enabled="true" float="true" pos="0,0,0,0" width="350" height="315">
+        <Label text="您的IP地址：" font="0" float="true" pos="20,15,0,0" enabled="true" width="85" height="20" textcolor="#FF999999"/>
+        <Label name="labRealNetIP" text="111.111.111.111" font="0" float="true" pos="105,15,0,0" enabled="true" endellipsis="true" width="115" height="20" textcolor="#FF07D569"/>
+        <Label text="地区与类型：" font="0" float="true" pos="20,35,0,0" enabled="true" width="85" height="20" textcolor="#FF999999"/>
+        <Label name="labRealNetType" text="ffdsaf" font="0" float="true" pos="105,35,0,0" enabled="true" endellipsis="true" width="115" height="20" textcolor="#FF07D569"/>
+        <VerticalLayout enabled="true" float="true" pos="20,70,0,0" width="310" height="160" topbordersize="1" bordercolor="#FF404040">
+          <Label text="<f 0>如果识别不准，请手动设置您的<c #FF7F00>地区及网络类型</c></f>" showhtml="true" align="left"  visible="true" float="true" pos="0,20,0,0" width="310" height="20" enabled="true" textcolor="#FF999999"/>
+          <Label text="以方便我们更好的为您推荐节点" font="0" float="true" pos="0,40,0,0" enabled="true" width="200" height="20" textcolor="#FF999999"/>
+          <Combo name="comboProvi" font="0" float="true" pos="0,65,0,0" align="left" textpadding="0,0,10,0" itemalign="center" enabled="true" width="110" height="32" itemtextcolor="#FF999999" itemselectedbkcolor="#FF2E343B" itembkcolor="#FF1F2226" itemselectedtextcolor="0xFF07D569" itemhotbkcolor="#FF07D569" itemlinecolor="#FF404040" vscrollbarstyle="" normalimage="file=&apos;combo110_32.png&apos; source=&apos;0,0,110,32&apos;" hotimage="file=&apos;combo110_32.png&apos; source=&apos;110,0,220,32&apos;"/>
+          <Combo name="comboNet" font="0" float="true" pos="145,65,0,0" align="left" textpadding="0,0,10,0" itemalign="center" enabled="true" width="110" height="32" itemtextcolor="#FF999999" itemselectedbkcolor="#FF2E343B" itembkcolor="#FF1F2226" itemselectedtextcolor="0xFF07D569" itemhotbkcolor="#FF07D569" itemlinecolor="#FF404040"  normalimage="file=&apos;combo110_32.png&apos; source=&apos;0,0,110,32&apos;" hotimage="file=&apos;combo110_32.png&apos; source=&apos;110,0,220,32&apos;"/>
+          <Label text="<f 0>建议您加速时<c #FF7F00> 选择和您的网络商类型一样</c>的节点加速效果更佳</f>" showhtml="true" font="0" float="true" pos="0,105,0,0" enabled="true" width="310" height="20" textcolor="#FF999999"/>
+          <Label text="加速效果更佳" font="0" float="true" pos="0,125,0,0" enabled="true" width="200" height="20" textcolor="#FF999999"/>
+        </VerticalLayout>
+        <Button name="btnReportNet" text="确定" font="1" textcolor="#FFFFFFFF" float="true" pos="55,245,0,0" enabled="true" width="110" height="36" normalimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;" pushedimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;" />
+        <Button name="BtnClose" text="取消" font="1" textcolor="#FFFFFFFF" float="true" pos="185,245,0,0" enabled="true" width="110" height="36" normalimage="file=&apos;Cancel110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Cancel110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;Cancel110_36.png&apos; source=&apos;220,0,330,36&apos;" />
+      </VerticalLayout>
+      <VerticalLayout enabled="true" float="true" pos="10,10,0,0" width="350" height="315">
+        <Label float="true" pos="85,60,0,0" width="32" height="32" enabled="true" bkimage="dadajiasu_wait.png"/>
+        <Label float="true" font="6" text="提交成功" textcolor="#FF0AAA60" pos="125,60,0,0" width="132" height="32" enabled="true"/>
+        <Label float="true" pos="35,150,0,0" enabled="true"  font="0" text="您还可以在哒哒<系统设置>里面再次更改" textcolor="#FF666666" width="320" height="20" />
+      </VerticalLayout>
+    </TabLayout>
+  </VerticalLayout>
+</Window>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+
+<div pos="0,0,-0,-0" >
+
+  <treectrlkaijia name="treectrl_ziqidongchajian" pos="10,80,-0,-0" show="1"
+    img-scroll="skin:IDB_SCROLL_V" img-sep="KJMainUI\skins\default\rp_line1.png"
+    img-check="skin:IDB_CHECK_BOX" img-colsep="" scroll-width="5"
+    img-collapse="KJMainUI\skins\kaijiaweishi\tree_collapse.png"
+    img-toggle="KJMainUI\skins\kaijiaweishi\tree_toggle.png"
+    img-count="12" image="skin:IDB_LIST_IMG"
+    left-pos="0" row-height="25" bk-transparent="10"
+    font-title="big" font="default" suojin="0"
+    valign="middle" down-row="0"
+    crtext="255,64,64,64" crhover="255,64,64,64" crpush="0,112,235"
+    level1-row-height="50" level2-row-height="20"
+    crtitle="32,32,32" crsep="200,160,160,160" crrowhover="50,128,128,128" >
+    <column title="列1" width="680" />
+    <!--<node id="1"  image-left-show="1" toggle-pos-x="7" hovercolor-pos-x="0" hovercolor-width="710">
+      <item title="图标应用的插件" font-title="1" image="" >
+      </item>
+      <node id="2-1"  image-left-show="1" collapse="1" leftimage-pos-x="7" hovercolor-pos-x="0" hovercolor-width="710">
+        <item title="输入法切换工具" font-title="1" content="禁止后可能会导致无法启动该程序" image="KJMainUI\skins\icon\scriptnet.png" >
+          <text pos="435,15" name="item2" width="60" height="18" crtext="" title="建议开启" tip="" show="1" sub-show="1" response="0"/>
+          <text pos="495,15" width="60" height="18" crtext="" title="已开启" tip="" sub-show="1" response="0"/>
+          <button name="jinzhiqidong" img-count="3" pos="565,15" width="74" height="25" image="KJMainUI\skins\kaijiaweishi\jinzhiqidong.png"
+                  title="" tip="" showfocus="0" show="1"/>
+          <button name="kaijijiashushezhi" img-count="3" pos="650,15" width="29" height="21" image="KJMainUI\skins\kaijiaweishi\kaijijiashushezhi.png"
+                  title="" tip="" showfocus="0" action="menu:menu_qidongxiang" menupos="-120,27"/>
+        </item>
+      </node>
+      <node id="2-2" image-left-show="1" collapse="1" leftimage-pos-x="7" hovercolor-pos-x="0" hovercolor-width="710">
+        <item title="输入法切换工具" font-title="1" content="禁止后可能会导致无法启动该程序" image="KJMainUI\skins\icon\scriptnet.png" >
+          <text pos="435,15" name="item2" width="60" height="18" crtext="" title="建议开启" tip="" show="1" sub-show="1" response="0"/>
+          <text pos="495,15" width="60" height="18" crtext="" title="已开启" tip="" sub-show="1" response="0"/>
+          <button name="jinzhiqidong" img-count="3" pos="565,15" width="74" height="25" image="KJMainUI\skins\kaijiaweishi\jinzhiqidong.png"
+                  title="" tip="" showfocus="0" show="1"/>
+          <button name="kaijijiashushezhi" img-count="3" pos="650,15" width="29" height="21" image="KJMainUI\skins\kaijiaweishi\kaijijiashushezhi.png"
+                  title="" tip="" showfocus="0" action="menu:menu_qidongxiang" menupos="-120,27"/>
+        </item>
+      </node>
+      <node id="2-3" image-left-show="1" collapse="1" leftimage-pos-x="7" hovercolor-pos-x="0" hovercolor-width="710">
+        <item title="输入法切换工具" font-title="1" content="禁止后可能会导致无法启动该程序" image="KJMainUI\skins\icon\scriptnet.png" >
+          <text pos="435,15" name="item2" width="60" height="18" crtext="" title="建议开启" tip="" show="1" sub-show="1" response="0"/>
+          <text pos="495,15" width="60" height="18" crtext="" title="已开启" tip="" sub-show="1" response="0"/>
+          <button name="jinzhiqidong" img-count="3" pos="565,15" width="74" height="25" image="KJMainUI\skins\kaijiaweishi\jinzhiqidong.png"
+                  title="" tip="" showfocus="0" show="1"/>
+          <button name="kaijijiashushezhi" img-count="3" pos="650,15" width="29" height="21" image="KJMainUI\skins\kaijiaweishi\kaijijiashushezhi.png"
+                  title="" tip="" showfocus="0" action="menu:menu_qidongxiang" menupos="-120,27"/>
+        </item>
+      </node>
+    </node>
+    <node id="2" image-left-show="1" toggle-pos-x="7" hovercolor-pos-x="0" hovercolor-width="710">
+      <item title="右键菜单内的插件" font-title="1" image="">
+      </item>
+      <node id="2-1"  image-left-show="1" collapse="1" leftimage-pos-x="7" hovercolor-pos-x="0" hovercolor-width="710">
+        <item title="输入法切换工具" font-title="1" content="禁止后可能会导致无法启动该程序" image="KJMainUI\skins\icon\scriptnet.png" >
+          <text pos="435,15" name="item2" width="60" height="18" crtext="" title="建议开启" tip="" show="1" sub-show="1" response="0"/>
+          <text pos="495,15" width="60" height="18" crtext="" title="已开启" tip="" sub-show="1" response="0"/>
+          <button name="jinzhiqidong" img-count="3" pos="565,15" width="74" height="25" image="KJMainUI\skins\kaijiaweishi\jinzhiqidong.png"
+                  title="" tip="" showfocus="0" show="1"/>
+          <button name="kaijijiashushezhi" img-count="3" pos="650,15" width="29" height="21" image="KJMainUI\skins\kaijiaweishi\kaijijiashushezhi.png"
+                  title="" tip="" showfocus="0" action="menu:menu_qidongxiang" menupos="-120,27"/>
+        </item>
+      </node>
+      <node id="2-2" image-left-show="1" collapse="1" leftimage-pos-x="7" hovercolor-pos-x="0" hovercolor-width="710">
+        <item title="输入法切换工具" font-title="1" content="禁止后可能会导致无法启动该程序" image="KJMainUI\skins\icon\scriptnet.png" >
+          <text pos="435,15" name="item2" width="60" height="18" crtext="" title="建议开启" tip="" show="1" sub-show="1" response="0"/>
+          <text pos="495,15" width="60" height="18" crtext="" title="已开启" tip="" sub-show="1" response="0"/>
+          <button name="jinzhiqidong" img-count="3" pos="565,15" width="74" height="25" image="KJMainUI\skins\kaijiaweishi\jinzhiqidong.png"
+                  title="" tip="" showfocus="0" show="1"/>
+          <button name="kaijijiashushezhi" img-count="3" pos="650,15" width="29" height="21" image="KJMainUI\skins\kaijiaweishi\kaijijiashushezhi.png"
+                  title="" tip="" showfocus="0" action="menu:menu_qidongxiang" menupos="-120,27"/>
+        </item>
+      </node>
+      <node id="2-3" image-left-show="1" collapse="1" leftimage-pos-x="7" hovercolor-pos-x="0" hovercolor-width="710">
+        <item title="输入法切换工具" font-title="1" content="禁止后可能会导致无法启动该程序" image="KJMainUI\skins\icon\scriptnet.png" >
+          <text pos="435,15" name="item2" width="60" height="18" crtext="" title="建议开启" tip="" show="1" sub-show="1" response="0"/>
+          <text pos="495,15" width="60" height="18" crtext="" title="已开启" tip="" sub-show="1" response="0"/>
+          <button name="jinzhiqidong" img-count="3" pos="565,15" width="74" height="25" image="KJMainUI\skins\kaijiaweishi\jinzhiqidong.png"
+                  title="" tip="" showfocus="0" show="1"/>
+          <button name="kaijijiashushezhi" img-count="3" pos="650,15" width="29" height="21" image="KJMainUI\skins\kaijiaweishi\kaijijiashushezhi.png"
+                  title="" tip="" showfocus="0" action="menu:menu_qidongxiang" menupos="-120,27"/>
+        </item>
+      </node>
+    </node>-->
+  </treectrlkaijia>
+</div>

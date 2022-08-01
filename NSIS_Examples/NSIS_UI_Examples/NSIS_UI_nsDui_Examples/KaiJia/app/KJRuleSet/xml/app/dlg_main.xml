@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg name="dlg_main" title="[APP_NAME]" width="740" height="480" translucent="255"
+	frame="skins\image\bkgnd.png" bkimg="" crbk="FFFFFF" appwin="1" resize="0" topmost="0"
+	img-shadow="skins\image\shadow.png" shadow-wlt="5" shadow-hlt="3" shadow-wrb="5" shadow-hrb="7">
+
+  <base>
+    <button name="button.close" pos="-30,5" width="24" height="24" img-count="3" skin="skin:IDB_BT_CLOSE" showfocus="0" cursor="hand" action="close-window:dlg_main" />
+  </base>
+
+  <body>
+    <button name="button.trust" pos="23,43" width="100" height="23" img-count="4" image="skins\image\bt_trust.png" showfocus="0" cursor="hand" disable="1" />
+    <button name="button.prevent" pos="136,43" width="100" height="23" img-count="4" image="skins\image\bt_prevent.png" showfocus="0" cursor="hand" />
+
+    <tabctrl name="tabctrl.main" pos="0,75,-0,-0" item-width="0" tab-height="0" tab-left-pading="0" animate="0">
+      <tab name="tab.trust" pos="0,0,-0,-0" active="true">
+        <gridctrl name="gridctrl.trust" pos="0,0,-0,-10" img-header="skins\image\header_bkgnd.png"
+                  img-colsep="skins\image\col_seperator.png" img-sep="skins\image\row_seperator.png"
+                  img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H"
+                  left-pos="25" row-height="70" header-height="34" bk-transparent="0"
+                  font-header="bold" align-header="center" crheader="333333" crrowhover="250,250,250"
+                  valign="middle" crtext="40a6e1" crtitle="666666" font-title="bigbig" crhover="0,0,0,0"
+                  down-row="0" column-sep="0" modify-column-width="1">
+          <column title="名称/文件名" width="440" />
+          <column title="添加时间" width="180" align="center" />
+          <column title="操作" width="-1" />
+        </gridctrl>
+      </tab>
+      <tab name="tab.prevent" pos="0,0,-0,-0">
+        <gridctrl name="gridctrl.prevent" pos="0,0,-0,-10" img-header="skins\image\header_bkgnd.png"
+                  img-colsep="skins\image\col_seperator.png" img-sep="skins\image\row_seperator.png"
+                  img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H"
+                  left-pos="25" row-height="70" header-height="34" bk-transparent="0"
+                  font-header="bold" align-header="center" crheader="333333" crrowhover="250,250,250"
+                  valign="middle" crtext="40a6e1" crtitle="666666" font-title="bigbig" crhover="0,0,0,0"
+                  down-row="0" column-sep="0" modify-column-width="1">
+          <column title="名称/文件名" width="440" />
+          <column title="添加时间" width="180" align="center" />
+          <column title="操作" width="-1" />
+        </gridctrl>
+      </tab>
+    </tabctrl>
+  </body>
+
+</dlg>

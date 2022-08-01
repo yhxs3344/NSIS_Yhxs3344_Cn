@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+
+<div pos="0,0,-0,-0" >
+
+  <gridctrlkaijia name="gridctrl_qidongxiang" pos="10,80,-0,-0" show="1"
+		img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="KJMainUI\skins\default\rp_line1.png"
+		img-check="skin:IDB_CHECK_BOX" img-header="skin:IDB_TOOLBAR_BG" img-colsep="skin:IDB_TAB_SEPERATOR"
+		img-count="12" image="skin:IDB_LIST_IMG" scroll-width="5" left-image-width="32" left-image-height="32"
+		left-pos="70" row-height="50" header-height="0" bk-transparent="10"
+		font="default" align="left" valign="middle" font-title="1"
+		crtext="255,64,64,64" crhover="255,64,64,64" crpush="0,112,235"
+		crtitle="32,32,32" crsep="200,160,160,160" crrowhover="50,128,128,128"
+		down-row="0" >
+		<column title="列1" width="385" />
+		<column title="列2" width="60" />
+		<column title="列3" width="65" align="" />
+    <column title="列4" width="70" align="" />
+		<column title="列5" />
+		<!--<row image="KJMainUI\skins\icon\scriptnet.png">
+			<item title="启动项输入法切换工具" content="禁止后可能会导致无法使用输入法" font-title="1" >
+				<img pos="100,0" width="136" height="28" image="KJMainUI\skins\script_logo.png" mode="normal" tip="" />
+			</item>
+			<item title="12%" content="" />
+			<item title="建议开启" />
+			<item title="已开启" />
+      <item>
+        <button name="jinzhiqidong" img-count="3" pos="0,10" width="74" height="25" image="KJMainUI\skins\kaijiaweishi\jinzhiqidong.png" 
+                title="" tip="" showfocus="0" show="1"/>
+        <button name="kaijijiashushezhi" img-count="3" pos="85,10" width="29" height="21" image="KJMainUI\skins\kaijiaweishi\kaijijiashushezhi.png" 
+                title="" tip="" showfocus="0" action="menu:menu_qidongxiang" menupos="-120,27"/>
+      </item>
+		</row>
+		<row image="KJMainUI\skins\icon\softmgr.png">
+			<item title="软媒时间" content="禁止后可能会导致无法使用媒体播放器" font-title="1" />
+			<item title="12%" content="" />
+			<item title="维持现状" />
+			<item title="已开启" />
+      <item>
+        <button name="jinzhiqidong" img-count="3" pos="0,10" width="74" height="25" image="KJMainUI\skins\kaijiaweishi\jinzhiqidong.png"
+                title="" tip="" showfocus="0" show="1"/>
+        <button name="kaijijiashushezhi" img-count="3" pos="85,10" width="29" height="21" image="KJMainUI\skins\kaijiaweishi\kaijijiashushezhi.png"
+                title="" tip="" showfocus="0" action="menu:menu_qidongxiang" menupos="-120,27"/>
+      </item>
+		</row>
+		<row image="KJMainUI\skins\icon\PDFViewer.png" >
+      <item title="软媒时间" content="禁止后可能会导致无法使用媒体播放器" font-title="1" />
+			<item title="5%" content="" />
+			<item title="维持现状" />
+      <item title="已禁用" />
+			<item>
+        <button name="jinzhiqidong" img-count="3" pos="0,10" width="74" height="25" image="KJMainUI\skins\kaijiaweishi\jinzhiqidong.png"
+                title="" tip="" showfocus="0" show="1"/>
+        <button name="kaijijiashushezhi" img-count="3" pos="85,10" width="29" height="21" image="KJMainUI\skins\kaijiaweishi\kaijijiashushezhi.png"
+                title="" tip="" showfocus="0" action="menu:menu_qidongxiang" menupos="-120,27"/>
+      </item>
+		</row>
+		<row image="KJMainUI\skins\icon\Movies.png">
+      <item title="软媒时间" content="禁止后可能会导致无法使用媒体播放器" font-title="1" />
+			<item title="12%" content="" />
+			<item title="维持现状" />
+      <item title="已禁用" />
+		</row>
+    <row image="KJMainUI\skins\icon\Movies.png">
+      <item title="软媒时间" content="禁止后可能会导致无法使用媒体播放器" font-title="1" />
+      <item title="12%" content="" />
+      <item title="维持现状" />
+      <item title="已禁用" />
+    </row>
+    <row image="KJMainUI\skins\icon\Movies.png">
+      <item title="软媒时间" content="禁止后可能会导致无法使用媒体播放器" font-title="1" />
+      <item title="12%" content="" />
+      <item title="维持现状" />
+      <item title="已禁用" />
+    </row>
+    <row image="KJMainUI\skins\icon\Movies.png">
+      <item title="软媒时间" content="禁止后可能会导致无法使用媒体播放器" font-title="1" />
+      <item title="12%" content="" />
+      <item title="维持现状" />
+      <item>
+        <button name="grid_btn1" pos="0,10,70,-10" skin="IDB_BT_DEFAULT" title="一键安装" tip="普通按钮"  showfocus="0"/>
+      </item>
+    </row>
+    <row image="KJMainUI\skins\icon\Movies.png">
+      <item title="软媒时间" content="禁止后可能会导致无法使用媒体播放器" font-title="1" />
+      <item title="12%" content="" />
+      <item title="维持现状" />
+      <item title="已禁用" />
+    </row>-->
+	</gridctrlkaijia>
+
+
+</div>

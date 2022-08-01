@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Window size="640,620" maxinfo="640,620" caption="0,0,0,35" showshadow="true" shadowsize="4" shadowcorner="23,13,23,33" shadowposition="0,3" shadowdarkness="70">
+  <Font id="0" name="微软雅黑" size="14" />
+  <Font id="1" name="微软雅黑" size="12" />
+  <Font id="2" name="微软雅黑" size="15" />
+  <Default name="VScrollBar" value="width=&quot;6&quot; thumbnormalimage=&quot;file='scroll.png' source='18,0,24,20'&quot; thumbpushedimage=&quot;file='scroll.png' source='12,0,18,20'&quot; thumbhotimage=&quot;file='scroll.png' showbutton1=&quot;false&quot; showbutton2=&quot;false&quot;" />
+  <VerticalLayout height="640" width="620" bkimage="NetMonitorBk.png">
+    <Container height="35">
+      <Label float="true" pos="30,5" width="100" height="25" text="流量助手" font="2" textcolor="#FF07D569" />
+      <Button name="Close" float="true" pos="612,0" height="32" width="31" normalimage="file='Close.png' source='0,0,31,32'" hotimage   ="file='Close.png' source='31,0,62,32'" pushedimage="file='Close.png' source='62,0,93,32'" />      
+    </Container>
+
+    <HorizontalLayout float="true" pos="0,35,0,0" height="180" width="640">
+      <GifAnim name="GifFlow" float="true" pos="19,17,0,0" width="96" height="96" autoplay="true" bkimage="flowGreen.gif"/>
+      <Label float="true" pos="125,40,0,0" text="当前有" width="46" height="20" font="0" textcolor="#FF999999" />
+      <Label name="CountItems" float="true" pos="170,40,0,0" height="20" align="center" text="-" width="22" font="0" textcolor="#FF07D569" />
+      <Label pos="195,40,0,0" float="true" height="20" text="个程序访问网络，总上传速度：" width="200" font="0" textcolor="#FF999999" />
+      <Label name="CountUpload" float="true" pos="395,40,0,0" height="20" text="-K/S"  width="70" font="0" textcolor="#ff661a" />
+      <Label text="总下载速度：" float="true" pos="455,40,0,0" height="20" width="86" font="0" textcolor="#FF999999" />
+      <Label name="CountDownload" float="true" pos="540,40,0,0" height="20" text="-K/S" width="70" font="0" textcolor="#FF07D569" />      
+      <Label pos="125,65,0,0" float="true" height="20" width="520" text="你可以右键选择退出消耗网络大的程序以保证游戏加速效果。" font="0" textcolor="#FF999999" />
+
+      <Option name="OptFlow" font="0" text="流量监控" float="true" pos="20,130,0,0" enabled="true" width="150" height="36" textcolor="#FF999999"  hottextcolor="#FFCCCCCC" selectedtextcolor="#FFCCCCCC" normalimage="file=&apos;GameBtnL150_36.png&apos; source=&apos;0,36,150,72&apos;" hotimage="file=&apos;GameBtnL150_36.png&apos; source=&apos;0,36,150,72&apos;" selectedimage="file=&apos;GameBtnL150_36.png&apos; source=&apos;0,36,150,72&apos;" selected="true"/>
+      <Option name="OptWarming" font="0" text="报警记录" float="true" pos="175,130,0,0" enabled="false" visible="false" width="150" height="36" textcolor="#FF999999"  hottextcolor="#FFCCCCCC" selectedtextcolor="#FFCCCCCC" normalimage="file=&apos;GameBtnR150_36.png&apos; source=&apos;0,0,150,36&apos;" hotimage="file=&apos;GameBtnR150_36.png&apos; source=&apos;0,36,150,72&apos;" selectedimage="file=&apos;GameBtnR150_36.png&apos; source=&apos;0,36,150,72&apos;"/>
+    </HorizontalLayout>
+
+    <VerticalLayout  float="true" pos="20,215,0,0" height="350" width="620">
+
+      <!--ListHead-->
+      <HorizontalLayout height="35" width="600" bkcolor="#FF323538">
+        <Button name="SortByName" text="名  称" textpadding="10,8" width="165" font="1" textcolor="#FFCCCCCC" rightbordersize="2" bordersize="#FFCCCCCC"/>
+        <Button name="SortByDownload" text="下载速度" width="85" font="1" textcolor="#FFCCCCCC"  rightbordersize="2" bordersize="#FFCCCCCC"/>
+        <Button name="SortByUpload" text="上传速度" width="85" font="1" textcolor="#FFCCCCCC"  rightbordersize="2" bordersize="#FFCCCCCC"/>
+        <Button name="SortByCpu" text="CPU占用" width="85" font="1" textcolor="#FFCCCCCC"  rightbordersize="2" bordersize="#FFCCCCCC"/>
+        <Button name="SortByMemory" text="内存占用" width="85" font="1" textcolor="#FFCCCCCC"  rightbordersize="2" bordersize="#FFCCCCCC"/>
+        <Button name="SortByName" text="建议操作" textpadding="20,8" width="100" font="1" textcolor="#FFCCCCCC" />
+      </HorizontalLayout>
+      <!--ItemList-->
+      <List name="ItemList" height="310"  width="610" header="hidden" vscrollbar="true" sepheight="1" itemhotbkcolor="#FF323538" itemselectedbkcolor="#FF404040" menu="true" />
+    </VerticalLayout>
+  </VerticalLayout> 
+</Window>

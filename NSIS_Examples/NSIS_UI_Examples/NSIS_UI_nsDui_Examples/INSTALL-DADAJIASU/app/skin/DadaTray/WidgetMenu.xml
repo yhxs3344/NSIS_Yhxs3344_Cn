@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Window size="120,152"
+        caption="0,0,0,152"
+        maxinfo="120,152">
+  
+  <VerticalLayout height="152" width="120">
+    <Button
+      name="ToMain"
+      height="31"
+      normalimage="file='DadaTray\UI\ToMain.jpg' source='  0,0,120,31'"
+      hotimage   ="file='DadaTray\UI\ToMain.jpg' source='120,0,240,31'"
+      pushedimage="file='DadaTray\UI\ToMain.jpg' source='240,0,360,31'" />
+    <Button
+      name="ToStart"
+      height="30"
+      normalimage="file='DadaTray\UI\ToStart.jpg' source='  0,0,120,30'"
+      hotimage   ="file='DadaTray\UI\ToStart.jpg' source='120,0,240,30'"
+      pushedimage="file='DadaTray\UI\ToStart.jpg' source='240,0,360,30'" />
+    <Button
+      name="ToStop"
+      height="30"
+      normalimage="file='DadaTray\UI\ToStop.jpg' source='  0,0,120,30'"
+      hotimage   ="file='DadaTray\UI\ToStop.jpg' source='120,0,240,30'"
+      pushedimage="file='DadaTray\UI\ToStop.jpg' source='240,0,360,30'" />
+    <Button
+      name="ToHide"
+      height="30"
+      normalimage="file='DadaTray\UI\ToHide.jpg' source='  0,0,120,30'"
+      hotimage   ="file='DadaTray\UI\ToHide.jpg' source='120,0,240,30'"
+      pushedimage="file='DadaTray\UI\ToHide.jpg' source='240,0,360,30'" />
+    <Button
+      name="ToExit"
+      height="31"
+      normalimage="file='DadaTray\UI\ToExit.jpg' source='  0,0,120,31'"
+      hotimage   ="file='DadaTray\UI\ToExit.jpg' source='120,0,240,31'"
+      pushedimage="file='DadaTray\UI\ToExit.jpg' source='240,0,360,31'" />
+  </VerticalLayout>  
+</Window>

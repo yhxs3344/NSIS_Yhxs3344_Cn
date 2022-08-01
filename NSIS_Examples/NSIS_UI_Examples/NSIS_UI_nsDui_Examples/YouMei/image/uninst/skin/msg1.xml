@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="330,180" caption="0,0,0,180" roundcorner="1,1">
+	<VerticalLayout name="vrl_page3" bkimage="keepwind.bmp"> 
+		<Button name="btn_yes2"  float="true" pos="80,135,0,0" width="70" height="26" normalimage="yn_y01.png" hotimage="yn_y02.png" pushedimage="yn_y03.png" />
+		<Button name="btn_no2" float="true" pos="180,135,0,0" width="70" height="26" normalimage="yn_n01.png" hotimage="yn_n02.png" pushedimage="yn_n03.png" />
+        <Button name="btn_close"  float="true" pos="300,4,0,0"  width="32" height="32"  normalimage="tipclose01.png" hotimage="tipclose02.png"  pushedimage="tipclose03.png" />				
+	</VerticalLayout>					
+</Window>

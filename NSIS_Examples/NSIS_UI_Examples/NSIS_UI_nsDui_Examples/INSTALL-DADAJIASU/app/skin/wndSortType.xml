@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="180,60" topmost="true" bktrans="true">
+    <Font name="微软雅黑" size="13" bold="false" italic="false" />
+    <VerticalLayout enabled="true" width="180" height="60" bkimage="bkimg180_60.png">
+        <List name="SrotTypeList" enabled="true" float="true" pos="1,4,0,0" width="198" height="52" header="hidden" itemselectedtextcolor="#FF07D569" itemhottextcolor="#FF07D569" itemhotbkcolor="#FF25282C">
+            <ListContainerElement name="AllLine" enabled="true" width="200" height="26" >
+                <Button name="btnAllLine" textpadding="20,0,0,0" align="left" text="整段线路低延时优先" font="0" textcolor="#FF999999" hottextcolor="#FF07D569" width="198" height="26" />
+            </ListContainerElement>
+            <ListContainerElement name="FristLine" enabled="true" width="200" height="26" >
+              <Button name="btnFristLine" textpadding="20,0,0,0" align="left" text="国内节点低延时优先" font="0" textcolor="#FF999999" hottextcolor="#FF07D569" width="198" height="26"/>
+            </ListContainerElement>
+        </List>
+    </VerticalLayout>
+</Window>

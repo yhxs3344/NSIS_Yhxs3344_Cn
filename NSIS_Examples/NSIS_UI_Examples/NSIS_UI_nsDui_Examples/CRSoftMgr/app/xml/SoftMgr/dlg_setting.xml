@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg name="dlg_setting" title="AboutBox" width="500" height="390" appwin="0" resize="1"
+	translucent="255" frame="skin:SKIN_PIC_SETTING" bkimg="skin:SKIN_PIC_SETTING" crbk="000000" 
+	img-shadow="skins\upgrade\shadow.png" shadow-wlt="5" shadow-hlt="3" shadow-wrb="5" shadow-hrb="7">
+	
+	<base>
+		<imgbtn name="button.close" img-count="3" pos="-32,0,-0,32" skin="IDB_BT_CLOSE_RJGJ1" show="1"/>
+	</base>
+
+	<body>
+		<text pos="30,65,150,85" font="big" crtext="130C01" title="下载设置" tip="" />
+		<img name="image.sp" pos="30,90" width="430" height="2" image="skins\default\rjgj_ico_84.png"
+				mode="tile" framesize="1" tip="" />
+		<text pos="30,120,130,140" font="bold" crtext="808080" title="软件下载目录（ " tip="" />
+		<textbtn name="opendir" font="bold" crtext="009AD6" align="left" pos="113,120,200,140" show="1" title="打开目录 " />
+		<text pos="160,120,260,140" font="bold" crtext="808080" title="）可用磁盘空间:" tip="" />
+		<edit name="edit.path" skin="IDB_EDIT" pos="30,150,280,180" title="" tip=""
+			multiline="0" wantreturn="1" autohscroll="1" autovscroll="0" number="0" readonly="1" maxchar="260"
+			font="default" crtip="128,128,128,128"/>
+		<button name="button.choose" img-count="3" skin="IDB_BT_CHOOSEDIR"  title="" pos="290,150,370,180" show="1" />
+		<textbtn name="default_dir" font="bold" crtext="009AD6" align="left" pos="380,156,480,175" show="1" title="恢复默认目录" />
+
+
+		<button name="button.sure" img-count="3" skin="IDB_BT_SURE"  title="" pos="-360,-40,-270,-8" show="1" />
+		<button name="button.cancel" img-count="3" skin="IDB_BT_CANCEL_RJGJ"  title="" pos="-230,-40,-140,-8" show="1" />
+	</body>
+  
+</dlg>

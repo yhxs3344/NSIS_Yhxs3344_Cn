@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_fankui" title="铠甲安全卫士反馈建议" width="600" height="410" appwin="0" resize="0" shadow-size="2"
+	frame="KJMainUI\skins\kaijiaweishi\fankuitishibeijing.png" bkimg="" crbk="" >
+
+  <base>
+    <imgbtn name="button.close" img-count="3" pos="-23,4,-0,29" skin="SKIN_PIC_TISHIKUANGGUANBI"  show="1" shortcut="ESC"/>
+    <img pos="2,0" width="35" height="35" img-count="1" image="KJMainUI\skins\kaijiaweishi\icon_logo.png" mode="frame" framesize="0" response="0"/>
+    <text name="title" crtext="FFFFFF" crmark="800000" font="big"
+				pos="32,7,200,25" title="铠甲安全卫士反馈建议" mask="" response="0" show="1" />
+  </base>
+
+  <body>
+
+    <img name="" pos="132,125" width="340" height="90" image="KJMainUI\skins\kaijiaweishi\tijiaochenggong.png" mode="normal" framesize="0" response="0" show="1"  />
+
+    <button name="jixufankui" img-count="4" image="KJMainUI\skins\kaijiaweishi\jixufankui.png" title=""	pos="135,310" width="145" height="42" show="1" showfocus="0"/>
+    <button name="guanbi" img-count="4" image="KJMainUI\skins\kaijiaweishi\fankuiguanbi.png" title=""	pos="325,310" width="145" height="42" show="1" showfocus="0"/>
+  </body>
+
+</dlg>
+
+

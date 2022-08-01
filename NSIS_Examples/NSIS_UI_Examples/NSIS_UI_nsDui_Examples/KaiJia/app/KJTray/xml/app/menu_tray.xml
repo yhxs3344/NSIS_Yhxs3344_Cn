@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu title="TrayMenu" width="281" item-height="0" left="30" top-height="470" bottom-height="0" bkimg="skins\image\window_shadow.png" bkmode="mid" width-lt="5" height-lt="3" width-rb="5" height-rb="7">
+
+  <img pos="5,3,-5,-7" skin="IDB_MENU_BKGND" mode="tile" framesize="0" response="0" />
+  <img pos="5,3" width="271" height="35" image="skins\menu\menu_title.png" mode="normal" framesize="0" />
+
+  <div pos="5,38,-5,370" scroll="0">
+    <button name="button.menu1" pos="0,0" width="135" height="110" skin="IDB_BT_MENU1" showfocus="0" taskmsg="1" />
+    <button name="button.menu2" pos="136,0" width="135" height="110" skin="IDB_BT_MENU2" showfocus="0" taskmsg="1" />
+    <button name="button.menu3" pos="0,111" width="135" height="110" skin="IDB_BT_MENU3" showfocus="0" taskmsg="1" />
+    <button name="button.menu4" pos="136,111" width="135" height="110" skin="IDB_BT_MENU4" showfocus="0" taskmsg="1" />
+    <button name="button.menu5" pos="0,222" width="135" height="110" skin="IDB_BT_MENU5" showfocus="0" taskmsg="1" />
+    <button name="button.menu6" pos="136,222" width="135" height="110" skin="IDB_BT_MENU6" showfocus="0" taskmsg="1" />
+  </div>
+
+  <img pos="5,371,-5,-47" skin="IDB_WHITE_BKGND" mode="tile" framesize="0" response="0" />
+  <img pos="31,383" width="100" height="30" skin="IDB_ICON_CIRCLE" />
+  <div pos="195,389,240,410" scroll="0">
+    <chkbtn name="checkbox.show_accelerator" pos="0,0" width="39" height="17" skin="IDB_CHECKBOX" check="true" cursor="hand" taskmsg="1" />
+  </div>
+
+  <img pos="5,423,-5,463" skin="IDB_BOTTOM_BKGND" mode="mid" width-lt="1" height-lt="1" width-rb="0" height-rb="0" response="0" />
+  <div pos="5,423,-5,463" scroll="0">
+    <button name="button.setting" pos="0,0" width="135" height="40" skin="IDB_BT_SETTING" showfocus="0" taskmsg="1" />
+    <button name="button.exit" pos="136,0" width="135" height="40" skin="IDB_BT_EXIT" showfocus="0" taskmsg="1" />
+  </div>
+
+</menu>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DefaultConfig>
+  <Font name="微软雅黑" size="14" bold="false" italic="false" />
+  <Font name="微软雅黑" size="16" bold="false" italic="false" />
+  <Font name="微软雅黑" size="18" bold="false" italic="false" />
+  <Font name="微软雅黑" size="22" bold="false" italic="false" />
+  <Font name="微软雅黑" size="24" bold="false" italic="false" />
+  <Font name="微软雅黑" size="14" bold="true" italic="false" />
+  <Font name="微软雅黑" size="30" bold="false" italic="false" />
+  <Font name="微软雅黑" size="20" bold="false" italic="false" />
+  <Font name="微软雅黑" size="12" bold="false" italic="false" />
+  <Font name="微软雅黑" size="11" bold="false" italic="false" />
+  <Font name="微软雅黑" size="13" default="true"/>
+  <Font name="微软雅黑" size="13" bold="true" />
+  <Default name="Label" value="textcolor=&quot;#FFFFFFFF&quot; autocalcwidth=&quot;true&quot;" />
+  <Default name="Button" value="textcolor=&quot;#FFFFFFFF&quot; autocalcwidth=&quot;true&quot;" />
+  <Default name="VScrollBar" value="showbutton1=&quot;false&quot; showbutton2=&quot;false&quot; width=&quot;6&quot; thumbnormalimage=&quot;file='scroll.png' dest='0,0,6,20' source='6,0,12,20'&quot; thumbhotimage=&quot;file='scroll.png' dest='0,0,6,20' source='12,0,18,20'&quot; thumbpushedimage=&quot;file='scroll.png'  dest='0,0,6,20' source='18,0,24,20' &quot; thumbdisabledimage=&quot;file='scroll.png  dest='0,0,6,20' source='0,0,6,20' &quot;  bkcolor=&quot;#FF000000&quot;" />    
+</DefaultConfig>
+

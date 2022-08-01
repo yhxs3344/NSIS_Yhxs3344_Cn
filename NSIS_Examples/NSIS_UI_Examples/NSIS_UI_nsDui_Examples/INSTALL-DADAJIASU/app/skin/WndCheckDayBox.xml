@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="350,240" caption="0,0,0,35" showshadow="true" shadowsize="4" shadowcorner="23,13,23,33" shadowposition="0,1" shadowdarkness="70">
+  <Include source="Default.xml"/>
+  <VerticalLayout enabled="true" width="350" height="240" bkimage="msgboxBk.png">
+    <Label name="LabTitle" text="温馨提示" font="1" float="true" pos="8,5,0,0" enabled="true" width="190" height="25" textcolor="#00FFFFFF" />
+    <Button name="ButClose" float="true" pos="322,0,0,0" enabled="true" width="31" height="32" normalimage="file=&apos;close1.png&apos; source=&apos;0,0,31,32&apos;" hotimage="file=&apos;close1.png&apos; source=&apos;31,0,62,32&apos;" pushedimage="file=&apos;close1.png&apos; source=&apos;62,0,93,32&apos;" />
+    <Label name="LabIcon" float="true" pos="20,85,0,0" enabled="true" width="32" height="32" bkimage="ErrorLog.png"/>
+    <Button name="Textline1" text="...." showhtml="true" align="left" font="0" float="true" pos="60,80,0,0" enabled="false" width="388" height="20" disabledtextcolor="#FF999999"/>
+    <Button name="Textline2" text="...." showhtml="true" align="left" font="0" float="true" pos="60,105,0,0" enabled="false" width="388" height="20" disabledtextcolor="#FF999999"/>
+    <Button name="ButLeft" float="true" textcolor="#FFFFFFFF" text="立即续费" font="0" pos="55,173,0,0" width="110" height="36" enabled="true" normalimage="file=&apos;select110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;select110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;select110_36.png&apos; source=&apos;220,0,330,36&apos;"/>
+    <Button name="ButRight" float="true" textcolor="#FF999999" text="以后再说" font="0" pos="185,173,0,0" width="110" height="36" enabled="true" normalimage="file=&apos;Cancel110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Cancel110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;Cancel110_36.png&apos; source=&apos;220,0,330,36&apos;"/>
+    <Button name="ButCenter" float="true" font="1" textcolor="#FFFFFFFF" text="确 定" pos="120,173,0,0" width="110" height="36" enabled="true" normalimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Ok110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;Ok110_36.png&apos; source=&apos;220,0,330,36&apos;"/>
+    </VerticalLayout>
+</Window>

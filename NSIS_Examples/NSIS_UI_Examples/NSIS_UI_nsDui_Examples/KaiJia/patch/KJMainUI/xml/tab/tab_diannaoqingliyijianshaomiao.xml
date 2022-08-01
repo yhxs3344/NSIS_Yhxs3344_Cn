@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+
+<div pos="120,0,-0,-0" >
+
+  <img pos="0,0" width="760" height="122" img-count="1" image="KJMainUI\skins\kaijiaweishi\jindutiaobeijing.png"
+       mode="frame" framesize="1" show="1" />
+  <progressKaijia name="DiannaoqingliPgr" img-back-clr="FFFFFF" img-fore-clr="EDFBED" draw-by-color="1"
+                  pos="0,0" width="760" height="120" value="0" run="false" process-msg="0" response="0"/>
+  <img pos="38,12" width="96" height="96" img-count="1" image="KJMainUI\skins\kaijiaweishi\diannaoqinglitubiao.png"
+       mode="frame" framesize="1" show="1" />
+
+  <text name="DiannaoqingliYijiansaomiaoCheckTip" crtext="000000" pos="150,25" width="450" height="40" 
+        title="正在扫描"  font="big25"/>
+  <text name="DiannaoqingliYijiansaomiaoCheckResult" crtext="CCCCCC" pos="150,70" width="400" height="30" 
+        title="经常清理，有效提交系统效率" />
+
+  <textbtn name="txtDiannaoqingliChongxinshaomiao" crtext="2EA2E5" align="center" pos="-240,65" width="100" 
+           height="22" show="1" title="重新扫描" show="1" />
+  <imgbtn name="DiannaoqingliQuxiaoshaomiao" pos="-150,50" width="105" height="37" img-count="3" 
+          image="KJMainUI\skins\kaijiaweishi\quxiaoshaomiao.png" tip="" show="0" showfocus="0"/>
+  <imgbtn name="DiannaoqingliYijianqingli" pos="-150,50" width="135" height="42" img-count="3"
+          image="KJMainUI\skins\kaijiaweishi\yijianqingli.png" tip="" show="0" showfocus="0"/>
+  <imgbtn name="DiannaoqingliChongxinshaomiao" pos="-130,50" width="105" height="37" img-count="3"
+          image="KJMainUI\skins\kaijiaweishi\chongxinshaomiao.png" tip="" show="0" showfocus="0"/>
+
+  <imgbtn name="DiannaoqingliGuanbi" pos="-25,0,-0,22" img-count="3" skin="SKIN_PIC_GUANBI"
+          tip="关闭" showfocus="0"/>
+  <imgbtn name="DiannaoqingliZuixiaohua" pos="-51,0,-26,22" img-count="3" skin="SKIN_PIC_ZUIXIAOHUA" 
+          tip="最小化"  showfocus="0"/>
+  <imgbtn name="DiannaoqingliXialakuang" pos="-77,0,-52,22" img-count="3" skin="SKIN_PIC_XIALAKUANG"
+          tip="菜单" action="menu:menu_main" menupos="-105,-0" showfocus="0" />
+  <imgbtn name="DiannaoqingliFankui" pos="-103,0,-78,22" img-count="3" skin="SKIN_PIC_XIAOXI"
+          tip="反馈建议" showfocus="0"/>
+
+  <treectrlkaijia name="DiannaoqingliYijiansaomiaoTreectrl" pos="25,130" width="730" height="375" show="1"
+  img-scroll="skin:IDB_SCROLL_V" img-sep="KJMainUI\skins\default\rp_line1.png"
+    img-check="skin:IDB_CHECK_BOX" img-check-small="KJMainUI\skins\kaijiaweishi\CHECK_BOX_SMALL.png" img-colsep=""
+  img-collapse="KJMainUI\skins\kaijiaweishi\tree_collapse.png" scroll-width="5"
+  img-toggle="KJMainUI\skins\kaijiaweishi\tree_toggle.png"
+  img-count="12" image="skin:IDB_LIST_IMG"
+  left-pos="0" row-height="50" bk-transparent="10"
+  font-title="big" font="default"
+  valign="middle" down-row="0"
+  crtext="255,64,64,64" crhover="0,0,0" crpush="0,112,235"
+    level1-row-height="30" level2-row-height="20" tab-num="9"
+    crtitle="32,32,32" crsep="200,160,160,160" crrowhover="128,245,245,245" >
+    <column title="列1" width="680" />
+    <column title="列2" width="100" />
+    <!--<node id="1"  check="1" image-left-show="1" title="" leftimage-pos-x="25" checkbox-pos-x="7"  collapse-pos-x="680" hovercolor-pos-x="0" hovercolor-width="720">
+      <item title="常用软件垃圾" font-title="1"  content="" >
+        <text pos="100,15" width="150" height="18" crtext="CCCCCC" title="共16项 900M,已选中" 
+              tip="" response="0" sub-show="1"/>
+        <text pos="220,15" width="60" height="18" crtext="FF0000" title="500M" tip="" response="0" 
+              sub-show="1"/>
+      </item>
+      <node id="1-0"   image-left-show="1" collapse="1" check="1" title="" show="0" checkbox-pos-x="30" hovercolor-pos-x="25" hovercolor-width="695">
+        <item title="QQ：共4项," image="KJMainUI\skins\kaijiaweishi\temp1.png" show="0">
+          <text name="title1" pos="120,5" width="60" height="18" crtext="FF0000" title="415M" tip="" response="0"
+                sub-show="1"/>
+          <text pos="120,5" width="60" height="18" crtext="FF0000" title="" tip="" response="0" 
+                sub-show="0"/>
+          <imgkaijia name="yishanchutubiao" pos="550,5" width="19" height="19" 
+                     image="KJMainUI\skins\kaijiaweishi\yishanchutubiao.png" mode="normal" sub-show="0"/>
+          <text pos="570,5" width="60" height="18" crtext="00CC00" title="清理完成" tip=""
+                response="0" sub-show="0"/>
+          <textbtn name="qingli" crtext="2EA2E5" align="left" pos="570,5" width="60" height="18"
+                   show="0" title="清理" sub-show="1" />
+        </item>
+        <node id="1-0-0"   image-left-show="1" collapse="1" check="1" title="" show="0" checkbox-pos-x="45" hovercolor-pos-x="45" hovercolor-width="675">
+        <item title="通过QQ好友接收的文件" show="0">
+          <text pos="240,5" width="60" height="18" crtext="FF0000" title="5个文件" tip=""
+                response="0" sub-show="1"/>
+          <text pos="320,5" width="60" height="18" crtext="FF0000" title="590M" tip=""
+                response="0" sub-show="1"/>
+          <imgkaijia name="yishanchutubiao" pos="550,0" width="19" height="19"
+                     image="KJMainUI\skins\kaijiaweishi\yishanchutubiao.png" mode="normal" sub-show="1"/>
+          <text pos="570,0" width="60" height="18" crtext="00CC00" title="清理完成" tip="" 
+                response="0" sub-show="1"/>
+          <textbtn name="qingli" crtext="2EA2E5" align="left" pos="570,0" width="60" 
+                   height="18" show="0" title="清理" sub-show="0" />
+          </item>
+        </node>
+        <node id="1-0-0"   image-left-show="1" collapse="1" check="1" title="" show="0" checkbox-pos-x="45" hovercolor-pos-x="45" hovercolor-width="675">
+          <item title="QQ接收到的图片" show="0">
+            <text pos="240,5" width="60" height="18" crtext="FF0000" title="3个文件" tip=""
+                  response="0" sub-show="1"/>
+            <text pos="320,5" width="60" height="18" crtext="FF0000" title="90M" tip="" 
+                  response="0" sub-show="1"/>
+            <imgkaijia name="yishanchutubiao" pos="550,0" width="19" height="19" 
+                       image="KJMainUI\skins\kaijiaweishi\yishanchutubiao.png" mode="normal"
+                       sub-show="1"/>
+            <text pos="570,0" width="60" height="18" crtext="00CC00" title="清理完成" 
+                  tip="" response="0" sub-show="1"/>
+            <textbtn name="qingli" crtext="2EA2E5" align="left" pos="570,0" width="60"
+                     height="18" show="0" title="清理" sub-show="0" />
+          </item>
+        </node>
+        <node id="1-0-0"   image-left-show="1" collapse="1" check="1" title="" show="0" checkbox-pos-x="45" hovercolor-pos-x="45" hovercolor-width="675">
+          <item title="QQ缓存" show="0">
+            <text pos="240,5" width="60" height="18" crtext="FF0000" title="15个文件"
+                  tip="" response="0" sub-show="1"/>
+            <text pos="320,5" width="60" height="18" crtext="FF0000" title="1590M" 
+                  tip="" response="0" sub-show="1"/>
+            <imgkaijia name="yishanchutubiao" pos="550,0" width="19" height="19" 
+                       image="KJMainUI\skins\kaijiaweishi\yishanchutubiao.png" 
+                       mode="normal" sub-show="1"/>
+            <text pos="570,0" width="60" height="18" crtext="00CC00" title="清理完成"
+                  tip="" response="0" sub-show="1"/>
+            <textbtn name="qingli" crtext="2EA2E5" align="left" pos="570,0" width="60"
+                     height="18" show="0" title="清理" sub-show="0" />
+          </item>
+        </node>
+      </node>
+      <node id="1-1"   image-left-show="1" collapse="1" check="1" image="KJMainUI\skins\kaijiaweishi\temp1.png" checkbox-pos-x="30" hovercolor-pos-x="25" hovercolor-width="695">
+        <item title="QQ：共4项," image="KJMainUI\skins\kaijiaweishi\temp1.png" show="0">
+          <text pos="120,5" width="60" height="18" crtext="FF0000" title="415M" tip="" response="0" sub-show="1"/>
+          <text pos="120,5" width="60" height="18" crtext="FF0000" title="" tip="" response="0" sub-show="0"/>
+          <imgkaijia name="yishanchutubiao" pos="550,5" width="19" height="19"
+                     image="KJMainUI\skins\kaijiaweishi\yishanchutubiao.png" mode="normal" sub-show="0"/>
+          <text pos="570,5" width="60" height="18" crtext="00CC00" title="清理完成" tip="" response="0" sub-show="0"/>
+          <textbtn name="qingli" crtext="2EA2E5" align="left" pos="570,5" width="60"
+                   height="18" show="0" title="清理" sub-show="1" />
+        </item>
+      </node>
+      <item collapse="1" />
+    </node>
+    <node id="2" check="1" image-left-show="1" title="节点2222222" leftimage-pos-x="25" checkbox-pos-x="7"  collapse-pos-x="680" hovercolor-pos-x="0" hovercolor-width="720">
+      <item title="系统加速" font-title="1">
+      </item>
+      <node id="2-0"   image-left-show="1" collapse="1" check="1" title="" show="0"  checkbox-pos-x="30" hovercolor-pos-x="25" hovercolor-width="695">
+        <item title="QQ：共4项," image="KJMainUI\skins\kaijiaweishi\temp1.png" show="0">
+          <text pos="120,5" width="60" height="18" crtext="FF0000" title="415M" tip=""
+                response="0" sub-show="1"/>
+          <text pos="120,5" width="60" height="18" crtext="FF0000" title="" tip=""
+                response="0" sub-show="1"/>
+          <imgkaijia name="yishanchutubiao" pos="550,5" width="19" height="19" 
+                     image="KJMainUI\skins\kaijiaweishi\yishanchutubiao.png" mode="normal" sub-show="0"/>
+          <text pos="570,5" width="60" height="18" crtext="00CC00" title="清理完成" 
+                tip="" response="0" sub-show="0"/>
+          <textbtn name="qingli" crtext="2EA2E5" align="left" pos="570,5" width="60"
+                   height="18" show="0" title="清理" sub-show="1" />
+        </item>
+        <node id="2-0-0"   image-left-show="1" collapse="1" check="1" title="" show="0"  checkbox-pos-x="45" hovercolor-pos-x="45" hovercolor-width="675">
+          <item title="通过QQ好友接收的文件" show="0">
+            <text pos="240,5" width="60" height="18" crtext="FF0000" title="5个文件"
+                  tip="" response="0" sub-show="1"/>
+            <text pos="320,5" width="60" height="18" crtext="FF0000" title="590M" 
+                  tip="" response="0" sub-show="1"/>
+            <imgkaijia name="yishanchutubiao" pos="550,0" width="19" height="19" 
+                       image="KJMainUI\skins\kaijiaweishi\yishanchutubiao.png" mode="normal" sub-show="1"/>
+            <text pos="570,0" width="60" height="18" crtext="00CC00" title="清理完成"
+                  tip="" response="0" sub-show="1"/>
+            <textbtn name="qingli" crtext="2EA2E5" align="left" pos="570,0" width="60"
+                     height="18" show="0" title="清理" sub-show="0" />
+          </item>
+        </node>
+        <node id="2-0-0"   image-left-show="1" collapse="1" check="1" title="" show="0" checkbox-pos-x="45" hovercolor-pos-x="45" hovercolor-width="675">
+          <item title="QQ接收到的图片" show="0">
+            <text pos="240,5" width="60" height="18" crtext="FF0000" title="3个文件"
+                  tip="" response="0" sub-show="1"/>
+            <text pos="320,5" width="60" height="18" crtext="FF0000" title="90M" tip=""
+                  response="0" sub-show="1"/>
+            <imgkaijia name="yishanchutubiao" pos="550,0" width="19" height="19" 
+                       image="KJMainUI\skins\kaijiaweishi\yishanchutubiao.png" mode="normal" 
+                       sub-show="1"/>
+            <text pos="570,0" width="60" height="18" crtext="00CC00" title="清理完成"
+                  tip="" response="0" sub-show="1"/>
+            <textbtn name="qingli" crtext="2EA2E5" align="left" pos="570,0" width="60"
+                     height="18" show="0" title="清理" sub-show="0" />
+          </item>
+        </node>
+        <node id="2-0-0"   image-left-show="1" collapse="1" check="1" title="" show="0" checkbox-pos-x="45" hovercolor-pos-x="45" hovercolor-width="675">
+          <item title="QQ缓存" show="0">
+            <text pos="240,5" width="60" height="18" crtext="FF0000" title="15个文件" 
+                  tip="" response="0" sub-show="1"/>
+            <text pos="320,5" width="60" height="18" crtext="FF0000" title="1590M" 
+                  tip="" response="0" sub-show="1"/>
+            <imgkaijia name="yishanchutubiao" pos="550,0" width="19" height="19" 
+                       image="KJMainUI\skins\kaijiaweishi\yishanchutubiao.png" mode="normal" 
+                       sub-show="1"/>
+            <text pos="570,0" width="60" height="18" crtext="00CC00" title="清理完成" 
+                  tip="" response="0" sub-show="1"/>
+            <textbtn name="qingli" crtext="2EA2E5" align="left" pos="570,0" width="60" 
+                     height="18" show="0" title="清理" sub-show="0" />
+          </item>
+        </node>
+      </node>
+      <item collapse="1" />
+    </node>
+    <node id="3" check="1" leftimage-pos-x="25" checkbox-pos-x="7"  collapse-pos-x="680" hovercolor-pos-x="0" hovercolor-width="720">
+      <item title="系统垃圾" font-title="1">
+      </item>
+      <item collapse="1" />
+    </node>
+    <node id="3" check="1" leftimage-pos-x="25" checkbox-pos-x="7" collapse-pos-x="680" hovercolor-pos-x="0" hovercolor-width="720">
+      <item title="娱乐软件垃圾" font-title="1">
+      </item>
+      <item collapse="1" />
+    </node>
+    <node id="4" check="1" leftimage-pos-x="25" checkbox-pos-x="7" collapse-pos-x="680" hovercolor-pos-x="0" hovercolor-width="720">
+      <item title="Cookies信息" font-title="1">
+      </item>
+      <item collapse="1" />
+    </node>
+    <node id="5" check="1" leftimage-pos-x="25" checkbox-pos-x="7" collapse-pos-x="680" hovercolor-pos-x="0" hovercolor-width="720">
+      <item title="清理软件" font-title="1">
+      </item>
+      <item collapse="1" />
+    </node>
+    <node id="7" check="1" leftimage-pos-x="25" checkbox-pos-x="7" collapse-pos-x="680" hovercolor-pos-x="0" hovercolor-width="720">
+      <item title="电脑中的插件" font-title="1">
+      </item>
+      <item collapse="1" />
+    </node>
+    <node id="8" check="1" leftimage-pos-x="25" checkbox-pos-x="7" collapse-pos-x="680" hovercolor-pos-x="0" hovercolor-width="720">
+      <item title="未扫描和无软件的清理项目" font-title="1">
+      </item>
+      <item collapse="1" />
+    </node>-->
+  </treectrlkaijia>
+
+
+  <!--QQ群-->
+  <buttonkaijia name="QQ" pos="30,540" width="165" height="39" img-count="3" image="KJMainUI\skins\kaijiaweishi\QQqun.png" mode="frame" framesize="0" showfocus="0" />
+  <text name="QQnumber_diannaoqingli1" crtext="808080" pos="110,550" width="90"  height="16" show="1" title="1234567890" align="left" font="big14" response="0"/>
+
+  <!--右下角的按钮-->
+  <imgbtn name="btnruanjianguanjia" pos="410,520" width="70" height="70" img-count="3" image="KJMainUI\skins\kaijiaweishi\ruanjianguanjia.png" showfocus="0"/>
+  <imgbtn name="btnbingduchasha" pos="480,520" width="70" height="70" img-count="3" image="KJMainUI\skins\kaijiaweishi\bingduchasha.png" showfocus="0"/>
+  <imgbtn name="btnzhuyefanghu" pos="550,520" width="70" height="70" img-count="3" image="KJMainUI\skins\kaijiaweishi\zhuyefanghu.png" showfocus="0"/>
+  <imgbtn name="btnkaijijiashu" pos="620,520" width="70" height="70" img-count="3" image="KJMainUI\skins\kaijiaweishi\kaijijiashu.png" showfocus="0"/>
+  <imgbtn name="btngengduo" pos="690,520" width="55" height="70" img-count="3" image="KJMainUI\skins\kaijiaweishi\gengduo.png" showfocus="0"/>
+</div>

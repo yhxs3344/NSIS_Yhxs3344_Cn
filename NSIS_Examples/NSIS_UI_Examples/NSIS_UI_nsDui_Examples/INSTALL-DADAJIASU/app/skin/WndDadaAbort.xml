@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="350,360" caption="0,0,0,300" showshadow="true" shadowsize="4" shadowcorner="23,13,23,33" shadowposition="0,1" shadowdarkness="70">
+  <Include source="Default.xml"/>
+  <VerticalLayout enabled="true" width="350" height="360" bkimage="dadaabortBk.png">
+    <Label name="LabTitle" text="关于哒哒" font="1" float="true" pos="8,5,0,0" enabled="true" width="190" height="25" textcolor="#00FFFFFF" />
+    <Button name="ButClose" float="true" pos="322,0,0,0" enabled="true" width="31" height="32" normalimage="file=&apos;close1.png&apos; source=&apos;0,0,31,32&apos;" hotimage="file=&apos;close1.png&apos; source=&apos;31,0,62,32&apos;" pushedimage="file=&apos;close1.png&apos; source=&apos;62,0,93,32&apos;" />
+    <Button name="btnLogo" float="true" pos="95,70,0,0" enabled="true" width="155" height="90"/>
+    <Button name="btnHost" text="www.dadajiasu.com" float="true" pos="115,210,0,0" enabled="true" width="130" height="20" textcolor="#FFFF7F00"/>
+    <Button name="btnLogo"  font="2" text="哒哒游戏加速器" float="true" pos="55,180,0,0" enabled="true" width="135" height="25" textcolor="#FF07D569"/>
+    <Label name="labVer" font="2" text="3.25.15.5542" float="true" align="left" pos="185,180,0,0" enabled="true" width="160" height="25" textcolor="#FFCCCCCC"/>
+    <Label name="labWeixinLog" float="true" pos="52,215,0,0" visible="false" width="92" height="97" bkimage="weixin_QRCODE.png"/>
+    <BtnMouse name="btnWeixin" mouse="true" float="true" pos="100,317,0,0" enabled="true" width="27" height="27" normalimage="file=&apos;weixin.png&apos; source=&apos;0,0,27,27&apos;" hotimage="file=&apos;weixin.png&apos; source=&apos;27,0,54,27&apos;" pushedimage="file=&apos;weixin.png&apos; source=&apos;54,0,81,27&apos;" />
+    <Button name="btnXinlan" float="true" pos="140,317,0,0" enabled="true" width="27" height="27" normalimage="file=&apos;xinlang27Min.png&apos; dest=&apos;0,0,27,27&apos; source=&apos;0,0,27,27&apos;" hotimage="file=&apos;xinlang27Min.png&apos; dest=&apos;0,0,27,27&apos; source=&apos;27,0,54,27&apos;" pushedimage="file=&apos;xinlang27Min.png&apos; dest=&apos;0,0,27,27&apos; source=&apos;54,0,81,27&apos;" />
+    <Button name="btnQQ" float="true" pos="180,317,0,0" enabled="true" width="27" height="27" normalimage="file=&apos;QQ27Min.png&apos; dest=&apos;0,0,27,27&apos; source=&apos;0,0,27,27&apos;" hotimage="file=&apos;QQ27Min.png&apos; dest=&apos;0,0,27,27&apos; source=&apos;27,0,54,27&apos;" pushedimage="file=&apos;QQ27Min.png&apos; dest=&apos;0,0,27,27&apos; source=&apos;54,0,81,27&apos;" />
+    <Button name="btnBaidutian" float="true" pos="220,317,0,0" enabled="true" width="27" height="27" normalimage="file=&apos;tieba.png&apos; source=&apos;0,0,27,27&apos;" hotimage="file=&apos;tieba.png&apos; source=&apos;27,0,54,27&apos;" pushedimage="file=&apos;tieba.png&apos; source=&apos;54,0,81,27&apos;" />
+  </VerticalLayout>
+</Window>

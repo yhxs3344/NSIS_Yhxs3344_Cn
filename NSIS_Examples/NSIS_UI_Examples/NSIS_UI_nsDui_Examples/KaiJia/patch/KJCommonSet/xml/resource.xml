@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+<!--系统配置-->
+<res type="cfg" name="defaultStyle" value="" />
+<res type="cfg" name="logfile" value="KaijiaWeishiShezhi.log" />
+<res type="cfg" name="loglevel" value="1" />
+<res type="cfg" name="appMutex" value="MUTEX_DUIVISION_KaijiaWeishiShezhi" />
+<res type="cfg" name="enableDragFile" value="1" />
+<res type="cfg" name="trayDbClickMsg" value="0" />
+
+<!--风格设置-->
+<res type="style" name="default" value="" />
+<res type="style" name="qq" value="qq" />
+
+<!--XML资源-->
+<res type="res" lang="zh-cn" file="xml\def_string_zh-cn.xml" />
+<res type="res" lang="en-us" file="xml\def_string_en-us.xml" />
+
+<!--XML资源-默认风格-->
+<res type="xml" name="dlg_main" file="xml\dlg_main.xml" />
+
+
+<!--字体资源-->
+<res type="font" lang="zh-cn" name="default" font="微软雅黑" size="12" bold="false" />
+<res type="font" lang="zh-cn" name="default" font="Tahoma" size="11" bold="false" os="winxp" />
+<res type="font" lang="zh-cn" name="bold" font="微软雅黑" size="12" bold="true" />
+<res type="font" lang="zh-cn" name="bold" font="Tahoma" size="11" bold="true" os="winxp" />
+<res type="font" lang="zh-cn" name="big" font="微软雅黑" size="14" bold="true" italic="false" underline="false" strikeout="false" />
+<res type="font" lang="zh-cn" name="big" font="Tahoma" size="12" bold="true" italic="false" underline="false" strikeout="false" os="winxp" />
+<res type="font" lang="zh-cn" name="bigbig" font="微软雅黑" size="18" />
+<res type="font" lang="zh-cn" name="bigbig" font="Tahoma" size="17" os="winxp" />
+  
+<!--图片资源-默认风格-->
+<res type="img" name="IDB_CHECK_BOX" file="skins\kaijiaweishishezhi\CHECK_BOX.png" />
+<res type="img" name="IDB_RADIO_BUTTON" file="skins\kaijiaweishishezhi\RADIO_BUTTON.png" />
+<res type="img" name="IDB_SCROLL_V" file="skins\kaijiaweishishezhi\SCROLL_V.png" />
+
+<!--图片资源-360风格-->
+
+<!--字符串资源-->
+<res type="str" lang="zh-cn" name="APP_NAME" value="" />
+<res type="str" lang="zh-cn" name="APP_VER" value="1.0.0.1" />
+<res type="str" lang="zh-cn" name="APP_COPYRIGHT" value="" />
+<res type="str" lang="zh-cn" name="OK" value="确定" />
+<res type="str" lang="zh-cn" name="CANCEL" value="放弃" />
+<res type="str" lang="zh-cn" name="YES" value="是" />
+<res type="str" lang="zh-cn" name="NO" value="否" />
+<res type="str" lang="zh-cn" name="LOGIN" value="登录" />
+
+</root>

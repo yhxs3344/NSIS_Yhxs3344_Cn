@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="140,210" topmost="true" showshadow="true" shadowsize="4" shadowcorner="23,13,23,33" shadowposition="0,-3" shadowdarkness="70">
+    <Font name="微软雅黑" size="12" bold="true" italic="false" />
+    <VerticalLayout enabled="true" width="140" height="210">
+        <List name="MenuList" enabled="true" width="140" height="210" bkcolor="#FFFFFBF0" header="hidden">
+            <ListContainerElement name="ResetLSP" enabled="true" width="140" height="30">
+                <Button name="btnRestLSP" tooltip="网络异常时可尝试修复" width="140" height="30" normalimage="file=&apos;ResetLSP.png&apos; source=&apos;0,0,140,30&apos;" hotimage="file=&apos;ResetLSP.png&apos; source=&apos;140,0,280,30&apos;"/>
+            </ListContainerElement>
+            <ListContainerElement name="CopyLog" enabled="true" width="140" height="30">
+              <Button name="btnCopyLog" tooltip="复制加速日志" width="140" height="30" normalimage="file=&apos;CopyAccLog.png&apos; source=&apos;0,0,140,30&apos;" hotimage="file=&apos;CopyAccLog.png&apos; source=&apos;140,0,280,30&apos;"/>
+            </ListContainerElement>
+            <ListContainerElement name="SystemSet" enabled="true" width="140" height="30">
+              <Button name="btnSystemSet" tooltip="系统软件设置" width="140" height="30" normalimage="file=&apos;SystemSet.png&apos; source=&apos;0,0,140,30&apos;" hotimage="file=&apos;SystemSet.png&apos; source=&apos;140,0,280,30&apos;"/>
+            </ListContainerElement>
+            <ListContainerElement name="FlowMonitor" enabled="true" width="140" height="30">
+              <Button name="btnFlowMonitor" tooltip="监控网络使用情况" width="140" height="30" normalimage="file=&apos;FlowMonitor.png&apos; source=&apos;0,0,140,30&apos;" hotimage="file=&apos;FlowMonitor.png&apos; source=&apos;140,0,280,30&apos;"/>
+            </ListContainerElement>
+            <ListContainerElement name="FeedBack" enabled="true" width="140" height="30">
+              <Button name="btnFeedBack" tooltip="反馈加速效果" width="140" height="30" normalimage="file=&apos;FeedBack.png&apos; source=&apos;0,0,140,30&apos;" hotimage="file=&apos;FeedBack.png&apos; source=&apos;140,0,280,30&apos;"/>
+            </ListContainerElement>
+            <ListContainerElement name="DadaAbort" enabled="true" width="140" height="30">
+              <Button name="btnDadaAbort" tooltip="当前哒哒版本信息" width="140" height="30" normalimage="file=&apos;DadaAbort.png&apos; source=&apos;0,0,140,30&apos;" hotimage="file=&apos;DadaAbort.png&apos; source=&apos;140,0,280,30&apos;"/>
+            </ListContainerElement>
+            <ListContainerElement name="DadaExit" enabled="true" width="140" height="30">
+              <Button name="btnDadaExit" width="140" height="30" normalimage="file=&apos;DadaExit.png&apos; source=&apos;0,0,140,30&apos;" hotimage="file=&apos;DadaExit.png&apos; source=&apos;140,0,280,30&apos;"/>
+            </ListContainerElement>
+        </List>
+    </VerticalLayout>
+</Window>

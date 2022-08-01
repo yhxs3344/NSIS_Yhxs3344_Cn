@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<popup title="" width="122" height="68" autoclose="0" bkimg="skins\ball\shadow.png" bkmode="mid" width-lt="10" height-lt="10" width-rb="10" height-rb="10">
+
+  <img name="img.bkgnd_right" pos="-61,7" width="54" height="54" image="skins\ball\bkgnd_right.png" mode="normal" response="0" />
+  <img pos="7,7" width="54" height="54" image="skins\ball\bkgnd_left.png" mode="normal" response="0" />
+  <myimg name="img.circle" pos="13,13" width="42" height="42" img-count="20" image="skins\ball\circle.png" mode="normal" response="0" angle="0" />
+  <text name="text.used_percent" pos="7,7,41,46" align="right" valign="bottom" crtext="FFFFFF" font="big16" title="" response="0" />
+  <text pos="37,7,61,44" align="left" valign="bottom" crtext="FFFFFF" font="normal" title="%" response="0" />
+
+</popup>

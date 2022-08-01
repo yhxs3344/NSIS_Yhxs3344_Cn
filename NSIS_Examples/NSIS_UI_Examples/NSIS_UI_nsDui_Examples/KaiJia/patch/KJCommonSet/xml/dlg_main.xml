@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_shezhi" title="铠甲安全卫士" width="760" height="550" appwin="0" resize="0" shadow-size="2"
+	frame="skins\kaijiaweishishezhi\tishikuangbeijing.png" bkimg="" crbk="" >
+
+  <base>
+    <imgbtn name="SetClose" img-count="3" pos="-25,5,-2,28" image="skins\kaijiaweishishezhi\tishikuangguanbi.png" show="1" shortcut="ESC" />
+    <text name="title" crtext="FFFFFF" crmark="800000" font="big"
+				pos="10,5,200,25" title="铠甲安全卫士设置中心" mask="" response="0" show="1" />
+  </base>
+
+  <body>
+    <div name="div_shezhi" pos="150,35" width="600" height="485" img-scroll="skin:IDB_SCROLL_V" scroll-width="5" left-button-flag="1">
+      <!--<img pos="20,25" width="565" height="80" img-count="1" image="skins\kaijiaweishishezhi\kaijiqidongxiangshezhibeijing.png"
+          mode="frame" framesize="0" response="0"/>
+      <chkbtn name="zidongqidong" skin="IDB_CHECK_BOX"  pos="40,60" width="300" height="22" show="1"
+          title="开机时自动开启安全防护中心" check="true" showfocus="0" />-->
+
+      <img pos="20,25" width="565" height="80" img-count="1" image="skins\kaijiaweishishezhi\kaijixiaozhushoubeijing.png"
+           mode="frame" framesize="0" response="0"/>
+      <chkbtn name="tishikaijishijian" skin="IDB_CHECK_BOX"  pos="40,60" width="300" height="22" show="1"
+           title="开机后提示本次开机时间" check="true" showfocus="0"/>
+
+      <img pos="20,120" width="565" height="80" img-count="1" image="skins\kaijiaweishishezhi\liulanqixiufu.png"
+           mode="frame" framesize="0" response="0"/>
+      <chkbtn name="xiugaitishi" skin="IDB_CHECK_BOX"  pos="40,155" width="300" height="22" show="1"
+           title="当默认浏览器设置被修改时，弹窗提示" check="true" showfocus="0"/>
+      <!--<chkbtn name="suodingliulanqi" skin="IDB_CHECK_BOX"  pos="40,280" width="130" height="22" show="1"
+           title="锁定默认浏览器" check="true" showfocus="0"/>
+      <text   pos="180,280" width="360" height="22" show="1" title="防止利用默认浏览器来启动木马、恶意插件、弹广告及窃取隐私" crtext="CCCCCC" />-->
+
+      <img pos="20,217" width="565" height="168" img-count="1" image="skins\kaijiaweishishezhi\loudongxiufufangshi.png"
+           mode="frame" framesize="0" response="0"/>
+      <radiobtn name="xiufufangshi1" skin="IDB_RADIO_BUTTON" title="无需弹窗，直接自动修复（修复）"	pos="40,252"
+           width="300" height="22" group="radio_group_xiufufangshi" show="1"  showfocus="0"/>
+      <radiobtn name="xiufufangshi2" skin="IDB_RADIO_BUTTON" title="有高危漏洞时弹窗提醒我修复"	pos="40,282"
+           width="300" height="22" group="radio_group_xiufufangshi" show="1" showfocus="0"/>
+      <radiobtn name="xiufufangshi3" skin="IDB_RADIO_BUTTON" title="弹窗提醒，若电脑空闲时自动修复"	pos="40,317"
+           width="300" height="22" group="radio_group_xiufufangshi" show="1" showfocus="0"/>
+      <radiobtn name="xiufufangshi4" skin="IDB_RADIO_BUTTON" title="关闭弹窗提醒，不修复"	pos="40,347" width="300"
+           height="22" group="radio_group_xiufufangshi" show="1"  check="true" showfocus="0"/>
+
+
+      <img pos="20,397" width="565" height="190" img-count="1" image="skins\kaijiaweishishezhi\budingbaocunshezhi.png" mode="frame"
+           framesize="0" response="0"/>
+      <text   pos="40,437" width="360" height="22" show="1" title="帮您下载的漏洞补丁安装文件将保存在以下目录：" />
+      <richedit name="richeditlujing" img-count="4" image="skins\kaijiaweishishezhi\xuanzelujingkuang.png"  pos="40,467" width="392" height="34"
+            title="" maxchar="150"  font="default" crback="255,128,224,128"	multiline="1" readonly="0" show="1"/>
+      <button name="xuanzemulu" image="skins\kaijiaweishishezhi\BT_DEFAULT.png"  crtext="333333" pos="450,472" width="80" height="30" title="选择目录"
+           font="default" showfocus="0"/>
+      <radiobtn name="baocunweizhi1" skin="IDB_RADIO_BUTTON" title="保存补丁的安装文件（便于重装系统及网吧等局域网内统一打补丁）"
+           pos="40,517" width="400" height="22" group="radio_group_baocunweizhi" show="1" showfocus="0" />
+      <radiobtn name="baocunweizhi2" skin="IDB_RADIO_BUTTON" title="定期自动删除补丁的安装文件"	pos="40,552" width="300"
+           height="22" group="radio_group_baocunweizhi" show="1" showfocus="0"/>
+
+      <img pos="20,607" width="565" height="137" img-count="1" image="skins\kaijiaweishishezhi\rujianziqidongtixing.png" mode="frame"
+           framesize="0" response="0"/>
+      <radiobtn name="ziqidongtixing1" skin="IDB_RADIO_BUTTON" title="新增启动项时间提醒（默认）"	pos="40,647" width="300"
+           height="22" group="radio_group_ziqidongtixing" show="1" showfocus="0"/>
+      <radiobtn name="ziqidongtixing2" skin="IDB_RADIO_BUTTON" title="新增启动项时不提醒"	pos="40,677" width="300" height="22"
+           group="radio_group_ziqidongtixing" show="1" showfocus="0"/>
+      <radiobtn name="ziqidongtixing3" skin="IDB_RADIO_BUTTON" title="不提醒，自动优化"	pos="40,707" width="670" height="22"
+           group="radio_group_ziqidongtixing" show="1"  check="true" showfocus="0"/>
+
+      <!--<img pos="20,875" width="565" height="80" img-count="1" image="skins\kaijiaweishishezhi\ziwobaohu.png" mode="frame" framesize="0" response="0"/>
+      <chkbtn name="ziwobaohu" skin="IDB_CHECK_BOX"  pos="40,910" width="300" height="22" show="1" title="开启铠甲安全卫士自我保护" check="true" showfocus="0"/>-->
+
+      <button name="" skin="IDB_BT_DEFAULT" title="800"	pos="0,1177" width="50" height="20" show="0"  showfocus="0" />
+    </div>
+
+
+    <imgkaijia name="xuanzexiang" pos="0,32" width="150" height="500" img-count="1" image="skins\kaijiaweishishezhi\shezhizuocebeijing.png"
+         mode="frame" framesize="0" response="0"/>
+    <img name="yixuanze" pos="0,60" width="150" height="40" img-count="1" image="skins\kaijiaweishishezhi\shezhixuanzhongbeijing.png" mode="frame"
+         framesize="0" show="1" response="0"/>
+    <img name="dibutubiao" pos="0,515" width="760" height="35" img-count="1" image="skins\kaijiaweishishezhi\shezhidibutiao.png" mode="frame" shadow-size="2"
+         framesize="0" show="1" response="0"/>
+
+    <button name="btnyes" img-count="3" image="skins\kaijiaweishishezhi\shezhiqueding.png" title=""	pos="-80,-30" width="70" height="25"
+     show="1"  showfocus="0" />
+    <button name="huifumoren" img-count="3" image="skins\kaijiaweishishezhi\huifusuoyoumorenzhi.png" title="" pos="60,-30" width="125" height="23" show="1"  />
+
+
+    <!--<button name="qidongxiangshezhi" img-count="1" crtext="333333" pos="0,60" width="150" height="40" title="       开机启动项设置"  font="default" align="left"
+         showfocus="0"/>-->
+    <button name="kaijixiaozhushou" crtext="333333" pos="0,60" width="150" height="40" title="       开机小助手"  font="default" align="left" showfocus="0"/>
+    <button name="liulanqifanghu" crtext="333333" pos="0,100" width="150" height="40" title="       浏览器防护"  font="default" align="left" showfocus="0"/>
+    <button name="loudongxiufufangshi" crtext="333333" pos="0,140" width="150" height="40" title="       漏洞修复方式"  font="default" align="left" showfocus="0"/>
+    <button name="budingbaocunshezhi" crtext="333333" pos="0,180" width="150" height="40" title="       补丁保存设置"  font="default" align="left" showfocus="0"/>
+    <button name="ruanjianziqidongtixing" crtext="333333" pos="0,220" width="150" height="40" title="       软件自启动提醒"  font="default" align="left" showfocus="0"/>
+    <!--<button name="ziwobaohu1" crtext="333333" pos="0,300" width="150" height="40" title="       自我保护"  font="default" align="left" showfocus="0"/>-->
+  </body>
+
+</dlg>
+
+

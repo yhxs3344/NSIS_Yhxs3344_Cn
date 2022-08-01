@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+
+<div pos="120,0,-0,-0" >
+
+  <img pos="0,0" width="780" height="122" img-count="1" image="KJMainUI\skins\kaijiaweishi\jindutiaobeijing.png" 
+       mode="frame" framesize="1" show="1" />
+  <img pos="25,18" width="85" height="85" img-count="1" image="KJMainUI\skins\kaijiaweishi\ClearTrashIcon.png"
+       mode="frame" framesize="1" show="1" />
+
+  <text name="DiannaoqingliCheckTip1" crtext="000000" pos="132,25" width="400" height="40" 
+        title="已选择6项清理类型"  font="big25"/>
+  <text name="DiannaoqingliCheckResult1" crtext="999999" pos="135,70" width="300" height="30" 
+        title="经常清理，有效提高系统效率" />
+
+
+  <imgbtn name="DiannaoqingliYijianshaomiao" pos="-154,46" width="135" height="42" img-count="4"
+          image="KJMainUI\skins\kaijiaweishi\yijianshaomiao.png" tip="" show="1" showfocus="0"/>
+
+  <imgbtn name="DiannaoqingliGuanbi" pos="-25,0,-0,22" img-count="3" skin="SKIN_PIC_GUANBI"
+          tip="关闭" showfocus="0"/>
+  <imgbtn name="DiannaoqingliZuixiaohua" pos="-51,0,-26,22" img-count="3" skin="SKIN_PIC_ZUIXIAOHUA" 
+          tip="最小化"  showfocus="0"/>
+  <imgbtn name="btnMneu" pos="-77,0,-52,22" img-count="3" skin="SKIN_PIC_XIALAKUANG" 
+          tip="菜单" showfocus="0"/>
+  <imgbtn name="DiannaoqingliFankui" pos="-103,0,-78,22" img-count="3" skin="SKIN_PIC_XIAOXI" 
+          tip="反馈建议" showfocus="0"/>
+
+  <imgbtn name="DiannaoqingliQinglilaji" pos="61,156" width="180" height="140" img-count="3" 
+          image="KJMainUI\skins\kaijiaweishi\qinglilaji.png" tip="" show="1" animate="0" showfocus="0"/>
+  <img name="DiannaoqingliQinglilajiGouxuan" pos="212,166" width="19" height="19" img-count="1"
+       image="KJMainUI\skins\kaijiaweishi\gouxuan.png" tip="" show="1" response="0"/>
+  <img name="DiannaoqingliQinglilajiWeigouxuan" pos="212,166" width="19" height="19" img-count="1"
+       image="KJMainUI\skins\kaijiaweishi\weigouxuan.png" tip="" show="0" response="0"/>
+
+  <imgbtn name="DiannaoqingliQinglihenji" pos="300,156" width="180" height="140" img-count="3"
+          image="KJMainUI\skins\kaijiaweishi\qinglihenji.png" tip="" show="1" animate="0" showfocus="0"/>
+  <img name="DiannaoqingliQinglihenjiGouxuan" pos="450,166" width="19" height="19" img-count="1" 
+       image="KJMainUI\skins\kaijiaweishi\gouxuan.png" tip="" show="1" response="0"/>
+  <img name="DiannaoqingliQinglihenjiWeigouxuan" pos="450,166" width="19" height="19" img-count="1"
+       image="KJMainUI\skins\kaijiaweishi\weigouxuan.png" tip="" show="0" response="0"/>
+
+  <imgbtn name="DiannaoqingliQinglizhucebiao" pos="541,156" width="180" height="140" img-count="3" 
+          image="KJMainUI\skins\kaijiaweishi\qinglizhucebiao.png" tip="" show="1" animate="0" showfocus="0"/>
+  <img name="DiannaoqingliQinglizhucebiaoGouxuan" pos="691,166" width="19" height="19" img-count="1"
+       image="KJMainUI\skins\kaijiaweishi\gouxuan.png" tip="" show="1" response="0"/>
+  <img name="DiannaoqingliQinglizhucebiaoWeigouxuan" pos="691,166" width="19" height="19" img-count="1"
+       image="KJMainUI\skins\kaijiaweishi\weigouxuan.png" tip="" show="0" response="0"/>
+
+  <imgbtn name="DiannaoqingliQinglichajian" pos="61,332" width="180" height="140" img-count="3"
+          image="KJMainUI\skins\kaijiaweishi\qinglichajian.png" tip="" show="1" animate="0" showfocus="0"/>
+  <img name="DiannaoqingliQinglichajianGouxuan" pos="212,342" width="19" height="19" img-count="1"
+       image="KJMainUI\skins\kaijiaweishi\gouxuan.png" tip="" show="1" response="0"/>
+  <img name="DiannaoqingliQinglichajianWeigouxuan" pos="212,342" width="19" height="19" img-count="1" 
+       image="KJMainUI\skins\kaijiaweishi\weigouxuan.png" tip="" show="0" response="0"/>
+
+  <imgbtn name="DiannaoqingliQingliruanjian" pos="300,332" width="180" height="140" img-count="3"
+          image="KJMainUI\skins\kaijiaweishi\qingliruanjian.png" tip="" show="1" animate="0" showfocus="0"/>
+  <img name="DiannaoqingliQingliruanjianGouxuan" pos="450,342" width="19" height="19" img-count="1"
+       image="KJMainUI\skins\kaijiaweishi\gouxuan.png" tip="" show="1" response="0"/>
+  <img name="DiannaoqingliQingliruanjianWeigouxuan" pos="450,342" width="19" height="19" img-count="1"
+       image="KJMainUI\skins\kaijiaweishi\weigouxuan.png" tip="" show="0" response="0"/>
+
+  <imgbtn name="DiannaoqingliQingliCookie" pos="541,332" width="180" height="140" img-count="3" 
+          image="KJMainUI\skins\kaijiaweishi\qinglicookies.png" tip="" show="1" animate="0" showfocus="0"/>
+  <img name="DiannaoqingliQingliCookieGouxuan" pos="691,342" width="19" height="19" img-count="1" 
+       image="KJMainUI\skins\kaijiaweishi\gouxuan.png" tip="" show="1" response="0"/>
+  <img name="DiannaoqingliQingliCookieWeigouxuan" pos="691,342" width="19" height="19" img-count="1" 
+       image="KJMainUI\skins\kaijiaweishi\weigouxuan.png" tip="" show="0" response="0"/>
+
+
+  <!--QQ群-->
+  <buttonkaijia name="QQ" pos="25,536" width="160" height="39" img-count="3" image="KJMainUI\skins\kaijiaweishi\QQqun.png" mode="frame" framesize="0" showfocus="0" />
+  <text name="QQnumber_diannaoqingli2" crtext="808080" pos="100,546" width="90"  height="16" show="1" title="1234567890" align="left" font="big14" response="0"/>
+
+  <!--右下角的按钮-->
+  <imgbtn name="btnruanjianguanjia" pos="500,520" width="70" height="70" img-count="3" 
+          image="KJMainUI\skins\kaijiaweishi\ruanjianguanjia.png" showfocus="0"/>
+  <!--<imgbtn name="btnbingduchasha" pos="480,520" width="70" height="70" img-count="3" 
+          image="KJMainUI\skins\kaijiaweishi\KillVirus.png" showfocus="0"/>-->
+  <imgbtn name="btnzhuyefanghu" pos="570,520" width="70" height="70" img-count="3" 
+          image="KJMainUI\skins\kaijiaweishi\zhuyefanghu.png" showfocus="0"/>
+  <imgbtn name="btnkaijijiashu" pos="640,520" width="70" height="70" img-count="3"
+          image="KJMainUI\skins\kaijiaweishi\kaijijiashu.png" showfocus="0"/>
+  <imgbtn name="btngengduo" pos="710,520" width="55" height="70" img-count="4" 
+          image="KJMainUI\skins\kaijiaweishi\gengduo.png" showfocus="0" disable="1"/>
+</div>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+
+<div pos="80,-575,-0,-0" >
+
+	<!--area name="area-controls" pos="80,1,980,600" begin-transparent="0" end-transparent="0" /-->
+
+	<!--imgbtn name="button.pagedown" pos="858,21,887,40" img-count="3" skin="IDB_BT_CLOSE" tip="关闭" duimsg="mouseldown" show="1"/-->
+
+<!--img pos="330,260,530,340" image="skin:IDB_LOADING_RJGJ" mode="tile" framesize="1" show="1" /-->
+
+	<!--rect pos="860,19,890,50" response="0" color="00CC00" /-->
+
+<!--img pos="0,19,-1,20" image="skin:IDB_TAB_BACK" mode="frame" framesize="1" show="1" />
+<img pos="0,59,-1,60" image="skin:IDB_TAB_BACK" mode="frame" framesize="1" show="1" /-->
+<img pos="0,45,-1,46" image="skin:IDB_TAB_BACK_RJGJ" mode="frame" framesize="1" show="1" />
+<text name="describe" pos="20,110,180,130" crtext="808080" font="bold" title="" />
+<!--img pos="0,49,-1,50" image="skin:IDB_TAB_BACK_RJGJ" mode="frame" framesize="1" show="1" /-->
+<img pos="0,85,-1,86" image="skin:IDB_TAB_BACK_RJGJ" mode="frame" framesize="1" show="1" />
+<tabctrl name="tabctrl.controls" img-sep="skin:IDB_TAB_SEPERATOR" img-hover="skin:IDB_TAB_BACK-"
+		img-tabbtn-="skins\default\btn_close.png" tabbtnpos="21,3"
+		font="bold" item-width="77" tab-height="29" img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H"
+		crtext="838B8B" crpush="00FF00" crrowhover="33FF33" animate="0"
+		pos="2,51,-0,-1">
+
+		<!--imgbtn name="button.pageup" pos="-36,19,890,39" img-count="4" skin="IDB_TAB_PAGEUP_RJGJ" tip="上一页" duimsg="mouseldown" show="1"/>
+		<imgbtn name="button.pagedown" pos="-36,39,890,60" img-count="4" skin="IDB_TAB_PAGEDOWN_RJGJ" tip="
+	下一页" duimsg="mouseldown" show="1"/-->
+
+		<!--tab name="tab.control.0" title="装机必备" active="true" pos="0,30,-0,-0"/-->
+		<!--tab name="tab.control.1"   title="装机必备1" active="true"  pos="10,30,970,590" show="1">
+			<button name="button.softsort" title="默认排序" align="left" valign="middle" pos="755,30,845,56" img-count="3" skin="IDB_SOFT_SORT" action="menu:menu_sort" menupos="-90,-0"/>
+			<gridctrl name="gridctrl_1" pos="0,60,870,-5" show="1" img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP" img-check="skin:IDB_CHECK_BOX"
+				 img-header="skin:IDB_TOOLBAR_BG" img-colsep="skin:IDB_TAB_SEPERATOR" img-count="12" image="skin:IDB_LIST_IMG" left-pos="50" row-height="60" header-height="0" bk-transparent="10"
+				 font="default" align="left" valign="middle" crtext="255,64,64,64" crhover="128,0,0" crpush="0,112,235" crtitle="32,32,32" crsep="200,160,160,160" crrowhover="80,0,255,0"
+				 down-row="0" >
+				<column title="列1" width="400" valign="top/5"/>
+				<column title="列2" width="80" />
+				<column title="列3" width="100" align="center" />
+				<column title="列4" width="125" align="center"/>
+				<column title="列5" width="180" />
+					<row image="skin:IDB_SOFT_MGR">
+						<item title="安全管家" content="安全防护，系统优化和软件管理，适合上网用户每天使用" font-title="1" >
+							<img pos="60,0" width="46" height="18" image="skins\SoftMgr\icon\have_plugin.png" mode="normal" tip="" />							
+						</item>
+						<item title="125.5M" />
+						<item title="已装：2.2.1.0" />						
+						<item title="点击下载" />
+						<item>
+							<button name="grid_btn1" pos="50,9,140,41" img-count="3" skin="IDB_ONE_KEY_RJGJ" tip="" />
+						</item>				
+					</row>
+					<row image="skins\icon\softmgr.png" >
+						<item title="腾讯软件管理" content="1.新的界面，丰富的内容；2.海量软件搜索；3.功能分类清晰呈现，更易选择" font-title="1" />
+						<item title="16.5M" />
+						<item title="已装：8.7.0.1" />						
+						<item link="一键安装" linkaction="dlg:dlg_option"/>
+						<item>
+							<button name="grid_btn2" pos="50,9,140,41" img-count="3" skin="IDB_ONE_KEY_RJGJ" tip="" />
+						</item>
+					</row>
+			</gridctrl>		
+		</tab>
+		<tab name="tab.control.2"   title="装机必备2" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码2" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.3"   title="装机必备3" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码3" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.4"   title="装机必备4" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码4" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.5"   title="装机必备5"  active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码5" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.6"   title="装机必备6"  active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码6" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.7"   title="装机必备7"  active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码7" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.8"   title="装机必备8"  active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码8" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.9"   title="装机必备9"  active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码9" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.10"  title="装机必备10" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码10" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.11"  title="装机必备11" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码11" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.12"  title="装机必备12" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码12" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.13"  title="装机必备13" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码13" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.14"  title="装机必备14" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码14" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.15"  title="装机必备15" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码15" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.16"  title="装机必备16" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码16" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.17"  title="装机必备17" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码17" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.18"  title="装机必备18" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码18" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.19"  title="装机必备19" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码19" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.20"  title="装机必备20" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码20" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.21"  title="装机必备21" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码21" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.22"  title="装机必备22" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码22" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.23"  title="装机必备23" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码23" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.24"  title="装机必备24" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码24" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.25"  title="装机必备25" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码25" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab-->
+		
+	</tabctrl>
+	<!--button name="button.pageup" pos="-36,19,889,39" img-count="4" align="center" valign="middle" skin="IDB_TAB_PAGEUP_RJGJ" showfocus="0" duimsg="mouseldown" show="1"/>
+	<button name="button.pagedown" pos="-36,39,889,60" img-count="4" skin="IDB_TAB_PAGEDOWN_RJGJ" showfocus="0" duimsg="mouseldown" show="1"/-->
+
+	<combobox name="combobox.sort" skin="IDB_BT_RJGJ_EDIT" small-image="skin:IDB_DROP_DOWN"
+					value="local" tip="默认排序"
+					pos="764,110,854,136"
+					list-height="78" 
+					title="默认排序" crtext="828282" crhover="00FF00" duimsg="mouseldown">
+			<item name="默认排序" value="1" crtext="828282"/>
+			<item name="软件评分" value="2" crtext="828282"/>
+			<item name="发布时间" value="3" crtext="828282"/>
+	</combobox>
+
+	<button name="button.pageup" pos="-36,45,889,65" img-count="4" align="center" valign="middle" skin="IDB_TAB_PAGEUP_RJGJ" showfocus="0" duimsg="mouseldown" show="1"/>
+	<button name="button.pagedown" pos="-36,65,889,86" img-count="4" skin="IDB_TAB_PAGEDOWN_RJGJ" showfocus="0" duimsg="mouseldown" show="1"/>
+
+	<button name="soft.pageup" pos="520,500,546,526" img-count="4" skin="IDB_PAGEUP_RJGJ" showfocus="1" tip="上一页" duimsg="mouseldown" show="1"/>
+
+	<button name="1"  pos="550,500,576,526" title="1"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="2"  pos="580,500,606,526" title="2"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="3"  pos="610,500,636,526" title="3"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="4"  pos="640,500,666,526" title="4"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="5"  pos="670,500,696,526" title="5"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="6"  pos="700,500,726,526" title="6"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="7"  pos="730,500,756,526" title="7"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="8"  pos="760,500,786,526" title="8"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="9"  pos="790,500,816,526" title="9"  img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	<button name="10" pos="820,500,846,526" title="10" img-count="4" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="1" font="small" duimsg="mouseldown" show="1"/>
+	
+	<button name="soft.pagedown" pos="850,500,876,526" img-count="4" skin="IDB_PAGEDOWN_RJGJ" showfocus="1" duimsg="mouseldown" show="1"/>
+</div>

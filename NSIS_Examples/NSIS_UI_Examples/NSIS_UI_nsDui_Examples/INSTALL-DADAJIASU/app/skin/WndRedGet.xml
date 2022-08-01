@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="308,341" caption="0,0,0,341" bktrans="true" showshadow="true" >
+  <Font italic="false" bold="false" size="12" name="微软雅黑"/>
+  <Font italic="false" bold="false" size="14" name="微软雅黑"/>
+  <Font italic="false" bold="false" size="16" name="微软雅黑"/>
+  <Font italic="false" bold="false" size="52" name="微软雅黑"/>
+  <VerticalLayout textcolor="0xFFFFFFFF" enabled="true" width="308" height="341">
+    <TabLayout name="TabRed" enabled="true" width="308" height="341" selectedid="0">
+      <VerticalLayout enabled="true" width="308" height="341" bkimage="RedTab2Bk.png">
+          <Button name="BtnClose" float="true" pos="260,15,0,0" width="14" height="14" enabled="true" normalimage="file=&apos;RedClose.png&apos; dest=&apos;0,0,14,14&apos; source=&apos;0,0,14,14&apos;" hotimage="file=&apos;RedClose.png&apos; dest=&apos;0,0,14,14&apos; source=&apos;14,0,28,14&apos;" pushedimage="file=&apos;RedClose.png&apos; dest=&apos;0,0,14,14&apos; source=&apos;28,0,42,14&apos;"/>
+          <Label font="1" float="true" align="center" pos="55,100,0,0" width="198" height="25" textcolor="#FFFFFFFF" text="老王（公司董事长）"/>
+          <Label font="2" float="true" align="center" pos="25,135,0,0" width="258" height="25" textcolor="#FFFFD400" text="发给您一个红包，拆开看看吧"/>
+          <Button name="BtnGetRed" tooltip="领取红包" float="true" pos="110,178,0,0" width="80" height="82" visible="true" enabled="true"/>
+          <GifAnim name="GifGetRed" bkimage="gifRedGetLog.gif" pos="110,178,0,0" float="true" mouse="false" autoplay="true" autosize="true" />
+          <Label name="labRedType" font="1" float="true" align="center" pos="70,277,0,0" width="168" height="20" textcolor="#FFFFFFFF" text="新用户专享红包"/>
+      </VerticalLayout>
+      <VerticalLayout enabled="true" width="308" height="341" bkimage="RedTab1Bk.png">
+        <Button name="BtnClose1" float="true" pos="260,15,0,0" width="14" height="14" enabled="true" normalimage="file=&apos;RedClose.png&apos; dest=&apos;0,0,14,14&apos; source=&apos;0,0,14,14&apos;" hotimage="file=&apos;RedClose.png&apos; dest=&apos;0,0,14,14&apos; source=&apos;14,0,28,14&apos;" pushedimage="file=&apos;RedClose.png&apos; dest=&apos;0,0,14,14&apos; source=&apos;28,0,42,14&apos;"/>
+        <Label name="labGetRedInfo" font="1" float="true" align="center" pos="30,102,0,0" width="248" height="25" textcolor="#FFFFFFFF" text="恭喜您获得，新用户专享红包"/>
+        <Label font="1" float="true" pos="220,168,0,0" width="20" height="20" textcolor="#FFFFFFFF" text="元"/>
+        <Label name="labMonery" font="3" float="true" align="right" pos="77,138,0,0" width="140" height="50" textcolor="#FFFFD400" text="58.88"/>
+        <Label name="labTimer" font="0" float="true" align="center" pos="25,202,0,0" width="258" height="25" textcolor="#FFFFFFFF" text="使用期限：2017.05.27-2017.12.12"/>
+        <Button name="BtnChange" float="true" pos="60,235,0,0" width="180" height="48" enabled="true" normalimage="file=&apos;RedCharge.png&apos; dest=&apos;0,0,180,48&apos; source=&apos;0,0,180,48&apos;" hotimage="file=&apos;RedCharge.png&apos; dest=&apos;0,0,180,48&apos; source=&apos;180,0,360,48&apos;" pushedimage="file=&apos;RedCharge.png&apos; dest=&apos;0,0,180,48&apos; source=&apos;360,0,540,48&apos;"/>
+        <Button name="BtnNext" font="0" float="true" pos="110,290,0,0" width="90" height="20" textcolor="#FFFFD400" hottextcolor="#FFFFFFFF"/>
+      </VerticalLayout>
+    </TabLayout>
+  </VerticalLayout>
+</Window>

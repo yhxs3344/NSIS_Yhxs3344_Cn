@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<menu title="menu_kaijijiashu" width="120" item-height="30" framesize="30" left="0" frame-width="0"
+      bkimg="" crrowhover="50,128,128,128"  bkimg="skin:IDB_MENU_BACK"
+      left="20" top-height="6" bottom-height="6" frame-width="3" top-height="6">
+	<menuitem name="item_jinzhiqidong"  img-count="3" title="   禁止启动" taskmsg="1"/>
+	<menuitem name="item_dakaisuozaimulu"  title="   打开所在目录" />
+  <menuitem name="item_fankuicixiangneirong"  img-count="3" title="   反馈此项内容" taskmsg="1" />  
+</menu>
+ 
