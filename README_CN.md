@@ -17,7 +17,8 @@
 - NSIS_Steup
 -	NSIS_Steup_Version_2.x  #NSIS 2.X 版本安装包
 -	NSIS_Steup_Version_3.x  #NSIS 3.X 版本安装包_可防破解、防解包
--
+-   #NSIS 3.X 的版本包太大，请到 https://www.123pan.com/s/m2T9-Y8wfh 下载
+- 
 - BY:yhxs344
 - WEB:www.yhxs344.net
 - QQ Group:436741130

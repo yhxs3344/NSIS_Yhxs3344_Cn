@@ -16,7 +16,8 @@
 - NSIS_Steup
 -	NSIS_Steup_Version_2.x  #NSIS 2.X Version Steup
 -	NSIS_Steup_Version_3.x  #NSIS 3.X Version Steup Anti-cracking Anti-unpacking
--
+-   #The NSIS 3.x version package is too large, please go to https://www.123pan.com/s/m2T9-Y8wfh download
+- 
 - BY:yhxs344
 - WEB:www.yhxs344.net
 - QQ Group:436741130
