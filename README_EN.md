@@ -1,4 +1,30 @@
 # NSIS_Yhxs3344_Cn
+- update time:2022-10-16
+- upgrade EnumAdapters.dll、EnumDisks.dll、nsLogView.dll、PathUtils.dll、smbios.dll、DotNetChecker.dll
+- add SysInfo.dll
+- Added WinVer_WaaS 21H2 and Win11
+- Allow . in variable names
+- Cherry pick halibut upstream
+- Added !assert
+- Fix typos found by codespell (DimitriPapadopoulos PR)
+- Set the cursor hotspot correctly
+- Fixed MMapBuf size bug
+- Added tests
+- Unicode fixes
+- Bug #1282: Apply zoom level when editor is cleared
+- Check define for MacOS (Patch 306)
+- Improved Win11 support
+- Fixed !appendfile not writing to non-empty files with a BOM
+- Fixed LogicLib Switch Unicode bug
+- Fixed typo
+- Display error message if starting the generated installer fails
+- Reduce old GCC linker warnings
+- Don't generate relocation section in stubs
+- Disable stub relocations in newer GCC (bug #1283)
+- Avoid unused label warning
+- Fixed NSD_ClearIcon (bug #1286)
+- Windows 11 2022 Update
+
 - update time:2022-08-01
 - chinese nsis
 - NSIS_zh_cn_Code:
