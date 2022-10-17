@@ -1,7 +1,8 @@
 # NSIS_Anti_unpacking_anti-cracking
 NSIS_Anti_unpacking_anti-cracking
-Nsis 版本为3.08
+Nsis 版本为3.0.8.1
 - 源码翻译为中文编译
 - 防解包防破解
 - 支持大文件编译
-- NSIS v3.08已被www.yhxs3344.net翻译成中文
+-合并主干到build7368
+- NSIS v3.0.8.1已被www.yhxs3344.net翻译成中文
