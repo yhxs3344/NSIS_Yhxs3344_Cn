@@ -1,6 +1,7 @@
 # Nsis_Pugins_Code
-- Time:2022-07-31
+- Time:2022-10-17
 - NSIS Pugins Code by www.yhxs3344.net
+- SysInfo
 - AccessControl_v1.0.8.3
 - AddToPath_v1.0.0.0
 - Aero_v1.0.1.2
