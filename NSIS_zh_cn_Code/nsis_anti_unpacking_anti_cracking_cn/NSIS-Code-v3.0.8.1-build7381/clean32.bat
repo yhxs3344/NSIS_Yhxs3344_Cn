@@ -1,0 +1,1 @@
+call scons --clean ZLIB_W32="D:\Zlib\Zlib_v1.2.13_x86"
