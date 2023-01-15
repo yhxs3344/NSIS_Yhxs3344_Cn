@@ -1,4 +1,15 @@
 # NSIS_Yhxs3344_Cn
+- update time:2023-01-15
+- Use full path for the default output p
+- OutFile for CI
+- Don't use _ environment variable because it is sometimes incorrect
+- !uninstfinalize big uninstaller fixes, part 2 (bug #1279)
+- Avoid node 12.x deprecation warnings
+- Added Install MultiUser example
+- Further !uninstfinalize big uninstaller fixes (bug #1279)
+- Fixed minor typos
+- Fixed GCC12 binary_function warning (patch #307)
+- Use SHCloneSpecialIDList instead of SHGetSpecialFolderLocation so missing folders can be created on Win4.x
 - update time:2022-10-16
 - upgrade EnumAdapters.dll、EnumDisks.dll、nsLogView.dll、PathUtils.dll、smbios.dll、DotNetChecker.dll
 - add SysInfo.dll

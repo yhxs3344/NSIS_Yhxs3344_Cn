@@ -1,4 +1,18 @@
 # NSIS_Yhxs3344_Cn
+- 更新时间：2023-01-15
+- 合并主干v3.0.8.1_build_7381
+- 更新了乌克兰语(patch 308)
+- 使用完整路径作为默认输出路径
+- 添加了多用户MultiUser示例
+- CI输出信息到文件
+- 不使用环境变量，因为它有时不正确
+- 修复了大型程序的卸载程序bug(bug #1279)
+- 弃用node 12.x的警告
+- 修正了一些拼写错误
+- 修复了 GCC12 binary_function警告(patch #307)
+- 使用 SHCloneSpecialIDList 而不是 SHGetSpecialFolderLocation，以便在 Win4.x 上创建缺少的文件夹
+- 加入nsis_semvercompare插件和例子
+- 加入dotnetcore例子，支持.NET7
 - 更新时间：2022-10-16
 - 更新EnumAdapters.dll、EnumDisks.dll、nsLogView.dll、PathUtils.dll、smbios.dll、DotNetChecker.dll插件;
 - 加入了SysInfo.dll插件及例子
