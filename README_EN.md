@@ -1,4 +1,13 @@
 # NSIS_Yhxs3344_Cn
+- update time:2023-06-18
+- Use isolated uninstaller temp directory
+- Fixed mingw-w64 12 warnings (patch #310)
+- Added internal pragma to dump compiler state
+- Don't activate the outline window
+- Fixed /ifndef when combined with /math
+- Don't delete old uninstaller if it points somewhere else
+- Added bug report number for bug #1296
+
 - update time:2023-01-15
 - Use full path for the default output p
 - OutFile for CI

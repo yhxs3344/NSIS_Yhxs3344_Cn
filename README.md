@@ -1,5 +1,9 @@
 中文说明：
 # NSIS_Yhxs3344_Cn
+- 更新时间：2023-06-18
+- 合并主干build_7395，并改版本为v3.0.8.2
+- 添加缺少的插件
+
 - 更新时间：2022-10-16
 - 更新EnumAdapters.dll、EnumDisks.dll、nsLogView.dll、PathUtils.dll、smbios.dll、DotNetChecker.dll插件;
 - 加入了SysInfo.dll插件及例子
