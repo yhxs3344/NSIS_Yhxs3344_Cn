@@ -1,5 +1,45 @@
 \A{history} Changelog and Release Notes
 
+\H{v3.09} 3.09
+
+Released on July 1st, 2023
+
+\S1{v3.09-cl} Changelog
+
+\S2{} Major Changes
+
+\b Use isolated uninstaller directory for every instance (\W{http://sf.net/p/nsis/bugs/1296}{bug #1296}, thanks Richard Warren)
+
+\S2{} Minor Changes
+
+\b Added \R{assert}{!assert}
+
+\b Fixed \cw{!uninstfinalize} bug on large uninstallers (\W{http://sf.net/p/nsis/bugs/1279}{bug #1279})
+
+\b Fixed creation of missing special folders on old Windows versions where SHGetFolderPath is not available
+
+\b Fixed plug-in call overwriting \cw{SetDetailsPrint lastused} (\W{http://sf.net/p/nsis/bugs/1271}{bug #1271})
+
+\b Fixed \cw{!appendfile} not writing to non-empty files with a BOM
+
+\b Fixed LogicLib \cw{$\{Switch\}} Unicode bug\#{ stackoverflow.com/q/73530905/ }
+
+\b Fixed \L{../Docs/makensisw/Readme.txt}{MakeNSISW} editor zoom level bug (\W{http://sf.net/p/nsis/bugs/1282}{bug #1282})
+
+\S2{} Translations
+
+\b Updated Brazilian Portuguese (\W{http://sf.net/p/nsis/bugs/1269}{bug #1269})
+
+\b Updated Ukrainian (\W{http://sf.net/p/nsis/patches/308}{patch #308})
+
+\S2{} Build System
+
+\b Fixed halibut \#{fprintf format security}compiler warnings (\W{http://sf.net/p/nsis/patches/304}{patch #304})
+
+\b Fixed various issues with very old and new GCC versions (\W{http://sf.net/p/nsis/bugs/1275}{bug #1275}, \W{http://sf.net/p/nsis/patches/307}{patch #307}, \W{http://sf.net/p/nsis/patches/310}{patch #310})
+
+\b Disable stub relocations in newer GCC (\W{http://sf.net/p/nsis/bugs/1283}{bug #1283})
+
 \H{v3.08} 3.08
 
 Released on September 25th, 2021
@@ -176,7 +216,7 @@ Released on December 15th, 2018
 
 \b Added experimental WinVer "Windows as a Service" detection macros
 
-\b Added MakeNSISW window info "spy" tool
+\b Added \L{../Docs/makensisw/Readme.txt}{MakeNSISW} window info "spy" tool
 
 \S2{} Minor Changes
 
@@ -392,7 +432,7 @@ Released on July 8th, 2016
 
 \H{v3.0rc1} 3.0 Release Candidate 1
 
-Released on April 3nd, 2016
+Released on April 3rd, 2016
 
 \S1{v3.0rc1-cl} Changelog
 
@@ -408,7 +448,7 @@ Released on April 3nd, 2016
 
 \b The name of the uninstaller created in %TEMP%\\~nsu.tmp has changed from %UNIQUE%u_.exe to Un_%UNIQUE%.exe
 
-\b Various warning and error improvments
+\b Various warning and error improvements
 
 \S2{} Translations
 
@@ -444,7 +484,7 @@ Released on December 26th, 2015
 
 \b Preprocessor now warns when invalid floating point numbers are used in math operations
 
-\b MakeNSISW now uses WinInet when checking for updates
+\b \L{../Docs/makensisw/Readme.txt}{MakeNSISW} now uses WinInet when checking for updates
 
 \S2{} Translations
 
@@ -610,7 +650,7 @@ It's the holiday gift you've been waiting for!
 
 \b Unicode stubs create WCHAR richedit controls (\W{http://sf.net/p/nsis/bugs/1080/}{bug #1080})
 
-\b Fixed MakeNSISW default pushbutton and tab order
+\b Fixed \L{../Docs/makensisw/Readme.txt}{MakeNSISW} default pushbutton and tab order
 
 \b Fixed incorrect page count in compiler statistics
 
@@ -632,7 +672,7 @@ Released on July 14th, 2013
 
 \S2{} Major Changes
 
-\b Default verbosity is /V3 without logo, MakeNSISW still uses /V4.
+\b Default verbosity is /V3 without logo, \L{../Docs/makensisw/Readme.txt}{MakeNSISW} still uses /V4.
 
 \b \R{amanifestsupportedos}{ManifestSupportedOS} added support for the Windows 8.1 GUID and it is set by default to avoid GetVersionEx compatibility behavior.
 
@@ -644,7 +684,7 @@ Released on July 14th, 2013
 
 \b Made installers always respect /S on command line, even when installer file can't be read (\W{https://sourceforge.net/p/nsis/bugs/1076/}{bug #1076})
 
-\b Minor MakeNSISW fixes and tweaks
+\b Minor \L{../Docs/makensisw/Readme.txt}{MakeNSISW} fixes and tweaks
 
 \b Added Zip2Exe Unicode checkbox
 
@@ -930,7 +970,7 @@ Released on February 5th, 2009
 
 \b \L{../Docs/Banner/Readme.txt}{Banner}: Fixed installer showing on the background when Banner was used in .onInit
 
-\b \L{../Docs/makensisw/Readme.txt}{MakeNSISW}: Added Ctrl+K hotkey for build cancelation (\W{http://sourceforge.net/support/tracker.php?aid=2557392}{RFE #2557392})
+\b \L{../Docs/makensisw/Readme.txt}{MakeNSISW}: Added Ctrl+K hotkey for build cancellation (\W{http://sourceforge.net/support/tracker.php?aid=2557392}{RFE #2557392})
 
 \b \L{../Docs/nsDialogs/Readme.html}{nsDialogs}: Added NSD_SetIcon (\W{http://sourceforge.net/support/tracker.php?aid=2500960}{patch #2500960})
 
@@ -982,7 +1022,7 @@ Released on December 20th, 2008
 
 \S2{} Minor Changes
 
-\b Added \R{searchreplace}{!searchreplace} preprocessor command for compiletime text search/replaces
+\b Added \R{searchreplace}{!searchreplace} preprocessor command for compile time text search/replaces
 
 \b Added support for \R{library}{registration} of EXE COM servers (\W{http://sourceforge.net/support/tracker.php?aid=2315740}{RFE #2315740})
 
@@ -1150,7 +1190,7 @@ Released on May 3rd, 2008
 
 \b Fixed $\{NSD_OnBack\} (\W{http://sourceforge.net/support/tracker.php?aid=1947388}{bug #1947388})
 
-\b Fixed \L{../Docs/nsDialogs/Readme.html}{nsDialogs}::SelectFileDialog return value for user cancelation (\W{http://sourceforge.net/support/tracker.php?aid=1955803}{bug #1955803})
+\b Fixed \L{../Docs/nsDialogs/Readme.html}{nsDialogs}::SelectFileDialog return value for user cancellation (\W{http://sourceforge.net/support/tracker.php?aid=1955803}{bug #1955803})
 
 \b Fixed possible \L{../Docs/BgImage/BgImage.txt}{BgImage} crash when calling BgImage::Destroy more than once (\W{http://sourceforge.net/support/tracker.php?aid=1951248}{patch #1951248})
 
@@ -1504,7 +1544,7 @@ Released on August 25th, 2007
 
 \b Added InstallOptions.nsh with relevant usage macros, based on the old Modern UI macros
 
-\b Added LangFile.nsh allowing creation of langauge files that can be included with a single command with defaults for missing strings (when LANGFILE_DEFAULT is set)
+\b Added LangFile.nsh allowing creation of language files that can be included with a single command with defaults for missing strings (when LANGFILE_DEFAULT is set)
 
 \b Added LB_ERR and CB_ERR to WinMessages.nsh (\W{http://sourceforge.net/support/tracker.php?aid=1771644}{bug #1771644})
 
@@ -2164,7 +2204,7 @@ Released on April 7th, 2006
     
 \b Fixed \R{library}{Library} failure with DLLs marked as read-only
 
-\b Fixed lzma's POSIX implemention thread synchronization issues and resource leaks
+\b Fixed lzma's POSIX implementation thread synchronization issues and resource leaks
 
 \b Fixed makensis self-path detection on non-Windows platforms (NSIS_CONFIG_CONST_DATA_PATH=no)
 
@@ -2378,7 +2418,7 @@ Released on December 17th, 2005
 
 \b Added drag & drop support for zip2exe
 
-\b Better drag & drop error handling in MakeNSISw
+\b Better drag & drop error handling in \L{../Docs/makensisw/Readme.txt}{MakeNSISW}
 
 \b Fixed Math plug-in array issues (\W{http://sourceforge.net/support/tracker.php?aid=1235875}{bug #1235875})
 
@@ -2392,7 +2432,7 @@ Released on December 17th, 2005
 
 \S2{} Build System
 
-\b Fixed endianess detection problem on POSIX platforms (\W{http://sourceforge.net/support/tracker.php?aid=1370179}{bug #1370179})
+\b Fixed endianness detection problem on POSIX platforms (\W{http://sourceforge.net/support/tracker.php?aid=1370179}{bug #1370179})
 
 \b Generated installers use nsis-VERSION-setup.exe template
 
@@ -3389,7 +3429,7 @@ Released on November 19th, 2003
 
 \b System plug-in improvements: Unicode, GUID and COM support 
 
-\b nsExec plug-in improvments: ability to run 16 bit code and tabs to spaces conversion
+\b nsExec plug-in improvements: ability to run 16 bit code and tabs to spaces conversion
 
 \b Math plug-in
 

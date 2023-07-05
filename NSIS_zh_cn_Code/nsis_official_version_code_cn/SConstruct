@@ -1,4 +1,5 @@
 # This Python file uses the following encoding: utf-8
+import platform; print("Using Python " + platform.python_version())
 EnsureSConsVersion(1,2)
 EnsurePythonVersion(2,7)
 # 生成的3个exe头
@@ -102,7 +103,7 @@ if defenv.WhereIs('hhc', os.environ['PATH']):
 	default_doctype = 'chm'
 
 import time
-cvs_version = time.strftime('3.0.8')
+cvs_version = time.strftime('3.0.9')
 
 opts = Variables()
 
@@ -457,9 +458,11 @@ Import('SilentActionEcho IsPEExecutable SetPESecurityFlagsWorker MakeReproducibl
 def SetPESecurityFlagsAction(target, source, env):
 	for t in target:
 		SetPESecurityFlagsWorker(t.path)
+g_pesecflagsecho = {}
 def SetPESecurityFlagsActionEcho(target, source, env):
 	for t in target:
-		if IsPEExecutable(t.path):
+		if t.name[-4:].lower() == '.dll' and IsPEExecutable(t.path) and not t.path in g_pesecflagsecho:
+			g_pesecflagsecho[t.path] = 1
 			print('Setting PE flags on %s' % t.name)
 def SetPESecurityFlags(targets):
 	for t in targets:

@@ -3,7 +3,7 @@
  * 
  * This file is a part of NSIS.
  * 
- * Copyright (C) 1999-2021 Nullsoft and Contributors
+ * Copyright (C) 1999-2023 Nullsoft and Contributors
  * 
  * Licensed under the zlib/libpng license (the "License");
  * you may not use this file except in compliance with the License.
@@ -255,6 +255,21 @@ TCHAR* CEXEBuild::GetMacro(const TCHAR *macroname, TCHAR**macroend /*= 0*/)
       if (macroend) *macroend = ++t;
       return mbeg;
     }
+  }
+  return 0;
+}
+
+TCHAR* CEXEBuild::GetMacro(size_t idx)
+{
+  TCHAR *t = (TCHAR*)m_macros.get(), *mbufbeg = t;
+  for (size_t i = 0, cbAll = m_macros.getlen(); t && *t; ++t)
+  {
+    if ((size_t)t - (size_t)mbufbeg >= cbAll) break;
+    if (i++ == idx) return t;
+    t += _tcslen(t) + 1; // advance over macro name
+    while (*t) t += _tcslen(t) + 1; // advance over parameters
+    t++; // Separator between parameters and data
+    while (*t) t += _tcslen(t) + 1; // advance over data
   }
   return 0;
 }
@@ -875,7 +890,6 @@ int CEXEBuild::pp_define(LineParser&line)
   {
     line.eattoken();
     define = line.gettoken_str(1);
-    if (dupemode == 1 && definedlist.find(define)) return PS_OK;
   }
 
   if (!_tcsicmp(define, _T("/date")) || !_tcsicmp(define, _T("/utcdate")))
@@ -1009,6 +1023,7 @@ int CEXEBuild::pp_define(LineParser&line)
   if (dupemode == 2) definedlist.del(define);
   if (definedlist.add(define, value))
   {
+    if (dupemode == 1) return PS_OK;
     ERROR_MSG(_T("!define: \"%") NPRIs _T("\" already defined!\n"), define);
     return PS_ERROR;
   }
@@ -1290,4 +1305,112 @@ int CEXEBuild::pp_cd(LineParser&line)
     return PS_ERROR;
   }
   return PS_OK;
+}
+
+int CEXEBuild::pp_boolifyexpression(LineParser&line, int &result, bool allow_logicneg, int ignore_last_tokens)
+{
+  const TCHAR *cmdnam = line.gettoken_str(0); // Must save name now before eattoken!
+  int istrue = 0, mod = 0, logicneg = 0;
+
+  if (allow_logicneg && !_tcscmp(line.gettoken_str(1),_T("!")))
+    logicneg++, line.eattoken();
+
+  int numtokens = line.getnumtokens() - ignore_last_tokens;
+  if (numtokens == 2)
+  {
+    istrue = line.gettoken_number(1) || line.gettoken_int(1);
+  }
+  else if (numtokens == 3)
+  {
+    if (!_tcsicmp(line.gettoken_str(1),_T("/fileexists")))
+    {
+      TCHAR *fc = my_convert(line.gettoken_str(2));
+      tstring dir = get_dir_name(fc), spec = get_file_name(fc);
+      my_convert_free(fc);
+      if (dir == spec) dir = _T("."); 
+  
+      boost::scoped_ptr<dir_reader> dr( new_dir_reader() );
+      dr->hack_simpleexcluded().erase(_T("."));
+      dr->read(dir);
+  
+      for (dir_reader::iterator fit = dr->files().begin();
+         fit != dr->files().end() && !istrue; fit++)
+      {
+        if (dir_reader::matches(*fit, spec)) istrue = true;
+      }
+      if (!istrue) for (dir_reader::iterator dit = dr->dirs().begin();
+         dit != dr->dirs().end() && !istrue; dit++)
+      {
+        if (dir_reader::matches(*dit, spec)) istrue = true;
+      }
+    }
+    else 
+      PRINTHELPEX(cmdnam)
+  }
+  else if (numtokens == 4) 
+  {
+    int cnv1 = 1, cnv2 = 1;
+    mod = line.gettoken_enum(2,_T("==\0!=\0S==\0S!=\0=\0<>\0<=\0<\0>\0>=\0&\0&&\0|\0||\0"));
+    switch(mod) 
+    {
+    case 0:
+      istrue = _tcsicmp(line.gettoken_str(1),line.gettoken_str(3)) == 0; break;
+    case 1:
+      istrue = _tcsicmp(line.gettoken_str(1),line.gettoken_str(3)) != 0; break;
+    case 2:
+      istrue = _tcscmp(line.gettoken_str(1),line.gettoken_str(3)) == 0; break;
+    case 3:
+      istrue = _tcscmp(line.gettoken_str(1),line.gettoken_str(3)) != 0; break;
+    case 4:
+       istrue = line.gettoken_number(1,&cnv1) == line.gettoken_number(3,&cnv2); break;
+    case 5:
+       istrue = line.gettoken_number(1,&cnv1) != line.gettoken_number(3,&cnv2); break;
+    case 6:
+      istrue = line.gettoken_number(1,&cnv1) <= line.gettoken_number(3,&cnv2); break;
+    case 7:
+      istrue = line.gettoken_number(1,&cnv1) <  line.gettoken_number(3,&cnv2); break;
+    case 8:
+      istrue = line.gettoken_number(1,&cnv1) >  line.gettoken_number(3,&cnv2); break;
+    case 9:
+      istrue = line.gettoken_number(1,&cnv1) >= line.gettoken_number(3,&cnv2); break;
+    case 10:
+      istrue = (line.gettoken_int(1,&cnv1) & line.gettoken_int(3,&cnv2)) != 0; break;
+    case 11:
+      istrue = line.gettoken_int(1,&cnv1) && line.gettoken_int(3,&cnv2); break;
+    case 12:
+    case 13:
+      istrue = line.gettoken_int(1,&cnv1) || line.gettoken_int(3,&cnv2); break;
+    default:
+      PRINTHELPEX(cmdnam)
+    }
+    if (!cnv1 || !cnv2) 
+      warning_fl(DW_PARSE_BADNUMBER, _T("Invalid number: \"%") NPRIs _T("\""), line.gettoken_str(!cnv1 ? 1 : 3));
+  }
+  else
+  {
+    PRINTHELPEX(cmdnam)
+  }
+
+  result = logicneg ? !istrue : istrue;
+  return PS_OK;
+}
+
+int CEXEBuild::pp_assert(LineParser&line)
+{
+  const TCHAR *message = line.gettoken_str(line.getnumtokens() - 1);
+  int istrue, ec = pp_boolifyexpression(line, istrue, false, 1);
+
+  if (ec != PS_ERROR && !istrue)
+  {
+    tstring buf = _T("");
+    if (!*message)
+    {
+      for (int i = 1, c = line.getnumtokens() - 1, any = 0; i < c; ++i)
+        buf += (_T(" ") + !(any++)), buf += line.gettoken_str(i);
+      message = buf.c_str();
+    }
+    ERROR_MSG(_T("%") NPRIs _T(": %") NPRIs _T("\n"), get_commandtoken_name(TOK_P_ASSERT), message);
+    return PS_ERROR;
+  }
+  return ec;
 }

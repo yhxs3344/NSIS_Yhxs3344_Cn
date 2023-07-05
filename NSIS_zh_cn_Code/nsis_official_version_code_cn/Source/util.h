@@ -3,7 +3,7 @@
  * 
  * This file is a part of NSIS.
  * 
- * Copyright (C) 1999-2021 Nullsoft and Contributors
+ * Copyright (C) 1999-2023 Nullsoft and Contributors
  * 
  * Licensed under the zlib/libpng license (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,6 +31,13 @@
 #endif
 #include <stdarg.h>
 #include <stdio.h>
+
+static inline bool ui_add(unsigned int &r, unsigned int a, unsigned int b) { return (r = a + b) >= a; }
+static inline bool si_add(int &r, int a, int b)
+{
+  unsigned int na = a < 0, aa = na ? a * -1 : a, nb = b < 0, ab = nb ? b * -1 : b, t = aa + ab, uz = 0;
+  return na == nb && (t > INT_MAX || (~uz / 2 > INT_MAX && t < aa)) ? false : (r = a + b, true); // Good enough for our use
+}
 
 extern double my_wtof(const wchar_t *str);
 extern size_t my_strncpy(TCHAR*Dest, const TCHAR*Src, size_t cchMax);
@@ -310,6 +317,7 @@ int my_open(const TCHAR *pathname, int flags);
 #define OPEN(a, b) my_open(a, b)
 
 #else // _WIN32
+bool GetFileSize64(HANDLE hFile, ULARGE_INTEGER &uli);
 
 #define my_convert(x) (x)
 #define my_convert_free(x)
@@ -321,9 +329,11 @@ int my_open(const TCHAR *pathname, int flags);
 FILE* my_fopen(const TCHAR *path, const char *mode);
 #define FOPEN(a, b) my_fopen((a), (b))
 
+UINT64 Platform_GetMaxFileSize();
 const UINT32 invalid_file_size32 = ~ (UINT32) 0;
 UINT32 get_file_size32(FILE *f);
 const UINT64 invalid_file_size64 = ~ (UINT64) 0;
+UINT64 get_file_size64(FILE *f);
 BYTE* alloc_and_read_file(FILE *f, unsigned long &size);
 BYTE* alloc_and_read_file(const TCHAR *filepath, unsigned long &size);
 

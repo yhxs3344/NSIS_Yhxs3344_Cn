@@ -22,8 +22,8 @@ void initversionstring(void)
 {
   char scmverbuf[VERSTRSCMREVMAX+1];
   int cchsvnrev = 0;
-  /* SCM trigger 20210912 */
-  const char*svnproprev = "$Revision: 7318 $";
+  /* SCM trigger 20211223 */
+  const char*svnproprev = "$Revision: 7347 $";
   if ('$' == *svnproprev++)
   {
     const char*p;
