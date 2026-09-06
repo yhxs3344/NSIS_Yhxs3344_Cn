@@ -1,1 +1,0 @@
-call scons --clean TARGET_ARCH="amd64" ZLIB_W32="D:\NSIS_Zlib\zlib-1.2.12-x64"
