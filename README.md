@@ -29,16 +29,27 @@
 
 ---
 
-## Note
-
-- BY:yhxs344
-
-- WEB:www.yhxs344.net
-
-- QQ Group:436741130
+## 文件说明
+- **code-zh-cn/nsisbi-v3.12.3  nsisbi翻译的中文版源码
+- **code-zh-cn/nsis-v3.12  nsis翻译的中文版官方源码
+- **docs 相关文档
+- **images相关截图
+- **Pugins-Code 收集的nsis插件源码
+- **Ui-Examples nsis界面库例子
+- **Ui-Pugins-Code  收集的nsis界面库插件源码
+- **Plugins-Dll nsis Pugins dll(x86-ansi、x86-unicode、x64-ansi、x64-unicode) 
 
 ---
 
+## Note
+
+- **BY:yhxs344
+
+- **WEB:www.yhxs344.net
+
+- **QQ Group:436741130
+
+---
 
 ## 许可与声明
 

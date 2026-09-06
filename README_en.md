@@ -15,10 +15,25 @@
 - **Updated plugins: NScurl.dll, nsis7z.dll, nsJSON.dll, and ShellExecAsUser.dll.**
 - **Added nsParser.dll as a new plugin.**
 
+---
+
+## File Notes
+- **code-zh-cn/nsisbi-v3.12.3  nsisbi Source code in Chinese
+- **code-zh-cn/nsis-v3.12  nsis Official source code in Chinese
+- **docs See Also
+- **images Screenshots
+- **Pugins-Code Collected NSIS Plugin Sources
+- **Ui-Examples NSIS UI Examples
+- **Ui-Pugins-Code  Collected NSIS UI Plugin Sources
+- **Plugins-Dll nsis Pugins dll(x86-ansi、x86-unicode、x64-ansi、x64-unicode) 
+
+---
+
 ## Note
-BY:yhxs344
-WEB:www.yhxs344.net
-QQ Group:436741130
+- **BY:yhxs344
+- **WEB:www.yhxs344.net
+- **QQ Group:436741130
+
 ---
 
 
