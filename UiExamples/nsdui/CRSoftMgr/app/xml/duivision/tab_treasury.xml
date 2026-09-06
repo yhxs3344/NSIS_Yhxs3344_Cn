@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<div pos="80,-550,-0,-0" >
+
+	<area name="area-controls" pos="80,1,980,600" begin-transparent="0" end-transparent="0" />
+	<img pos="0,19,980,20" image="skin:IDB_TAB_BACK" mode="frame" framesize="1" show="1" />
+	<img pos="0,59,980,60" image="skin:IDB_TAB_BACK" mode="frame" framesize="1" show="1" />
+
+	<!--imgbtn name="button.pagedown" pos="858,21,887,40" img-count="3" skin="IDB_BT_CLOSE" tip="关闭" duimsg="mouseldown" show="1"/-->
+	<imgbtn name="button.pageup" pos="-36,19,890,39" img-count="4" skin="IDB_TAB_PAGEUP_RJGJ" tip="上一页" duimsg="mouseldown" show="1"/>
+	<imgbtn name="button.pagedown" pos="-36,39,890,60" img-count="4" skin="IDB_TAB_PAGEDOWN_RJGJ" tip="下一页" duimsg="mouseldown" show="1"/>
+	<!--rect pos="860,19,890,50" response="0" color="00CC00" /-->
+
+
+
+
+	<tabctrl name="tabctrl.controls" img-sep="skin:IDB_TAB_SEPERATOR" img-hover="skin:IDB_TAB_BACK-"
+		img-tabbtn-="skins\default\btn_close.png" tabbtnpos="21,3"
+		font="bold" item-width="77" tab-height="29" 
+		crtext="838B8B" crhover="CDB7B5" crpush="00FF00" crrowhover="33FF33" animate="0"
+		pos="2,25,855,-1">
+
+		<!--tab name="tab.control.1" image="skin:IDB_TAB_ITEM" title="装机必备" active="true" pos="0,30,-0,-0"/-->
+		<tab name="tab.control.1"   title="装机必备1" active="true"  pos="10,30,970,590" show="1">
+			<!--text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码1" tip="文字可拖动,设置控件的drag属性=1" drag="1"/-->
+			<imgbtn name="button.softsort" pos="17,50,300,80" img-count="1" skin="IDB_BT_SUBMIT" tip="test" show="1"/>
+		</tab>
+		<tab name="tab.control.2"   title="装机必备2" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码2" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.3"   title="装机必备3" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码3" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.4"   title="装机必备4" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码4" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.5"   title="装机必备5"  active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码5" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.6"   title="装机必备6"  active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码6" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.7"   title="装机必备7"  active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码7" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.8"   title="装机必备8"  active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码8" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.9"   title="装机必备9"  active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码9" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.10"  title="装机必备10" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码10" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.11"  title="装机必备11" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码11" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.12"  title="装机必备12" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码12" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.13"  title="装机必备13" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码13" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.14"  title="装机必备14" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码14" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.15"  title="装机必备15" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码15" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.16"  title="装机必备16" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码16" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.17"  title="装机必备17" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码17" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.18"  title="装机必备18" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码18" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.19"  title="装机必备19" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码19" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.20"  title="装机必备20" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码20" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.21"  title="装机必备21" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码21" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.22"  title="装机必备22" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码22" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.23"  title="装机必备23" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码23" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.24"  title="装机必备24" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码24" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		<tab name="tab.control.25"  title="装机必备25" active="false" pos="10,30,970,590" >
+			<text pos="17,50,300,80" crtext="000000" crmark="904000" font="bigbig" title="测试代码25" tip="文字可拖动,设置控件的drag属性=1" drag="1"/>
+		</tab>
+		
+	</tabctrl>
+
+</div>

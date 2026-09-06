@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="640,485">
+  <Include source="Default.xml" />
+  <VerticalLayout enabled="true" width="640" height="485" bkcolor="#FF1F2226">
+    <VerticalLayout name="HeaderTag" float="true" pos="0,0,0,0" enabled="true" width="635" height="1"/>
+    <VerticalLayout name="GameTopVer" float="true" pos="0,1,0,0" enabled="true" width="635" height="485"/>
+  </VerticalLayout>
+</Window>

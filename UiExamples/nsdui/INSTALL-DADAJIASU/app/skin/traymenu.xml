@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="98,70" topmost="true" bktrans="true" >
+    <Font name="微软雅黑" size="12" italic="false" />
+    <VerticalLayout enabled="true" width="98" height="70" bkimage="trayMenuBk.png">
+        <List name="MenuList" enabled="true" float="true" pos="5,5,0,0" width="88" height="60" bkcolor="#FF333944"  itemselectedbkcolor="#FF07C171" itemhottextcolor="#FFFFFFFF" itemhotbkcolor="#FF07C171" header="hidden" >
+            <ListContainerElement name="ShowCliect" enabled="true" width="88" height="30" >
+                <Label name="ItemText" text="显示页面"  font="0" float="true" pos="18,5,0,0" enabled="true" width="60" height="20" mouse="false" textcolor="#FFCCCCCC" />
+             </ListContainerElement>
+            <ListContainerElement name="Exit" text="退出程序" enabled="true" width="88" height="30">
+                <Label name="ItemText" text="退出程序" font="0" float="true" pos="18,5,0,0" enabled="true" width="60" height="20" mouse="false" textcolor="#FFCCCCCC" />
+             </ListContainerElement>
+        </List>
+    </VerticalLayout>
+</Window>

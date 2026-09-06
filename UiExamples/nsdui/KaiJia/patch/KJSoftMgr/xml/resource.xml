@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+<!--系统配置-->
+<res type="cfg" name="defaultStyle" value="" />
+<res type="cfg" name="logfile" value="SoftMgr.log" />
+<res type="cfg" name="loglevel" value="1" />
+<res type="cfg" name="appMutex" value="MUTEX_DUIVISION_SoftMgr" />
+<res type="cfg" name="enableDragFile" value="1" />
+<res type="cfg" name="trayDbClickMsg" value="0" />
+
+<!--风格设置-->
+<res type="style" name="default" value="" />
+<res type="style" name="qq" value="qq" />
+
+<!--XML资源-->
+<res type="res" lang="zh-cn" file="xml\def_string_zh-cn.xml" />
+<res type="res" lang="en-us" file="xml\def_string_en-us.xml" />
+
+<!--XML资源-默认风格-->
+<res type="xml" name="dlg_main" file="xml\duivision\dlg_main.xml" />
+<res type="xml" name="dlg_skin" file="xml\dlg_skin.xml"  />
+<res type="xml" name="dlg_notifymsg" file="xml\dlg_notifymsg.xml"  />
+<res type="xml" name="dlg_msgbox" file="xml\dlg_msgbox.xml"  />
+<res type="xml" name="dlg_about" file="xml\duivision\dlg_about.xml"  />
+<res type="xml" name="dlg_login" file="xml\duivision\dlg_login.xml"  />
+<res type="xml" name="tab_Home" file="xml\app\tab_Home.xml" />
+<res type="xml" name="menu_main" file="xml\duivision\menu_main.xml"  />
+<res type="xml" name="menu_tray" file="xml\duivision\menu_tray.xml"  />
+<res type="xml" name="tab_browser" file="xml\duivision\tab_browser.xml"  />
+
+<!--软件管家XML资源 by wechy-->
+<res type="xml" name="dlg_setting" file="xml\SoftMgr\dlg_setting.xml"  />
+<res type="xml" name="dlg_aboutus" file="xml\SoftMgr\dlg_aboutus.xml"  />
+<res type="xml" name="dlg_suggest" file="xml\SoftMgr\dlg_suggest.xml"  />
+<res type="xml" name="tab_update" file="xml\SoftMgr\tab_update.xml"  />
+<res type="xml" name="tab_treasury" file="xml\SoftMgr\tab_treasury.xml"  />
+<res type="xml" name="menu_sort" file="xml\SoftMgr\menu_sort.xml"  />
+<res type="xml" name="tab_wkeview" file="xml\SoftMgr\tab_wkeview.xml"  />
+<res type="xml" name="tab_ext_treasury" file="xml\SoftMgr\tab_ext_treasury.xml"  />
+<res type="xml" name="tab_uninstall" file="xml\SoftMgr\tab_uninstall.xml"  />
+<res type="xml" name="tab_ext_uninstall" file="xml\SoftMgr\tab_ext_uninstall.xml"  />
+<res type="xml" name="tab_download" file="xml\SoftMgr\tab_download.xml"  />
+<res type="xml" name="tab_search" file="xml\SoftMgr\tab_search.xml"  />
+
+
+<!--字体资源-->
+<res type="font" lang="zh-cn" name="small" font="微软雅黑" size="9" bold="false" />
+<res type="font" lang="zh-cn" name="small" font="Tahoma" size="8" bold="false" os="winxp" />
+<res type="font" lang="zh-cn" name="default" font="微软雅黑" size="12" bold="false" />
+<res type="font" lang="zh-cn" name="default" font="Tahoma" size="11" bold="false" os="winxp" />
+<res type="font" lang="zh-cn" name="bold" font="微软雅黑" size="12" bold="true" />
+<res type="font" lang="zh-cn" name="bold" font="Tahoma" size="11" bold="true" os="winxp" />
+<res type="font" lang="zh-cn" name="big" font="微软雅黑" size="14" bold="true" italic="false" underline="false" strikeout="false" />
+<res type="font" lang="zh-cn" name="big" font="Tahoma" size="12" bold="true" italic="false" underline="false" strikeout="false" os="winxp" />
+<res type="font" lang="zh-cn" name="bigbig" font="微软雅黑" size="18" />
+<res type="font" lang="zh-cn" name="bigbig" font="Tahoma" size="17" os="winxp" />
+
+<!--自定义图片 by Wechy-->
+<res type="img" name="IDB_BT_CLOSE_RJGJ" file="skins\SoftMgr\default\BT_CLOSE.png" />
+<res type="img" name="IDB_BT_MIN_RJGJ" file="skins\SoftMgr\default\BT_MIN.png" />
+<res type="img" name="IDB_BT_MENU_RJGJ" file="skins\SoftMgr\default\BT_MENU.png" />
+<res type="img" name="IDB_GJ_HORI_RJGJ" file="skins\SoftMgr\default\split_hori.png" />
+<res type="img" name="IDB_TAB_BACK_RJGJ" file="skins\SoftMgr\default\rjgj_seperator_back.png" />
+<res type="img" name="IDB_PAGEUP_RJGJ" file="skins\SoftMgr\default\BT_PAGEUP.png" />
+<res type="img" name="IDB_PAGEDOWN_RJGJ" file="skins\SoftMgr\default\BT_PAGEDOWN.png" />
+<res type="img" name="IDB_TAB_PAGEUP_RJGJ" file="skins\SoftMgr\default\BT_TAB_PAGEUP.png" />
+<res type="img" name="IDB_TAB_PAGEDOWN_RJGJ" file="skins\SoftMgr\default\BT_TAB_PAGEDOWN.png" />
+<res type="img" name="IDB_SOFT_SORT" file="skins\SoftMgr\default\BT_SOFT_SORT.png" />
+<res type="img" name="IDB_ONE_KEY_RJGJ" file="skins\SoftMgr\default\ONE_KEY_SETUP.png" />
+<res type="img" name="IDB_CHANGE_PAGE_RJGJ" file="skins\SoftMgr\default\RJGJ_PAGE.png" />
+<res type="img" name="IDB_RP_LINE_RJGJ" file="skins\SoftMgr\default\rpline.png" />
+<res type="img" name="IDB_TAB_BACKGROUND_RJGJ" file="skins\SoftMgr\default\tab_background.png" />
+<res type="img" name="IDB_HOME_BACK_RJGJ" file="skins\SoftMgr\default\RJGJ_BACK.png" />
+<res type="img" name="IDB_DOWN_SETTING_RJGJ" file="skins\SoftMgr\default\RJGJ_SETTING.png" />
+<res type="img" name="IDB_DOWN_OPENPATH_RJGJ" file="skins\SoftMgr\default\OPEN_PATH.png" />
+<res type="img" name="IDB_DOWN_CLEANLIST_RJGJ" file="skins\SoftMgr\default\CLEAN_LIST.png" />
+
+
+
+
+
+<res type="img" name="IDB_SOFT_MGR" file="skins\SoftMgr\icon\ico_softmgr.png" />
+<res type="img" name="IDB_CHARTLET_ICO" file="skins\SoftMgr\icon\ico_chartlet.png" />
+<res type="img" name="IDB_CHARTLET_ICO2" file="skins\SoftMgr\icon\ico_chartlet2.png" />
+<res type="img" name="IDB_CHECK_BOX_RJGJ" file="skins\SoftMgr\default\CHECK_BOX.png" />
+<res type="img" name="IDB_TREE_TOGGLE_RJGJ" file="skins\SoftMgr\default\tree_toggle.png" />
+<res type="img" name="IDB_SEARCH_RJGJ" file="skins\SoftMgr\default\Search.png" />
+<res type="img" name="IDB_LOADING_RJGJ" file="skins\SoftMgr\default\Loading.png" />
+
+
+
+
+
+
+<!--图片资源-默认风格-->
+<res type="img" name="IDB_TRAY_ICON" file="SoftMgr.ico" />
+<res type="img" name="IDB_MAIN_FRAME" file="skins\default\WindowsBack.png" />
+<res type="img" name="IDB_BT_CLOSE" file="skins\default\BT_CLOSE.png" />
+<res type="img" name="IDB_BT_MIN" file="skins\default\BT_MIN.png" />
+<res type="img" name="IDB_BT_MENU" file="skins\default\BT_MENU.png" />
+<res type="img" name="IDB_BT_SKIN" file="skins\default\BT_SKIN.png" />
+<res type="img" name="IDB_BT_SETUP" file="skins\default\BT_SETUP.png" />
+<res type="img" name="IDB_BT_DEFAULT" file="skins\default\BT_DEFAULT.png" />
+<res type="img" name="IDB_BT_ICON" file="skins\default\BT_ICON.png" />
+<res type="img" name="IDB_BT_GREEN" file="skins\default\BT_GREEN.png" />
+<res type="img" name="IDB_BT_CANCEL" file="skins\default\BT_CANCEL.png" />
+<res type="img" name="IDB_CHECK_BOX" file="skins\default\CHECK_BOX.png" />
+<res type="img" name="IDB_RADIO_BUTTON" file="skins\default\RADIO_BUTTON.png" />
+<res type="img" name="IDB_EDIT" file="skins\default\EDIT.png" />
+<res type="img" name="IDB_COMBO_ITEM" file="skins\default\COMBO_ITEM.png" />
+<res type="img" name="IDB_COMBO_ITEM_CLOSE" file="skins\default\COMBO_ITEM_CLOSE.png" />
+<res type="img" name="IDB_PROGRESS" file="skins\default\Progress.png" />
+<res type="img" name="IDB_PROGRESS_GREEN_BACK" file="skins\default\progress_background_icon.png" />
+<res type="img" name="IDB_PROGRESS_GREEN_FORE" file="skins\default\progress_foreground_icon.png" />
+<res type="img" name="IDB_SCROLL_V" file="skins\default\SCROLL_V.png" />
+<res type="img" name="IDB_BT_SCROLL_UP" file="skins\default\BT_SCROLL_UP.png" />
+<res type="img" name="IDB_BT_SCROLL_DOWN" file="skins\default\BT_SCROLL_DOWN.png" />
+<res type="img" name="IDB_TAB_SEPERATOR" file="skins\default\Tab_seperator.png" />
+<res type="img" name="IDB_TAB_ITEM" file="skins\default\tab.png" />
+<res type="img" name="IDB_TAB_BACK" file="skins\default\tab_background.png" />
+<res type="img" name="IDB_TAB_HOVER" file="skins\default\toolbar_hover.png" />
+<res type="img" name="IDB_LIST_IMG" file="skins\default\list_img.png" />
+<res type="img" name="IDB_MSGDLG_BK" file="skins\default\msgdlg_bk.png" />
+<res type="img" name="IDB_TREE_COLLAPSE" file="skins\default\tree_collapse.png" />
+<res type="img" name="IDB_TREE_TOGGLE" file="skins\default\tree_toggle.png" />
+<res type="img" name="IDB_TREE_CHECKBOX" file="skins\default\tree_checkbox.png" />
+<res type="img" name="IDB_TREE_ICON" file="skins\default\tree_icon.png" />
+<res type="img" name="IDB_BT_SKIN_CUSTOMIZE" file="skins\default\BT_SKIN_CUSTOMIZE.png" />
+<res type="img" name="IDB_BT_SKIN_IMAGE" file="skins\default\BT_SKIN_IMAGE.png" />
+<res type="img" name="IDB_BT_SKIN_COLOR" file="skins\default\BT_SKIN_COLOR.png" />
+<res type="img" name="IDB_SKIN_PUSHED_BKG" file="skins\default\SkinPushedBkg.png" />
+<res type="img" name="IDB_SKIN_BKG" file="skins\default\SkinBkg.png" />
+<res type="img" name="IDB_DROP_DOWN" file="skins\default\BT_DROP_DOWN.png" />
+<res type="img" name="IDB_KEY_BOARD" file="skins\default\BT_KEY_BOARD.png" />
+<res type="img" name="IDB_EDIT_USER" file="skins\simage\edit_user.png" />
+<res type="img" name="IDB_COMPUTER" file="skins\simage\computer.png" />
+<res type="img" name="IDB_EDIT_PWD" file="skins\simage\password.png" />
+<res type="img" name="IDB_LINE_RP" file="skins\default\rp_line.png" />
+<res type="img" name="IDB_SHADOW_BK" file="skins\default\winback_shadow.png" />
+
+<!--自定义按钮by wechy-->
+<res type="img" name="IDB_BT_SURE" file="skins\SoftMgr\default\BT_SURE.png" />
+<res type="img" name="IDB_BT_CANCEL_RJGJ" file="skins\SoftMgr\default\BT_CANCEL.png" />
+<res type="img" name="IDB_BT_SUBMIT" file="skins\SoftMgr\default\BT_SUBMIT.png" />
+<res type="img" name="IDB_BT_CHOOSEDIR" file="skins\SoftMgr\default\CHOOSE_DIR.png" />
+<res type="img" name="IDB_BT_COMBOBOX" file="skins\SoftMgr\default\BT_COMBOBOX.png" />
+<res type="img" name="IDB_BT_BOXSMALL" file="skins\SoftMgr\default\BT_BOX_SMALL.png" />
+<res type="img" name="IDB_BT_RJGJ_EDIT" file="skins\SoftMgr\default\RJGJ_EDIT.png" />
+
+
+
+
+
+
+
+
+
+
+<res type="img" name="IDB_MENU_BACK" file="skins\menu\menu_bkg.png" />
+<res type="img" name="IDB_MENU_SEP" file="skins\menu\menu_sep.png" />
+<res type="img" name="IDB_MENU_ARROW" file="skins\menu\menu_arrow.png" />
+<res type="img" name="IDB_NMENU_BACK" file="skins\menu\nmenu_back.png" />
+
+<res type="img" name="SKIN_PIC_9" file="bkimg\SKIN_PIC_0.png" />
+<res type="img" name="SKIN_PIC_1" file="bkimg\SKIN_PIC_1.png" />
+<res type="img" name="SKIN_PIC_2" file="bkimg\SKIN_PIC_2.png" />
+<res type="img" name="SKIN_PIC_3" file="bkimg\SKIN_PIC_3.png" />
+<res type="img" name="SKIN_PIC_4" file="bkimg\SKIN_PIC_4.png" />
+<res type="img" name="SKIN_PIC_5" file="bkimg\SKIN_PIC_5.png" />
+<res type="img" name="SKIN_PIC_6" file="bkimg\SKIN_PIC_6.png" />
+<res type="img" name="SKIN_PIC_7" file="bkimg\SKIN_PIC_7.png" />
+<res type="img" name="SKIN_PIC_8" file="bkimg\SKIN_PIC_8.png" />
+<res type="img" name="SKIN_PIC_0" file="bkimg\SKIN_PIC_0.png" />
+
+<!--自定义背景图片by wechy-->
+<res type="img" name="SKIN_PIC_SETTING" file="skins\SoftMgr\bkimg\SKIN_PIC_SETTING.png" />
+<res type="img" name="SKIN_PIC_ABOUTUS" file="skins\SoftMgr\bkimg\SKIN_PIC_ABOUTUS.png" />
+<res type="img" name="SKIN_PIC_SUGGEST" file="skins\SoftMgr\bkimg\SKIN_PIC_SUGGEST.png" />
+
+
+
+<res type="img" name="IDB_ICON_CHECK" file="skins\image\icon_check.png" />
+<res type="img" name="IDB_ICON_INFO" file="skins\image\icon_info.png" />
+<res type="img" name="IDB_ICON_QUESTION" file="skins\image\icon_question.png" />
+<res type="img" name="IDB_ICON_WARN" file="skins\image\icon_warning.png" />
+<res type="img" name="IDB_ICON_ERROR" file="skins\image\icon_error.png" />
+
+<res type="img" name="IDB_MENU_UPDATE" file="skins\menu\MENU_UPDATE.png" />
+<res type="img" name="IDB_MENU_AUTH" file="skins\menu\MENU_AUTH.png" />
+<res type="img" name="IDB_MENU_HELP" file="skins\menu\MENU_HELP.png" />
+<res type="img" name="IDB_MENU_SETUP" file="skins\menu\MENU_SETUP.png" />
+
+<!--自定义菜单图标 by wechy-->
+<res type="img" name="IDB_MENU_SETTING" file="skins\SoftMgr\menu\MENU_SETTING.png" />
+<res type="img" name="IDB_MENU_CHECKUPDATE" file="skins\SoftMgr\menu\MENU_CHECKUPDATE.png" />
+<res type="img" name="IDB_MENU_SUGGEST" file="skins\SoftMgr\menu\MENU_SUGGEST.png" />
+<res type="img" name="IDB_MENU_OFFCIAL" file="skins\SoftMgr\menu\MENU_OFFCIAL.png" />
+<res type="img" name="IDB_MENU_CONTACTUS" file="skins\SoftMgr\menu\MENU_CONTACTUS.png" />
+
+<res type="img" name="IDB_SCAN_ANIMATE" file="skins\default\scan_animate.png" />
+
+<!--图片资源-360风格-->
+
+<!--字符串资源-->
+<res type="str" lang="zh-cn" name="APP_NAME" value="" />
+<res type="str" lang="zh-cn" name="APP_VER" value="1.0.0.1" />
+<res type="str" lang="zh-cn" name="APP_COPYRIGHT" value="" />
+<res type="str" lang="zh-cn" name="OK" value="确定" />
+<res type="str" lang="zh-cn" name="CANCEL" value="放弃" />
+<res type="str" lang="zh-cn" name="YES" value="是" />
+<res type="str" lang="zh-cn" name="NO" value="否" />
+<res type="str" lang="zh-cn" name="LOGIN" value="登录" />
+
+</root>

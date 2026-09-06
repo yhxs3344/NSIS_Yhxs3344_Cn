@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg title="" width="360" height="400" translucent="255"
+	frame="" bkimg="" crbk="ff0012" appwin="0" resize="0" topmost="0"
+	img-shadow="skins\image\window_shadow.png" shadow-wlt="5" shadow-hlt="3" shadow-wrb="5" shadow-hrb="7">
+
+  <base>
+    <button name="button.setting" pos="-48,0" width="24" height="24" skin="IDB_BOOTTIME_BT_SETTING" showfocus="0" cursor="hand" taskmsg="1" />
+    <button name="button.close" pos="-24,0" width="24" height="24" skin="IDB_BOOTTIME_BT_CLOSE" showfocus="0" cursor="hand" action="hide-window" />
+  </base>
+
+  <body>
+    <area name="area.yellow" pos="0,0,-0,-0" color="ffbf00" begin-transparent="0" end-transparent="0" />
+    <area name="area.green" pos="0,0,-0,-0" color="18c31d" begin-transparent="0" end-transparent="0" />
+    <img pos="0,0" width="360" height="400" skin="IDB_BOOTTIME_BKGND" mode="normal" response="0" />
+    
+    <img pos="0,0" width="35" height="35" skin="IDB_ICON_LOGO" mode="normal" response="0" />
+    <text pos="30,0" width="200" height="35" crtext="FFFFFF" valign="middle" font="big" title="铠甲安全卫士开机小助手" response="0" />
+
+    <img name="img_minute_high" pos="40,100" width="60" height="90" skin="IDB_BOOTTIME_NUMBER_0" mode="normal" response="0" />
+    <img name="img_minute_low" pos="100,100" width="60" height="90" skin="IDB_BOOTTIME_NUMBER_0" mode="normal" response="0" />
+    <text name="text_minute" pos="160,100" width="30" height="86" align="left" valign="bottom" crtext="FFFFFF" font="big" title="分" />
+    <img name="img_second_high" pos="190,100" width="60" height="90" skin="IDB_BOOTTIME_NUMBER_0" mode="normal" response="0" />
+    <img name="img_second_low" pos="250,100" width="60" height="90" skin="IDB_BOOTTIME_NUMBER_0" mode="normal" response="0" />
+    <text name="text_second" pos="310,100" width="30" height="86" align="left" valign="bottom" crtext="FFFFFF" font="big" title="秒" />
+    
+    <text name="text_optimize_tips" pos="0,250" width="360" height="25" align="center" crtext="205,244,217" font="big" title="电脑太慢？请立即优化可提高开机速度" />
+    <button name="button.optimize" pos="104,300" width="153" height="44" skin="IDB_BOOTTIME_BT_OPTIMIZE" showfocus="0" cursor="hand" taskmsg="1" />
+  </body>
+
+</dlg>

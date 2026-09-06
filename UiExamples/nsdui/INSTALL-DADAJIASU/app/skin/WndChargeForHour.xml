@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="350,400" caption="0,0,0,35" showshadow="true" shadowsize="4" shadowcorner="23,13,23,33" shadowposition="0,0" shadowdarkness="70">
+  <Include source="Default.xml" />
+  <VerticalLayout enabled="true" width="350" height="400" bkimage="WndChargeHourBk.png" >
+    <VerticalLayout enabled="true" width="350" height="75">
+      <Label textcolor="FFCCCCCC" text="会员充值"  font="0" float="true" pos="10,5,0,0" width="65" height="25" />
+      <Button name="ButClose" float="true" pos="317,0,0,0" enabled="true" width="31" height="32" normalimage="file=&apos;close1.png&apos; source=&apos;0,0,31,32&apos;" hotimage="file=&apos;close1.png&apos; source=&apos;31,0,62,32&apos;" pushedimage="file=&apos;close1.png&apos; source=&apos;62,0,93,32&apos;"/>
+      <Option name="OptCharge" float="true" pos="0,36,0,0" enabled="true" visible="true" width="175" height="38" text="时长购买" font="0" textcolor="#FF999999" selectedtextcolor="#FF07D569" hottextcolor="#FF07D569" group="FulshMode" normalimage="file=&apos;WndChargeOpt.png&apos; source=&apos;175,0,350,38&apos;" hotimage="file=&apos;WndChargeOpt.png&apos; source=&apos;0,0,175,38&apos;" selectedimage="file=&apos;WndChargeOpt.png&apos; source=&apos;0,0,175,38&apos;" selected="true"/>
+      <Option name="OptMask" float="true" pos="175,36,0,0" enabled="true" visible="true" width="175" height="38" text="换机码" font="0" textcolor="#FF999999" selectedtextcolor="#FF07D569" hottextcolor="#FF07D569" group="FulshMode" normalimage="file=&apos;WndChargeOpt.png&apos; source=&apos;175,0,350,38&apos;" hotimage="file=&apos;WndChargeOpt.png&apos; source=&apos;0,0,175,38&apos;" selectedimage="file=&apos;WndChargeOpt.png&apos; source=&apos;0,0,175,38&apos;"/>
+    </VerticalLayout>
+    <TabLayout name="TabType" enabled="true" float="true" pos="0,75,0,0" width="350" height="325" selectedid="0">
+      <VerticalLayout enabled="true" width="350" height="325" bkcolor="FF00FF00">
+        <wkeWebkit name="WkeCharge" visible="true" enabled="true" float="true" pos="0,0,0,0" width="470" height="345"  bkcolor="#FF2A2A2A"/>
+      </VerticalLayout>
+      <VerticalLayout enabled="true" width="350" height="325">
+        <Label textcolor="FFFF7F00" text="更换电脑请输入您之前的换机码即可继续激活会员"  font="0" float="true" pos="20,8,0,0" width="330" height="20" />
+        <Label textcolor="FF999999" text="激活换机码："  font="0" float="true" pos="20,40,0,0" width="90" height="20" />
+        <Edit name="TextMask" float="true" pos="20,70,0,0" text="" font="0" tipvalue="输入激活码" enabled="true" bkcolor="FF1F2226" textcolor="#FF999999" nativebkcolor="#FF333944" width="310" height="35" textpadding="10,0,35,0" align="left" normalimage="file=&apos;HourBEdit.png&apos; dest=&apos;0,0,310,35&apos; source=&apos;0,0,310,35&apos;" focusedimage="file=&apos;HourBEdit.png&apos; dest=&apos;0,0,310,35&apos; source=&apos;0,35,310,70&apos;"/>
+        <Label textcolor="FF999999" text="校验码："  font="0" float="true" pos="20,120,0,0" width="90" height="20" />
+        <Edit name="TextCheck" float="true" pos="20,145,0,0" text="" font="0" tipvalue="输入校验码" enabled="true" bkcolor="FF1F2226" textcolor="#FF999999" nativebkcolor="#FF333944" width="120" height="35" textpadding="10,0,10,0" align="left" normalimage="file=&apos;HourSEdit.png&apos; dest=&apos;0,0,120,35&apos; source=&apos;0,0,120,35&apos;" focusedimage="file=&apos;HourSEdit.png&apos; dest=&apos;0,0,120,35&apos; source=&apos;0,0,120,35&apos;"/>
+        <Button name="ButCheckMask1" bkcolor="FF666666" float="true" pos="170,155,0,0" enabled="true" width="70" height="20" />
+        <Button name="ButCheckMask2" textcolor="FF07D569" hottextcolor="FFFF7F00" text="刷新" float="true" pos="245,145,0,0" enabled="true" width="35" height="35"/>
+        <Button name="ButLogin" textcolor="FFFFFFFF" text="立即激活" font="1" float="true" pos="105,210,0,0" enabled="true" width="140" height="40" normalimage="file=&apos;HourLogin.png&apos; source=&apos;0,0,140,40&apos;" hotimage="file=&apos;HourLogin.png&apos; source=&apos;140,0,280,40&apos;" pushedimage="file=&apos;HourLogin.png&apos; source=&apos;280,0,420,40&apos;" />
+      </VerticalLayout>
+    </TabLayout>
+  </VerticalLayout>
+</Window>

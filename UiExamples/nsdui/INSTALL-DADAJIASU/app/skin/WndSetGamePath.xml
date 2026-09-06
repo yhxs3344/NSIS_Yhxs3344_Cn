@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="350,360" caption="0,0,0,35" showshadow="true" shadowsize="4" shadowcorner="23,13,23,33" shadowposition="0,1" shadowdarkness="70">
+  <Include source="Default.xml"/>
+  <VerticalLayout enabled="true" width="350" height="360" bkimage="Bkimg350_360.png">
+    <Label name="LabTitle" showhtml="true" textcolor="#FF999999" text="哒哒加速效果反馈" font="1" float="true" pos="8,5,0,0" enabled="true" width="260" height="25" />
+    <Button name="ButClose" float="true" pos="322,0,0,0" enabled="true" width="31" height="32" normalimage="file=&apos;close1.png&apos; source=&apos;0,0,31,32&apos;" hotimage="file=&apos;close1.png&apos; source=&apos;31,0,62,32&apos;" pushedimage="file=&apos;close1.png&apos; source=&apos;62,0,93,32&apos;" />
+    <Button name="BtnSetPathHelp" text="如何设置游戏路径?" font="0" float="true" pos="210,70,0,0" enabled="true" width="125" height="25" textcolor="#FF07D569" endellipsis="true" align="center"/>
+    <Label mouse="false" float="true" pos="20,65,0,0" width="88" height="34" bkimage="SetPathLog.png"/>
+    <Label name="CurPath" endellipsis="true" font="0" float="true" pos="20,100,0,0" width="250" height="32"  textpadding="15,0,0,0" textcolor="#FF666666" bkimage="curpathbk.png"/>
+    <Button name="ButSelPath" float="true" pos="270,100,0,0" enabled="true" width="60" height="32" normalimage="file=&apos;SelGamePath.png&apos; source=&apos;0,0,60,32&apos;" hotimage="file=&apos;SelGamePath.png&apos; source=&apos;60,0,120,32&apos;" pushedimage="file=&apos;SelGamePath.png&apos; source=&apos;120,0,180,32&apos;" />
+    <Option name="Autostart" float="true" pos="36,150,200,170" enabled="true" textcolor="#FF999999"  align="left" text="下次自动启动游戏" textpadding="20,0,0,0" normalimage="file=&apos;checkbox1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;0,0,16,16&apos;" selectedimage="file=&apos;checkbox1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;48,0,64,16&apos;" />
+    <Option name="shortCut" float="true" pos="185,150,315,170" enabled="true" textcolor="#FF999999"  align="left" text="创建快捷加速图标" textpadding="20,0,0,0" normalimage="file=&apos;checkbox1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;0,0,16,16&apos;" selectedimage="file=&apos;checkbox1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;48,0,64,16&apos;" />
+    <VerticalLayout enabled="true" float="true" pos="20,185,0,0" width="310" height="70" topbordersize="1" bordercolor="#FF404040">
+      <Label float="true" pos="0,15,0,0" width="310" height="20" showhtml="true" text="<f 0>您也可以把路径设置为<c #FF661A>TGP等助手</c>的路径，直接帮</f>" font="0" enabled="true" textcolor="#FF999999" />
+      <Label float="true" pos="0,40,0,0" width="310" height="20" text="您启动助手哦！" font="0" enabled="true" textcolor="#FF999999" />
+    </VerticalLayout>
+    <Button name="BtnOK" float="true" font="1" textcolor="#FFFFFFFF" text="确 定" pos="55,290,0,0" width="110" height="36" enabled="true" normalimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Ok110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;Ok110_36.png&apos; source=&apos;220,0,330,36&apos;"/>
+    <Button name="BtnCancel" float="true" textcolor="#FF999999" text="取 消" font="1" pos="185,290,0,0" width="110" height="36" enabled="true" normalimage="file=&apos;Cancel110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Cancel110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;Cancel110_36.png&apos; source=&apos;220,0,330,36&apos;"/>
+  </VerticalLayout>
+</Window>

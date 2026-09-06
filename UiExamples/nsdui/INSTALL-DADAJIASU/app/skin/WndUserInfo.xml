@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="300,200"  bktrans="true" showshadow="true" >
+  <Font italic="false" bold="false" size="12" name="微软雅黑"/>
+  <Font italic="false" bold="false" size="13" name="微软雅黑"/>
+  <Font italic="true" bold="true" size="14" name="楷体"/>
+  <Font italic="false" bold="false" size="16" name="微软雅黑"/>
+  <VerticalLayout textcolor="0xFFFFFFFF" enabled="true" width="300" height="200">
+    <TabLayout name="TabLayUserInfo" enabled="true" width="300" height="200" selectedid="1">
+      <VerticalLayout enabled="true" width="300" height="160" bkimage="UserInfoBk_Nor.png">
+          <Label name="NorUserName" font="3" float="true" pos="10,15,0,0" width="240" height="20" textcolor="#FFFFFFFF" text="123456@qq.com"/>
+          <Button name="BtnDadaMsg1" tooltip="哒哒消息" float="true" pos="250,15,0,0" enabled="true" width="19" height="15" normalimage="file=&apos;ddmsglog.png&apos; source=&apos;0,0,19,15&apos;" hotimage="file=&apos;ddmsglog.png&apos; source=&apos;19,0,38,15&apos;" pushedimage="file=&apos;ddmsglog.png&apos; source=&apos;38,0,57,15&apos;"/>
+          <Button name="BtnRed1" tooltip="哒哒红包" float="true" pos="275,14,0,0" enabled="true" width="16" height="17" normalimage="file=&apos;ddRedLog.png&apos; source=&apos;0,0,16,17&apos;" hotimage="file=&apos;ddRedLog.png&apos; source=&apos;16,0,32,17&apos;" pushedimage="file=&apos;ddRedLog.png&apos; source=&apos;32,0,48,17&apos;"/>
+          <Button name="BtnUserName1" text="普通会员" align="left" endellipsis="true" font="1" float="true" pos="10,45,0,0" width="55" height="20" enabled="true" hottextcolor="0xFFFF661A" textcolor="#FF07D569"/>
+          <Label font="0" float="true" pos="90,45,0,0" width="240" height="20" textcolor="#FF999999" text="升级会员享受更好加速"/>  
+          <Button name="BtnCharge" float="true" pos="220,45,0,0" enabled="true" font="0" text="开通会员" textcolor="#FFFFFFFF" width="70" height="22" normalimage="file=&apos;Kaitonghuiyuan.png&apos; source=&apos;0,0,70,22&apos;" hotimage="file=&apos;Kaitonghuiyuan.png&apos; source=&apos;70,0,140,22&apos;" pushedimage="file=&apos;Kaitonghuiyuan.png&apos; source=&apos;140,0,210,22&apos;"/>
+          <Label text="上次登录：" mouse="false" font="0" float="true" align="center" pos="10,100,0,0" width="60" height="20" enabled="true" textcolor="#FF999999"/>
+          <Label name="LastLoginTime" text="2015-10-20 20:55:65" mouse="false" font="0" float="true" align="center" pos="70,100,0,0" width="135" height="20" enabled="true" textcolor="#FFFFFFFF"/>
+          <Button name="BtnLogOut" float="true" text="退出账号" textcolor="#FFFFFFFF" hottextcolor="0xFFFF661A" font="0" pos="195,130,0,0"  enabled="true"  width="70" height="22" normalimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;0,0,70,22&apos;" hotimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;70,0,140,22&apos;" pushedimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;140,0,210,22&apos;"/>
+          <Button name="BtnChangeUser" float="true" text="更改账号" textcolor="#FFFFFFFF" hottextcolor="0xFFFF661A" font="0" pos="115,130,0,0"  enabled="true"  width="70" height="22" normalimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;0,0,70,22&apos;" hotimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;70,0,140,22&apos;" pushedimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;140,0,210,22&apos;"/>
+          <Button name="BtnChangeSecret" float="true" text="修改密码" textcolor="#FFFFFFFF" hottextcolor="0xFFFF661A" font="0" pos="35,130,0,0"  enabled="true"  width="70" height="22" normalimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;0,0,70,22&apos;" hotimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;70,0,140,22&apos;" pushedimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;140,0,210,22&apos;"/>
+      </VerticalLayout>
+      <VerticalLayout enabled="true" width="300" height="200" bkimage="UserInfoBk_Level.png">
+        <Label name="NorUserName2" font="3" float="true" pos="10,15,0,0" width="240" height="20" textcolor="#FFFFFFFF" text="123456@qq.com"/>
+        <Button name="BtnDadaMsg2" tooltip="哒哒消息" float="true" pos="250,15,0,0" enabled="true" width="19" height="15" normalimage="file=&apos;ddmsglog.png&apos; source=&apos;0,0,19,15&apos;" hotimage="file=&apos;ddmsglog.png&apos; source=&apos;19,0,38,15&apos;" pushedimage="file=&apos;ddmsglog.png&apos; source=&apos;38,0,57,15&apos;"/>
+        <Button name="BtnRed2" tooltip="哒哒红包" float="true" pos="275,14,0,0" enabled="true" width="16" height="17" normalimage="file=&apos;ddRedLog.png&apos; source=&apos;0,0,16,17&apos;" hotimage="file=&apos;ddRedLog.png&apos; source=&apos;16,0,32,17&apos;" pushedimage="file=&apos;ddRedLog.png&apos; source=&apos;32,0,48,17&apos;"/>
+        <Button name="BtnUserName" text="白金会员" align="left" endellipsis="true" font="1" float="true" pos="10,45,0,0" width="55" height="20" enabled="true" hottextcolor="0xFFFF661A" textcolor="#FF07D569"/>
+        <Button name="BtnCharge1" float="true" pos="220,45,0,0" enabled="true" font="0" text="我要续费" textcolor="#FFFFFFFF" width="70" height="22" normalimage="file=&apos;Kaitonghuiyuan.png&apos; source=&apos;0,0,70,22&apos;" hotimage="file=&apos;Kaitonghuiyuan.png&apos; source=&apos;70,0,140,22&apos;" pushedimage="file=&apos;Kaitonghuiyuan.png&apos; source=&apos;140,0,210,22&apos;"/>    
+        <Button name="LabLevelTime" float="true" mouse="false" text="钻石会员 至 2017-8-24 到期钻石会员 至 2017-8-24 到期" textcolor="0xFFFF7F00" font="0" pos="10,60,0,0" width="165" height="50" enabled="true" multiline="true"/>
+        <Label text="上次登录：" mouse="false" font="0" float="true" align="center" pos="10,130,0,0" width="60" height="20" enabled="true" textcolor="#FF999999"/>
+        <Label name="LastLoginTime1" text="2015-10-20 20:55:65" mouse="false" font="0" float="true" align="center" pos="70,130,0,0" width="135" height="20" enabled="true" textcolor="#FFFFFFFF"/>
+        <Button name="BtnLogOut1" float="true" text="退出账号" textcolor="#FFFFFFFF" hottextcolor="0xFFFF661A" font="0" pos="195,160,0,0"  enabled="true"  width="70" height="22" normalimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;0,0,70,22&apos;" hotimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;70,0,140,22&apos;" pushedimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;140,0,210,22&apos;"/>
+        <Button name="BtnChangeUser1" float="true" text="更改账号" textcolor="#FFFFFFFF" hottextcolor="0xFFFF661A" font="0" pos="115,160,0,0"  enabled="true"  width="70" height="22" normalimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;0,0,70,22&apos;" hotimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;70,0,140,22&apos;" pushedimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;140,0,210,22&apos;"/>
+        <Button name="BtnChangeSecret1" float="true" text="修改密码" textcolor="#FFFFFFFF" hottextcolor="0xFFFF661A" font="0" pos="35,160,0,0"  enabled="true"  width="70" height="22" normalimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;0,0,70,22&apos;" hotimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;70,0,140,22&apos;" pushedimage="file=&apos;ExitLogin_70_22.png&apos; source=&apos;140,0,210,22&apos;"/>
+      </VerticalLayout>
+    </TabLayout>
+  </VerticalLayout>
+</Window>

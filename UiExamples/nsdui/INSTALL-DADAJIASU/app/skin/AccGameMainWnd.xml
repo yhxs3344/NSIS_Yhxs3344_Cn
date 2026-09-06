@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="370,525">
+  <Include source="Default.xml"/>
+    <VerticalLayout name="LayoutBk" enabled="true" width="370" height="525" bkimage="file=&apos;bkimg.png&apos; dest=&apos;0,0,370,525&apos; source=&apos;0,35,370,560&apos;">
+      <Button name="BtnUserInfo" float="true" tooltip="用户信息" pos="330,18,0,0" width="30" height="30" normalimage="file=&apos;userinfolog.png&apos; source=&apos;60,0,90,30&apos;" hotimage="file=&apos;userinfolog.png&apos; source=&apos;90,0,120,30&apos;" pushedimage="file=&apos;userinfolog.png&apos; source=&apos;90,0,120,30&apos;"/>
+      <Button name="BtnBackMain" float="true" tooltip="返回游戏列表" pos="10,18,0,0" width="30" height="30" normalimage="file=&apos;BackMainWnd.png&apos; source=&apos;0,0,30,30&apos;" hotimage="file=&apos;BackMainWnd.png&apos; source=&apos;30,0,60,30&apos;" pushedimage="file=&apos;BackMainWnd.png&apos; source=&apos;60,0,90,30&apos;&apos;"/>
+      <Button name="BtnFlowMonitor" float="true" tooltip="流量监控" visible="false" enabled="false" pos="10,18,0,0" width="30" height="30" normalimage="file=&apos;flowlog.png&apos; source=&apos;0,0,30,30&apos;" hotimage="file=&apos;flowlog.png&apos; source=&apos;30,0,60,30&apos;" pushedimage="file=&apos;flowlog.png&apos; source=&apos;60,0,90,30&apos;"/>
+      <TabLayout name="AccTab" float="true" pos="0,50,370,545" enabled="true" width="370" height="495" selectedid="0">
+        <VerticalLayout enabled="true" width="370" height="495">
+          <VerticalLayout name="LabGameLogobk" float="true" pos="110,20,0,0" enabled="true" width="150" height="150" bkimage="AccLogBk1.png">
+            <Label name="LabGameLogo" float="true" pos="50,50,0,0" enabled="false" width="48" height="48"  bkimage="default.png" />
+          </VerticalLayout>
+          <Label name="LabGameName" text="英雄联盟（台服）"  font="1" float="true" pos="70,185,0,0" enabled="false" align="center" width="230" height="20" disabledtextcolor="#FF07D569" />
+          <Label name="LabFreeLog" tooltip="限时免费加速特权" float="true" pos="240,185,0,0" enabled="false" width="16" height="16" bkimage="freeLog.png"/>
+          <Label name="LabNetInfo"  text="福建省厦门市电信"  font="0" float="true" pos="70,210,0,0" enabled="false" align="center" width="230" height="20" disabledtextcolor="#FF808080" />
+          <Label name="LabWorld" text="电信十六区\艾奥尼亚" mouse="false" font="0" textpadding="50,0,50,0" float="true" pos="15,295,0,0" width="340" height="36" textcolor="#FFCCCCCC"  endellipsis="true" align="left" bkimage="worldnotebk.png"/>
+          <Label text="区服" mouse="false" font="0" float="true" pos="25,295,0,0" width="30" height="36" textcolor="#FF666666" />
+          <Button name="BtnSetWorld" tooltip="重新选择分区" pos="325,305,0,0" float="true" enabled="true" width="17" height="17"  normalimage="file=&apos;setworldnotebtn.png&apos; source=&apos;0,0,17,17&apos;" hotimage="file=&apos;setworldnotebtn.png&apos; source=&apos;17,0,34,17&apos;" pushedimage="file=&apos;setworldnotebtn.png&apos; source=&apos;34,0,51,17&apos;"/>
+          <Label name="LabNode" text="福建电信第三方撒范德萨范德萨" mouse="false" font="0" textpadding="50,0,50,0" float="true" pos="15,340,0,0" width="340" height="36" textcolor="#FFCCCCCC"  endellipsis="true" align="left"  bkimage="worldnotebk.png"/>
+          <Label text="节点" mouse="false" font="0" float="true" pos="25,340,0,0" width="30" height="36" textcolor="#FF666666" />
+          <Button name="BtnSetNode" tooltip="重新选择节点" pos="325,350,0,0" float="true" enabled="true" width="17" height="17"  normalimage="file=&apos;setworldnotebtn.png&apos; source=&apos;0,0,17,17&apos;" hotimage="file=&apos;setworldnotebtn.png&apos; source=&apos;17,0,34,17&apos;" pushedimage="file=&apos;setworldnotebtn.png&apos; source=&apos;34,0,51,17&apos;"/>
+          <Button name="BtnStartAcc" text="立即加速" font="2" textcolor="#FFFFFFFF" float="true" pos="80,405,0,0" enabled="true" visible="true" width="200" height="50" normalimage="file=&apos;startAccbtn.png&apos; source=&apos;0,0,200,50&apos;" hotimage="file=&apos;startAccbtn.png&apos; source=&apos;0,50,200,100&apos;" pushedimage="file=&apos;startAccbtn.png&apos; source=&apos;0,100,200,150&apos;"  />
+        </VerticalLayout>
+        <VerticalLayout enabled="true" width="370" height="495">
+          <VerticalLayout name="LabGameLogobk2" float="true" pos="110,20,0,0" enabled="true" width="150" height="150">
+            <GifAnim enabled="false" width="150" height="150" autoplay="true" bkimage="accingLogBk.gif"/>
+            <Label name="LabAccScore" float="true" pos="25,25,0,0" enabled="false" width="102" height="102"  bkimage="file=&apos;accingscore.png&apos; source=&apos;0,0,102,102&apos;" />
+          </VerticalLayout>
+          <Label name="LabGameName2" text="英雄联盟（台服）"  font="1" float="true" pos="70,185,0,0" enabled="false" align="center" width="230" height="20" disabledtextcolor="#FF07D569" />
+          <Label name="LabFreeLog2" tooltip="限时免费加速特权" float="true" pos="240,185,0,0" enabled="false" width="16" height="16" bkimage="freeLog.png"/>
+          <Label name="LabNetInfo2"  text="福建省厦门市电信"  font="0" float="true" pos="70,210,0,0" enabled="false" align="center" width="230" height="20" disabledtextcolor="#FF808080" />
+          <Label name="LabWorld2" text="电信十六区\艾奥尼亚" mouse="false" font="0" textpadding="50,0,50,0" float="true" pos="15,295,0,0" width="340" height="36" textcolor="#FFCCCCCC"  endellipsis="true" align="left"  bkimage="worldnotebk.png"/>
+          <Label text="区服" mouse="false" font="0" float="true" pos="25,295,0,0" width="30" height="36" textcolor="#FF666666" />
+          <Button name="BtnSetWorld2" tooltip="重新选择分区" pos="325,305,0,0" float="true" enabled="true" width="17" height="17"  normalimage="file=&apos;setworldnotebtn.png&apos; source=&apos;0,0,17,17&apos;" hotimage="file=&apos;setworldnotebtn.png&apos; source=&apos;17,0,34,17&apos;" pushedimage="file=&apos;setworldnotebtn.png&apos; source=&apos;34,0,51,17&apos;"/>
+          <Label name="LabNode2" text="福建电信第三方撒范德萨范德萨" mouse="false" font="0" textpadding="50,0,50,0" float="true" pos="15,340,0,0" width="340" height="36" textcolor="#FFCCCCCC"  endellipsis="true" align="left"  bkimage="worldnotebk.png"/>
+          <Label text="节点" mouse="false" font="0" float="true" pos="25,340,0,0" width="30" height="36" textcolor="#FF666666" />
+          <Button name="BtnSetNode2"  tooltip="重新选择节点" pos="325,350,0,0" float="true" enabled="true" width="17" height="17"  normalimage="file=&apos;setworldnotebtn.png&apos; source=&apos;0,0,17,17&apos;" hotimage="file=&apos;setworldnotebtn.png&apos; source=&apos;17,0,34,17&apos;" pushedimage="file=&apos;setworldnotebtn.png&apos; source=&apos;34,0,51,17&apos;"/>
+          <Label name="LabAccingBtn" float="true" pos="80,405,0,0" width="200" height="50" bkimage="accingbtnicon.png"/>
+        </VerticalLayout>
+        <VerticalLayout enabled="true" width="370" height="495">
+          <Label name="LabAccSucessLog" float="true" pos="125,10,0,0" width="120" height="120" bkimage="AccLogBk2.png"/>
+          <Label name="LabGameName3" text="英雄联盟（台服）"  font="1" float="true" pos="70,135,0,0" enabled="false" align="center" width="230" height="20" disabledtextcolor="#FF07D569" />
+          <Label name="LabFreeLog3" tooltip="限时免费加速特权" float="true" pos="240,135,0,0" enabled="false" width="16" height="16" bkimage="freeLog.png"/>
+          <Label name="LabNetInfo3"  text="福建省厦门市电信"  font="0" float="true" pos="70,160,0,0" enabled="false" align="center" width="230" height="20" disabledtextcolor="#FF808080" />
+          <VerticalLayout float="true" pos="15,190,0,0" enabled="true" width="340" height="80" bkimage="accedinfolog.png">
+            <Label name="LabMode" mouse="false" text="模式一" float="true" align="left" pos="32,17,0,0" enabled="true" width="70" height="17"  textcolor="#FFFF7F00" font="0" />
+            <Label name="LabAccTime" mouse="false" text="65" float="true" align="left" pos="32,47,0,0" width="85" height="15" textcolor="#FFFF7F00" font="0" />
+            <Label mouse="false" text="丢包率" float="true" align="center" pos="155,17,0,0" enabled="true" width="45" height="20" font="0"  textcolor="#FF666666" />
+            <Label name="LabLostPag" mouse="false" text="%10" float="true" align="center" pos="155,47,0,0" enabled="true" width="45" height="20" font="0"  textcolor="#FFFF7F00" />
+            <Label mouse="false" text="Max" float="true" align="center" pos="205,17,0,0" enabled="true" width="45" height="20" font="0"  textcolor="#FF666666" />
+            <Label name="LabLostMax" mouse="false" text="1120" float="true" align="center" pos="210,47,0,0" enabled="true" width="30" height="20" font="0"  textcolor="#FFFF7F00" />
+            <Label mouse="false" text="Min" float="true" align="center" pos="245,17,0,0" enabled="true" width="45" height="20" font="0"  textcolor="#FF666666" />
+            <Label name="LabLostMin" mouse="false" text="5" float="true" align="center" pos="250,47,0,0" enabled="true" width="30" height="20" font="0"  textcolor="#FFFF7F00" />
+            <Label mouse="false" text="Avg" float="true" align="center" pos="285,17,0,0" enabled="true" width="45" height="20" font="0"  textcolor="#FF666666" />
+            <Label name="LabLostAvg" mouse="false" text="180" float="true" align="center" pos="290,47,0,0" enabled="true" width="30" height="20" font="0"  textcolor="#FFFF7F00" />
+          </VerticalLayout>
+          <Label name="LabWorld3" text="电信十六区\艾奥尼亚" mouse="false" font="0" textpadding="50,0,50,0" float="true" pos="15,295,0,0" width="340" height="36" textcolor="#FFCCCCCC"  endellipsis="true" align="left"  bkimage="worldnotebk.png"/>
+          <Label text="区服" mouse="false" font="0" float="true" pos="25,295,0,0" width="30" height="36" textcolor="#FF666666" />
+          <Button name="BtnSetWorld3" tooltip="重新选择分区" pos="325,305,0,0" float="true" enabled="true" width="17" height="17"  normalimage="file=&apos;setworldnotebtn.png&apos; source=&apos;0,0,17,17&apos;" hotimage="file=&apos;setworldnotebtn.png&apos; source=&apos;17,0,34,17&apos;" pushedimage="file=&apos;setworldnotebtn.png&apos; source=&apos;34,0,51,17&apos;"/>
+          <Label name="LabNode3" text="福建电信第三方撒范德萨范德萨" mouse="false" font="0" textpadding="50,0,50,0" float="true" pos="15,340,0,0" width="340" height="36" textcolor="#FFCCCCCC"  endellipsis="true" align="left"  bkimage="worldnotebk.png"/>
+          <Label text="节点" mouse="false" font="0" float="true" pos="25,340,0,0" width="30" height="36" textcolor="#FF666666" />
+          <Button name="BtnSetNode3" tooltip="重新选择节点" pos="325,350,0,0" float="true" enabled="true" width="17" height="17"  normalimage="file=&apos;setworldnotebtn.png&apos; source=&apos;0,0,17,17&apos;" hotimage="file=&apos;setworldnotebtn.png&apos; source=&apos;17,0,34,17&apos;" pushedimage="file=&apos;setworldnotebtn.png&apos; source=&apos;34,0,51,17&apos;"/>   
+          <Button name="BtnDownGame" text="游戏下载" float="true" bottombordersize="2" borderColor="#FF808080" pos="80,43,0,0" enabled="false" visible="false" width="55" height="20" textcolor="#FF40AF66" hottextcolor="#FFFF661A" align="left" />
+          <Button name="BtnStartGame" text="运行游戏" font="2" textcolor="#FFFFFFFF" float="true" tooltip="您也可以自己启动游戏" pos="80,395,0,0" enabled="true" visible="true" width="200" height="50" normalimage="file=&apos;startAccbtn.png&apos; source=&apos;0,0,200,50&apos;" hotimage="file=&apos;startAccbtn.png&apos; source=&apos;0,50,200,100&apos;" pushedimage="file=&apos;startAccbtn.png&apos; source=&apos;0,100,200,150&apos;"/>
+          <Button name="BtnSetPath" float="true" tooltip="更改启动游戏路径" text="设置路径" textpadding="20,0,0,2" textcolor="#FF999999" hottextcolor="#FF40AA0A" pos="285,450,0,0" enabled="true" visible="true" width="80" height="20" normalimage="file=&apos;BtnStartSetPath.png&apos; dest=&apos;0,3,15,17&apos; source=&apos;0,0,15,14&apos;" hotimage="file=&apos;BtnStartSetPath.png&apos; dest=&apos;0,3,15,17&apos; source=&apos;15,0,30,14&apos;" pushedimage="file=&apos;BtnStartSetPath.png&apos; dest=&apos;0,3,15,17&apos; source=&apos;30,0,45,14&apos;"  />
+          <Button name="ButStopAcc" float="true" pos="15,450,0,0" textpadding="20,0,0,2" font="0" text="停止加速" textcolor="#FF999999" hottextcolor="#FF40AA0A" width="80" height="20" normalimage="file=&apos;StopAccBtn.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;0,0,16,16&apos;" hotimage="file=&apos;StopAccBtn.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;16,0,32,16&apos;" pushedimage="file=&apos;StopAccBtn.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;32,0,48,16&apos;" />
+         </VerticalLayout>
+      </TabLayout>
+    </VerticalLayout>
+</Window>

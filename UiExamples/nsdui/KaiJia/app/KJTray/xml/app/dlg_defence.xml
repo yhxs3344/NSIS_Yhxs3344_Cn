@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg title="铠甲安全卫士主动防御" width="360" height="520" translucent="255"
+	frame="skins\defence\bkgnd.png" bkimg="" crbk="" appwin="0" resize="0" topmost="0"
+	img-shadow="skins\image\window_shadow.png" shadow-wlt="5" shadow-hlt="3" shadow-wrb="5" shadow-hrb="7">
+
+  <base>
+    <button name="button.setting" pos="-48,0" width="24" height="24" skin="IDB_BOOTTIME_BT_SETTING" showfocus="0" cursor="hand" />
+    <button name="button.close" pos="-24,0" width="24" height="24" skin="IDB_BOOTTIME_BT_CLOSE" showfocus="0" cursor="hand" />
+  </base>
+
+  <body>
+    <img pos="0,0" width="360" height="400" skin="IDB_BOOTTIME_BKGND" mode="normal" response="0" />
+
+    <text name="text.notice" pos="0,280,-0,320" crtext="FFFFFF" align="center" valign="middle" font="bigbigbig" title="" response="0" />
+    <text name="text.softname" pos="0,320,-50,350" crtext="FFFFFF" align="right" valign="middle" font="big" title="" response="1" />
+    <button name="button.detail" pos="-100,325" width="47" height="20" img-count="3" image="skins\defence\bt_detail.png" showfocus="0" cursor="hand" />
+
+    <button name="button.prevent" pos="96,-110" width="165" height="42" img-count="4" image="skins\defence\bt_confirm.png" crtext="FFFFFF" font="bigbig" showfocus="0" cursor="hand" />
+
+    <radiobtn name="radio.prevent" pos="15,-25" width="75" height="13" img-count="6" image="skins\defence\radio.png" crtext="666666" title="阻止修改" check="true" group="radio_group_1" cursor="hand" />
+    <radiobtn name="radio.allow" pos="90,-25" width="75" height="13" img-count="6" image="skins\defence\radio.png" crtext="666666" title="允许修改" check="false" group="radio_group_1" cursor="hand" />
+    <chkbtn name="chkbtn.remember" pos="220,-25" width="150" height="13" img-count="6" image="skins\defence\checkbox.png" crtext="666666" title="记住选择，不再提醒" check="false" showfocus="0" cursor="hand" />
+
+    <div name="div.detail" pos="10,40,-10,360" show="0">
+      <img pos="0,0,-0,-0" skin="IDB_WHITE_BKGND" mode="tile" response="0" />
+
+      <img pos="20,30" width="32" height="32" image="" mode="normal" response="0" />
+      <text name="text.detail_softname" pos="60,20,-0,50" crtext="333333" font="bigbigbold" title="" response="0" />
+      <text name="text.detail_notice" pos="60,50,-0,70" crtext="999999" font="big" title="" response="0" />
+
+      <text pos="20,90,110,110" crtext="333333" font="bigbold" title="操作类型：" response="0" />
+      <text name="text.opt_type" pos="95,90,-10,110" crtext="999999" font="big" title="" response="1" />
+      <text pos="20,120,110,140" crtext="333333" font="bigbold" title="程序路径：" response="0" />
+      <text name="text.proc_path" pos="95,120,-10,140" crtext="999999" font="big" title="" response="1" />
+      <text pos="20,150,100,170" crtext="333333" font="bigbold" title="修改内容：" response="0" />
+      <text name="text.content" pos="95,150,-10,170" crtext="999999" font="big" title="" response="1" />
+      <text name="text.reg_key_title" pos="20,180,100,200" crtext="333333" font="bigbold" title="注册表键：" response="0" show="0" />
+      <text name="text.reg_key" pos="95,180,-10,200" crtext="999999" font="big" title="" response="1" show="0" />
+      <text name="text.reg_value_title" pos="20,210,100,230" crtext="333333" font="bigbold" title="注册表值：" response="0" show="0" />
+      <text name="text.reg_value" pos="95,210,-10,230" crtext="999999" font="big" title="" response="1" show="0" />
+    </div>
+  </body>
+
+</dlg>

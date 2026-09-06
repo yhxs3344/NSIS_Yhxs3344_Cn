@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg title="" width="290" height="110" translucent="255"
+	frame="skins\image\tips_bkgnd.png" crbk="" appwin="0" resize="0" topmost="1"
+	img-shadow="skins\image\window_shadow.png" shadow-wlt="5" shadow-hlt="3" shadow-wrb="5" shadow-hrb="7">
+
+  <base>
+    <button name="button.close" pos="-25,1" width="24" height="24" skin="IDB_BOOTTIME_BT_CLOSE" showfocus="0" cursor="hand" />
+    <button name="button.prevent_setting" pos="-50,1" width="24" height="24" skin="IDB_BOOTTIME_BT_SETTING" showfocus="0" cursor="hand" />
+    <text name="text.tray_tips_title" pos="8,0,200,26" crtext="FFFFFF" font="big" valign="middle" title="提示" response="0" />
+    <button name="button.close" pos="-80,-35" width="70" height="25" image="skins\image\bt_confirm.png" showfocus="0" cursor="hand" />
+  </base>
+
+  <body>
+    <text name="text.tray_tips" pos="10,40,-0,80" crtext="666666" font="big" title="已阻止" response="0" />
+  </body>
+
+</dlg>

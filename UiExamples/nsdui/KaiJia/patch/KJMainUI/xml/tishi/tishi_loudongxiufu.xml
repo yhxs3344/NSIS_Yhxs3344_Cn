@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="tishi_loudongxiufu" title="NotifyMsg" width="360" height="500" resize="0"	frame="" 
+     bkimg="KJMainUI\skins\kaijiaweishi\loudongxiufutishibeijing.png" crbk="" >
+  <base>
+    <imgbtn name="button.close" pos="-23,4,-0,29" img-count="3" skin="SKIN_PIC_TISHIKUANGGUANBI"
+            show="1" shortcut="ESC"/>
+    <imgbtn name="button.setup" pos="-47,0,-24,23" img-count="3" image="KJMainUI\skins\kaijiaweishi\tishikuangshezhi.png"
+            show="1" showfocus="0"/>
+  </base>
+
+  <body>
+
+    <text name="LoudongGeshu1" crtext="FFFFFF" pos="80,280" width="240" height="30" title="发现      个高危漏洞" show="1" font="big25" />
+    <text name="LoudongGeshu2" crtext="FFFFFF" pos="130,270" width="60" height="40" title="40" show="1" font="big35" />
+    <text name="tishi" crtext="FFFFFF" pos="30,-30" width="200" height="30" title="以后电脑空闲时自动修复" show="1" />
+    <imgbtn name="yijianxiufutishi" pos="80,320" width="205" height="54" img-count="3" image="KJMainUI\skins\kaijiaweishi\yijianxiufutishi.png" 
+            show="1" showfocus="0"/>
+    <textbtn name="textbtnFanhui" crtext="FFFFFF" align="center" pos="-80,-65" width="80" height="22"
+              show="1" title="查看详情>>" />
+    <chkbtn name="Zidongxiufu" img-count="6" image="KJMainUI\skins\kaijiaweishi\tishikuangfuxuankuang.png"  pos="18,-28" width="12"
+            height="12" show="1" title="" check="false" shortcut="" />
+    
+
+
+  </body>
+</dlg>

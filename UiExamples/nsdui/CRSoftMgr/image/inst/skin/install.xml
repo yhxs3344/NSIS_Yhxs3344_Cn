@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="600,400" caption="0,0,0,400" roundcorner="1,1">
+    <Font id="0" name="微软雅黑" size="13" bold="false" italic="false" default="true" />
+    <Font id="1" name="宋体" size="13" bold="true" italic="false" />
+	<TabLayout name="tab_wizard" >	
+		<VerticalLayout name="vrl_page1" width="600" height="400" bkimage="bg0.bmp">
+			<Button name="btn_install" float="true" pos="190,272,0,0" width="210" height="55" normalimage="btn_inst1.png" hotimage="btn_inst2.png" disabledimage="btn_inst3.png" />
+			<Option name="opt_agree" float="true" pos="22,366,0,0" width="14" height="14" normalimage="d02.png" selected="true" selectedimage="d01.png" />
+			<Label text="阅读并同意" float="true" pos="42,366,0,0" width="65" height="14" align="left" textcolor="#00808080"/>
+			<Button name="btn_licence" float="true" pos="110,366,0,0" width="180" height="14" align="left" textcolor="#00b949" text="《使用协议》" />
+			<Button name="btn_custom" float="true" pos="486,364,0,0" width="90" height="16" normalimage="custom01.png" selectedimage="custom02.png"  disabledimage="custom03.png" />
+			<HorizontalLayout float="true" pos="568,0,0,0" width="32" height="32">
+				<Button name="btn_close1"  width="32" height="32"  normalimage="x01.png" hotimage="x02.png" />
+			</HorizontalLayout> 
+			<HorizontalLayout float="true" pos="536,0,0,0" width="32" height="32">
+				<Button name="btn_min"   width="32" height="32"  normalimage="mini01.png" hotimage="mini02.png" />
+			</HorizontalLayout>  			
+		</VerticalLayout>
+		<VerticalLayout name="vrl_page2" width="600" height="400" bkimage="bg1.bmp" > 
+			<Button name="btn_close2"  float="true" pos="568,0,0,0"  width="32" height="32"  normalimage="x01.png" hotimage="x02.png" />
+			<Button name="btn_min"   float="true" pos="536,0,0,0"  width="32" height="32"  normalimage="mini01.png" hotimage="mini02.png" />
+			<Button name="btn_dir" float="true" pos="460,252,0,0" width="110" height="40" normalimage="path01.png" hotimage="path02.png" />
+			<Edit name="edt_dir" text="C:\KJSoftMgr" float="true" pos="96,258,0,0" width="360" height="30" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" />
+			<Button name="btn_next"  float="true" pos="236,340,0,0"  width="130" height="40"  normalimage="next01.png" hotimage="next02.png" />
+			<Option name="opt_agree1" float="true" pos="92,304,0,0" width="14" height="14" normalimage="d02.png" selected="true" selectedimage="d01.png" />
+			<Label text="创建桌面快捷方式" float="true" pos="110,304,0,0" width="110" height="14" align="left" textcolor="#00808080"/>
+			<Option name="opt_agree2" float="true" pos="242,304,0,0" width="14" height="14" normalimage="d02.png" selected="true" selectedimage="d01.png" />
+			<Label text="创建开始菜单快捷方式" float="true" pos="260,304,0,0" width="130" height="14" align="left" textcolor="#00808080"/>
+			<Button name="btn_back" text="返回" float="true" pos="386,354,0,0" width="65" height="14" align="left" textcolor="#00808080"/>
+        </VerticalLayout>
+		<VerticalLayout name="vrl_page3" width="600" height="400" bkimage="bg0.bmp"> 
+			<VerticalLayout height="304"/>
+			<HorizontalLayout padding="30" height="30">
+				<Text name="txt_install_" text="正在为您安装超人软件管家..." width="180" height="30" textcolor="#00808080"/>
+				<Text name="txt_percent" text="20%" width="304" height="30"  textcolor="#00808080" />					
+			</HorizontalLayout>
+			<Slider name="sld_percent" padding="30" width="540" height="15" bkimage="empty_bg.png"  foreimage="full_bg.png" min="0" max="100" value="25" hor="true" thumbsize="10,10" mouse="false" />
+			<HorizontalLayout float="true" pos="568,0,0,0" width="32" height="32">
+				<Button name="btn_close3"  width="32" height="32"  normalimage="x01.png" hotimage="x02.png" />
+			</HorizontalLayout>
+			<HorizontalLayout float="true" pos="536,0,0,0" width="32" height="32">
+				<Button name="btn_min"   width="32" height="32"  normalimage="mini01.png" hotimage="mini02.png" />
+			</HorizontalLayout>              
+		</VerticalLayout>
+		<VerticalLayout name="vrl_page4" width="600" height="400" bkimage="bg2.bmp">              
+			<Button name="btn_finish" float="true" pos="190,300,0,0" width="220" height="55"  normalimage="btn_finish1.png" hotimage="btn_finish2.png" />
+			<HorizontalLayout float="true" pos="568,0,0,0" width="32" height="32">
+				<Button name="btn_close4"  width="32" height="32"  normalimage="x01.png" hotimage="x02.png" />
+			</HorizontalLayout>
+			<HorizontalLayout float="true" pos="536,0,0,0" width="32" height="32">
+				<Button name="btn_min"   width="32" height="32"  normalimage="mini01.png" hotimage="mini02.png" />
+			</HorizontalLayout>  			
+		</VerticalLayout>		
+	</TabLayout>
+</Window>

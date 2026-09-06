@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="350,264" caption="0,0,0,35" showshadow="true" shadowsize="4" shadowcorner="23,13,23,33" shadowposition="0,1" shadowdarkness="70">
+  <Include source="Default.xml" />
+  <VerticalLayout enabled="true" width="350" height="264" bkimage="stopAccBk.png">
+    <Label name="LabTitle" text="停止加速" font="0" float="true" pos="8,5,0,0" enabled="true" width="190" height="25" textcolor="#FFCCCCCC" />
+    <Button name="ButClose" float="true" pos="322,0,0,0" enabled="true" width="31" height="32" normalimage="file=&apos;close1.png&apos; source=&apos;0,0,31,32&apos;" hotimage="file=&apos;close1.png&apos; source=&apos;31,0,62,32&apos;" pushedimage="file=&apos;close1.png&apos; source=&apos;62,0,93,32&apos;" />
+    <Label name="LabLevel" text="亲，游戏还没停止，为啥先停止加速呐？" align="left"  mouse="false" font="0" float="true" pos="20,60,280,80" enabled="true" textcolor="#FF999999"/>
+    <VerticalLayout enabled="true" float="true" pos="20,85,0,0" width="310" height="100" topbordersize="1" bordercolor="0xFF444444">
+      <Option name="tired" selected="true" float="true" pos="30,20,0,0" width="170" height="20" enabled="true" textcolor="#FF999999"  align="left" text="玩累了，不玩了，休息会" group="StopSel" textpadding="20,0,0,0" normalimage="file=&apos;radio1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;0,0,16,16&apos;" selectedimage="file=&apos;radio1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;48,0,64,16&apos;" />
+      <Option name="noeffect" float="true" pos="30,45,0,0" width="150" height="20" enabled="true" textcolor="#FF999999"  align="left" text="加速没效果，不用了" group="StopSel" textpadding="20,0,0,0" normalimage="file=&apos;radio1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;0,0,16,16&apos;" selectedimage="file=&apos;radio1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;48,0,64,16&apos;" />
+      <Option name="Program" float="true" pos="30,70,0,0" width="230" height="20" enabled="true" textcolor="#FF999999"  align="left" text="加速后问题更多，算了，不用了" group="StopSel" textpadding="20,0,0,0" normalimage="file=&apos;radio1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;0,0,16,16&apos;" selectedimage="file=&apos;radio1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;48,0,64,16&apos;" />
+    </VerticalLayout>
+    <Button name="BtnOK"  text="确 定" font="1" textcolor="#FFFFFFFF" float="true" pos="55,195,0,0" enabled="true" width="110" height="36" normalimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;" pushedimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;"/>
+    <Button name="BtnCancel" text="取 消" font="1" textcolor="#FFFFFFFF" float="true" pos="185,195,0,0" enabled="true" width="110" height="36" normalimage="file=&apos;Cancel110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Cancel110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;Cancel110_36.png&apos; source=&apos;220,0,330,36&apos;"/>
+  </VerticalLayout>
+</Window>

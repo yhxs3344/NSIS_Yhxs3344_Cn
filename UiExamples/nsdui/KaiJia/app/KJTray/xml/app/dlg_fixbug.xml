@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg title="" width="360" height="500" translucent="255"
+	frame="skins\fixbug\bkgnd.png" bkimg="" crbk="" appwin="0" resize="0" topmost="1"
+	img-shadow="skins\image\window_shadow.png" shadow-wlt="5" shadow-hlt="3" shadow-wrb="5" shadow-hrb="7">
+
+  <base>
+    <button name="button.setting" pos="-48,0" width="24" height="24" skin="IDB_BOOTTIME_BT_SETTING" showfocus="0" cursor="hand" show="0" />
+    <button name="button.close" pos="-24,0" width="24" height="24" skin="IDB_BOOTTIME_BT_CLOSE" showfocus="0" cursor="hand" />
+  </base>
+
+  <body>
+    <text name="text.bug_count" pos="120,280,190,325" crtext="FFFFFF" align="center" valign="bottom" font="big30" title="" response="0" />
+    <button name="button.fixbug" pos="78,350" width="205" height="54" img-count="3" image="skins\fixbug\bt_fix.png" showfocus="0" cursor="hand" />
+    <textbtn name="button.bug_detail" pos="-100,-75,-10,-55" crtext="FFFFFF" align="right" font="big" title="查看详情>>" cursor="hand" show="0" />
+
+    <chkbtn name="chkbtn.autofix" pos="15,-25" width="200" height="15" img-count="6" image="skins\fixbug\checkbox.png" crtext="FFFFFF" title="以后电脑空闲时自动修复" check="true" showfocus="0" cursor="hand" />
+  </body>
+
+</dlg>

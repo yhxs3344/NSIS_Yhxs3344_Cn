@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<dlg name="dlg_reboot" title="MsgBox" width="430" height="220"
+     frame="skins\image\reboot_bkgnd.png" bkimg="" width-lt="35" height-lt="35" width-rb="0" height-rb="0"
+     img-shadow="skins\image\shadow.png" shadow-wlt="5" shadow-hlt="3" shadow-wrb="5" shadow-hrb="7">
+	
+	<base>
+		<imgbtn name="button.close" pos="-29,5" width="24" height="24" image="skins\image\bt_close.png" shortcut="ESC" />
+	</base>
+
+	<body>
+    <button name="button.ok" pos="90,-50" width="110" height="32" img-count="3" image="skins\image\bt_reboot_confirm.png" cursor="hand" showfocus="0" shortcut="RETURN" />
+    <button name="button.cancel" pos="230,-50" width="130" height="32" img-count="3" image="skins\image\bt_reboot_cancel.png" cursor="hand" showfocus="0" />
+	</body>
+  
+</dlg>

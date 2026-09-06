@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg name="dlg_aboutus" title="AboutBox" width="420" height="320" appwin="0" resize="1"
+	translucent="255" frame="skin:SKIN_PIC_ABOUTUS" bkimg="skin:SKIN_PIC_ABOUTUS" crbk="000000" >
+	
+	<base>
+		<imgbtn name="button.close" img-count="3" pos="-29,10,-0,29" skin="IDB_BT_CLOSE_RJGJ" show="1"/>
+	</base>
+
+	<body>
+
+		<text pos="50,130,120,150" crtext="808080" title="软件版本:" tip="" />
+		<text pos="50,155,120,175" crtext="808080" title="官方网站:" tip="" />
+		<linkbtn name="linkbtn" crtext="33CCFF" align="center"
+				pos="110,155,310,175" show="1" title="http://www.chaorenguanjia.com" href="http://www.chaorenguanjia.com" />
+		<text pos="50,180,120,200" crtext="808080" title="官方论坛:" tip="" />
+		<linkbtn name="linkbtn" crtext="33CCFF" align="center"
+				pos="110,180,300,200" show="1" title="http://bbs.chaorenguanjia.com" href="http://bbs.chaorenguanjia.com" />
+		<text pos="50,230,250,280" crtext="808080" title="Copyright © 2016 超人软件管家" tip="" />
+		<area name="area-1" pos="0,0,-0,40" begin-transparent="100" end-transparent="30" />
+		<area name="area-2" pos="0,40,-0,-0" begin-transparent="30" end-transparent="30" />
+		<area name="area-3" pos="0,-37,-0,-36" begin-transparent="70" end-transparent="70" />
+		<area name="area-4" pos="0,-36,-0,-0" begin-transparent="88" end-transparent="88" />
+		
+		
+		
+		<button name="button.ok" img-count="3" skin="IDB_BT_SURE"  title="" pos="-265,-40,-175,-8" show="1" />
+	</body>
+  
+</dlg>

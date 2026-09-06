@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="250,90" topmost="true" bktrans="true">
+  <Font name="微软雅黑" size="13" bold="false" italic="false" />
+  <VerticalLayout enabled="true" width="250" height="90" bkimage="bkimg180_60.png">
+    <List name="historyLines" enabled="true" float="true" pos="1,4,0,0" width="248" height="81" header="hidden" itemselectedtextcolor="#FF07D569" itemhottextcolor="#FF07D569" itemhotbkcolor="#FF25282C">
+    </List>
+  </VerticalLayout>
+</Window>

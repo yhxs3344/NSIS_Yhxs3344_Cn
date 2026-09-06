@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_shouyefanghu" title="铠甲安全卫士--主页防护" width="520" height="300" appwin="0" resize="0" shadow-size="2"
+	frame="KJMainUI\skins\kaijiaweishi\zhuyefanghubeijing.png" bkimg="" crbk="" wantdown="1">
+	
+	<base>
+		<imgbtn name="ZhuyeGuanbi" img-count="3" pos="-29,5" width="24" height="24" skin="SKIN_PIC_TISHIKUANGGUANBI" show="1" shortcut="ESC" />
+    <img pos="5,0" width="35" height="35" img-count="1" image="KJMainUI\skins\kaijiaweishi\icon_logo.png" mode="frame" framesize="0" response="0"/>
+		<text name="AllTitle" crtext="FFFFFF" crmark="800000" font="big"
+				pos="35,7,350,25" title="铠甲安全卫士--主页防护" mask="" response="0" show="1" />
+	</base>
+
+	<body>
+    <imgkaijia name="img" pos="0,0,1,1" show="1"  response="1" />     <!--这个控件的作用是为了获取界面上的鼠标移动和单击的消息，因此大小只有一个像素-->
+    <img name="iconhttpnormal" pos="25,59" width="470"  height="102" image="KJMainUI\skins\kaijiaweishi\huikuang1.png"
+         mode="normal" framesize="0" response="0" show="1"  />
+    <img name="iconhttpmove" pos="25,59" width="470"  height="102" image="KJMainUI\skins\kaijiaweishi\huikuang2.png"
+         mode="normal" framesize="0" response="0" show="0" />
+    <img name="iconhttpclick" pos="25,59" width="470"  height="102" image="KJMainUI\skins\kaijiaweishi\lvkuang.png"
+         mode="normal" framesize="0" response="0" show="0" />
+    <text name="title" crtext="000000" crmark="800000" font="big"   pos="75,74" width="100" height="30"
+          title="上网首页防护" mask="" response="0" show="1" />
+    <text name="title" crtext="333333" crmark="800000" font="default"   pos="180,75" width="270" height="30" 
+          title="保护浏览器首页不被篡改，重启浏览器后生效" mask="" response="0" show="1" />
+    <text name="title" crtext="000000" crmark="800000" font="big14"   pos="40,114" width="160" height="30" 
+          title="锁定浏览器主页为：" mask="" response="0" show="1" />
+    <combobox name="comboboxhttp" image="KJMainUI\skins\kaijiaweishi\zhuyefanghukuang.png" small-image="KJMainUI\skins\kaijiaweishi\BT_DROP_DOWN.png"
+    value="" tip="" font=""   pos="180,109" width="188" height="30"   list-height="160" readonly="0"
+              img-scroll="skin:IDB_SCROLL_V"    title="" crhover="F5F5F5">
+      <!--<item name="http://www.kaijiaweishi.com/" value="1"/>
+      <item name="http://hao126.con/" value="2"  />
+      <item name="http://www.baidu.com" value="3" />-->
+    </combobox>
+    <chkbtn name="checkbuttonhttpgreen" image="KJMainUI\skins\kaijiaweishi\checkboxgreen.png"  pos="420,114" width="39"
+            height="17" show="1" title="" check="false" shortcut="" />
+
+    <img name="iconbrowsenormal" pos="25,174" width="470"  height="102" image="KJMainUI\skins\kaijiaweishi\huikuang1.png" mode="normal"
+         framesize="0" response="0" show="1" />
+    <img name="iconbrowsemove" pos="25,174" width="470"  height="102" image="KJMainUI\skins\kaijiaweishi\huikuang2.png" mode="normal"
+      framesize="0" response="0" show="0" />
+    <img name="iconbrowseclick" pos="25,174" width="470"  height="102" image="KJMainUI\skins\kaijiaweishi\lvkuang.png" mode="normal"
+         framesize="0" response="0" show="0" />
+    <text name="title" crtext="000000" crmark="800000" font="big"   pos="65,194" width="120" height="30"
+          title="默认浏览器防护" mask="" response="0" show="1" />
+    <text name="tip" crtext="333333" crmark="800000" font="default"   pos="180,195" width="270" height="30"
+          title="保护默认浏览器设置，防止被其他程序任意篡改" mask="" response="0" show="1" />
+    <text name="title" crtext="000000" crmark="800000" font="big14"   pos="40,234" width="160" height="30"
+          title="锁定默认浏览器为：" mask="" response="0" show="1" />
+    <combobox name="combobox_liulanqi" image="KJMainUI\skins\kaijiaweishi\zhuyefanghukuang.png" small-image="KJMainUI\skins\kaijiaweishi\BT_DROP_DOWN.png"
+      value="local" tip="" font="bold"   pos="180,229" width="188" height="30"   list-height="80" readonly="0"
+              img-scroll="skin:IDB_SCROLL_V" crhover="F5F5F5"  title="" >
+    </combobox>
+    <chkbtn name="checkbuttonbrowsegreen" image="KJMainUI\skins\kaijiaweishi\checkboxgreen.png"  pos="420,234"
+            width="39" height="17" show="1" title="" check="false" shortcut="" />
+    
+	</body>
+  
+</dlg>

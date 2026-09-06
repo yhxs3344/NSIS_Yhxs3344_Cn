@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+
+<div pos="80,-575,-0,-0" >
+
+	<!--area name="area-controls" pos="80,1,980,600" begin-transparent="0" end-transparent="0" /-->
+	<img pos="0,45,-1,46" image="skin:IDB_TAB_BACK_RJGJ" mode="frame" framesize="1" show="1" />
+	<img pos="0,85,-1,86" image="skin:IDB_TAB_BACK_RJGJ" mode="frame" framesize="1" show="1" />
+
+	<tabctrl name="tabctrl.uninstall" img-sep="skin:IDB_TAB_SEPERATOR" img-hover="skin:IDB_TAB_BACK-"
+		img-tabbtn-="skins\default\btn_close.png" tabbtnpos="21,3"
+		font="bold" item-width="77" tab-height="29" img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" scroll-width="4"
+		crtext="838B8B" crpush="00FF00" crrowhover="33FF33" animate="0"
+		pos="2,51,-0,-1">		
+	</tabctrl>
+	<button name="button.pageup" pos="-36,45,889,65" img-count="4" align="center" valign="middle" skin="IDB_TAB_PAGEUP_RJGJ" showfocus="0" duimsg="mouseldown" show="1"/>
+	<button name="button.pagedown" pos="-36,64,889,86" img-count="4" skin="IDB_TAB_PAGEDOWN_RJGJ" showfocus="0" duimsg="mouseldown" show="1"/>
+
+
+	<combobox name="combobox.uninstall" skin="IDB_BT_RJGJ_EDIT" small-image="skin:IDB_DROP_DOWN"
+					value="local" tip="默认排序"
+					pos="764,110,854,136"
+					list-height="78" 
+					title="默认排序" crtext="828282" crhover="00FF00">
+			<item name="默认排序" value="1" crtext="828282"/>
+			<item name="软件评分" value="2" crtext="828282"/>
+			<item name="发布时间" value="3" crtext="828282"/>
+	</combobox>
+	<!--button name="soft.pageup" pos="520,500,546,526" img-count="4" skin="IDB_PAGEUP_RJGJ" showfocus="0" tip="上一页" duimsg="mouseldown" show="1"/>
+
+	<button name="1" pos="550,500,576,526" title="1" img-count="4" align="center" valign="middle" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="0" duimsg="mouseldown" show="1"/>
+	<button name="2" pos="580,500,606,526" title="2" img-count="4" align="center" valign="middle" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="0" duimsg="mouseldown" show="1"/>
+	<button name="3" pos="610,500,636,526" title="3" img-count="4" align="center" valign="middle" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="0" duimsg="mouseldown" show="1"/>
+	<button name="4" pos="640,500,666,526" title="4" img-count="4" align="center" valign="middle" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="0" duimsg="mouseldown" show="1"/>
+	<button name="5" pos="670,500,696,526" title="5" img-count="4" align="center" valign="middle" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="0" duimsg="mouseldown" show="1"/>
+	<button name="6" pos="700,500,726,526" title="6" img-count="4" align="center" valign="middle" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="0" duimsg="mouseldown" show="1"/>
+	<button name="7" pos="730,500,756,526" title="7" img-count="4" align="center" valign="middle" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="0" duimsg="mouseldown" show="1"/>
+	<button name="8" pos="760,500,786,526" title="8" img-count="4" align="center" valign="middle" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="0" duimsg="mouseldown" show="1"/>
+	<button name="9" pos="790,500,816,526" title="9" img-count="4" align="center" valign="middle" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="0" duimsg="mouseldown" show="1"/>
+	<button name="10" pos="820,500,846,526" title="10" img-count="4" align="center" valign="middle" skin="IDB_CHANGE_PAGE_RJGJ" crtext="838B83" showfocus="0" duimsg="mouseldown" show="1"/>
+	
+	<button name="soft.pagedown" pos="850,500,876,526" img-count="4" skin="IDB_PAGEDOWN_RJGJ" showfocus="0" duimsg="mouseldown" show="1"/-->
+</div>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="640,485">
+  <Include source="Default.xml" />
+  <VerticalLayout name="verMain" enabled="true" width="640" height="485" bkcolor="#FF1F2226">
+    <VerticalLayout name="verHead" float="true" pos="0,0,0,0" enabled="true" width="640" height="80">
+      <Option name="BtnDuanyou" font="0" textcolor="#FF999999" selectedtextcolor="#FFFFFFFF" text="端 游" group="guofuWnd" float="true" pos="20,20,0,0" width="150" height="36" normalimage="file=&apos;GameBtnL150_36.png&apos; source=&apos;0,0,150,36&apos;" selectedimage="file=&apos;GameBtnL150_36.png&apos; source=&apos;0,36,150,72&apos;" selected="true"/>
+      <Option name="BtnYeyou" font="0" textcolor="#FF999999" selectedtextcolor="#FFFFFFFF"  text="页 游" group="guofuWnd" float="true" pos="175,20,0,0" width="150" height="36" normalimage="file=&apos;GameBtnR150_36.png&apos; source=&apos;0,0,150,36&apos;" selectedimage="file=&apos;GameBtnR150_36.png&apos; source=&apos;0,36,150,72&apos;"/>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>

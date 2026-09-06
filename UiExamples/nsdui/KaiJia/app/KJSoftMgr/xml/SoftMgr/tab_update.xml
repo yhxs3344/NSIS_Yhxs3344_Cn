@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<div pos="80,-560,-0,-0" >
+
+	<text name="update.dsc" crtext="808080" crmark="800000" 
+		pos="14,25,-0,65" title="" font="big14" show="1" />
+	<imgbtn name="update.refresh" img-count="3" pos="820,27,870,43" crtext="FFFFFF"  
+		image="skins\SoftMgr\icon\refresh.png" show="1"/>
+	
+	<mytreectrl name="treectrl_update" pos="0,60,-0,-5" show="1"
+		img-scroll="skin:IDB_SCROLL_V" scroll-width="4" img-sep="skin:IDB_TAB_BACK_RJGJ"
+		img-check="skin:IDB_CHECK_BOX_RJGJ" img-colsep=""
+		img-collapse=""
+		img-toggle="skin:IDB_TREE_TOGGLE"
+		show-Toggle="false"
+		img-count="12" image="skin:IDB_LIST_IMG"
+		left-pos="40" row-height="80" bk-transparent="10"
+		font-title="custom15" font="custom12"
+		valign="middle" down-row="0"
+		crtext="92,92,92" crhover="0,0,0" crpush="0,112,235"
+		crtitle="24,24,24" crsep="200,160,160,160" crrowhover="60,0,255,0" 
+		primer-Height="40">
+		<column title="列1" width="110" />
+		<column title="列2" width="158" />
+		<column title="列3" width="165" />
+		<column title="列4" width="100" />
+		<column title="列5" width="120" />
+		<column title="列6" width="160" />
+		<column title="列7" width="20" />
+		<!--node id="1" show="0">
+			<item title="" font-title="1"/-->
+			<node id="1" check="0">
+				<!--img name="" pos="0,2,60,18" image="skins\SoftMgr\icon\ico_chartlet.png" showfocus="0" tip="图片按钮1" /-->
+				
+				<item title="" font-title="2">
+
+					<img pos="3,11,43,27" image="skin:IDB_CHARTLET_ICO" mode="frame" framesize="1" show="1" />
+					<text name="free.count" pos="5,11,48,27" font="default" crtext="FFFFFF" title="0" tip="" />
+					<text pos="50,11,130,27" font="default" crtext="AAAAAA" title="软件可升级至" tip="" />
+					<text pos="135,11,220,27" font="default" crtext="030303" title="免费正式版" tip="" />
+				</item>
+				<item title="" font-title="2"/>
+				<item title="" font-title="1"/>
+				<item title="" font-title="2"/>
+				<item title="" font-title="2"/>
+				<item title="" font-title="2"/>
+				<item collapse="1" align="right" image="skin:IDB_TREE_TOGGLE_RJGJ"/>
+
+			</node>
+			<!--item collapse="1" /-->
+		
+			<node id="2" check="0" >
+				<item title="" font-title="2">
+					<img pos="3,11,43,27" image="skin:IDB_CHARTLET_ICO" mode="frame" framesize="1" show="1" />
+					<text name="pay.count" pos="5,11,40,27" font="default" crtext="FFFFFF" title="0" tip="" />
+					<text pos="50,11,130,27" font="default" crtext="AAAAAA" title="软件可升级至" tip="" />
+					<text pos="135,11,220,27" font="default" crtext="030303" title="收费版" tip="" />
+				</item>
+				<!--item link="一键安装" linkaction="dlg:dlg_login" /-->
+				<item title="" font-title="2"/>
+				<item title="" font-title="2"/>
+				<item title="" font-title="2"/>
+				<item title="" font-title="2"/>
+				<item title="" font-title="2"/>
+				<item collapse="1" align="right" image="skin:IDB_TREE_TOGGLE_RJGJ"/>
+			</node>
+			
+		</mytreectrl>
+		<wkeview name="webkit_soft" show="0"
+				delaycreate="true"
+				transparent="0"
+				url=""
+				pos="0,25,-0,600"
+				show-contextmenu="0" >
+	</wkeview>
+
+</div>

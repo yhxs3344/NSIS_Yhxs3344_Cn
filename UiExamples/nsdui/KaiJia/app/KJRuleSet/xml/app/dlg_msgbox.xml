@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<dlg name="dlg_msgbox" title="MsgBox" width="300" height="150"
+     frame="skins\image\msg_bkgnd.png" bkimg="" width-lt="35" height-lt="35" width-rb="0" height-rb="0"
+     img-shadow="skins\image\shadow.png" shadow-wlt="5" shadow-hlt="3" shadow-wrb="5" shadow-hrb="7">
+	
+	<base>
+		<imgbtn name="button.close" pos="-29,5" width="24" height="24" img-count="3" skin="skin:IDB_BT_CLOSE" shortcut="ESC" />
+		<text name="msgbox.title" crtext="FFFFFF" crmark="800000" font="big" pos="10,5,200,25" title="[APP_NAME]" mask="" response="0" show="1" />
+	</base>
+
+	<body>
+		<!--
+    <area name="area-1" pos="0,0,-0,40" begin-transparent="100" end-transparent="30" />
+		<area name="area-2" pos="0,40,-0,-0" begin-transparent="30" end-transparent="30" />
+		<area name="area-3" pos="0,-37,-0,-36" begin-transparent="70" end-transparent="70" />
+		<area name="area-4" pos="0,-36,-0,-0" begin-transparent="88" end-transparent="88" />
+    -->
+		
+		<img name="msgbox.icon" pos="20,50" width="40" height="40" mode="normal" framesize="0" show="1" />
+		<text name="msgbox.text" pos="70,58,-20,-50" crtext="666666" font="big" title="" show="1" response="0" />
+		<chkbtn name="msgbox.check" skin="IDB_CHECKBOX" pos="75,-60,-25,-40" title="" check="true" show="0" />
+		
+		<div name="msgbox.type.0" pos="0,-50,-0,-0" show="1" >
+      <button name="button.ok" pos="108,-50" width="85" height="30" img-count="4" image="skins\image\bt_exit_confirm.png" cursor="hand" showfocus="0" shortcut="RETURN" />
+		</div>
+		<div name="msgbox.type.1" pos="0,-50,-0,-0" show="0" >
+			<button name="button.ok" pos="80,-50" width="85" height="30" img-count="4" image="skins\image\bt_exit_confirm.png" cursor="hand" showfocus="0" shortcut="RETURN" />
+			<button name="button.cancel" pos="180,-50" width="85" height="30" img-count="4" image="skins\image\bt_exit_cancel.png" cursor="hand" showfocus="0" show="1" />
+		</div>
+		<div name="msgbox.type.3" pos="0,-30,-0,-0" show="0" >
+			<button name="button.yes" skin="IDB_BT_DEFAULT" title="[YES]" pos="-280,0,-200,24" show="1" />
+			<button name="button.no" skin="IDB_BT_DEFAULT" title="[NO]" pos="-190,0,-110,24" show="1" />
+			<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-100,0,-20,24" shortcut="ESC" />
+		</div>
+		<div name="msgbox.type.4" pos="0,-30,-0,-0" show="0" >
+			<button name="button.yes" skin="IDB_BT_DEFAULT" title="[YES]" pos="-190,0,-110,24" show="1" />
+			<button name="button.no" skin="IDB_BT_DEFAULT" title="[NO]" pos="-100,0,-20,24" show="1" />
+		</div>
+
+	</body>
+  
+</dlg>

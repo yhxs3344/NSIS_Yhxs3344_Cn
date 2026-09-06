@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Window size="90,62"
+        maxinfo="90,62" 
+        showshadow="true"
+        shadowsize="4"
+        shadowcorner="23,13,23,33"
+        shadowposition="0,3"
+        shadowdarkness="70">
+  
+  <Font id="0" name="微软雅黑" size="12" />
+  
+  <VerticalLayout height="64" width="90">
+    <Button
+      name="kill" text="结束程序"
+      height="31"
+      normalimage="file='kill.png' source='0,0,90,31'"
+      hotimage="file='kill.png' source='90,0,180,31'"
+      font="0" textcolor="#333333" />
+    <Control height="1" bkcolor="0xffcccccc" />
+    <Button
+      name="open" text="定位文件"
+      height="31"
+      normalimage="file='open.png' source='0,0,90,31'"
+      hotimage="file='open.png' source='90,0,180,31'"
+      font="0" textcolor="#333333" />
+    <Control height="1" bkcolor="0xffffffff" />
+  </VerticalLayout>
+  
+</Window>

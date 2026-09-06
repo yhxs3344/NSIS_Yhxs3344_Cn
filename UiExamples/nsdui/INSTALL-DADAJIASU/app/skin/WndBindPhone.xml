@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="350,360" caption="0,0,0,35" showshadow="true" shadowsize="4" shadowcorner="23,13,23,33" shadowposition="0,1" shadowdarkness="70">
+  <Include source="Default.xml" />
+  <VerticalLayout enabled="true" width="350" height="360" bkimage="Bkimg350_360.png">
+    <Label name="LabTitle" text="验证手机号" font="0" float="true" pos="8,5,0,0" enabled="true" width="190" height="25" textcolor="#FFCCCCCC" />
+    <Button name="BtnClose" float="true" pos="322,0,0,0" enabled="true" width="31" height="32" normalimage="file=&apos;close1.png&apos; source=&apos;0,0,31,32&apos;" hotimage="file=&apos;close1.png&apos; source=&apos;31,0,62,32&apos;" pushedimage="file=&apos;close1.png&apos; source=&apos;62,0,93,32&apos;" />
+    <VerticalLayout float="true" pos="0,35,0,0" enabled="true" width="350" height="325">
+        <Edit name="Edit_ChkPhone_Phone" tipvalue="输入手机号" nativebkcolor="#FF292F32" font="0" float="true" pos="35,30,0,0" enabled="true" visible="true" width="300" height="45" textpadding="40,2,0,0" textcolor="#FFCCCCCC" normalimage="file=&apos;phoneEditLog.png&apos; source=&apos;0,0,300,45&apos;" focusedimage="file=&apos;phoneEditLog.png&apos; source=&apos;300,0,600,45&apos;"/>
+        <Edit name="Edit_ChkPhone_Dycode" tipvalue="输入验证码" font="0" nativebkcolor="#FF292F32" float="true" pos="35,90,0,0" enabled="true" visible="true" width="150" height="45" textpadding="40,2,0,0" textcolor="#FFCCCCCC" ativebkcolor="#FF2A3034" normalimage="file=&apos;DYCodeEditLog.png&apos; source=&apos;0,0,150,45&apos;" focusedimage="file=&apos;DYCodeEditLog.png&apos; source=&apos;150,0,300,45&apos;"/>
+        <Edit name="Edit_ChkPhone_Duanxin" tipvalue="输入短信验证码" font="0" nativebkcolor="#FF292F32" float="true" pos="35,150,0,0" enabled="true" visible="true" width="150" height="45" textpadding="40,2,0,0" textcolor="#FFCCCCCC" ativebkcolor="#FF2A3034" normalimage="file=&apos;DYCodeEditLog.png&apos; source=&apos;0,0,150,45&apos;" focusedimage="file=&apos;DYCodeEditLog.png&apos; source=&apos;150,0,300,45&apos;"/>
+        <Label text="验证手机即可免费领取！" font="0" visible="true" float="true" pos="35,205,0,0" enabled="true" width="180" height="20" textcolor="#FFE4660D" align="left" />
+        <Button name="But_ChkPhone_Dycode" visible="true" float="true" pos="185,115,0,0" enabled="true" width="70" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Button name="BtnFlushDycode" text="刷新" visible="true" float="true" pos="265,115,0,0" enabled="true" width="30" height="16" textcolor="#FF05D569"/>
+        <Button name="But_ChkPhone_Duanxin" text="发送短信验证码" visible="true" float="true" pos="190,155,0,0" enabled="true" width="140" height="40" textcolor="#FFFF7F00" normalimage="file=&apos;registLog.png&apos; source=&apos;0,0,140,40&apos;" hotimage="file=&apos;registLog.png&apos; source=&apos;140,0,280,40&apos;" pushedimage="file=&apos;registLog.png&apos; source=&apos;280,0,420,40&apos;"/>
+        <Button name="But_ChkPhone_Login" text="马上验证" font="1" textcolor="#FFFFFFFF" float="true" pos="55,255,0,0" enabled="true" width="110" height="36" normalimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;" pushedimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;" />
+        <Button name="BtnClose" text="取消" font="1" textcolor="#FFFFFFFF" float="true" pos="185,255,0,0" enabled="true" width="110" height="36" normalimage="file=&apos;Cancel110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Cancel110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;Cancel110_36.png&apos; source=&apos;220,0,330,36&apos;" />
+     </VerticalLayout>
+  </VerticalLayout>
+</Window>

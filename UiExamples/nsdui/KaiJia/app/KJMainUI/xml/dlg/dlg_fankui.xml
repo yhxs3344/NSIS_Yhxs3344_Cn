@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_fankui" title="铠甲安全卫士反馈建议" width="600" height="410" appwin="0" resize="0" shadow-size="2"
+	frame="KJMainUI\skins\kaijiaweishi\fankuibeijing.png" bkimg="" crbk="" >
+
+  <base>
+    <imgbtn name="button.close" img-count="3" pos="-29,5" width="24" height="24" skin="SKIN_PIC_TISHIKUANGGUANBI"  show="1" shortcut="ESC"/>
+    <text name="title" crtext="FFFFFF" crmark="800000" font="big"
+				pos="50,7,200,25" title="" mask="" response="0" show="1" />
+  </base>
+
+  <body>
+    <text name="titletip" crtext="000000" crmark="800000" font="big"   pos="30,60" width="490" height="30"
+          title="您有什么问题或者建议对我们说？" mask="" response="0" show="1" />
+    <edit name="jianyi" image="KJMainUI\skins\kaijiaweishi\EditFrame.png" small-image=""  pos="30,86" width="540" height="110" title="" 
+          multiline="1" autohscroll="0" autovscroll="1" vscroll="1"  number="0" readonly="0"  font="default"/>
+    <text name="title" crtext="000000" crmark="800000" font="big"   pos="30,226" width="120" height="30"
+          title="您的联系方式：" mask="" response="0" show="1" />
+    <combobox name="comboboxlianxifangshi" frame="skin:IDB_MENU_BACK" crtext="666666" image="KJMainUI\skins\kaijiaweishi\EditFrame.png" small-image="skin:IDB_DROP_DOWN"  value="local"
+          tip=""  pos="130,220" width="90" height="30"  list-height="76" img-scroll="skin:IDB_SCROLL_V"  title="QQ" crhover="f5f5f5"  >
+      <item name="QQ" value="1" crtext="666666"/>
+      <item name="电话" value="2" crtext="666666"/>
+      <item name="微信" value="3" crtext="666666"/>
+    </combobox>
+    <edit name="lianxihaoma" image="KJMainUI\skins\kaijiaweishi\EditFrame.png"  pos="230,220" width="200" height="30" title=""  font="default"  />
+    <text name="title" crtext="999999" crmark="800000"  pos="30,270" width="400" height="30" 
+          title="请留下您的联系方式，以方便我们快速定位问题的原因。" mask="" response="0" show="1" />
+    <text name="failetip" crtext="E60000" crmark=""  pos="405,-70" width="200" height="30" font="big14"
+          title="提交失败，请重试" mask="" response="0" show="0" />
+
+    <button name="tijiao" img-count="3" image="KJMainUI\skins\kaijiaweishi\tijiaowenti.png" title=""	pos="210,-82" width="175" height="42" show="1" showfocus="0"/>
+  </body>
+
+</dlg>
+
+

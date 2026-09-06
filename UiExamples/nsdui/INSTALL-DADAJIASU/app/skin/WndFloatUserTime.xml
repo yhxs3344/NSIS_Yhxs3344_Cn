@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="250,170" >
+  <Include source="Default.xml" />
+  <VerticalLayout name="vecBk" enabled="true" width="250" height="170" bkimage="wndFloatBkBig.png" >
+    <TabLayout name="TabFloat" enabled="true" idth="250" height="170" selectedid="0">
+      <VerticalLayout enabled="true" width="250" height="60">
+        <Label textcolor="FFFF7F00" text="请先购买会员时间"  font="0" float="true" pos="35,20,0,0" width="120" height="20" />
+        <Button name="ButCharge1" textcolor="FFFFFFFF" text="充值" float="true" pos="160,16,0,0" enabled="true" width="60" height="28" normalimage="file=&apos;FloatCharge.png&apos; source=&apos;0,0,60,28&apos;" hotimage="file=&apos;FloatCharge.png&apos; source=&apos;60,0,120,28&apos;" pushedimage="file=&apos;FloatCharge.png&apos; source=&apos;120,0,180,28&apos;" />
+      </VerticalLayout>
+      <VerticalLayout enabled="true" width="250" height="60">
+        <Label textcolor="FF999999" text="会员时间剩余："  font="0" float="true" pos="10,0,0,0" width="105" height="30" />
+        <Label name="LabLastTime" textcolor="FF07D569" text="20:02:03"  font="1" float="true" pos="110,0,0,0" width="80" height="30" />
+        <Label textcolor="FF999999" text="您的换机码是："  font="0" mouse="false" float="true" pos="10,30,0,0" width="105" height="30" />
+        <Button name="btnChargeMask" tooltip="在更换电脑时使用" textcolor="FF17CCFF" align="left" text="NS254F"  font="1" float="true" pos="105,30,0,0" width="60" height="40" />
+        <Button name="ButCharge2" textcolor="FFFFFFFF" text="续费" float="true" pos="190,20,0,0" enabled="true" width="50" height="24" normalimage="file=&apos;FloatCharge2.png&apos; source=&apos;0,0,50,24&apos;" hotimage="file=&apos;FloatCharge2.png&apos; source=&apos;50,0,100,24&apos;" pushedimage="file=&apos;FloatCharge2.png&apos; source=&apos;100,0,150,24&apos;" />
+      </VerticalLayout>
+      <VerticalLayout enabled="true" width="250" height="170">
+        <Label textcolor="FF999999" text="您的会员时间仅剩"  font="0" float="true" pos="65,20,0,0" width="150" height="20" />
+        <Label name="LabLastTime2" textcolor="FFFF7F00" text="20:02:03"  font="2" float="true" pos="85,45,0,0" width="90" height="25" />
+        <Label textcolor="FF999999" text="请提前续费保障游戏加速"  font="0" float="true" pos="45,80,0,0" width="160" height="20" />
+        <Button name="ButCharge3" textcolor="FFFFFFFF" text="续费" float="true" pos="100,110,0,0" enabled="true" width="50" height="24" normalimage="file=&apos;FloatCharge2.png&apos; source=&apos;0,0,50,24&apos;" hotimage="file=&apos;FloatCharge2.png&apos; source=&apos;50,0,100,24&apos;" pushedimage="file=&apos;FloatCharge2.png&apos; source=&apos;100,0,150,24&apos;" />
+        <Button name="Butup" float="true" pos="100,145,0,0" enabled="true" width="48" height="24" normalimage="file=&apos;FloatUp.png&apos; source=&apos;0,0,48,24&apos;" hotimage="file=&apos;FloatUp.png&apos; source=&apos;48,0,96,24&apos;" pushedimage="file=&apos;FloatUp.png&apos; source=&apos;96,0,144,24&apos;" />
+      </VerticalLayout>
+    </TabLayout>
+  </VerticalLayout>
+</Window>

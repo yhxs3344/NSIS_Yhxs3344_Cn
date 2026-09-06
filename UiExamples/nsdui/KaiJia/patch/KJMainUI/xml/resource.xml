@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+<!--系统配置-->
+<res type="cfg" name="defaultStyle" value="" />
+<res type="cfg" name="logfile" value="KaijiaWeishi.log" />
+<res type="cfg" name="loglevel" value="1" />
+<res type="cfg" name="appMutex" value="MUTEX_DUIVISION_KaijiaWeishi" />
+<res type="cfg" name="enableDragFile" value="1" />
+<res type="cfg" name="trayDbClickMsg" value="0" />
+
+<!--风格设置-->
+<res type="style" name="default" value="" />
+
+<!--XML资源-->
+<res type="res" lang="zh-cn" file="KJMainUI\\xml\def_string_zh-cn.xml" />
+<res type="res" lang="en-us" file="KJMainUI\\xml\def_string_en-us.xml" />
+
+<!--XML资源-默认风格-->
+<res type="xml" name="dlg_main" file="KJMainUI\\xml\duivision\dlg_main.xml" />
+<res type="xml" name="dlg_skin" file="KJMainUI\\xml\dlg_skin.xml"  />
+<res type="xml" name="dlg_notifymsg" file="KJMainUI\\xml\dlg_notifymsg.xml"  />
+<res type="xml" name="dlg_msgbox" file="KJMainUI\\xml\dlg_msgbox.xml"  />
+<res type="xml" name="dlg_about" file="KJMainUI\\xml\duivision\dlg_about.xml"  />
+<res type="xml" name="dlg_login" file="KJMainUI\\xml\duivision\dlg_login.xml"  />
+<res type="xml" name="dlg_zhuyefanghu" file="KJMainUI\\xml\dlg\dlg_zhuyefanghu.xml"  />
+<res type="xml" name="dlg_shouyefanghuguanbishouye" file="KJMainUI\\xml\dlg\dlg_zhuyefanghuguanbishouye.xml"  />
+<res type="xml" name="dlg_shouyefanghuguanbiliulanqi" file="KJMainUI\\xml\dlg\dlg_shouyefanghuguanbiliulanqi.xml"  />
+<res type="xml" name="tab_Home" file="KJMainUI\\xml\app\tab_Home.xml" />
+<res type="xml" name="menu_main" file="KJMainUI\\xml\duivision\menu_main.xml"  />
+<res type="xml" name="menu_tray" file="KJMainUI\\xml\duivision\menu_tray.xml"  />
+<res type="xml" name="menu_qidongxiang" file="KJMainUI\\xml\duivision\menu_qidongxiang.xml"  />
+<res type="xml" name="menu_ziqidongchajian" file="KJMainUI\\xml\duivision\menu_ziqidongchajian.xml"  />
+<res type="xml" name="menu_yingyongruanjianfuwu" file="KJMainUI\\xml\duivision\menu_yingyongruanjianfuwu.xml"  />
+<res type="xml" name="tab_shouye" file="KJMainUI\\xml\tab\tab_shouye.xml"  />
+<res type="xml" name="tab_lijitijian" file="KJMainUI\\xml\tab\tab_lijitijian.xml"  />
+<res type="xml" name="tab_loudongxiufu" file="KJMainUI\\xml\tab\tab_loudongxiufu.xml"  />
+<res type="xml" name="tab_kaijijiashu" file="KJMainUI\\xml\tab\tab_kaijijiashu.xml"  />
+<res type="xml" name="tab_xitongxiufu" file="KJMainUI\\xml\tab\tab_xitongxiufu.xml"  />
+<res type="xml" name="tab_youhuajiashu" file="KJMainUI\\xml\tab\tab_youhuajiashu.xml"  />
+<res type="xml" name="tab_youhuajiashuyijianshaomiao" file="KJMainUI\\xml\tab\tab_youhuajiashuyijianshaomiao.xml"  />
+<res type="xml" name="tab_diannaoqingli" file="KJMainUI\\xml\tab\tab_diannaoqingli.xml"  />
+<res type="xml" name="tab_diannaoqingliyijianshaomiao" file="KJMainUI\\xml\tab\tab_diannaoqingliyijianshaomiao.xml"  />
+<res type="xml" name="tab_qidongxiang" file="KJMainUI\\xml\tab\tab_qidongxiang.xml"  />
+<res type="xml" name="tab_jihuarenwu" file="KJMainUI\\xml\tab\tab_jihuarenwu.xml"  />
+<res type="xml" name="tab_ziqidongchajian" file="KJMainUI\\xml\tab\tab_ziqidongchajian.xml"  />
+<res type="xml" name="tab_yingyongruanjianfuwu" file="KJMainUI\\xml\tab\tab_yingyongruanjianfuwu.xml"  />
+<res type="xml" name="tab_xitongguanjianfuwu" file="KJMainUI\\xml\tab\tab_xitongguanjianfuwu.xml"  />
+<res type="xml" name="tishi_loudongxiufu" file="KJMainUI\\xml\tishi\tishi_loudongxiufu.xml"  />
+<res type="xml" name="tishi_quxiaoloudongxiufu" file="KJMainUI\\xml\tishi\tishi_quxiaoloudongxiufu.xml"  />
+<res type="xml" name="tishi_kaijishijian" file="KJMainUI\\xml\tishi\tishi_kaijishijian.xml"  />
+<res type="xml" name="dlg_shezhi" file="KJMainUI\\xml\dlg\dlg_shezhi.xml"  />
+<res type="xml" name="dlg_fankui" file="KJMainUI\\xml\dlg\dlg_fankui.xml"  />
+<res type="xml" name="dlg_guanyu" file="KJMainUI\\xml\dlg\dlg_guanyu.xml"  />
+<res type="xml" name="tishi_loudongxiufu" file="KJMainUI\\xml\tishi\tishi_loudongxiufu.xml"  />
+  
+
+  <!--字体资源-->
+<res type="font" lang="zh-cn" name="default" font="微软雅黑" size="12" bold="false" />
+<res type="font" lang="zh-cn" name="default" font="Tahoma" size="10" bold="false" os="winxp" />
+<res type="font" lang="zh-cn" name="bold" font="微软雅黑" size="12" bold="true" />
+<res type="font" lang="zh-cn" name="bold" font="Tahoma" size="11" bold="true" os="winxp" />
+<res type="font" lang="zh-cn" name="bold13" font="微软雅黑" size="13" bold="true" />
+<res type="font" lang="zh-cn" name="bold13" font="Tahoma" size="12" bold="true" os="winxp" />
+<res type="font" lang="zh-cn" name="big" font="微软雅黑" size="14" bold="true" italic="false" underline="false" strikeout="false" />
+<res type="font" lang="zh-cn" name="big" font="Tahoma" size="12" bold="true" italic="false" underline="false" strikeout="false" os="winxp" />
+<res type="font" lang="zh-cn" name="bigbig" font="微软雅黑" size="18" />
+<res type="font" lang="zh-cn" name="bigbig" font="Tahoma" size="17" os="winxp" />
+<res type="font" lang="zh-cn" name="big25" font="微软雅黑" size="25" />
+<res type="font" lang="zh-cn" name="big25" font="Tahoma" size="24" os="winxp" />
+<res type="font" lang="zh-cn" name="big40" font="微软雅黑" size="40" />
+<res type="font" lang="zh-cn" name="big40" font="Tahoma" size="48" os="winxp" />
+<res type="font" lang="zh-cn" name="big35" font="微软雅黑" size="35" />
+<res type="font" lang="zh-cn" name="big35" font="Tahoma" size="34" os="winxp" />
+<res type="font" lang="zh-cn" name="big60" font="微软雅黑" size="60" />
+<res type="font" lang="zh-cn" name="big60" font="Tahoma" size="58" os="winxp" />
+<res type="font" lang="zh-cn" name="big50" font="微软雅黑" size="50" />
+<res type="font" lang="zh-cn" name="big50" font="Tahoma" size="48" os="winxp" />
+<res type="font" lang="zh-cn" name="bigbold18" font="微软雅黑"  bold="true" size="18" />
+<res type="font" lang="zh-cn" name="bigbold18" font="Tahoma"  bold="true" size="16" os="winxp" />
+<res type="font" lang="zh-cn" name="bigbigbold" font="微软雅黑"  bold="true" size="16" />
+<res type="font" lang="zh-cn" name="bigbigbold" font="Tahoma"  bold="true" size="14" os="winxp" />
+<res type="font" lang="zh-cn" name="bigbig16" font="微软雅黑" size="16" />
+<res type="font" lang="zh-cn" name="bigbig16" font="Tahoma" size="15" os="winxp" />
+<res type="font" lang="zh-cn" name="big14" font="微软雅黑" size="14" />
+<res type="font" lang="zh-cn" name="big14" font="Tahoma" size="12" os="winxp" />
+
+  <!--图片资源-默认风格-->
+<res type="img" name="IDB_TRAY_ICON" file="dui.ico" />
+<res type="img" name="IDB_MAIN_FRAME" file="KJMainUI\skins\default\WindowsBack.png" />
+<res type="img" name="IDB_BT_CLOSE" file="KJMainUI\skins\default\BT_CLOSE.png" />
+<res type="img" name="IDB_BT_MIN" file="KJMainUI\skins\default\BT_MIN.png" />
+<res type="img" name="IDB_BT_MENU" file="KJMainUI\skins\default\BT_MENU.png" />
+<res type="img" name="IDB_BT_SKIN" file="KJMainUI\skins\default\BT_SKIN.png" />
+<res type="img" name="IDB_BT_SETUP" file="KJMainUI\skins\default\BT_SETUP.png" />
+<res type="img" name="IDB_BT_DEFAULT" file="KJMainUI\skins\default\BT_DEFAULT.png" />
+<res type="img" name="IDB_BT_ICON" file="KJMainUI\skins\default\BT_ICON.png" />
+<res type="img" name="IDB_BT_GREEN" file="KJMainUI\skins\default\BT_GREEN.png" />
+<res type="img" name="IDB_BT_CANCEL" file="KJMainUI\skins\default\BT_CANCEL.png" />
+<res type="img" name="IDB_CHECK_BOX" file="KJMainUI\skins\default\CHECK_BOX.png" />
+<res type="img" name="IDB_RADIO_BUTTON" file="KJMainUI\skins\default\RADIO_BUTTON.png" />
+<res type="img" name="IDB_EDIT" file="KJMainUI\skins\default\EDIT.png" />
+<res type="img" name="IDB_COMBO_ITEM" file="KJMainUI\skins\default\COMBO_ITEM.png" />
+<res type="img" name="IDB_COMBO_ITEM_CLOSE" file="KJMainUI\skins\default\COMBO_ITEM_CLOSE.png" />
+<res type="img" name="IDB_PROGRESS" file="KJMainUI\skins\default\Progress.png" />
+<res type="img" name="IDB_PROGRESS_GREEN_BACK" file="KJMainUI\skins\default\progress_background_icon.png" />
+<res type="img" name="IDB_PROGRESS_GREEN_FORE" file="KJMainUI\skins\default\progress_foreground_icon.png" />
+<res type="img" name="IDB_SCROLL_V" file="KJMainUI\skins\default\SCROLL_V.png" />
+<res type="img" name="IDB_SCROLL_H" file="KJMainUI\skins\default\SCROLL_H.png" />
+<res type="img" name="IDB_BT_SCROLL_UP" file="KJMainUI\skins\default\BT_SCROLL_UP.png" />
+<res type="img" name="IDB_BT_SCROLL_DOWN" file="KJMainUI\skins\default\BT_SCROLL_DOWN.png" />
+<res type="img" name="IDB_TAB_SEPERATOR" file="KJMainUI\skins\default\Tab_seperator.png" />
+<res type="img" name="IDB_TAB_SEPERATOR_V" file="KJMainUI\skins\default\Tab_seperator_v.png" />
+<res type="img" name="IDB_TAB_ITEM" file="KJMainUI\skins\default\tab.png" />
+<res type="img" name="IDB_TAB_BACK" file="KJMainUI\skins\default\tab_background.png" />
+<res type="img" name="IDB_TAB_HOVER" file="KJMainUI\skins\default\toolbar_hover.png" />
+<res type="img" name="IDB_TAB_HOVER_V" file="KJMainUI\skins\default\toolbar_hover_v.png" />
+<res type="img" name="IDB_LIST_IMG" file="KJMainUI\skins\default\list_img.png" />
+<res type="img" name="IDB_MSGDLG_BK" file="KJMainUI\skins\default\msgdlg_bk.png" />
+<res type="img" name="IDB_TREE_COLLAPSE" file="KJMainUI\skins\default\tree_collapse.png" />
+<res type="img" name="IDB_TREE_TOGGLE" file="KJMainUI\skins\default\tree_toggle.png" />
+<res type="img" name="IDB_TREE_CHECKBOX" file="KJMainUI\skins\default\tree_checkbox.png" />
+<res type="img" name="IDB_TREE_ICON" file="KJMainUI\skins\default\tree_icon.png" />
+<res type="img" name="IDB_BT_SKIN_CUSTOMIZE" file="KJMainUI\skins\default\BT_SKIN_CUSTOMIZE.png" />
+<res type="img" name="IDB_BT_SKIN_IMAGE" file="KJMainUI\skins\default\BT_SKIN_IMAGE.png" />
+<res type="img" name="IDB_BT_SKIN_COLOR" file="KJMainUI\skins\default\BT_SKIN_COLOR.png" />
+<res type="img" name="IDB_SKIN_PUSHED_BKG" file="KJMainUI\skins\default\SkinPushedBkg.png" />
+<res type="img" name="IDB_SKIN_BKG" file="KJMainUI\skins\default\SkinBkg.png" />
+<res type="img" name="IDB_DROP_DOWN" file="KJMainUI\skins\default\BT_DROP_DOWN.png" />
+<res type="img" name="IDB_KEY_BOARD" file="KJMainUI\skins\default\BT_KEY_BOARD.png" />
+<res type="img" name="IDB_EDIT_USER" file="KJMainUI\skins\simage\edit_user.png" />
+<res type="img" name="IDB_COMPUTER" file="KJMainUI\skins\simage\computer.png" />
+<res type="img" name="IDB_EDIT_PWD" file="KJMainUI\skins\simage\password.png" />
+<res type="img" name="IDB_LINE_RP" file="KJMainUI\skins\default\rp_line.png" />
+<res type="img" name="IDB_SPLIT_HORI" file="KJMainUI\skins\default\split_hori.png" />
+<res type="img" name="IDB_SPLIT_VERT" file="KJMainUI\skins\default\split_vert.png" />
+<res type="img" name="IDB_SPLIT_THUMB_HORI" file="KJMainUI\skins\default\split_thumb_hori.jpg" />
+<res type="img" name="IDB_SPLIT_THUMB_VERT" file="KJMainUI\skins\default\split_thumb_vert.jpg" />
+
+<res type="img" name="IDB_MENU_BACK" file="KJMainUI\skins\menu\menu_bkg.png" />
+<res type="img" name="IDB_MENU_SEP" file="KJMainUI\skins\menu\menu_sep.png" />
+<res type="img" name="IDB_MENU_ARROW" file="KJMainUI\skins\menu\menu_arrow.png" />
+
+<res type="img" name="SKIN_PIC_0" file="bkimg\SKIN_PIC_0.png" />
+<res type="img" name="SKIN_PIC_1" file="bkimg\SKIN_PIC_1.png" />
+<res type="img" name="SKIN_PIC_2" file="bkimg\SKIN_PIC_2.png" />
+<res type="img" name="SKIN_PIC_3" file="bkimg\SKIN_PIC_3.png" />
+<res type="img" name="SKIN_PIC_4" file="bkimg\SKIN_PIC_4.png" />
+<res type="img" name="SKIN_PIC_5" file="bkimg\SKIN_PIC_5.png" />
+<res type="img" name="SKIN_PIC_6" file="bkimg\SKIN_PIC_6.png" />
+<res type="img" name="SKIN_PIC_7" file="bkimg\SKIN_PIC_7.png" />
+<res type="img" name="SKIN_PIC_8" file="bkimg\SKIN_PIC_8.png" />
+
+<res type="img" name="IDB_ICON_CHECK" file="KJMainUI\skins\image\icon_check.png" />
+<res type="img" name="IDB_ICON_INFO" file="KJMainUI\skins\image\icon_info.png" />
+<res type="img" name="IDB_ICON_QUESTION" file="KJMainUI\skins\image\icon_question.png" />
+<res type="img" name="IDB_ICON_WARN" file="KJMainUI\skins\image\icon_warning.png" />
+<res type="img" name="IDB_ICON_ERROR" file="KJMainUI\skins\image\icon_error.png" />
+
+<res type="img" name="IDB_MENU_UPDATE" file="KJMainUI\skins\menu\MENU_UPDATE.png" />
+<res type="img" name="IDB_MENU_AUTH" file="KJMainUI\skins\menu\MENU_AUTH.png" />
+<res type="img" name="IDB_MENU_HELP" file="KJMainUI\skins\menu\MENU_HELP.png" />
+<res type="img" name="IDB_MENU_SETUP" file="KJMainUI\skins\menu\MENU_SETUP.png" />
+
+<res type="img" name="IDB_SCAN_ANIMATE" file="KJMainUI\skins\default\scan_animate.png" />
+<res type="img" name="IDB_SCAN_STATUS_360" file="KJMainUI\skins\360\SkanMovie01.png" />
+<res type="img" name="IDB_REPAIR_STATUS_360" file="KJMainUI\skins\360\RepairMovie01.png" />
+<res type="img" name="IDB_SCAN_STATUS_QQ" file="KJMainUI\skins\qq\HPScanStatus.png" />
+<res type="img" name="IDB_NUMBER_SAFE" file="KJMainUI\skins\qq\SefaNumber.png" />
+<res type="img" name="IDB_NUMBER_DANGER" file="KJMainUI\skins\qq\DangerNumber.png" />
+<res type="img" name="IDB_NUMBER_HINT" file="KJMainUI\skins\qq\HintNumber.png" />
+<res type="img" name="IDB_NUMBER_WHITE" file="KJMainUI\skins\qq\WhiteNumber.png" />
+
+<res type="img" name="IDB_LOGIN_USER" file="KJMainUI\skins\qq\HEAD_101.png" />
+<res type="img" name="SKIN_PIC_BK" file="KJMainUI\skins\kaijiaweishi\background.png" />
+<res type="img" name="SKIN_PIC_GUANBI" file="KJMainUI\skins\kaijiaweishi\guanbi.png" />
+<res type="img" name="SKIN_PIC_ZUIXIAOHUA" file="KJMainUI\skins\kaijiaweishi\zuixiaohua.png" />
+<res type="img" name="SKIN_PIC_XIALAKUANG" file="KJMainUI\skins\kaijiaweishi\xialakuang.png" />
+<res type="img" name="SKIN_PIC_XIAOXI" file="KJMainUI\skins\kaijiaweishi\xiaoxi.png" />
+<res type="img" name="SKIN_PIC_TISHIKUANGGUANBI" file="KJMainUI\skins\kaijiaweishi\tishikuangguanbi.png" />
+
+<res type="str" lang="zh-cn" name="APP_NAME" value="铠甲安全卫士" />
+</root>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="430,220" caption="0,0,0,220" roundcorner="1,1">
+	<VerticalLayout name="vrl_page3" bkimage="bg0.bmp"> 
+		<Button name="btn_yes"  float="true" pos="195,175,0,0" width="70" height="20"/>
+		<Button name="btn_no" float="true" pos="265,165,0,0" width="139" height="32" normalimage="btn_ct1.png" hotimage="btn_ct2.png" />
+		<HorizontalLayout float="true" pos="398,0,0,0" width="35" height="35">
+			<Button name="btn_close"  width="35" height="35"  normalimage="xx1.png" hotimage="xx2.png" pushedimage="xx3.png" />
+		</HorizontalLayout>  				
+	</VerticalLayout>					
+</Window>

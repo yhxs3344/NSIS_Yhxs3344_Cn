@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg name="dlg_setting" title="AboutBox" width="500" height="390" appwin="0" resize="1"
+	translucent="255" frame="skin:SKIN_PIC_SUGGEST" bkimg="skin:SKIN_PIC_SUGGEST" crbk="000000" >
+	
+	<base>
+		<imgbtn name="button.close" img-count="3" pos="-29,10,-0,29" skin="IDB_BT_CLOSE_RJGJ" show="1"/>
+	</base>
+
+	<body>
+		<text pos="30,65,220,85" font="bold" crtext="808080" title="您有什么问题或建议想对我们说？" tip="" />
+		<text pos="312,65,480,85" font="bold" crtext="808080" title="官方QQ交流群：304176403" tip="" />
+		<edit name="edit.suggest" skin="IDB_EDIT" pos="30,90,470,250" title="" tip="请详细描述您的意见或建议，我们会尽快参考您的的建议来优化我们的产品和服务。"
+			multiline="1" wantreturn="1" autohscroll="0" autovscroll="1" number="0" readonly="0" 
+			font="default" crtip="128,128,128,128" />
+		<text pos="30,272,123,298" font="big" crtext="808080" title="您的联系QQ:" tip="" />
+		<edit name="edit.qq" skin="IDB_EDIT" pos="125,268,250,298" title="" 
+			multiline="0" wantreturn="1" autohscroll="1" autovscroll="0" number="1" readonly="0" maxchar="15"
+			font="default" crtip="128,128,128,128" />
+		<text pos="125,305,480,330" font="bold" crtext="999D9C" title="请留下您的联系方式，方便我们为您快速解决问题。" tip="" />
+		
+		
+		<button name="button.commit" img-count="3" skin="IDB_BT_SUBMIT"  title="" pos="-360,-40,-270,-8" show="1" />
+		<button name="button.cancel" img-count="3" skin="IDB_BT_CANCEL_RJGJ"  title="" pos="-230,-40,-140,-8" show="1" />
+	</body>
+  
+</dlg>

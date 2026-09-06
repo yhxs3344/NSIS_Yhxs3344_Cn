@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<menu title="Menu" bkmod="frame" width="120" item-height="25" framesize="3" left="30" frame-width="0" bkimg="skin:IDB_NMENU_BACK" crrowhover="00CD00" >
+
+	<menuitem name="item_setting" img-count="3" skin="IDB_MENU_SETTING" title="设置" taskmsg="1" />
+	<menuitem name="item_setup" img-count="3" skin="IDB_MENU_CHECKUPDATE" title="检查更新" taskmsg="1" />
+	<menuitem name="item_suggest" img-count="3" image="skin:IDB_MENU_SUGGEST" title="反馈建议" taskmsg="1" />
+	<!--menuitem name="item_update1" img-count="3" image="skin:IDB_MENU_OFFCIAL" title="官网" action="link:http://www.chaorenguanjia.com" /-->
+	<menuitem name="item_aboutus" img-count="3" image="skin:IDB_MENU_CONTACTUS" title="关于我们" taskmsg="1" />
+	<!--menuitem separator="1" skin="IDB_MENU_SEP" />
+	<menuitem name="item_about" skin="" image="" title="关于" action="dlg:dlg_about" /-->
+  
+</menu>

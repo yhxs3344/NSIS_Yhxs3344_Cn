@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="330,182" topmost="true" >
+    <Font name="微软雅黑" size="12" italic="false" />
+    <Font name="微软雅黑" size="12" italic="false" bold="true"/>
+    <VerticalLayout name="accmodeVer" enabled="true" width="330" height="182" bkcolor="#FF282C32" bordersize="1" bordercolor="#FF999999">
+    </VerticalLayout>
+</Window>

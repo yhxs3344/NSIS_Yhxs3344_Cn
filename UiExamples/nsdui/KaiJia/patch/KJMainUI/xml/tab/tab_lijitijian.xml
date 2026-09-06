@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+
+<div pos="120,0,-0,-0" >  
+  <img pos="0,0" width="760" height="122" img-count="1" image="KJMainUI\skins\kaijiaweishi\jindutiaobeijing.png" 
+       mode="frame" framesize="1" show="1" />
+  <progressKaijia name="progressCheckPgr" img-back-clr="FFFFFF" img-fore-clr="FFFFFF" draw-by-color="1"
+                  pos="0,0" width="760" height="120" value="0" run="false" process-msg="0" response="0" show="0"/>
+  <rectkaijia name="rectbk1" pos="0,0" width="760" height="120" response="0" color="FFFFFF" />
+  <rectkaijia name="rectbk2" pos="0,0" width="760" height="120" response="0" color="FFFFFF" />
+  <circle name="circle1" pos="38,12" width="96" height="96" response="0" color="00FF00" show="0" />
+  <circle name="circle2" pos="38,12" width="96" height="96" response="0" color="FF0000" img-alpha="50" show="0"/>
+
+  <!--以下4个圆形及2个矩形是为了画渐变的“一键修复”按钮，在按钮两分别为半个圆，中间为矩形-->
+  <circle name="circleleft1" pos="-150,50" width="41" height="41" response="0" color="FFFFFF" show="0" />
+  <circle name="circleleft2" pos="-150,50" width="41" height="41" response="0" color="FFFFFF" show="0"/>
+  <circle name="circleright1" pos="-57,50" width="41" height="41" response="0" color="FFFFFF" show="0" />
+  <circle name="circleright2" pos="-57,50" width="41" height="41" response="0" color="FFFFFF" show="0" />
+  <rectkaijia name="rectmid" pos="-129,50" width="93" height="42" response="0" color="FFFFFF" show="0"/>
+  <rectkaijia name="rectmid1" pos="-129,50" width="93" height="42" response="0" color="FFFFFF" show="0"/>
+  <rectkaijia name="rectmid2" pos="-129,50" width="93" height="42" response="0" color="FFFFFF" show="0"/>
+
+  
+  <!--<text name="txtCheckValue" crtext="FFFFFF" pos="45,35" width="90" height="60" title="100" font="big40"/>-->
+  <img pos="54,45" name="fenshubaiwei" width="22" height="32" img-count="1" image=""  mode="frame" framesize="1" show="1" />
+  <img pos="76,45" name="fenshushiwei" width="22" height="32" img-count="1" image=""  mode="frame" framesize="1" show="1" />
+  <img pos="98,45" name="fenshugewei" width="22" height="32" img-count="1" image=""  mode="frame" framesize="1" show="1" />
+  <text name="txtCheckTip" crtext="000000" pos="150,25" width="400" height="40" title="正在进行体检：故障检测…"  font="big25"/>
+  <text name="txtCheckResult" crtext="CCCCCC" pos="150,70" width="400" height="30" title="已发现1项问题需要修复，建议体检后一键修复"/>
+
+  <textbtn name="textbtnFanhui" crtext="2EA2E5" align="center" pos="-220,65" width="80" height="22"
+           show="1" title="  <<返回" show="1" />
+  <buttonkaijia name="btnyijianxiufu" title="" crtext="FFFFFF" font="big" pos="-150,50" img-count="3" title="一键修复"
+                width="135" height="42" image="" show="0" animate="0"  tip="" showfocus="0"/>
+  <imgbtn name="btnquxiaotijian" pos="-130,50" width="105" height="37" img-count="3" 
+          image="KJMainUI\skins\kaijiaweishi\quxiaotijian.png" tip="" show="1" showfocus="0"/>
+  <imgbtn name="btnfanhui" pos="-130,50" width="105" height="37" img-count="3" 
+          image="KJMainUI\skins\kaijiaweishi\fanhui.png" tip="" show="0" showfocus="0"/>
+  <imgbtn name="btnquxiaoxiufu" pos="-130,50" width="105" height="37" img-count="3"
+          image="KJMainUI\skins\kaijiaweishi\quxiaoxiufu.png" tip="" show="0" showfocus="0"/>
+    
+  <imgbtn name="btnguanbi" pos="-25,0,-0,22" img-count="3" skin="SKIN_PIC_GUANBI" 
+          tip="关闭" showfocus="0"/>
+  <imgbtn name="btnzuixiaohua" pos="-51,0,-26,22" img-count="3" skin="SKIN_PIC_ZUIXIAOHUA"
+          tip="最小化"  showfocus="0"/>
+  <imgbtn name="btnxialakuang" pos="-77,0,-52,22" img-count="3" skin="SKIN_PIC_XIALAKUANG" 
+          tip="菜单" action="menu:menu_main" menupos="-105,-0"  showfocus="0"/>
+  <imgbtn name="btnfankui" pos="-103,0,-78,22" img-count="3" skin="SKIN_PIC_XIAOXI"
+          tip="反馈建议" showfocus="0"/>
+
+  <treectrlkaijia name="treectrl_kaijiaweishi" pos="25,130" width="730" height="375" show="1"
+    img-scroll="skin:IDB_SCROLL_V" img-sep="KJMainUI\skins\default\rp_line1.png"
+    img-colsep="" scroll-width="5"
+    img-collapse="KJMainUI\skins\kaijiaweishi\tree_collapse.png"
+    img-toggle="KJMainUI\skins\kaijiaweishi\tree_toggle.png"
+    img-count="12" image="skin:IDB_LIST_IMG"
+    left-pos="0" row-height="50" bk-transparent="10"
+    font-title="bigbig" font="default"
+    valign="middle" down-row="0"
+    crtext="255,64,64,64" crhover="0,0,0" crpush="0,112,235"
+    level1-row-height="30" level2-row-height="20"
+    crtitle="32,32,32" crsep="200,160,160,160" crrowhover="128,245,245,245" >
+    <column title="列1" width="680" />
+    <column title="列2" width="100" />
+    <!--<animateimg name="animateimg_scan_1" image="KJMainUI\skins\kaijiaweishi\zhengzaijiancha.png" show="1"
+    pos="0,16" width="18" height="18" index="0" maxindex="12" timer-count="3" run="true" />-->
+    <!--<node id="1" leftimage-pos-x="7"  collapse-pos-x="680" hovercolor-pos-x="0" hovercolor-width="720">
+      <item>
+        <imgkaijia name="diannaosudutubiao" pos="0,16" width="18" height="18" img-count="1"
+            image="KJMainUI\skins\kaijiaweishi\diannaosudu.png"  mode="frame" framesize="1" show="1" />
+        <animateimg name="animateimg_scan_1" image="KJMainUI\skins\kaijiaweishi\zhengzaijiancha.png" show="0"
+				    pos="0,16" width="18" height="18" index="0" maxindex="12" timer-count="3" run="true" />
+        <text name="title" crtext="333333" font="bigbig16"  pos="20,12,250,35" title="电脑速度" mask="--" response="0" show="1"  />
+        <text name="title" crtext="CCCCCC" font="big"  pos="110,15,250,35"
+              title="检测到2个影响电脑速度的问题 " mask="--" response="0" show="1" />
+        <text name="title" crtext="FF0000" font="big"  pos="250,15,300,35"
+              title="-5分 " mask="--" response="0" show="1" />
+      </item>
+      <item collapse="1" />
+      --><!--<node id="1-0"   image-left-show="1" collapse="1" toggle-pos-x="30"  hovercolor-pos-x="23" hovercolor-width="697">
+        <item title="发现电脑存在154G垃圾"  crmark="00FF00"/>
+        <node id="1-0-1" image="skin:IDB_ICON_ERROR" check="0"  hovercolor-pos-x="23" hovercolor-width="697">
+          <item title="临时文件10G"/>
+        </node>
+        <node id="1-0-2" image="skin:IDB_ICON_ERROR" check="0"  hovercolor-pos-x="23" hovercolor-width="697">
+          <item title="回收站10G"/>
+        </node>
+      </node>
+      <node id="1-1"   image-left-show="1" collapse="1" toggle-pos-x="30"  hovercolor-pos-x="23" hovercolor-width="697">
+        <item title="IE缓存123M" />
+        <node id="1-1-1" image="skin:IDB_ICON_ERROR" check="0"  hovercolor-pos-x="23" hovercolor-width="697">
+          <item title="IE缓存1"/>
+          <item />
+        </node>
+        <node id="1-1-2" image="skin:IDB_ICON_ERROR" check="0"  hovercolor-pos-x="23" hovercolor-width="697">
+          <item title="IE缓存2"/>
+        </node>
+        <node id="1-1-3" image="skin:IDB_ICON_ERROR" check="0"  hovercolor-pos-x="23" hovercolor-width="697">
+          <item title="IE缓存2"/>
+        </node>
+      </node>--><!--
+    </node>-->
+    <!--<node id="2" leftimage-pos-x="7"  collapse-pos-x="680"  hovercolor-pos-x="0" hovercolor-width="720" font="big40">
+      <item>
+        <imgkaijia name="zhanghaofengxiantubiao" pos="0,16" width="18" height="18" img-count="1" image="KJMainUI\skins\kaijiaweishi\zhanghaofengxian.png"  mode="frame" framesize="1" show="1" />
+        <text name="title" crtext="666666" font="bigbig16"  pos="20,12,250,35" title="帐号风险" mask="--" response="0" show="1"  />
+        <text name="title" crtext="CCCCCC" font="big"  pos="110,15,250,35" title="等待扫描 "
+              mask="--" response="0" show="1" />
+      </item>
+      <item collapse="1" />
+      <node id="2-1"  image-left-show="1" collapse="1" toggle-pos-x="30"  hovercolor-pos-x="23" hovercolor-width="697">
+        <item title="系统帐号" />
+        <node id="2-1-1" image="skin:IDB_ICON_ERROR" check="0" hovercolor-pos-x="40" hovercolor-width="680">
+          <item title="帐号1"/>
+          <item />
+        </node>
+        <node id="2-1-2" image="skin:IDB_ICON_ERROR" check="0" hovercolor-pos-x="40" hovercolor-width="680">
+          <item title="帐号2"/>
+        </node>
+      </node>
+      <node id="2-2" hovercolor-pos-x="23" hovercolor-width="697">
+        <item title="邮箱帐号" />
+      </node>
+      <node id="2-3" hovercolor-pos-x="23" hovercolor-width="697" >
+        <item title="即时通信帐号" />
+      </node>
+    </node>-->
+    <!--<node id="3" leftimage-pos-x="7"  collapse-pos-x="680" hovercolor-pos-x="0" hovercolor-width="720">
+      <item>
+        <imgkaijia name="bingdumumatubiao" pos="0,16" width="18" height="18" img-count="1" image="KJMainUI\skins\kaijiaweishi\bingdumuma.png"  mode="frame" framesize="1" show="1" />
+        <text name="title" crtext="666666" font="bigbig16"  pos="20,12,250,35" title="病毒木马" mask="--" response="0" show="1"  />
+        <text name="title" crtext="CCCCCC" font="big"  pos="110,15,250,35" title="等待扫描 "
+              mask="--" response="0" show="1" />
+      </item>
+      <item collapse="1" />
+    </node>-->
+    <!--<node id="4" leftimage-pos-x="7" collapse-pos-x="680" hovercolor-pos-x="0" hovercolor-width="720">
+      <item>
+        <imgkaijia name="gaoweiloudongtubiao" pos="0,16" width="18" height="18" img-count="1" image="KJMainUI\skins\kaijiaweishi\gaoweiloudong.png"  mode="frame" framesize="1" show="1" />
+        <text name="title" crtext="666666" font="bigbig16"  pos="20,12,250,35" title="高危漏洞" mask="--" response="0" show="1"  />
+        <text name="title" crtext="CCCCCC" font="big"  pos="110,15,250,35" title="等待扫描 "
+              mask="--" response="0" show="1" />
+      </item>
+      <item collapse="1" />
+    </node>
+    <node id="5" leftimage-pos-x="7" collapse-pos-x="680" hovercolor-pos-x="0" hovercolor-width="720">
+      <item>
+        <imgkaijia name="xitongyichangtubiao" pos="0,16" width="18" height="18" img-count="1" image="KJMainUI\skins\kaijiaweishi\xitongyichang.png"  mode="frame" framesize="1" show="1" />
+        <text name="title" crtext="666666" font="bigbig16"  pos="20,12,250,35" title="系统异常" mask="--" response="0" show="1"  />
+        <text name="title" crtext="CCCCCC" font="big"  pos="110,15,250,35" title="等待扫描 "
+              mask="--" response="0" show="1" />
+      </item>
+      <item collapse="1" />
+    </node>
+    <node id="6" leftimage-pos-x="7" collapse-pos-x="680" hovercolor-pos-x="0" hovercolor-width="720">
+      <item>
+        <imgkaijia name="youhuajianyitubiao" pos="0,16" width="18" height="18" img-count="1" image="KJMainUI\skins\kaijiaweishi\youhuajianyi.png"  mode="frame" framesize="1" show="1" />
+        <text name="title" crtext="666666" font="bigbig16"  pos="20,12,250,35" title="优化建议" mask="--" response="0" show="1"  />
+        <text name="title" crtext="CCCCCC" font="big"  pos="110,15,250,35" title="等待扫描 "
+              mask="--" response="0" show="1" />
+      </item>
+      <item collapse="1" />
+    </node>-->
+  </treectrlkaijia>
+  <textbtn name="textbtnHulve" crtext="2EA2E5" align="center" pos="630,200" width="60"
+           height="18" show="0" title="忽略" />
+  <text name="textbtnYiHulve" crtext="CCCCCC" align="center" pos="630,200" width="90"
+        height="18" show="0" title="已忽略" />
+  <button name="btnQingli" title="清理" pos="570,200" width="60" height="18" 
+          image="skin:IDB_BT_DEFAULT" show="0"  tip="" showfocus="0"/>
+
+  
+  <!--QQ群-->
+<buttonkaijia name="QQ" pos="30,540" width="165" height="39" img-count="3" image="KJMainUI\skins\kaijiaweishi\QQqun.png" mode="frame" framesize="0" showfocus="0" />
+<text name="QQnumber_lijitijian" crtext="808080" pos="110,550" width="90"  height="16" show="1" title="1234567890" align="left" font="big14" response="0"/>
+             
+  <!--右下角的按钮-->
+  <imgbtn name="btnruanjianguanjia" pos="410,520" width="70" height="70" img-count="3"
+          image="KJMainUI\skins\kaijiaweishi\ruanjianguanjia.png" showfocus="0"/>
+  <imgbtn name="btnbingduchasha" pos="480,520" width="70" height="70" img-count="3" 
+          image="KJMainUI\skins\kaijiaweishi\bingduchasha.png" showfocus="0"/>
+  <imgbtn name="btnzhuyefanghu" pos="550,520" width="70" height="70" img-count="3"
+          image="KJMainUI\skins\kaijiaweishi\zhuyefanghu.png" showfocus="0"/>
+  <imgbtn name="btnkaijijiashu" pos="620,520" width="70" height="70" img-count="3" 
+          image="KJMainUI\skins\kaijiaweishi\kaijijiashu.png" showfocus="0"/>
+  <imgbtn name="btngengduo" pos="690,520" width="55" height="70" img-count="3" 
+          image="KJMainUI\skins\kaijiaweishi\gengduo.png" showfocus="0"/>
+</div>

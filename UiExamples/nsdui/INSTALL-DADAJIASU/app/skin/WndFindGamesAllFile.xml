@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="620,453">
+  <Include source="Default.xml"/>
+  <VerticalLayout enabled="true" width="620" height="453" bkcolor="#FFF6F6F6">
+    <VerticalLayout enabled="true" width="620" height="73" bkcolor="#FFF6F6F6">
+        <Label float="true" pos="31,25,0,0" enabled="true" width="150" height="28" text="智能添加游戏" textcolor="#FF4C4C4C" font="4"/>
+        <Button name="ButManual" float="true" pos="530,35,0,0" width="66" height="21" enabled="true" normalimage="file=&apos;manualadd.png&apos; dest=&apos;0,0,66,21&apos; source=&apos;0,0,66,21&apos;" hotimage="file=&apos;manualadd.png&apos; dest=&apos;0,0,66,21&apos; source=&apos;66,0,132,21&apos;" pushedimage="file=&apos;manualadd.png&apos; dest=&apos;0,0,66,21&apos; source=&apos;132,0,198,21&apos;" />
+    </VerticalLayout>
+    <TabLayout name="FindTab" float="true" pos="0,80,0,0" enabled="true" width="620" height="380" selectedid="0">
+        <VerticalLayout enabled="true" width="620" height="380" bkcolor="#FFF6F6F6">
+          <VerticalLayout name="LayDriver" enabled="true" width="620" height="60" bordersize="0,1,0,3" bordercolor="#FFE0E0E0">
+            <Label float="true" pos="35,12,0,0" enabled="true" width="44" height="38" bkimage="compicon.png"/>
+            <Option name="selectAllDriver" selected="true" float="true" pos="100,20,0,0" padding="22,2,0,0" width="60" height="20" enabled="true" align="left" text="全选" textpadding="20,4,0,0" textcolor="#00666666" disabledtextcolor="#FFA7A6AA" normalimage="file=&apos;checkbox1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;0,0,16,16&apos;" selectedimage="file=&apos;checkbox1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;32,0,48,16&apos;" />
+            <TileLayout name="TileDriverItem" float="true" pos="160,10,0,0" columns="4" inset="0,0,0,0" vscrollbar="true" enabled="true" width="300" height="30" bkcolor="#FFF6F6F6" >
+            </TileLayout>
+            <Button name="ButSearch" float="true" pos="490,14,0,0" width="100" height="30" enabled="true" normalimage="file=&apos;startSearch.png&apos; dest=&apos;0,0,100,30&apos; source=&apos;0,0,100,30&apos;" hotimage="file=&apos;startSearch.png&apos; dest=&apos;0,0,100,30&apos; source=&apos;100,0,200,30&apos;" pushedimage="file=&apos;startSearch.png&apos; dest=&apos;0,0,100,30&apos; source=&apos;200,0,300,30&apos;" />
+          </VerticalLayout>
+        </VerticalLayout>
+        <VerticalLayout enabled="true" width="620" height="380" bkcolor="#FFF6F6F6">
+          <VerticalLayout enabled="true" width="620" height="60" bordersize="0,1,0,3" bordercolor="#FFE0E0E0">
+            <GifAnim float="true" pos="35,12,0,0" enabled="true" width="44" height="38" autoplay="true" bkimage="findingLog.gif"/>
+            <Label float="true" pos="100,20,0,0" enabled="true" width="65" height="16" text="正在扫描:" textcolor="#FF666666" />
+            <Label name="labCurFindPath" float="true" pos="160,20,0,0" enabled="true" width="310" height="16" text="正在扫描:" endellipsis="true" textcolor="#FF666666"/>
+            <Button name="ButStopSearch" float="true" pos="490,14,0,0" width="100" height="30" enabled="true" normalimage="file=&apos;stopSearch.png&apos; dest=&apos;0,0,100,30&apos; source=&apos;0,0,100,30&apos;" hotimage="file=&apos;stopSearch.png&apos; dest=&apos;0,0,100,30&apos; source=&apos;100,0,200,30&apos;" pushedimage="file=&apos;stopSearch.png&apos; dest=&apos;0,0,100,30&apos; source=&apos;200,0,300,30&apos;" />
+          </VerticalLayout>
+        </VerticalLayout>
+        <VerticalLayout enabled="true" width="620" height="380" bkcolor="#FFF6F6F6">
+          <VerticalLayout enabled="true" width="620" height="60" bordersize="0,1,0,3" bordercolor="#FFE0E0E0">
+            <Label name="labFindCnt" float="true" pos="30,20,0,0" enabled="true" width="170" height="20" text="总共找到10款游戏" textcolor="#FF666666" font="2"/>
+            <Button name="Research" float="true" pos="200,20,0,0" enabled="true" width="60" height="20" text="重新搜索" textcolor="#FF0080FF"/>
+          </VerticalLayout>
+          <TileLayout name="TileGameItem" columns="4" inset="0,10,0,10" vscrollbar="true" enabled="true" width="620" height="260" bkcolor="#FFF6F6F6" >
+          </TileLayout>
+          <HorizontalLayout enabled="true" width="620" height="60" topbordersize="1" bordercolor="#FFE0E0E0">
+            <Option name="AllItemSelect" selected="true" float="true" pos="345,20,0,0" padding="25,2,0,0" width="60" height="20" font="0" enabled="true" align="left" text="全选" textpadding="20,0,0,0" textcolor="#00666666" disabledtextcolor="#FFA7A6AA" normalimage="file=&apos;checkbox1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;0,0,16,16&apos;" selectedimage="file=&apos;checkbox1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;32,0,48,16&apos;" />
+            <Button name="ButOK"            float="true" pos="415,15,0,0" width="80" height="30" enabled="true" normalimage="file=&apos;addGameOK.png&apos; dest=&apos;0,0,80,30&apos; source=&apos;0,0,80,30&apos;" hotimage="file=&apos;addGameOK.png&apos; dest=&apos;0,0,80,30&apos; source=&apos;80,0,160,30&apos;" pushedimage="file=&apos;addGameOK.png&apos; dest=&apos;0,0,80,30&apos; source=&apos;160,0,240,30&apos;" />
+            <Button name="ButCancel"       float="true"  pos="510,15,0,0" width="80" height="30" enabled="true" normalimage="file=&apos;addGameCancel.png&apos; dest=&apos;0,0,80,30&apos; source=&apos;0,0,80,30&apos;" hotimage="file=&apos;addGameCancel.png&apos; dest=&apos;0,0,80,30&apos; source=&apos;80,0,160,30&apos;" pushedimage="file=&apos;addGameCancel.png&apos; dest=&apos;0,0,80,30&apos; source=&apos;160,0,240,30&apos;" />
+          </HorizontalLayout>
+        </VerticalLayout>
+    </TabLayout>
+  </VerticalLayout>
+</Window>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Shezhi>
+	<KaijiXiaozhushou>
+		<TishiKaijiShijian>1</TishiKaijiShijian>
+		<TishiKaijiShijianMoren>1</TishiKaijiShijianMoren>
+	</KaijiXiaozhushou>
+	<LoudongXiufuFangshi>
+		<XiufuFangshi>1</XiufuFangshi>
+		<XiufuFangshiMoren>1</XiufuFangshiMoren>
+	</LoudongXiufuFangshi>
+	<BudingBaocunWeizhi>
+		<BaocunLujing></BaocunLujing>
+		<BaocunLujingMoren></BaocunLujingMoren>
+		<Baocun_Shanchu>1</Baocun_Shanchu>
+		<Baocun_ShanchuMoren>1</Baocun_ShanchuMoren>
+	</BudingBaocunWeizhi>
+	<ZiqidongTixing>
+		<TixingFangshi>1</TixingFangshi>
+		<TixingFangshiMoren>1</TixingFangshiMoren>
+	</ZiqidongTixing>
+	<XianshiJiashuqiu>
+		<Xianshifangshi>1</Xianshifangshi>
+		<XianshifangshiMoren>1</XianshifangshiMoren>
+	</XianshiJiashuqiu>
+</Shezhi>

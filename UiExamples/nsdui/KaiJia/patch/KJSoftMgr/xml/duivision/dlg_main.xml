@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg name="dlg_main" title="[APP_NAME]" width="970" height="600" translucent="255"
+	frame="skin:SKIN_PIC_0" bkimg="skin:SKIN_PIC_0" crbk="000000" appwin="1" resize="0" width-lt="3" height-lt="115" width-rb="3" height-rb="30" shadow-size="3">
+
+  <base>
+  	<!--img name="image-logo" pos="0,0" width="80" height="70" image="skins\icon\rjgj_ico_01.png" pos="80,-550,970,-0"
+				mode="tile" framesize="1" tip="" duimsg="mouseldown|mousemove|mouselup"/-->
+	<!--img pos="0,69,80,70" image="skin:IDB_TAB_BACK" mode="frame" framesize="1" show="1" skin:IDB_DROP_DOWN    IDB_SEARCH_RJGJ/-->
+	<button name="button.back"  pos="95,15,115,35" title=""  img-count="3" skin="IDB_HOME_BACK_RJGJ"  showfocus="1" duimsg="mouseldown" show="1"/>
+	<Myedit name="edit-search" img-count="4" image="skins\SoftMgr\default\rjgj_ico_03.png" title="" small-image="skin:IDB_SEARCH_RJGJ"
+				pos="130,12" width="300" height="26" multiline="0" number="0" readonly="0" maxchar="" font="default" duimsg="mouseldown"/>
+
+	<!--imgbtn name="button.search" pos="190,10,216,36" img-count="4" skin="IDB_SEARCH_RJGJ" tip="搜索" action="close-window" show="1"/-->
+	<imgbtn name="button.close" pos="-29,0,-0,19" img-count="3" skin="IDB_BT_CLOSE_RJGJ" tip="关闭" action="close-window" show="1"/>
+	<imgbtn name="button.min" pos="-59,0,-30,19" img-count="3" skin="IDB_BT_MIN_RJGJ" tip="最小化" />
+	<imgbtn name="button.menu" pos="-89,0,-60,19" img-count="3" skin="IDB_BT_MENU_RJGJ" tip="菜单" action="menu:menu_main" menupos="-100,-0"/>
+  </base>
+  
+  <body>
+
+<!--imgbtn name="button.menu" pos="200,200,229,219" img-count="3" skin="IDB_BT_MENU_RJGJ" tip="菜单" action="menu:menu_main" menupos="-100,-0"                      small-image="skin:IDB_SEARCH_RJGJ"/-->
+	<tabctrl name="tabctrl.main" image="" img-count="4" tab-type="vertical"			 
+			 font="bold" item-width="80" tab-height="110" tab-left-pading="0" animate="0" scroll="0" 
+			pos="0,70,-1,-0">
+
+			
+		<tab name="tab.home" image="skins\icon\rjgj_ico_13.png" img-count="4" active="true" div="tab_wkeview"/>
+		<tab name="tab.treasury" image="skins\icon\rjgj_ico_14.png" img-count="4" active="false" div="tab_treasury" />
+		<tab name="tab.update" image="skins\icon\rjgj_ico_15.png" img-count="4" active="false" div="tab_update"/>
+		<tab name="tab.uninstall" image="skins\icon\rjgj_ico_16.png" img-count="4" active="false" div="tab_uninstall"/>
+		<tab name="tab.download"  image="skins\icon\rjgj_ico_17.png" img-count="4" active="false" div="tab_download"/>
+		<tab name="tab.search"  image="skins\icon\rjgj_ico_17.png" img-count="4" active="false" div="tab_search"/>
+			
+		
+	</tabctrl>
+		
+  </body>
+  
+</dlg>

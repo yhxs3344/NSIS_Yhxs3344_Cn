@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="370,425"  >
+  <Include source="Default.xml"/>
+  <VerticalLayout enabled="true" width="370" height="425" bkimage="file=&apos;bkimg.png&apos; dest=&apos;0,0,370,4425&apos; source=&apos;0,35,370,460&apos;">
+    <TabLayout name="FindTab" enabled="true" width="370" height="445" selectedid="0">
+        <VerticalLayout enabled="true" width="370" height="445">
+          <GifAnim float="true" pos="100,88,0,0" enabled="true" width="191" height="137" autoplay="true" bkimage="findingLog.gif"/>
+          <Label float="true" pos="70,270,0,0" enabled="true" width="255" height="20" text="正在扫描本机游戏|已扫描到     款游戏" textcolor="#FF999999" font="0"/>
+          <Label name="LabCnt" float="true" pos="245,270,0,0" align="center" enabled="true" width="15" height="20" text="0" textcolor="#FFFF661A" font="0"/>
+          <Progress name="FindProgress" isstretchfore="false" float="true" pos="100,180,0,0" enabled="true" width="172" height="19" bkimage="progressBk.png" textcolor="#FFFFFFFF" align="center" foreimage="progressFore.png" min="0" max="100" value="50" hor="true" />
+          <Button name="StopScan" font="1" textcolor="#FFFFFFFF" text="停止扫描" float="true" pos="85,370,0,0" width="200" height="40" enabled="true" normalimage="file=&apos;FindGameStopScan.png&apos; source=&apos;0,0,200,40&apos;" hotimage="file=&apos;FindGameStopScan.png&apos; source=&apos;0,40,200,80&apos;" pushedimage="file=&apos;FindGameStopScan.png&apos; source=&apos;0,80,200,120&apos;"/>
+        </VerticalLayout>
+        <VerticalLayout enabled="true" width="370" height="445">
+          <Button name="BtnBackMain" float="true" pos="10,18,0,0" width="30" height="30" normalimage="file=&apos;BackMainWnd.png&apos; source=&apos;0,0,30,30&apos;" hotimage="file=&apos;BackMainWnd.png&apos; source=&apos;30,0,60,30&apos;" pushedimage="file=&apos;BackMainWnd.png&apos; source=&apos;60,0,90,30&apos;&apos;"/>
+          <Label float="true" pos="10,65,0,0" enabled="true" width="255" height="20" text="已扫描到     款游戏" textcolor="#FF999999" font="0"/>
+          <Label name="LabCnt2" float="true" pos="70,65,0,0" align="center" enabled="true" width="15" height="20" text="0" textcolor="#FFFF661A" font="0"/>
+          <Option name="AllSelect" selected="true" float="true" pos="310,65,0,0" padding="25,2,0,0" width="60" height="20" font="0" enabled="true" align="left" text="全选" textpadding="20,0,0,0" textcolor="#FF666666" hottextcolor="#0xFFFF661A" normalimage="file=&apos;checkbox1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;0,0,16,16&apos;" hotimage="file=&apos;checkbox1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;16,0,32,16&apos;" selectedimage="file=&apos;checkbox1.png&apos; dest=&apos;0,2,16,18&apos; source=&apos;48,0,64,16&apos;" />
+          <TileLayout float="true" childpadding="2" pos="0,90,0,0" inset="10,10,10,0" name="TileGameItem" columns="3" vscrollbar="true" enabled="true" width="370" height="234"  bordersize="0,1,0,1" bordercolor="#FF404040">
+          </TileLayout>
+          <HorizontalLayout name="verOpt" childpadding="10" float="true" pos="150,340,0,0" enabled="true" width="100" height="20">
+          </HorizontalLayout>
+          <Button name="ButReScan"       float="true" pos="35,370,0,0" width="140" height="40" enabled="true" text="重新扫描" font="1" textcolor="#FFFFFFFF" normalimage="file=&apos;FindGameStopScan140_40.png&apos; source=&apos;0,0,140,40&apos;" hotimage="file=&apos;FindGameStopScan140_40.png&apos; source=&apos;140,0,280,40&apos;" pushedimage="file=&apos;FindGameStopScan140_40.png&apos; source=&apos;280,0,420,40&apos;"/>
+          <Button name="ButOK"           float="true" pos="195,370,0,0" width="140" height="40" enabled="true" text="添加完成" font="1" textcolor="#FFFFFFFF" normalimage="file=&apos;FindGameOk140_40.png&apos; source=&apos;0,0,140,40&apos;" hotimage="file=&apos;FindGameOk140_40.png&apos; source=&apos;140,0,280,40&apos;" pushedimage="file=&apos;FindGameOk140_40.png&apos; source=&apos;280,0,420,40&apos;" />
+        </VerticalLayout>
+        <VerticalLayout enabled="true" width="370" height="445">
+          <Button name="BtnBackMain" float="true" pos="10,18,0,0" width="30" height="30" normalimage="file=&apos;BackMainWnd.png&apos; source=&apos;0,0,30,30&apos;" hotimage="file=&apos;BackMainWnd.png&apos; source=&apos;30,0,60,30&apos;" pushedimage="file=&apos;BackMainWnd.png&apos; source=&apos;60,0,90,30&apos;&apos;"/>
+          <Label float="true" pos="100,90,0,0" enabled="true" width="191" height="137" autoplay="true" bkimage="FindGameNull.png"/>
+          <Label float="true" pos="133,255,0,0" enabled="true" width="110" height="20" text="没有扫描到游戏" textcolor="#FFFF7F00" font="0"/>
+          <Button name="ButAddGameManual"    float="true" pos="85,370,0,0" width="200" height="40" enabled="true" text="手动添加" font="1" textcolor="#FFFFFFFF" normalimage="file=&apos;FindGameOk.png&apos; source=&apos;0,0,200,40&apos;" hotimage="file=&apos;FindGameOk.png&apos; source=&apos;0,40,200,80&apos;" pushedimage="file=&apos;FindGameOk.png&apos; source=&apos;0,80,200,120&apos;"/>
+        </VerticalLayout>
+    </TabLayout>
+  </VerticalLayout>
+</Window>

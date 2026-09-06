@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="350,360" caption="0,0,0,35" showshadow="true" shadowsize="4" shadowcorner="23,13,23,33" shadowposition="0,1" shadowdarkness="70">
+  <Include source="Default.xml"/>
+  <VerticalLayout enabled="true" width="350" height="440" bkimage="Bkimg350_360.png">
+    <Label name="LabTitle" text="修复工具" font="1" float="true" pos="8,5,0,0" enabled="true" width="190" height="25" textcolor="#FFCCCCCC" />
+    <Button name="ButClose" float="true" pos="322,0,0,0" enabled="true" width="31" height="32" normalimage="file=&apos;close1.png&apos; source=&apos;0,0,31,32&apos;" hotimage="file=&apos;close1.png&apos; source=&apos;31,0,62,32&apos;" pushedimage="file=&apos;close1.png&apos; source=&apos;62,0,93,32&apos;" />
+    <Label text="修复LSP" float="true" pos="20,60,0,0" width="60" height="20" textcolor="#FF999999"/>
+    <Button name="ButLSP" float="true" pos="275,60,0,0" text="立即修复" textcolor="#FF07D569" enabled="true" width="60" height="20" />
+    <VerticalLayout float="true" pos="20,90,0,0" enabled="true" width="310" height="95" topbordersize="1" bordercolor="#FF404040">
+      <Label name="labDNS1" text="设置DNS为 8.8.8.8" float="true" pos="0,10,0,0" width="170" height="20" textcolor="#FF999999"/>
+      <Button name="ButSetDNS8" float="true" pos="255,10,0,0" text="立即修复" textcolor="#FF07D569" enabled="true" width="60" height="20" />
+      <Label name="labDNS2" text="设置DNS为 114.114.114.114" float="true" pos="0,40,0,0" width="180" height="20" textcolor="#FF999999"/>
+      <Button name="ButSetDNS114" float="true" pos="255,40,0,0" text="立即修复" textcolor="#FF07D569" enabled="true" width="60" height="20" />
+      <Label text="重置DNS为默认" float="true" pos="0,70,0,0" width="170" height="20" textcolor="#FF999999"/>
+      <Button name="ButResetDNS" float="true" pos="255,70,0,0" text="立即修复" textcolor="#FF07D569" enabled="true" width="60" height="20" />
+    </VerticalLayout>
+    <VerticalLayout float="true" pos="20,185,0,0" enabled="true" width="310" height="95" topbordersize="1" bordercolor="#FF404040">
+      <Label text="重置网络（需要重启电脑）" float="true" pos="0,10,0,0" width="170" height="20" textcolor="#FF999999"/>
+      <Button name="ButResetNet" float="true" pos="255,10,0,0" text="立即修复" textcolor="#FF07D569" enabled="true" width="60" height="20" />
+      <Label name="LabReInstall" text="重装网络驱动"  float="true" pos="0,40,0,0" width="170" height="20" textcolor="#FF999999"/>
+      <Button name="ButInstallVNP" float="true" pos="255,40,0,0" text="立即修复" textcolor="#FF07D569" enabled="true" width="60" height="20" />
+    </VerticalLayout>
+    <VerticalLayout name="LayoutTitle" float="true" pos="20,255,0,0" enabled="true" width="310" height="105"  topbordersize="2" bordercolor="#FF404040">
+      <Label name="LabClearRoute" text="清空路由表(断网可尝试，但网吧用户慎用)"  float="true" pos="0,10,0,0" width="270" height="20" textcolor="#FF999999"/>
+      <Button name="ButClearRoute" float="true" pos="255,10,0,0" text="立即清空" textcolor="#FF07D569" enabled="true" width="60" height="20" />
+      <Button name="ButOK" font="1" float="true" textcolor="#FFFFFFFF" text="确 定" pos="35,40,0,0" width="110" height="36" enabled="true" normalimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Ok110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;Ok110_36.png&apos; source=&apos;220,0,330,36&apos;"/>
+      <Button name="ButCancel" float="true" textcolor="#FF999999" text="取 消" font="1" pos="165,40,0,0" width="110" height="36" enabled="true" normalimage="file=&apos;Cancel110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Cancel110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;Cancel110_36.png&apos; source=&apos;220,0,330,36&apos;"/>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>

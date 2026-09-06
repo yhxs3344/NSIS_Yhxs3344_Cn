@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+  <!--系统配置-->
+  <res type="cfg" name="defaultStyle" value="" />
+  <res type="cfg" name="logfile" value="" />
+  <res type="cfg" name="loglevel" value="1" />
+  <res type="cfg" name="appMutex" value="MUTEX_DUIVISION_PREVENT_LIST" />
+  <res type="cfg" name="enableDragFile" value="0" />
+  <res type="cfg" name="trayDbClickMsg" value="1" />
+
+  <!--风格设置-->
+  <res type="style" name="default" value="" />
+
+  <!--XML资源-->
+  <res type="res" lang="zh-cn" file="xml\lang\zh-cn.xml" />
+  <res type="res" lang="en-us" file="xml\lang\en-us.xml" />
+
+  <!--XML资源-默认风格-->
+  <res type="xml" name="dlg_main" file="xml\app\dlg_main.xml" />
+  <res type="xml" name="dlg_msgbox" file="xml\app\dlg_msgbox.xml" />
+  
+  <!--字体资源-->
+  <res type="font" lang="zh-cn" name="default" font="微软雅黑" size="12" bold="false" />
+  <res type="font" lang="zh-cn" name="default" font="Tahoma" size="11" bold="false" os="winxp" />
+  <res type="font" lang="zh-cn" name="bold" font="微软雅黑" size="12" bold="true" />
+  <res type="font" lang="zh-cn" name="bold" font="Tahoma" size="11" bold="true" os="winxp" />
+  <res type="font" lang="zh-cn" name="big" font="微软雅黑" size="14" />
+  <res type="font" lang="zh-cn" name="big" font="Tahoma" size="13" os="winxp" />
+  <res type="font" lang="zh-cn" name="bigbold" font="微软雅黑" size="14" bold="true" />
+  <res type="font" lang="zh-cn" name="bigbold" font="Tahoma" size="13" bold="true" os="winxp" />
+  <res type="font" lang="zh-cn" name="bigbig" font="微软雅黑" size="16" />
+  <res type="font" lang="zh-cn" name="bigbig" font="Tahoma" size="15" os="winxp" />
+  <res type="font" lang="zh-cn" name="bigbigbold" font="微软雅黑" size="18" bold="true" />
+  <res type="font" lang="zh-cn" name="bigbigbold" font="Tahoma" size="17" bold="true" os="winxp" />
+  <res type="font" lang="zh-cn" name="bigbigbig" font="微软雅黑" size="23" />
+  <res type="font" lang="zh-cn" name="bigbigbig" font="Tahoma" size="22" os="winxp" />
+  <res type="font" lang="zh-cn" name="big30" font="微软雅黑" size="30" />
+  <res type="font" lang="zh-cn" name="big30" font="Tahoma" size="29" os="winxp" />
+
+  <!--图片资源-默认风格-->
+  <res type="img" name="IDB_BT_CLOSE" file="skins\image\bt_close.png" />
+  <res type="img" name="IDB_SCROLL_H" file="skins\image\scroll_h.png" />
+  <res type="img" name="IDB_SCROLL_V" file="skins\image\scroll_v.png" />
+  <res type="img" name="IDB_ICON_CHECK" file="skins\image\icon_check.png" />
+  
+  <!--字符串资源-->
+  <res type="str" lang="zh-cn" name="APP_NAME" value="信任和阻止" />
+  <res type="str" lang="zh-cn" name="APP_VER" value="1.0.0" />
+  <res type="str" lang="zh-cn" name="OK" value="确定" />
+  <res type="str" lang="zh-cn" name="CANCEL" value="取消" />
+  <res type="str" lang="zh-cn" name="YES" value="是" />
+  <res type="str" lang="zh-cn" name="NO" value="否" />
+
+</root>

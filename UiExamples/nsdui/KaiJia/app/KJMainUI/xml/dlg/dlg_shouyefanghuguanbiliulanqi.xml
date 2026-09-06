@@ -1,0 +1,30 @@
+﻿
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_shouyefanghuguanbiliulanqi" title="铠甲安全卫士提示" width="430" height="220" appwin="0" resize="0" shadow-size="2"
+	frame="KJMainUI\skins\kaijiaweishi\tuichubeijing.png" bkimg="" crbk="" >
+
+  <base>
+    <imgbtn name="button.close" img-count="3" pos="-23,4,-0,29" skin="SKIN_PIC_TISHIKUANGGUANBI"  show="1" shortcut="ESC"/>
+    <img pos="5,0" width="35" height="35" img-count="1" image="KJMainUI\skins\kaijiaweishi\icon_logo.png" mode="frame" framesize="0" response="0"/>
+    <text name="title" crtext="FFFFFF" crmark="800000" font="big"
+				pos="35,7,370,25" title="铠甲安全卫士提示：您正在关闭默认浏览器防护" mask="" response="0" show="1" />
+  </base>
+
+  <body>
+    <img name="iconhttpnormal" pos="20,60" width="40"  height="40" image="KJMainUI\skins\kaijiaweishi\hongsegantanhao.png"
+         mode="normal" framesize="0" response="0" show="1"  />
+    <text name="title" crtext="FF0000" crmark="800000" font="bigbold18"   pos="80,60" width="270" height="30"
+         title="风险提示" mask="" response="0" show="1" />
+    <text name="title" crtext="999999" crmark="" font="big"   pos="80,90" width="300" height="50" 
+         title="如果解锁浏览器锁定，您的默认浏览器可能会被顽固的木马反篡改。您确定要解锁吗？" mask=""
+          response="0" show="1" />
+    <button name="btnyes" img-count="3" image="KJMainUI\skins\kaijiaweishi\queding_tishi.png" title=""	pos="-190,-50" width="75" height="30"
+          show="1"  showfocus="0"/>
+    <button name="btnno" img-count="3" image="KJMainUI\skins\kaijiaweishi\quxiao_tishi.png" title=""	pos="-100,-50" width="75" height="30" 
+          show="1"  showfocus="0"/>
+  </body>
+
+</dlg>
+
+

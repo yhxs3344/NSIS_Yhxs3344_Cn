@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+<!--系统配置-->
+<res type="cfg" name="defaultStyle" value="" />
+<res type="cfg" name="logfile" value=".\\log\\KaijiaWeishi.log" />
+<res type="cfg" name="loglevel" value="1" />
+<res type="cfg" name="appMutex" value="MUTEX_DUIVISION_KaijiaWeishi" />
+<res type="cfg" name="enableDragFile" value="1" />
+<res type="cfg" name="trayDbClickMsg" value="0" />
+
+<!--风格设置-->
+<res type="style" name="default" value="" />
+
+<!--XML资源-->
+<res type="res" lang="zh-cn" file="KJMainUI\\xml\def_string_zh-cn.xml" />
+<res type="res" lang="en-us" file="KJMainUI\\xml\def_string_en-us.xml" />
+
+<!--XML资源-默认风格-->
+<res type="xml" name="dlg_main" file="KJMainUI\\xml\duivision\dlg_main.xml" />
+<res type="xml" name="dlg_skin" file="KJMainUI\\xml\dlg_skin.xml"  />
+<res type="xml" name="dlg_notifymsg" file="KJMainUI\\xml\dlg_notifymsg.xml"  />
+<res type="xml" name="dlg_msgbox" file="KJMainUI\\xml\dlg_msgbox.xml"  />
+<res type="xml" name="dlg_zhuyefanghu" file="KJMainUI\\xml\dlg\dlg_zhuyefanghu.xml"  />
+<res type="xml" name="dlg_shouyefanghuguanbishouye" file="KJMainUI\\xml\dlg\dlg_zhuyefanghuguanbishouye.xml"  />
+<res type="xml" name="dlg_shouyefanghuguanbiliulanqi" file="KJMainUI\\xml\dlg\dlg_shouyefanghuguanbiliulanqi.xml"  />
+<res type="xml" name="menu_main" file="KJMainUI\\xml\duivision\menu_main.xml"  />
+<res type="xml" name="menu_qidongxiang" file="KJMainUI\\xml\duivision\menu_qidongxiang.xml"  />
+<res type="xml" name="menu_ziqidongchajian" file="KJMainUI\\xml\duivision\menu_ziqidongchajian.xml"  />
+<res type="xml" name="menu_yingyongruanjianfuwu" file="KJMainUI\\xml\duivision\menu_yingyongruanjianfuwu.xml"  />
+<res type="xml" name="tab_shouye" file="KJMainUI\\xml\tab\tab_shouye.xml"  />
+<res type="xml" name="tab_lijitijian" file="KJMainUI\\xml\tab\tab_lijitijian.xml"  />
+<res type="xml" name="tab_loudongxiufu" file="KJMainUI\\xml\tab\tab_loudongxiufu.xml"  />
+<res type="xml" name="tab_kaijijiashu" file="KJMainUI\\xml\tab\tab_kaijijiashu.xml"  />
+<res type="xml" name="tab_xitongxiufu" file="KJMainUI\\xml\tab\tab_xitongxiufu.xml"  />
+<res type="xml" name="tab_youhuajiashu" file="KJMainUI\\xml\tab\tab_youhuajiashu.xml"  />
+<res type="xml" name="tab_youhuajiashuyijianshaomiao" file="KJMainUI\\xml\tab\tab_youhuajiashuyijianshaomiao.xml"  />
+<res type="xml" name="tab_diannaoqingli" file="KJMainUI\\xml\tab\tab_diannaoqingli.xml"  />
+<res type="xml" name="tab_diannaoqingliyijianshaomiao" file="KJMainUI\\xml\tab\tab_diannaoqingliyijianshaomiao.xml"  />
+<res type="xml" name="tab_qidongxiang" file="KJMainUI\\xml\tab\tab_qidongxiang.xml"  />
+<res type="xml" name="tab_jihuarenwu" file="KJMainUI\\xml\tab\tab_jihuarenwu.xml"  />
+<res type="xml" name="tab_ziqidongchajian" file="KJMainUI\\xml\tab\tab_ziqidongchajian.xml"  />
+<res type="xml" name="tab_yingyongruanjianfuwu" file="KJMainUI\\xml\tab\tab_yingyongruanjianfuwu.xml"  />
+<res type="xml" name="tab_xitongguanjianfuwu" file="KJMainUI\\xml\tab\tab_xitongguanjianfuwu.xml"  />
+<res type="xml" name="tishi_kaijishijian" file="KJMainUI\\xml\tishi\tishi_kaijishijian.xml"  />
+<res type="xml" name="dlg_fankuitishi" file="KJMainUI\\xml\dlg\dlg_fankuitishi.xml"  />
+<res type="xml" name="dlg_fankui" file="KJMainUI\\xml\dlg\dlg_fankui.xml"  />
+<res type="xml" name="dlg_guanyu" file="KJMainUI\\xml\dlg\dlg_guanyu.xml"  />
+<res type="xml" name="dlg_tuichutishi" file="KJMainUI\\xml\dlg\dlg_tuichutishi.xml"  />  
+
+  <!--字体资源-->
+<res type="font" lang="zh-cn" name="default" font="微软雅黑" size="12" bold="false" />
+<res type="font" lang="zh-cn" name="default" font="Tahoma" size="10" bold="false" os="winxp" />
+<res type="font" lang="zh-cn" name="bold" font="微软雅黑" size="12" bold="true" />
+<res type="font" lang="zh-cn" name="bold" font="Tahoma" size="11" bold="true" os="winxp" />
+<res type="font" lang="zh-cn" name="bold13" font="微软雅黑" size="13" bold="true" />
+<res type="font" lang="zh-cn" name="bold13" font="Tahoma" size="12" bold="true" os="winxp" />
+<res type="font" lang="zh-cn" name="big" font="微软雅黑" size="14" bold="true" italic="false" underline="false" strikeout="false" />
+<res type="font" lang="zh-cn" name="big" font="Tahoma" size="12" bold="true" italic="false" underline="false" strikeout="false" os="winxp" />
+<res type="font" lang="zh-cn" name="big16" font="微软雅黑" size="16" bold="true" />
+<res type="font" lang="zh-cn" name="bigbig" font="微软雅黑" size="18" />
+<res type="font" lang="zh-cn" name="bigbig" font="Tahoma" size="17" os="winxp" />
+<res type="font" lang="zh-cn" name="big25" font="微软雅黑" size="25" />
+<res type="font" lang="zh-cn" name="big25" font="Tahoma" size="24" os="winxp" />
+<res type="font" lang="zh-cn" name="big28" font="微软雅黑" size="28" />
+<res type="font" lang="zh-cn" name="big28" font="Tahoma" size="27" os="winxp" />
+<res type="font" lang="zh-cn" name="big40" font="微软雅黑" size="40" />
+<res type="font" lang="zh-cn" name="big40" font="Tahoma" size="48" os="winxp" />
+<res type="font" lang="zh-cn" name="big35" font="微软雅黑" size="35" />
+<res type="font" lang="zh-cn" name="big35" font="Tahoma" size="34" os="winxp" />
+<res type="font" lang="zh-cn" name="big60" font="微软雅黑" size="60" />
+<res type="font" lang="zh-cn" name="big60" font="Tahoma" size="58" os="winxp" />
+<res type="font" lang="zh-cn" name="big50" font="微软雅黑" size="50" />
+<res type="font" lang="zh-cn" name="big50" font="Tahoma" size="51" os="winxp" />
+<res type="font" lang="zh-cn" name="bigbold18" font="微软雅黑"  bold="true" size="18" />
+<res type="font" lang="zh-cn" name="bigbold18" font="Tahoma"  bold="true" size="16" os="winxp" />
+<res type="font" lang="zh-cn" name="big18" font="微软雅黑" size="18" />
+<res type="font" lang="zh-cn" name="big18" font="Tahoma"  size="16" os="winxp" />
+<res type="font" lang="zh-cn" name="bigbigbold" font="微软雅黑"  bold="true" size="16" />
+<res type="font" lang="zh-cn" name="bigbigbold" font="Tahoma"  bold="true" size="14" os="winxp" />
+<res type="font" lang="zh-cn" name="bigbig16" font="微软雅黑" size="16" />
+<res type="font" lang="zh-cn" name="bigbig16" font="Tahoma" size="15" os="winxp" />
+<res type="font" lang="zh-cn" name="big14" font="微软雅黑" size="14" />
+<res type="font" lang="zh-cn" name="big14" font="Tahoma" size="14" os="winxp" />
+
+  <!--图片资源-默认风格-->
+<res type="img" name="IDB_TRAY_ICON" file="130" />
+<res type="img" name="IDB_BT_CLOSE" file="KJMainUI\skins\default\BT_CLOSE.png" />
+<res type="img" name="IDB_BT_DEFAULT" file="KJMainUI\skins\default\BT_DEFAULT.png" />
+<res type="img" name="IDB_CHECK_BOX" file="KJMainUI\skins\default\CHECK_BOX.png" />
+<res type="img" name="IDB_SCROLL_V" file="KJMainUI\skins\default\SCROLL_V.png" />
+<res type="img" name="IDB_SCROLL_H" file="KJMainUI\skins\default\SCROLL_H.png" />
+<res type="img" name="IDB_TAB_SEPERATOR" file="KJMainUI\skins\default\Tab_seperator.png" />
+<res type="img" name="IDB_TAB_HOVER" file="KJMainUI\skins\default\toolbar_hover.png" />
+<res type="img" name="IDB_LIST_IMG" file="KJMainUI\skins\default\list_img.png" />
+<res type="img" name="IDB_BT_SKIN_CUSTOMIZE" file="KJMainUI\skins\default\BT_SKIN_CUSTOMIZE.png" />
+<res type="img" name="IDB_BT_SKIN_IMAGE" file="KJMainUI\skins\default\BT_SKIN_IMAGE.png" />
+<res type="img" name="IDB_BT_SKIN_COLOR" file="KJMainUI\skins\default\BT_SKIN_COLOR.png" />
+<res type="img" name="IDB_SKIN_PUSHED_BKG" file="KJMainUI\skins\default\SkinPushedBkg.png" />
+<res type="img" name="IDB_SKIN_BKG" file="KJMainUI\skins\default\SkinBkg.png" />
+<res type="img" name="IDB_DROP_DOWN" file="KJMainUI\skins\default\BT_DROP_DOWN.png" />
+<res type="img" name="IDB_TOOLBAR_BG" file="KJMainUI\skins\default\toolbar.png" />
+<res type="img" name="IDB_MENU_BACK" file="KJMainUI\skins\kaijiaweishi\menu_bkg.png" />
+<res type="img" name="IDB_ICON_CHECK" file="KJMainUI\skins\image\icon_check.png" />
+<res type="img" name="IDB_ICON_INFO" file="KJMainUI\skins\image\icon_info.png" />
+<res type="img" name="IDB_ICON_QUESTION" file="KJMainUI\skins\image\icon_question.png" />
+<res type="img" name="IDB_ICON_WARN" file="KJMainUI\skins\image\icon_warning.png" />
+<res type="img" name="IDB_ICON_ERROR" file="KJMainUI\skins\image\icon_error.png" />
+<res type="img" name="SKIN_PIC_BK" file="KJMainUI\skins\kaijiaweishi\background.png" />
+<res type="img" name="SKIN_PIC_GUANBI" file="KJMainUI\skins\kaijiaweishi\guanbi.png" />
+<res type="img" name="SKIN_PIC_ZUIXIAOHUA" file="KJMainUI\skins\kaijiaweishi\zuixiaohua.png" />
+<res type="img" name="SKIN_PIC_XIALAKUANG" file="KJMainUI\skins\kaijiaweishi\xialakuang.png" />
+<res type="img" name="SKIN_PIC_XIAOXI" file="KJMainUI\skins\kaijiaweishi\xiaoxi.png" />
+<res type="img" name="SKIN_PIC_TISHIKUANGGUANBI" file="KJMainUI\skins\kaijiaweishi\tishikuangguanbi.png" />
+
+<res type="str" lang="zh-cn" name="APP_NAME" value="铠甲安全卫士" />
+</root>

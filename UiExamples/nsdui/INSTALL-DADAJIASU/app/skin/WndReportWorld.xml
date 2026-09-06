@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="470,350" caption="0,0,0,35" showshadow="true" shadowsize="4" shadowcorner="23,13,23,33" shadowposition="0,1" shadowdarkness="70">
+  <Include source="Default.xml"/>
+  <VerticalLayout enabled="true" width="470" height="350" bkimage="updateWndBk.png">
+    <Label name="LabTitle" showhtml="true" textcolor="#FFCCCCCC" text="上报游戏" font="1" float="true" pos="8,5,0,0" enabled="true" width="260" height="25" />
+    <Button name="ButClose" float="true" pos="442,0,0,0" enabled="true" width="31" height="32" normalimage="file=&apos;close1.png&apos; source=&apos;0,0,31,32&apos;" hotimage="file=&apos;close1.png&apos; source=&apos;31,0,62,32&apos;" pushedimage="file=&apos;close1.png&apos; source=&apos;62,0,93,32&apos;" />
+    <VerticalLayout name="youxishangbao" float="true" pos="0,35,0,0" enabled="true" width="480" height="230" bkcolor="#FF292D33" visible="false">
+        <Label text="游戏名称："  font="0" float="true" pos="25,60,0,0" enabled="true" width="75" height="20" textcolor="#FF999999" />
+        <Label text="下载地址："  font="0" float="true" pos="25,110,0,0" enabled="true" width="75" height="20" textcolor="#FF999999" />
+        <Label text="游戏类型："  font="0" float="true" pos="25,160,0,0" enabled="true" width="75" height="20" textcolor="#FF999999" />
+        <Edit name="Edit_GameName" tipvalue="请填写游戏名称" font="0" float="true" textpadding="15,0,0,0" pos="100,50,0,0" enabled="true" width="340" height="36" bkcolor="#FF292D33" tipvaluecolor="#FF666666" nativebkcolor="#FF25282C" textcolor="#FFCCCCCC" bkimage="edit340_36.png"/>
+        <Edit name="Edit_URL"  tipvalue="请填写游戏下载路径" font="0" bordersize="1" textpadding="15,0,0,0" float="true" pos="100,100,0,0" enabled="true" width="340" height="36" bkcolor="#FF292D33" tipvaluecolor="#FF666666" nativebkcolor="#FF25282C" textcolor="#FFCCCCCC" bkimage="edit340_36.png"/>
+        <Combo name="ComSel"  text="范德萨发" font="0" bordercolor="#FFFF0000" float="true" pos="100,155,0,0" textpadding="10,0,0,0" itemtextpadding="10,0,0,0" enabled="true" width="341" height="36" itemtextcolor="#FF999999" itemselectedtextcolor="#FF07D569" itemhottextcolor="#FF07D569" dropboxsize="341,110" normalimage="file=&apos;select.png&apos; source=&apos;0,0,341,36&apos;" hotimage="file=&apos;select.png&apos; source=&apos;0,36,341,72&apos;" pushedimage="file=&apos;select.png&apos; source=&apos;0,72,341,108&apos;" itembkimage="edit340_36.png" itembkcolor="FF292D33" itemhotbkcolor="FF292D33" itemselectedbkcolor="FF292D33"/>
+        <Label float="true" textpadding="25,0,0,0" text="您提供越详细的信息，就越能被<c #FF661A>优先处理</c>！" pos="110,200,0,0" width="280" height="20" showhtml="true" enabled="true" font="0" textcolor="#FF999999" bkimage="file=&apos;lighttip.png&apos; dest=&apos;2,5,20,24&apos; "/>
+    </VerticalLayout>
+    <VerticalLayout name="qufushangbao" float="true" pos="0,35,0,0" enabled="true" width="480" height="230" bkcolor="#FF292D33" visible="false">
+        <Label text="我们会<c #FF7F00>尽快支持添加</c>您提交的游戏区服！"  showhtml="true" font="0" visible="true" float="true" pos="105,20,0,0" enabled="true" width="300" height="20" textcolor="#FF999999"/>
+        <Label text="游戏名称："  font="0" visible="true" float="true" pos="30,50,0,0" enabled="true" width="75" height="20" textcolor="#FF999999"/>
+        <Label name="LabGameWorld"  font="0" text="游戏名称：" visible="true" float="true" pos="105,45,0,0" enabled="true" width="310" height="30" textcolor="#FF07D569"/>
+        <Label visible="true" font="0" text="游戏大区：" float="true" pos="30,85,0,0" enabled="true" width="75" height="20" textcolor="#FF999999"/>
+        <Edit name="Edit_World"  font="0" tipvalue="在这里填写游戏区服名称及所属大区" textpadding="15,0,0,0" bordersize="1" float="true" pos="105,80,0,0" enabled="true" width="340" height="36" bkcolor="#FF292D33" tipvaluecolor="#FF666666" nativebkcolor="#FF25282C" textcolor="#FFCCCCCC" bkimage="edit340_36.png"/>
+        <Label text="您的邮箱："  font="0" visible="true" float="true" pos="30,140,0,0" enabled="true" width="75" height="20" textcolor="#FF999999"/>
+        <Edit name="Edit_QQEmail"  tipvalue="如：89xxxxxx@qq.com" font="0" bordersize="1" textpadding="15,0,0,0" float="true" pos="105,135,0,0" enabled="true" width="340" height="36" bkcolor="#FF292D33" tipvaluecolor="#FF999999" nativebkcolor="#FF25282C" textcolor="#FFCCCCCC" bkimage="edit340_36.png"/>
+        <Label float="true" textpadding="25,0,0,0" text="您提供越详细的信息，就越能被优先处理！" pos="100,175,480,205" showhtml="true" enabled="true" font="0" textcolor="#FF999999" />
+        <Label float="true" text="您可以先选择<c #FF7F00><其他></c>大区里的<c #FF9966><其他></c>小区进行游戏！" pos="100,205,480,225" showhtml="true" enabled="true" font="0" textcolor="#FF999999"/>
+      </VerticalLayout>
+      <Button name="ButOK" font="1" float="true" textcolor="#FFFFFFFF" text="确 定" pos="115,285,0,0" width="110" height="36" enabled="true" normalimage="file=&apos;Ok110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Ok110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;Ok110_36.png&apos; source=&apos;220,0,330,36&apos;"/>
+      <Button name="ButCancel" float="true" textcolor="#FF999999" text="取 消" font="1" pos="245,285,0,0" width="110" height="36" enabled="true" normalimage="file=&apos;Cancel110_36.png&apos; source=&apos;0,0,110,36&apos;" hotimage="file=&apos;Cancel110_36.png&apos; source=&apos;110,0,220,36&apos;" pushedimage="file=&apos;Cancel110_36.png&apos; source=&apos;220,0,330,36&apos;"/>
+    </VerticalLayout>
+</Window>

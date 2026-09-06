@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="200,50" showshadow="true" shadowsize="4" alpha="100" shadowcorner="23,13,23,33" shadowposition="0,1" shadowdarkness="70">
+  <Include source="Default.xml"/>
+    <VerticalLayout enabled="true" width="200" height="50" bkimage="dadajiasu_waitBk.png">
+      <Label name="ShowText" float="true"  text="等待中……" font="2" pos="50,0,0,0" width="200" height="40" align="left" textpadding="0,10,0,0" textcolor="#FFE0E0E0"/>
+      <GifAnim name="waitGif" bkimage="dadajiasu_wait.gif" pos="9,9,0,0" float="true" autoplay="true" autosize="true"  />
+      <Label name="WaitOK" float="true" visible="false" pos="9,9,41,41" enabled="true" bkimage="dadajiasu_wait.png"/>
+    </VerticalLayout>
+</Window>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="tishi_quxiaoloudongxiufu" title="NotifyMsg" width="430" height="220" resize="0"	frame="" 
+     bkimg="KJMainUI\skins\kaijiaweishi\quxiaoloudongxiufubeijing.png" crbk="" shadow-size="2">
+  <base>
+    <imgbtn name="button.close" pos="-23,4,-0,29" img-count="3"
+            skin="SKIN_PIC_TISHIKUANGGUANBI" show="1" shortcut="ESC"/>
+  </base>
+
+  <body>
+    <imgbtn name="LoudongxiufuQueding" pos="200,-55" width="95" height="30" img-count="3" 
+            image="KJMainUI\skins\kaijiaweishi\queding.png" show="1" showfocus="0"/>
+    <imgbtn name="LoudongxiufuQuxiao" pos="320,-55" width="95" height="30" img-count="3"
+            image="KJMainUI\skins\kaijiaweishi\quxiao.png" show="1" showfocus="0"/>
+  </body>
+</dlg>

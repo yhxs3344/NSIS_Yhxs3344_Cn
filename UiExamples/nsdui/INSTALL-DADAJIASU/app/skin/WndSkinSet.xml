@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="632,405" sizebox="1,1,1,1" caption="0,0,0,45" showshadow="true" shadowsize="4" shadowcorner="23,13,23,33" shadowposition="0,1" shadowdarkness="70">
+  <Include source="Default.xml" />
+  <VerticalLayout enabled="true" width="632" height="405" >
+      <HorizontalLayout name="background" height="45" bkimage="file='allWnd_bk.png' source='0,0,632,45'" ><!-- 标题栏 -->
+        <Label name="LabSelectNode" text="选择节点" font="1" float="true" pos="8,11,0,0" enabled="true" width="92" height="26" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+        <Button name="closebtn" float="true" pos="598,10,0,0" enabled="true" width="25" height="25" normalimage="file=&apos;close1.png&apos; dest=&apos;0,0,25,25&apos; source=&apos;0,0,25,25&apos;" hotimage="file=&apos;close1.png&apos; dest=&apos;0,0,25,25&apos; source=&apos;25,0,50,25&apos;" pushedimage="file=&apos;close1.png&apos; dest=&apos;0,0,25,25&apos; source=&apos;50,0,75,25&apos;"/>                
+      </HorizontalLayout>
+        <VerticalLayout height="327" bkcolor="#FFFFFFFF" bordersize="0,2,0,2" bordercolor="FFCACACA"><!-- 主体 -->
+            <HorizontalLayout height="35" bottombordersize="2" bordercolor="FFCACACA">
+            	<Option name="Skin_OptOfficial" width="84" height="36" text="官方皮肤" textcolor="#FF6480F5"  selected="true" />
+            	<Option name="Skin_OptMy" width="84" height="36" text="我的皮肤" textcolor="#FF6480F5" />
+            	<Button name="Skin_BtnRestore" float="true" pos="490,12,0,0" text="恢复窗口默认状态" textcolor="#FF648085" width="118" height="13" normalimage="UI\skin\restore_normal.png" hotimage="UI\skin\restore_hover.png" pushedimage="UI\skin\restore_down.png"  />
+            </HorizontalLayout >
+          <VerticalLayout name="Skin_Tab" height="292">
+	            <TileLayout columns="5" vscrollbar="true" padding="10,4,0,0" childpadding="1,0,0,0" width="613" height="282" >
+                <SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\1small.jpg" bkname="默认皮肤" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\2small.jpg" bkname="隽永七夕" author="Redrain"  />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\3small.jpg" bkname="你好狮子座" author="Redrain"  />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\4small.jpg"  bkname="激情世界杯" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\5small.jpg"  bkname="新春快乐" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\6small.jpg"  bkname="快乐童年" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\7small.jpg"  bkname="土豪金" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\8small.jpg"  bkname="雾林小径" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\9small.jpg"  bkname="落叶沉思" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\10small.jpg" bkname="春日初暖" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\11small.jpg" bkname="雾色渐浓" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\12small.jpg" bkname="馨馨相伴" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\13small.jpg" bkname="灿烂黄昏" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\14small.jpg" bkname="音乐节" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\15small.jpg" bkname="青青碧色" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\16small.jpg" bkname="森林呓语" author="Redrain" />
+	            	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\17small.jpg" bkname="初秋日光" author="Redrain" />
+                    <SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\18small.jpg" bkname="寂寥秋意" author="Redrain" />
+                    <SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\19small.jpg" bkname="来自星星的你" author="Redrain" />
+                </TileLayout >
+                <TileLayout columns="5" vscrollbar="true" padding="13,10,0,0" childpadding="1,0,0,0" width="613" height="285" >
+                	<SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\1small.jpg" bkname="默认皮肤" author="Redrain" />
+	            	  <SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\2small.jpg" bkname="来自星星的你" author="Redrain"  />
+	            	  <SkinPicItem name="SkinPicItem" width="118" height="70" bkimage="skin\3small.jpg" bkname="寂寥秋意" author="Redrain"  />
+                </TileLayout >
+            </VerticalLayout>	            
+        </VerticalLayout> 
+
+        <HorizontalLayout height="35" inset="12,5,0,0" bkcolor="#FFFFFFFF"><!-- 状态栏 -->
+        	<Label text="列表透明" padding="0,3,0,0" textcolor="FF666666" width="1" height="18" font="10" />
+        	<Button name="Skin_BtnListTrans" text="50 %" tag="50" align="left" textpadding="6,2,0,0" width="73" height="24" padding="10,0,0,0" normalimage="UI\skin\combo_normal.png" hotimage="UI\skin\combo_down.png" pushedimage="UI\skin\combo_down.png"  />
+
+        	<Option name="Skin_OptSkinTrans" width="14" height="14" padding="52,6,0,0" normalimage="UI\skin\check_normal.png" hotimage="UI\skin\check_hover.png" pushedimage="UI\skin\check_down.png" selectedimage="UI\skin\checked_normal.png" selectedhotimage="UI\skin\checked_hover.png" selectedpushedimage="UI\skin\checked_down.png"/>
+			    <Label text="皮肤透明" padding="2,3,0,0" width="1" textcolor="FF666666" height="18" font="10" />
+        	<Button name="Skin_BtnSkinTrans" enabled="false" text="0 %" tag="0" align="left" textpadding="6,2,0,0" width="73" height="24" padding="10,0,0,0" normalimage="UI\skin\combo_normal.png" hotimage="UI\skin\combo_down.png" pushedimage="UI\skin\combo_down.png"  />
+
+          <Button name="Skin_BtnPattet"  text="调色板" textcolor="FF666666" width="65" height="26" padding="117,0,0,0" normalimage="file='UI\skin\button_normal.png' corner='5,5,5,5'" hotimage="file='UI\skin\button_hover.png' corner='5,5,5,5'" pushedimage="file='UI\skin\button_down.png' corner='5,5,5,5'"  />
+          <Button name="Skin_BtnCustom"  text="自定义皮肤" textcolor="FF666666" width="77" height="26" padding="5,0,0,0" normalimage="file='UI\skin\button_normal.png' corner='5,5,5,5'" hotimage="file='UI\skin\button_hover.png' corner='5,5,5,5'" pushedimage="file='UI\skin\button_down.png' corner='5,5,5,5'"  />
+        </HorizontalLayout>
+    </VerticalLayout>
+
+</Window>

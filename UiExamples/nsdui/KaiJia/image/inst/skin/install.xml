@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="610,525" caption="0,0,0,15" roundcorner="1,1">
+    <Font id="0" name="微软雅黑" size="13" bold="false" italic="false" default="true" />
+    <Font id="1" name="宋体" size="13" bold="true" italic="false" />
+	<TabLayout name="tab_wizard" >
+		<VerticalLayout name="vrl_page1" width="610" height="525" bkimage="bg1.bmp">
+			<Button name="btn_install" float="true" pos="200,325,0,0" width="210" height="50" normalimage="btn_inst1.png" hotimage="btn_inst2.png" pushedimage="btn_inst3.png" disabledimage="btn_inst4.png" />
+			<Option name="opt_agree" float="true" pos="15,411,0,0" width="14" height="14" normalimage="d02.png" selected="true" selectedimage="d01.png" />
+			<Button name="btn_agree" text="已阅读" float="true" pos="35,410,0,0" width="40" height="14" align="left" textcolor="#00808080"/>
+			<Button name="btn_licence" float="true" pos="75,410,0,0" width="180" height="14" align="left" textcolor="#2f79d4" text="《铠甲安全卫士用户许可协议》" />
+			<Button name="btn_custom" text="自定义选项" float="true" pos="515,410,0,0" width="70" height="14" align="left" textcolor="#00808080"/>
+			<Option name="opt_custom" float="true" pos="585,412,0,0" width="14" height="12" normalimage="btn_cust_up.png" selectedimage="btn_cust_down.png" />				
+			<Button name="btn_dir" float="true" pos="481,470,0,0" width="97" height="38" normalimage="path01.png" hotimage="path02.png" pushedimage="path03.png"  />
+			<Edit name="edt_dir" text="C:\KaiJia" float="true" pos="96,470,0,0" width="385" height="38" normalimage="dir02.png" hotimage="dir01.png" bkcolor="#FFFFFFFF" textpadding="12,3,12,3" textcolor="#666666" />				
+			<HorizontalLayout float="true" pos="578,0,0,0" width="32" height="32">
+				<Button name="btn_close1"  width="32" height="32"  normalimage="x01.png" hotimage="x02.png"  pushedimage="x03.png" />
+			</HorizontalLayout>             
+		</VerticalLayout>
+		<VerticalLayout name="vrl_page2" width="610" height="525" bkimage="bg1.bmp">				
+			<VerticalLayout height="340"/>
+			<HorizontalLayout padding="30" height="30">
+				<Text name="txt_install_" text="正在安装..." width="80" height="30" textcolor="#00808080"/>
+				<Text name="txt_percent" text="20%" width="340" height="30"  textcolor="#00808080" />					
+			</HorizontalLayout>
+			<Slider name="sld_percent" padding="30" width="533" height="20" bkimage="empty_bg.png"  foreimage="file='full_bg.png' xtiled='true'" min="0" max="100" value="20" hor="true" thumbsize="10,10" mouse="true" />         
+		</VerticalLayout>			
+		<VerticalLayout name="vrl_page3" width="610" height="300" bkimage="bg2.bmp">              
+			<Button name="btn_finish" float="true" pos="230,200,0,0" width="150" height="45"  normalimage="btn_finish1.png" hotimage="btn_finish2.png"  pushedimage="btn_finish3.png" />
+			<HorizontalLayout float="true" pos="578,0,0,0" width="32" height="32">
+				<Button name="btn_close3"  width="32" height="32"  normalimage="x01.png" hotimage="x02.png"  pushedimage="x03.png" />
+			</HorizontalLayout>  				
+		</VerticalLayout>					
+	</TabLayout>
+</Window>

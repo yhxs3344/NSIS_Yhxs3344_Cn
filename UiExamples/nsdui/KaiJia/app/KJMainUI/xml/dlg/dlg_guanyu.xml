@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_guanyu" title="铠甲安全卫士关于我们" width="460" height="280" appwin="0" resize="0" shadow-size="2"
+	frame="KJMainUI\skins\kaijiaweishi\guanyubeijing.png" bkimg="" crbk="" >
+
+  <base>
+    <imgbtn name="button.close"  img-count="3" pos="-29,5" width="24" height="24" skin="SKIN_PIC_TISHIKUANGGUANBI" show="1" shortcut="ESC" />
+    <img pos="5,0" width="35" height="35" img-count="1" image="KJMainUI\skins\kaijiaweishi\icon_logo.png" mode="frame" framesize="0" response="0"/>
+    <text name="title" crtext="FFFFFF" crmark="800000" font="big"
+				pos="35,7,200,25" title="铠甲安全卫士" mask="" response="0" show="1" />
+  </base>
+
+  <body>
+    <img name="" pos="0,35" width="460" height="245" image="KJMainUI\skins\kaijiaweishi\guanyuwomen.png" mode="normal" framesize="0" response="0" show="1"  />
+
+    <text name="version"  crmark="" font="default" crtext="A0A0A0" pos="30,180" width="150" height="20" title="" mask="" response="0" show="1" />
+    <text name="upgradetime"  crmark="" font="default" crtext="A0A0A0" pos="30,205" width="150" height="20" title="" mask="" response="0" show="1" />
+
+  </body>
+
+</dlg>
+
+
