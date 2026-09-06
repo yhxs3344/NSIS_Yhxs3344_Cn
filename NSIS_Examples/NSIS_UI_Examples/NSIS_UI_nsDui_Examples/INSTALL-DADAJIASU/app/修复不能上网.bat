@@ -1,2 +1,0 @@
-netsh winsock reset
-pause
