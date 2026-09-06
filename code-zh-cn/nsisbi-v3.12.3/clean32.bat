@@ -1,0 +1,1 @@
+call scons --clean ZLIB_W32="C:\NSIS\zlib128-dll-win32"

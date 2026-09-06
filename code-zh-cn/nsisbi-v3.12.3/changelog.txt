@@ -1,0 +1,227 @@
+Unless otherwise stated all releases are built on Windows 10,
+using Visual Studio 2008 with the Windows 7 SDK. Solid compression
+is not supported with external file installers.
+
+29/07/2026 - 3.12.3 (7496-3)
+
+- Backported commits 7498 and 7499 from NSIS
+- Fixed compilation issues on old Raspberry Pi OS
+- Fixed endianness issues in a few places
+- Fixed documentation regarding OutFileMode
+- Compiled using VS2005 Pro on Windows 10
+
+31/05/2026 - 3.12.2 (7496-2)
+
+- Fixed a bug in the exehead file reader when bit-shifting large MiB size to bytes
+- Fixed size spacing printing issues in compiler with file size display
+- Compiled using VS2005 Pro on Windows 10
+
+28/05/2026 - 3.12.1 (7496-1)
+
+- Based on NSIS 3.12
+- Added commits from NSIS up to r7496
+- Made a new build and release system using python
+- Source code is now signed using gnupg
+- Installer and special builds now built and available
+- Fixed various clang warnings on macOS
+- Fixed scons error with MSVC ml64.exe not found when building amd64 builds
+- The default script target is now 'amd64-unicode', use the 'Target' command
+  to select 'x86-unicode' or 'x86-ansi'
+- Added new feature to create split external files
+- Added OutFileSize script attribute to set the split size
+- Changed the external file naming to setup1.bin, setup2.bin, etc
+- Removed OutFileMode 'auto' and 'data', only 'aio' and 'stub' are supported
+- Separated the threading code to each codec, now block size is specific to each codec
+- Simplified the first header flags to save a bit of space
+- Included my own 'EnVar' plugin with this release, which modifies environment variables
+- Compiled using VS2005 Pro on Windows 10
+
+24/01/2025 - 7423-3
+
+- Fixed a compile error on macOS about a missing header file
+- Fixed large file support on macOS, an upstream change in NSIS with getting file sizes broke
+  large file support in NSISBI
+- Windows binaries are not affected by these bugs, so the binaries are the same as last release
+
+18/09/2024 - 7423-2
+
+- Installers using solid compression will now decompress all data at the start when executed
+- Changed SetCompressor /SOLID check so that if OutFileMode is auto, SetCompressor now
+  changes OutFileMode to 'aio' automatically
+- Fixed a bug where solid installers would error if more than 4GB uncompressed data was added
+- Added stricter size checking while compressing solid installers
+- Fixed a logging bug where the filename was blank (again)
+- Improve types in the decompression routines to remove typecasting
+- Compiled using VS2005 on Windows 7, and the ansi stubs were compiled with VC6 on Windows XP
+
+30/04/2024 - 7423-1
+
+- Based on NSIS 3.10
+- Changed the final stack allocated buffer to heap allocated in the MTW wrapper
+- Increased the block size from 1MiB to 2MiB to help lzma compression ratio on big files
+- Fixed a link error with some compilers in the LZ4 library by forcing software only bitcount
+- Compiled using VS2005 on Windows 7, and the ansi stubs were compiled with VC6 on Windows XP
+
+18/03/2024 - 7405-2
+
+- Fixed a logging bug where the filename was blank (the size type had to be extended for printing)
+- Changed the output buffer size in non-solid compression for a minor speedup on big files
+- Split different licensed code into separate files within the MTW threading wrapper
+- Compiled using VS2005 on Windows 7, and the ansi stubs were compiled with VC6 on Windows XP
+
+30/12/2023 - 7405-1
+
+- Based on NSIS 3.09
+- Added official multithreading for compression and decompression
+- Fixed bug in the threading wrapper on Win9x (CreateThread() error)
+- Large file support is now official, build define NSIS_CONFIG_LARGE_FILE_SUPPORT has been removed
+- Rewrite LZ4 buffering for more stability
+- Fixed incorrect compiler stats for install size and uninstall size in stub mode
+- Fixed a minor bug where an external file was still being created when there was no data to write
+- More robust limit handling for datablock sizes and exe file sizes
+- Changed crc32 in the compress routine so that it's processed as data comes in on the main thread,
+  instead of in one go at the end
+- Compiled using VS2005 on Windows 7, and the ansi stubs were compiled with VC6 on Windows XP
+
+20/05/2023 - 7336-2-beta
+
+- Added experimental multithreading for compression and decompression.
+- Bzip2 is disabled in this build due to an obscure issue (decompression infinite loop).
+- The 32bit plugins and stubs were compiled with VC6 on Windows XP.
+
+22/11/2021 - 7336-1
+
+- Based on NSIS 3.08
+- Backported commits from NSIS trunk: 7338, 7340 to 7343
+- Removed 'register' keyword in lz4, since modern C++ ignores it anyway
+
+13/09/2020 - 7208-3
+
+- Fixed compile error with NSIS_CONFIG_LOG=yes (needed explicit curly braces for if/else)
+- Fixed compile error with NSIS_MAX_STRLEN > 1024 (path should be MAX_PATH, not NSIS_MAX_STRLEN).
+
+10/09/2020 - 7208-2
+
+- Quick fix for a compile warning when using mingw-w64
+
+31/08/2020 - 7208-1
+
+- Based on NSIS 3.06.1
+- Added support for source files bigger than 2GiB to be added to the installer (all outfile modes)
+- Quick fix for a 4GiB limit in the lzma decoder, needs to be revisited
+- Changed "on the fly" crc checking and applied it to all outfile modes, should give
+  a decent first-start speedup for all-in-one installers
+- External file hash verification (xxhash32) has been removed due to new crc handling,
+  now VerifyExternalFile just checks if it exists and opens the file, and a huge speedup as a result
+- More minor improvements to 32bit support on linux (build system/compiler related)
+- Backported commits from NSIS trunk: 7210, 7211, 7213 to 7217, 7220.
+
+16/04/2020 - 7140-3
+
+- Cleaned and improved 32bit support on linux
+  Some more testing and I found out I can just add _FILE_OFFSET_BITS to the build system. So I started
+  with 7140-1 instead and cleaned out the unneeded code, and stuck with standard calls instead of 64
+  bit specific calls and helper functions.
+
+19/03/2020 - 7140-2
+
+- More improvements on 32bit linux
+  Some 32bit distros, ubuntu in particular, hardcode _FILE_OFFSET_BITS to 32 bit, and force use of
+  64bit specific calls instead, which means setting _FILE_OFFSET_BITS has no effect.
+  So the improvement is to use a helper instead, which checks for _LARGEFILE64_SOURCE and
+  uses those calls if they are available first, and if not available falls back to standard calls.
+
+22/01/2020 - 7140-1
+
+- Based on NSIS 3.05
+- Minor type corrections regarding 32bit file sizes (DWORD -> UINT32)
+
+26/06/2019 - 7069-2
+
+- Improved support for MSVC compilers as old as VC6 with the Feb 2003 PSDK (same setup as official NSIS)
+
+13/06/2019 - 7069-1
+
+- Based on NSIS 3.04
+- Renamed SetExOutFile to OutFileMode auto|aio|data|stub
+- Added new commands for stub mode: StubFile, ReserveStubFile, VerifyExternalFile (these are in the help files too)
+- Fixed solid installers (been broken since 6770-2, oops)
+- Increased solid installer limit up to 4GB
+- Fixed lz4 solid compression
+- Got lz4 dictionary mode to work
+- LZ4 high compression has been removed, SetCompressorDictSize no longer has an effect on lz4
+- Improved cross-platform support, mingw32 is supported again, MS compilers before VS2005 are also supported now
+- makensis is now bitness agnostic, 32bit and 64bit makensis can compile installers bigger than 2GB (includes posix)
+- The default installer target is now x86 unicode, following the deprecation of ansi targets in NSIS trunk
+- Backported commit r7095 from trunk (gui fix for makensisw)
+- added extra flags in the exehead first header: stub mode, external file mode and long offsets (easier to decompile installer if needed)
+- Added xxhash32 for external file verification (stub mode) for a 1.5+ times speedup over crc32
+- Split clean.bat to clean32.bat and clean64.bat
+
+04/02/2018 - 6978-1
+
+- Based on NSIS 3.03
+- Added experimental lz4 support, see the readme for more details
+
+24/10/2017 - 6896-3
+
+- Added experimental 32bit makensis support, main binary package is still 64bit based
+- deprecated mingw32, I recommend mingw-w64 or similar compiler that supports GetFileSizeEx()
+
+07/10/2017 - 6896-2
+
+- Fixed a long standing bug with dll handle multiple call pointer truncation in makensis
+
+11/08/2017 - 6896-1
+
+- Based on NSIS 3.02.1
+- Improved version numbering to be more consistent between folders and documents.
+- Added a proper changelog (this document).
+- Changed the default path in the build*.bat files to the version number of the release.
+- Fixed the incorrect 64 bit zlib path in clean.bat.
+
+16/01/2017 - 6823-1
+
+- Fixed default target being set to 64 bit installers.
+- Added cleaning of both 32 bit and 64 bit build to clean.bat.
+
+04/01/2017 - 6823
+
+- First release based on NSIS3 stable code.
+- Added Linux support, a 64 bit OS is required for big installers to be build. A 64 bit cross-compiler is optional, you can build them if you need 64 bit installers.
+- Improved crc on-the-fly code for a small speed increase.
+- Added .bat files for easier compilation on windows. Change the paths in them to suit your environment.
+
+01/11/2016 - 6770-2
+
+- Increased the all-in-one limit from 2GB to 4GB (requires a 64 bit makensis compiler).
+- Solid compression is still limited to 2GB, I recommend the official NSIS builds for solid compression.
+- Fixed a few bugs with error handling.
+- Removed some leftover code from the change in crc handling.
+
+28/10/2016 - 6770-1
+
+- Implemented on-the-fly crc checking, this allows the installer to launch straight away.
+- Fixed an uninstaller creation error using both 'SetCompress off' and 'SetExOutFile on'.
+- Backported commits from NSIS trunk (r6781, r6783).
+
+20/07/2016 - 6770
+
+- Fixed 'SetExOutFile auto' causing an error and showing the usage text.
+- Minor fixes relating to extracted file timestamps.
+- Improved file size handling for files between 1.6GB and 2GB.
+- Improved error detection for files over 2GB.
+- Improved internal size truncation issues.
+
+15/04/2016 - 6741
+
+- The command to use an external file is: SetExOutFile auto | off | on.
+- This version creates native 32 bit ansi installers as the default.
+- Fixed a filename parsing bug for the external file.
+
+04/01/2016 - 6699
+
+- Initial Release.
+- This version creates native 64 bit installers as the default, this will be
+changed back to 32 bit installers as the default in the future.
+- The command to use an external file is: SetExOutFile false | true.

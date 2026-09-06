@@ -1,0 +1,997 @@
+import platform; print("Using Python " + platform.python_version())
+EnsureSConsVersion(1,2)
+EnsurePythonVersion(2,7)
+# 生成的3个exe头
+stubs = [
+	'bzip2',
+	'lz4',
+	'lzma',
+	'zlib'
+]
+
+# 插件库
+plugin_libs = [
+	'ExDLL'
+]
+
+# NSIS自带的插件
+plugins = [
+	'AdvSplash',
+	'Banner',
+	'BgImage',
+	'Dialer',
+	'EnVar',
+	'InstallOptions',
+	'LangDLL',
+	'Library/TypeLib',
+	'Math',
+	'nsDialogs',
+	'nsExec',
+	'NSISdl',
+	'Splash',
+	'StartMenu',
+	'System',
+	'UserInfo',
+	'VPatch/Source/Plugin',
+]
+
+# 工具，其中NSIS Menu要用到wxWidgets
+utils = [
+	'Library/RegTool',
+	'MakeLangId',
+	'Makensisw',
+	'NSIS Menu',
+	'UIs',
+	'SubStart',
+	'VPatch/Source/GenPat',
+	'zip2exe'
+]
+
+# 其它
+misc = [
+	'Graphics',
+	'Language files',
+	'MultiUser',
+	'Modern UI',
+	'Modern UI 2',
+	'VPatch'
+]
+
+doc = [
+	'COPYING'
+]
+
+doctypes = [
+	'chm',
+	'html',
+	'htmlsingle',
+	'web',
+]
+
+######################################################################
+#######  构建环境                                                  ###
+######################################################################
+
+import os
+path = ARGUMENTS.get('PATH', '')
+toolset = ARGUMENTS.get('TOOLSET', '')
+
+defenv = {
+	'TARGET_ARCH': ARGUMENTS.get('TARGET_ARCH', 'x86'),
+	'ENV': {}
+}
+
+if path: defenv['ENV']['PATH'] = path
+if toolset: defenv['TOOLS'] = toolset.split(',') + ['zip']
+
+if len(defenv['ENV']) == 0: del defenv['ENV']
+defenv = Environment(**defenv)
+Export('defenv')
+
+######################################################################
+#######  包含文件                                                   ###
+######################################################################
+# 包含Scons/utils.py文件
+SConscript('SCons/utils.py')
+Import('GetOptionOrEnv')
+
+######################################################################
+#######  选项                                                       ###
+######################################################################
+
+default_doctype = 'html'
+if defenv.WhereIs('hhc', os.environ['PATH']):
+	default_doctype = 'chm'
+
+import time
+cvs_version = time.strftime('3.12.3.0')
+
+opts = Variables()
+
+# 加载配置选项
+# 这很重要,必现在这里完成,以便 NSIS_CONFIG_CONST_DATA_PATH
+# 在接下来的几行代码中可用,并且可以设置"dirs"了
+SConscript('SCons/config.py')
+
+opts.Update(defenv)
+Help(opts.GenerateHelpText(defenv))
+
+#修复 ListVariable 以生成逗号分隔的（必要时加引号）允许名称列表:
+org_ListVariable = ListVariable
+def ListVariable(key, help, default, names, map={}):
+	r = list(org_ListVariable(key, help, default, names, map))
+	if len(r) == 5 and isinstance(r[1], str):
+		fmt = 'allowed names: %s'
+		repl = fmt % ', '.join( ((' ' in s) and ('"%s"' % s) or s) for s in names )
+		r[1] = r[1].replace(fmt % ' '.join(names), repl)
+	return r
+
+
+install_dirs = {
+	'relocatable': {
+		'dest': '',
+		'prefix': '',
+		'conf': '$PREFIX',
+		'bin': '$PREFIX',
+		'data': '$PREFIX',
+		'doc': '$PREFIX'
+	},
+	'static': {
+		'dest': '',
+		'prefix': '/usr/local',
+		'conf': '$PREFIX/etc',
+		'bin': '$PREFIX/bin',
+		'data': '$PREFIX/share/nsis',
+		'doc': '$PREFIX/share/doc/nsis'
+	}
+}
+
+if 'NSIS_CONFIG_CONST_DATA_PATH' in defenv['NSIS_CPPDEFINES']:
+	dirs = install_dirs['static']
+else:
+	dirs = install_dirs['relocatable']
+
+if defenv['PLATFORM'] == 'win32':
+	ignore_tests = 'none'
+else:
+	ignore_tests = ','.join(Split("""
+Examples/makensis.nsi"""))
+
+# 版本
+opts.Add(('VERSION', 'NSIS 版本', cvs_version))
+opts.Add(('VER_MAJOR', 'NSIS 主版本号 (推荐用于分发安装程序)', None))
+opts.Add(('VER_MINOR', 'NSIS 次版本号 (推荐用于分发安装程序)', None))
+opts.Add(('VER_REVISION', 'NSIS 修订号', None))
+opts.Add(('VER_BUILD', 'NSIS 构建版本号', None))
+#opts.Add(('VER_PACKED', 'NSIS 的打包版本, 格式为 0xMMmmmrrb, 用于脚本中的特性检测 (如果未设置 VER_MAJOR 和 VER_MINOR 则推荐)', None))
+# 安装
+opts.Add(('PREFIX', '安装前缀', dirs['prefix']))
+opts.Add(ListVariable('SKIPSTUBS', '将不会构建的 stub 列表', 'none', stubs))
+opts.Add(ListVariable('SKIPPLUGINS', '将不会构建的插件列表', 'none', plugin_libs + plugins))
+opts.Add(ListVariable('SKIPUTILS', '将不会构建的实用工具列表', 'NSIS Menu', utils))
+opts.Add(ListVariable('SKIPMISC', '将不会构建的杂项列表', 'none', misc))
+opts.Add(ListVariable('SKIPDOC', '将不会构建/安装的文档文件列表', 'none', doc))
+opts.Add(('SKIPTESTS', '将不会运行的测试文件逗号分隔列表', 'none'))
+opts.Add(('IGNORETESTS', '将被运行但忽略的测试文件逗号分隔列表', ignore_tests))
+# 构建工具
+opts.Add(('PATH', '用于替代默认系统路径的冒号分隔列表 - 临时且可能弃用', None))
+opts.Add(('TOOLSET', '用于构建的特定工具逗号分隔列表,替代默认值', None))
+opts.Add(BoolVariable('MSTOOLKIT', '使用 Microsoft Visual C++ 工具包', 'no'))
+opts.Add(EnumVariable('MSVS_VERSION', 'MS Visual C++ 版本', os.environ.get('MSVS_VERSION'), allowed_values=('6.0', '7.0', '7.1', '8.0', '8.0Exp', '9.0', '9.0Exp', '10.0', '10.0Exp')))
+opts.Add(EnumVariable('TARGET_ARCH', '目标处理器架构', 'x86', allowed_values=('x86', 'amd64', 'arm64')))
+opts.Add(ListVariable('DOCTYPES', '将构建的文档类型列表', default_doctype, doctypes))
+opts.Add(('CC', '覆盖 C 编译器', None))
+opts.Add(('CXX', '覆盖 C++ 编译器', None))
+opts.Add(PathVariable('APPEND_CPPPATH', '要搜索包含文件的附加路径', None))
+opts.Add(PathVariable('APPEND_LIBPATH', '要搜索库的附加路径', None))
+opts.Add(('APPEND_CCFLAGS', '附加的C/C++编译器标识'))
+opts.Add(('APPEND_LINKFLAGS', '附加的链接器标识'))
+opts.Add(PathVariable('WXWIN', 'wxWindows 库文件夹路径 (例如 C:\\Dev\\wxWidgets-2.8.10)', os.environ.get('WXWIN')))
+opts.Add(PathVariable('ZLIB_W32', 'Win32 zlib 库文件夹路径 (例如 C:\\Dev\\zlib-1.2.3)', os.environ.get('ZLIB_W32')))
+# 构建选项
+opts.Add(BoolVariable('UNICODE', '构建编译器和工具的 Unicode 版本', 'yes'))
+opts.Add(BoolVariable('DEBUG', '构建带有调试信息的可执行文件', 'no'))
+opts.Add(PathVariable('CODESIGNER', '用于对可执行文件进行签名的程序（如signtool.exe）', None))
+opts.Add(BoolVariable('STRIP', '从可执行文件中去除任何不需要的数据, 例如符号', 'yes'))
+opts.Add(BoolVariable('STRIP_CP', '从跨平台可执行文件中去除任何不需要的数据, 例如符号', 'yes'))
+opts.Add(BoolVariable('STRIP_W32', '从 Win32 可执行文件中去除任何不需要的数据, 例如符号', 'yes'))
+# 路径相关构建选项
+opts.Add(('PREFIX_DEST', '中间安装前缀 (额外的安装时前缀)', dirs['dest']))
+opts.Add(('PREFIX_CONF', '安装 nsisconf.nsh 的路径', dirs['conf']))
+opts.Add(('PREFIX_BIN', '安装原生二进制文件的路径', dirs['bin']))
+opts.Add(('PREFIX_DATA', '安装 NSIS 数据 (插件, 包含文件, stubs, contrib, win32 二进制文件的路径)', dirs['data']))
+opts.Add(('PREFIX_DOC','安装 NSIS README / INSTALL / TODO 文件的路径.', dirs['doc']))
+opts.Add(('PREFIX_PLUGINAPI_INC','安装插件 API 头文件的路径.', None))
+opts.Add(('PREFIX_PLUGINAPI_LIB','安装插件静态库的路径.', None))
+# 可重现构建
+opts.Add(('SOURCE_DATE_EPOCH', 'UNIX 时间戳 (秒)', os.environ.get('SOURCE_DATE_EPOCH')))
+
+opts.Update(defenv)
+Help(opts.GenerateHelpText(defenv))
+
+if defenv['TARGET_ARCH'] != 'x86':
+	defenv['UNICODE'] = True
+
+if defenv['DEBUG']:
+	defenv.Append(CPPDEFINES = ['DEBUG'])
+
+# 添加前缀宏定义
+if 'NSIS_CONFIG_CONST_DATA_PATH' in defenv['NSIS_CPPDEFINES']:
+	defenv.Append(NSIS_CPPDEFINES = [('PREFIX_CONF', '"%s"' % defenv.subst('$PREFIX_CONF'))])
+	defenv.Append(NSIS_CPPDEFINES = [('PREFIX_DATA', '"%s"' % defenv.subst('$PREFIX_DATA'))])
+	defenv.Append(NSIS_CPPDEFINES = [('PREFIX_DOC', '"%s"' % defenv.subst('$PREFIX_DOC'))])
+
+if defenv.get('SOURCE_DATE_EPOCH','') != '':
+	if defenv.get('SOURCE_DATE_EPOCH','').lower() == 'now':
+		import time
+		defenv['SOURCE_DATE_EPOCH'] = str(int(time.time()))
+	defenv['ENV']['SOURCE_DATE_EPOCH'] = defenv['SOURCE_DATE_EPOCH'] = int(defenv['SOURCE_DATE_EPOCH'], 0) # Normalize and apply to ENV for child processes
+	defenv.Append(NSIS_CPPDEFINES = [('NSIS_SOURCE_DATE_EPOCH', '%s' % defenv['SOURCE_DATE_EPOCH'])]) # Display in /HDRINFO
+
+# 需要提前进行，以便将配置头文件放置到正确位置
+if defenv['UNICODE']:
+	if defenv['DEBUG']:
+		defenv.Replace(BUILD_PREFIX = 'build/udebug')
+	else:
+		defenv.Replace(BUILD_PREFIX = 'build/urelease')
+else:
+	if defenv['DEBUG']:
+		defenv.Replace(BUILD_PREFIX = 'build/debug')
+	else:
+		defenv.Replace(BUILD_PREFIX = 'build/release')
+
+defenv.Replace(BUILD_CONFIG = defenv.subst('$BUILD_PREFIX/config'))
+
+# 确保配置目录存在
+if not Dir(defenv.Dir('#$BUILD_CONFIG')).exists():
+	defenv.Execute(Mkdir(defenv.Dir('#$BUILD_CONFIG')))
+
+# 将配置写入 sconf.h 和 defines.h
+sconf_h = open(defenv.File('#$BUILD_CONFIG/nsis-sconf.h').abspath, 'w')
+sconf_h.write('// 此文件由 SCons 自动生成\n// 请勿编辑此文件\n')
+
+defines_h = open(defenv.File('#$BUILD_CONFIG/nsis-defines.h').abspath, 'w')
+defines_h.write('// 此文件由 SCons 自动生成\n// 请勿编辑此文件\n')
+
+for i in defenv['NSIS_CPPDEFINES']:
+	if type(i) is not str:
+		sconf_h.write('#define %s %s\n' % (i[0], i[1]))
+		if str(i[1])[0] != '"':
+			defines_h.write('definedlist.add(_T("%s"), _T("%s"));\n' % (i[0], i[1]))
+		else:
+			defines_h.write('definedlist.add(_T("%s"), _T(%s));\n' % (i[0], i[1]))
+	else:
+		sconf_h.write('#define %s\n' % (i))
+		defines_h.write('definedlist.add(_T("%s"));\n' % (i))
+
+sconf_h.write('#define NSIS_DEFAULT_TARGET_ARCH "%s"\n' % defenv['TARGET_ARCH'])
+sconf_h.close()
+defines_h.close()
+
+#写入版本信息到 version.h
+f = open(defenv.File('#$BUILD_CONFIG/nsis-version.h').abspath, 'w')
+f.write('// 此文件由 SCons 自动生成\n// 请勿编辑此文件\n')
+f.write('#include "%s"\n' % File('#/Source/tchar.h').abspath)
+
+if (not 'VER_PACKED' in defenv) and 'VER_MAJOR' in defenv and 'VER_MINOR' in defenv:
+	packed_r = int(defenv.get('VER_REVISION','0'))
+	packed_b = int(defenv.get('VER_BUILD','0'))
+	defenv['VER_PACKED'] = '0x%0.2i%0.3i%0.2i%0.1i' % (int(defenv['VER_MAJOR']), int(defenv['VER_MINOR']), packed_r, packed_b)
+if not 'VER_PACKED' in defenv:
+	import re
+	found = None
+	for v in re.compile(r'^\\H\{[v]?(\S+)\}', re.M).finditer(File('#/Docs/src/history.but').get_contents().decode()): # 尝试解析 Halibut 历史文件
+		if v and not found:
+			v = v.group(1).split('.')
+			if len(v) >= 2:
+				mi = int(re.search(r'\d+', v[1]).group())
+				if mi < 1: mi = 1 # 确保我们可以从次版本号减1,以便主干保持低于下一个发布版本
+				defenv['VER_PACKED'] = '0x%0.2i%0.3i%0.2i%0.1i' % (int(re.search(r'\d+', v[0]).group()), mi - 1, 66, 6)
+				if int(defenv['VER_PACKED'], 0) >= int('0x03000000', 0):
+					found = v
+	if not found:
+		defenv['VER_PACKED'] = '0x%0.2i%0.3i%0.2i%0.1i' % (3, 3, 42, 0) # 默认使用一个我们从未用过的版本号
+	print('WARNING: VER_PACKED not set, defaulting to %s!' % defenv['VER_PACKED'])
+if int(defenv['VER_PACKED'], 0) < int('0x03000000', 0) or int(defenv['VER_PACKED'], 0) >= int('0x04000000', 0):
+	print('错误: 无效的 VER_PACKED 值!')
+	Exit(1)
+f.write('#define NSIS_PACKEDVERSION _T("%s")\n' % defenv['VER_PACKED'])
+
+if defenv.get('VERSION','') == '' and 'VER_MAJOR' in defenv:
+	defenv['VERSION'] = defenv['VER_MAJOR']
+	if 'VER_MINOR' in defenv:
+		defenv['VERSION'] += '.' + defenv['VER_MINOR']
+	if 'VER_REVISION' in defenv:
+		defenv['VERSION'] += '.' + defenv['VER_REVISION']
+if defenv.get('VERSION','') == '' and int(defenv['VER_PACKED'], 0) > int('0x02000000', 0):
+	defenv['VERSION'] = '%i.%i.%i' % (int(defenv['VER_PACKED'][2:][:2]), int(defenv['VER_PACKED'][4:][:3]), int(defenv['VER_PACKED'][7:][:2]))
+	print('警告: VERSION 未设置, 默认使用 %s!' % defenv['VERSION'])
+f.write('#define NSIS_VERSION _T("v%s")\n' % defenv['VERSION'])
+
+f.close()
+
+######################################################################
+#######  常用函数                                                  ###
+######################################################################
+
+def GetArcCPU(env):
+	if (not 'TARGET_ARCH' in env) or env['TARGET_ARCH'] == 'x86':
+		return 'x86'
+	return env['TARGET_ARCH']
+
+def GetArcSuffix(env, unicode = None):
+	if unicode is None:
+		unicode = 'UNICODE' in env['CPPDEFINES']
+	suff = '-unicode'
+	if not unicode:
+		suff = '-ansi'
+	return GetArcCPU(env) + suff
+
+def GetTargetMinOSVersion(env):
+	if GetArcCPU(defenv) == 'arm64':
+		return (6, 4)
+	if not GetArcCPU(defenv) == 'x86':
+		return (5, 1)
+	return (4, 0)
+
+
+def SafeFile(f):
+	from types import StringType
+
+	if isinstance(f, StringType):
+		return File(f)
+
+	return f
+
+def MakeFileList(files):
+	return Flatten(File(files))
+
+def AddEnvStandardFlags(env, defines=None, flags=None, libs=None, entry=None, nodeflib=None):
+	if defines:
+		env.Append(CPPDEFINES = defines)
+	if flags:
+		env.Append(CCFLAGS = flags)
+	if libs:
+		env.Append(LIBS = libs)
+
+	if entry:
+		unicodestr = "None"
+		if 'UNICODE' in env['CPPDEFINES']:
+			unicodestr = "True"
+		env.Append(LINKFLAGS = ['${ENTRY_FLAG("%s",%s)}' % (entry,unicodestr)])
+
+	if nodeflib:
+		env.Append(LINKFLAGS = ['$NODEFLIBS_FLAG']) # 不使用默认库
+
+def AppendRES(env, source, res, resources):
+	if res:
+		target = MakeFileList(res)[0].name.replace('.rc', '-rc')
+		target_res = env.RES(target, res)
+		if resources:
+			env.Depends(target_res, resources)
+		source.append(target_res)
+
+def CleanMap(env, target, target_name):
+	env.Clean(target, File(target_name + '.map'))
+
+
+######################################################################
+#######  函数                                                      ###
+######################################################################
+
+defenv['ZIPDISTDIR'] = defenv.Dir('#nsisbi-$VERSION')
+defenv['INSTDISTDIR'] = defenv.Dir('#.instdist')
+defenv['TESTDISTDIR'] = defenv.Dir('#.test')
+defenv['DISTSUFFIX'] = ''
+
+if GetArcCPU(defenv) != 'x86':
+	defenv['DISTSUFFIX'] += GetArcCPU(defenv)
+if 'CODESIGNER' in defenv:
+	defenv['DISTSUFFIX'] += '-signed'
+
+#defenv.Execute(Delete('$ZIPDISTDIR'))
+defenv.Execute(Delete('$INSTDISTDIR'))
+defenv.Execute(Delete('$TESTDISTDIR'))
+
+def Distribute(files, names, component, path, subpath, alias, install_alias=None):
+	files = MakeFileList(files)
+
+	names = names or list(map(lambda x: x.name, files))
+	if isinstance(names, str):
+		names = [names]
+
+	for d in ('$ZIPDISTDIR', '$INSTDISTDIR', '$TESTDISTDIR'):
+		paths = list(map(lambda file: os.path.join(d, path, subpath, file), names))
+		defenv.InstallAs(paths, files)
+
+	if ('PREFIX' in defenv and defenv['PREFIX']) or ('PREFIX_DEST' in defenv and defenv['PREFIX_DEST']) :
+		prefix = '${PREFIX_DEST}${PREFIX_%s}' % component.upper()
+		paths = list(map(lambda file: os.path.join(prefix, path, subpath, file), names))
+		ins = defenv.InstallAs(paths, files)
+	else:
+		ins = []
+
+	if ins:
+		defenv.Alias('install', ins)
+		defenv.Alias('install-%s' % component, ins)
+		if alias:
+			defenv.Alias(alias, ins)
+		if install_alias:
+			defenv.Alias('install-%s' % install_alias, ins)
+
+		return ins
+
+def DistributeBin(files, names=[], path='', alias=None):
+	return defenv.Distribute(files, names, 'bin', '', path, alias)
+
+def DistributeConf(files, names=[], path='', alias=None):
+	return defenv.Distribute(files, names, 'conf', '', path, alias)
+
+def DistributeW32Bin(files, names=[], path='', alias=None):
+	return defenv.Distribute(files, names, 'data', 'Bin', path, alias, 'w32bin')
+
+def DistributeStubs(files, names=[], path='', alias=None):
+	return defenv.Distribute(files, names, 'data', 'Stubs', path, alias, 'stubs')
+
+def DistributePlugin(files, names=[], arcsubpath='', alias=None):
+	return defenv.Distribute(files, names, 'data', 'Plugins', arcsubpath, alias, 'plugins')
+
+def DistributeContrib(files, names=[], path='', alias=None):
+	return defenv.Distribute(files, names, 'data', 'Contrib', path, alias, 'contrib')
+
+def DistributeMenu(files, names=[], path='', alias=None):
+	return defenv.Distribute(files, names, 'data', 'Menu', path, alias, 'menu')
+
+def DistributeInclude(files, names=[], path='', alias=None):
+	return defenv.Distribute(files, names, 'data', 'Include', path, alias, 'includes')
+
+def DistributeDoc(files, names=[], path='', alias=None, basepath='', install_alias='docs'):
+	return defenv.Distribute(files, names, 'doc', path=basepath, subpath=path, alias=alias, install_alias=install_alias)
+
+def DistributeDocs(files, names=[], path='', alias=None, basepath='Docs', install_alias='docs'):
+	return defenv.Distribute(files, names, 'doc', path=basepath, subpath=path, alias=alias, install_alias=install_alias)
+
+def DistributeExamples(files, names=[], path='', alias=None):
+	return defenv.Distribute(files, names, 'doc', 'Examples', path, alias, 'examples')
+
+def FindMakeNSIS(env, path):
+	exename = 'makensis_not_found'
+	file = env.FindFile('makensis$PROGSUFFIX', 
+		[os.path.join(path, '.'), os.path.join(path, 'Bin')])
+	if file:
+		exename = str(file)
+	return exename
+
+def Sign(targets):
+	if 'CODESIGNER' in defenv:
+		for t in targets:
+			a = defenv.Action('$CODESIGNER "%s"' % t.path)
+			defenv.AddPostAction(t, a)
+
+Import('SilentActionEcho IsPEExecutable SetPESecurityFlagsWorker SetPEMinOS MakeReproducibleAction')
+def SetPESecurityFlagsAction(target, source, env):
+	for t in target:
+		SetPESecurityFlagsWorker(t.path)
+g_pesecflagsecho = {}
+def SetPESecurityFlagsActionEcho(target, source, env):
+	for t in target:
+		if t.name[-4:].lower() == '.dll' and IsPEExecutable(t.path) and not t.path in g_pesecflagsecho:
+			g_pesecflagsecho[t.path] = 1
+			print('Setting PE flags on %s' % t.name)
+def SetPESecurityFlags(targets):
+	for t in targets:
+		a = defenv.Action(SetPESecurityFlagsAction, strfunction=SetPESecurityFlagsActionEcho)
+		defenv.AddPostAction(t, a)
+
+def SetTargetPEMinOS(target, source=None, env=None):
+	for t in target:
+		if source is None:
+			defenv.AddPostAction(t, defenv.Action(SetTargetPEMinOS, strfunction=SilentActionEcho))
+		else:
+			ver = GetTargetMinOSVersion(env)
+			SetPEMinOS(t.path, ver[0], ver[1], ver[0], ver[1])
+
+def MakeReproducible(targets):
+	for t in targets:
+		defenv.AddPostAction(t, defenv.Action(MakeReproducibleAction, strfunction=SilentActionEcho))
+
+def TestScript(scripts):
+	defenv.Install('$TESTDISTDIR/Tests', scripts)
+
+defenv.Distribute = Distribute
+defenv.DistributeBin = DistributeBin
+defenv.DistributeConf = DistributeConf
+defenv.DistributeW32Bin = DistributeW32Bin
+defenv.DistributeStubs = DistributeStubs
+defenv.DistributePlugin = DistributePlugin
+defenv.DistributeContrib = DistributeContrib
+defenv.DistributeMenu = DistributeMenu
+defenv.DistributeInclude = DistributeInclude
+defenv.DistributeDoc = DistributeDoc
+defenv.DistributeDocs = DistributeDocs
+defenv.DistributeExamples = DistributeExamples
+defenv.Sign = Sign
+defenv.SetPESecurityFlags = SetPESecurityFlags
+defenv.SetTargetPEMinOS = SetTargetPEMinOS
+defenv.MakeReproducible = MakeReproducible
+defenv.TestScript = TestScript
+
+def DistributeExtras(env, target, examples, docs):
+	if examples:
+		env.DistributeExamples(examples, path=target)
+	if docs:
+		env.DistributeDocs(docs, path=target)
+
+######################################################################
+#######  环境                                                      ###
+######################################################################
+
+if defenv['MSTOOLKIT']:
+	if GetOptionOrEnv('MSVC_USE_SCRIPT', '!') != '!':
+		defenv['MSVC_USE_SCRIPT'] = GetOptionOrEnv('MSVC_USE_SCRIPT')
+	defenv.Tool('mstoolkit', toolpath = [Dir('SCons/Tools').rdir()])
+
+defenv.Append(CCFLAGS = Split('$APPEND_CCFLAGS'))
+defenv.Append(LINKFLAGS = Split('$APPEND_LINKFLAGS'))
+defenv.Append(CPPPATH = Split('$APPEND_CPPPATH'))
+defenv.Append(LIBPATH = Split('$APPEND_LIBPATH'))
+
+defenv.Default('$BUILD_PREFIX')
+
+if 'ZLIB_W32' in defenv:
+	defenv['ZLIB_W32_INC'] = os.path.dirname(str(
+		defenv.FindFile('zlib.h', 
+			[
+				defenv['ZLIB_W32'], 
+				os.path.join(defenv['ZLIB_W32'], 'include')
+			]
+		)
+	))
+	# 为 MinGW 或 Visual C 搜索 zlib 的导入库
+	for importlib in ['libzdll.a', 'libz.dll.a', 'zdll.lib']:
+		defenv['ZLIB_W32_LIB'] = os.path.dirname(str(
+			defenv.FindFile(importlib, 
+				[
+					defenv['ZLIB_W32'], 
+					os.path.join(defenv['ZLIB_W32'], 'lib')
+				]
+			)
+		))
+		if defenv['ZLIB_W32_LIB']:
+			break
+	defenv['ZLIB_W32_DLL'] = defenv.FindFile('zlib1.dll', 
+		[defenv['ZLIB_W32'], defenv['ZLIB_W32_LIB']])
+	defenv['ZLIB_W32_NEW_DLL'] = defenv.FindFile('zlib.dll',
+		[defenv['ZLIB_W32'], defenv['ZLIB_W32_LIB']])
+
+tools = defenv['TOOLS']
+
+envs = []
+
+if 'msvc' in tools or 'mstoolkit' in tools:
+	envs = SConscript('SCons/Config/ms')
+elif 'gcc' in tools:
+	envs = SConscript('SCons/Config/gnu')
+elif 'hpc++' in tools:
+	envs = SConscript('SCons/Config/hpc++')
+else:
+	envs = SConscript('SCons/Config/default')
+
+stub_env = envs[0]
+makensis_env = envs[1]
+plugin_env = envs[2]
+util_env = envs[3]
+cp_util_env = envs[4]
+test_env = envs[5]
+stub_uenv = envs[6]
+plugin_uenv = envs[7]
+
+Export('plugin_env plugin_uenv')
+
+######################################################################
+#######  分发                                                       ###
+######################################################################
+
+if defenv['PLATFORM'] == 'win32':
+	def build_nsis_menu_for_zip(target, source, env):
+		cmdline = FindMakeNSIS(env, str(env['ZIPDISTDIR']))
+		if Execute('''"{}" "{}" /X"OutFile '{}'" '''.format(cmdline, source[0].abspath, target[0].abspath)):
+			Exit(1)
+
+	nsis_menu_target = defenv.Command(
+		os.path.join('$ZIPDISTDIR', 'NSIS.exe'),
+		os.path.join('$ZIPDISTDIR', 'Examples', 'NSISMenu.nsi'),
+		build_nsis_menu_for_zip
+	)
+	defenv.Depends(nsis_menu_target, r'$ZIPDISTDIR\makensis.exe')
+	defenv.Depends(nsis_menu_target, r'$ZIPDISTDIR\Stubs')
+	defenv.Depends(nsis_menu_target, r'$ZIPDISTDIR\Plugins')
+	defenv.MakeReproducible(nsis_menu_target)
+	defenv.Sign(nsis_menu_target)
+
+dist_zip = 'nsisbi-${VERSION}${DISTSUFFIX}.zip'
+zip_target = defenv.Zip(dist_zip, '$ZIPDISTDIR')
+defenv.Alias('dist-zip', zip_target)
+
+AlwaysBuild(defenv.AddPostAction(zip_target, Delete('$ZIPDISTDIR')))
+
+if defenv['PLATFORM'] == 'win32':
+	optchar = '/'
+else:
+	optchar = '-'
+
+defenv['INSTVER'] = '%sDVERSION=$VERSION' % optchar
+if 'VER_MAJOR' in defenv and 'VER_MINOR' in defenv \
+    and 'VER_REVISION' in defenv and 'VER_BUILD' in defenv:
+	defenv['INSTVER'] += ' %sDVER_MAJOR=$VER_MAJOR' % optchar
+	defenv['INSTVER'] += ' %sDVER_MINOR=$VER_MINOR' % optchar
+	defenv['INSTVER'] += ' %sDVER_REVISION=$VER_REVISION' % optchar
+	defenv['INSTVER'] += ' %sDVER_BUILD=$VER_BUILD' % optchar
+
+inst_env = {}
+inst_env['NSISDIR'] = os.path.abspath(str(defenv['INSTDISTDIR']))
+inst_env['NSISCONFDIR'] = os.path.abspath(str(defenv['INSTDISTDIR']))
+
+def build_installer(target, source, env):
+	cmdline = FindMakeNSIS(env, str(env['INSTDISTDIR'])) + ' %sDOUTFILE=%s %s' % (optchar, target[0].abspath, env['INSTVER'])
+	if 'ZLIB_W32_NEW_DLL' in env and env['ZLIB_W32_NEW_DLL']:
+		cmdline += ' %sDUSE_NEW_ZLIB' % optchar
+	cmd = env.Command(None, source, cmdline + ' $SOURCE')
+	AlwaysBuild(cmd)
+	# 如果您希望在构建完成后看到安装目录
+	# 请注释掉下面这行.
+	#AlwaysBuild(env.AddPostAction(cmd, Delete('$INSTDISTDIR')))
+	env.Alias('dist-installer', cmd)
+
+installer_target = defenv.Command('nsisbi-${VERSION}-setup${DISTSUFFIX}.exe',
+                                  os.path.join('$INSTDISTDIR', 'Examples', 'makensis.nsi'),
+                                  build_installer,
+                                  ENV = inst_env)
+defenv.Depends(installer_target, '$INSTDISTDIR')
+defenv.Sign(installer_target)
+defenv.Alias('dist-installer', installer_target)
+
+defenv.Alias('dist', ['dist-zip', 'dist-installer'])
+
+######################################################################
+#######  分发基础文件                                                ###
+######################################################################
+
+for d in doc:
+	if d in defenv['SKIPDOC']:
+		continue
+	defenv.DistributeDoc(d)
+
+defenv.DistributeConf('nsisconf.nsh')
+
+######################################################################
+#######  Stubs                                                     ###
+######################################################################
+
+def BuildStub(compression, solid, unicode):
+
+	suffix = ''
+	if solid:
+		suffix = '_solid'
+	if unicode:
+		env = stub_uenv.Clone()
+	else:
+		env = stub_env.Clone()
+
+	suffix = suffix + '-' + GetArcSuffix(env, unicode)
+
+	AddEnvStandardFlags(env, entry='NSISWinMainNOCRT')
+
+	build_dir = '$BUILD_PREFIX/stub_%s%s' % (compression, suffix)
+
+	exports = { 'env' : env, 'compression' : compression, 'solid_compression' : solid }
+
+	target = defenv.SConscript(dirs = 'Source/exehead', variant_dir = build_dir, duplicate = False, exports = exports)
+	env.SideEffect('%s/stub_%s.map' % (build_dir, stub), target)
+
+	env.SetTargetPEMinOS(target)
+	env.MakeReproducible(target)
+	env.DistributeStubs(target, names=compression+suffix)
+
+	defenv.Alias(compression, target)
+	defenv.Alias('stubs', target)
+
+for stub in stubs:
+	if stub in defenv['SKIPSTUBS']:
+		continue
+
+	if defenv['UNICODE']:
+		BuildStub(stub, False, True)
+		BuildStub(stub, True, True)
+	
+	if GetArcCPU(defenv)=='x86':
+		BuildStub(stub, False, False)
+		BuildStub(stub, True, False)
+	# BUGBUG64: 应该在 x64 上构建 x86 stub 吗?
+
+defenv.DistributeStubs('Source/exehead/uninst.ico',names='uninst')
+
+######################################################################
+#######  makensis                                                  ###
+######################################################################
+
+build_dir = '$BUILD_PREFIX/makensis'
+exports = { 'env' : makensis_env }
+
+makensis = defenv.SConscript(dirs = 'Source', variant_dir = build_dir, duplicate = False, exports = exports)
+
+makensis_env.SideEffect('%s/makensis.map' % build_dir, makensis)
+
+defenv.MakeReproducible(makensis)
+defenv.Alias('makensis', makensis)
+
+if defenv['PLATFORM'] == 'win32': 
+	defenv.DistributeW32Bin(makensis, alias='install-compiler')
+else:
+	defenv.DistributeBin(makensis, alias='install-compiler')
+
+######################################################################
+#######  插件                                                       ###
+######################################################################
+
+def PerformPluginExtrasDistOperationOnce(env, unicode):
+	#SCons 不喜欢多次安装同一个文件
+	return GetArcCPU(defenv)==GetArcCPU(env) and (defenv['UNICODE']==unicode)
+
+def BuildPluginWorker(target, source, libs, examples = None, docs = None,
+                entry = 'DllMain', res = None, resources = None,
+                defines = None, flags = None, nodeflib = True,
+                cppused = False, unicode = False):
+	basename = target
+	if unicode:
+		env = plugin_uenv.Clone()
+	else:
+		env = plugin_env.Clone()
+
+	if cppused and env['CPP_REQUIRES_STDLIB']:
+		nodeflib = False
+
+	AddEnvStandardFlags(env, defines, flags, libs, entry, nodeflib)
+
+	AppendRES(env, source, res, resources)
+
+	plugin = env.SharedLibrary(target, source)
+	defenv.Alias(target, plugin)
+	defenv.Alias('plugins', plugin)
+
+	defenv.SetTargetPEMinOS(plugin)
+	defenv.SetPESecurityFlags(plugin)
+	defenv.MakeReproducible(plugin)
+	defenv.Sign(plugin)
+
+	CleanMap(env, plugin, target)
+
+	for i in plugin:
+		if str(i)[-4:].lower() == '.dll':
+			plugin = i
+			break
+	env.DistributePlugin(plugin, arcsubpath = GetArcSuffix(env, unicode))
+	
+	if PerformPluginExtrasDistOperationOnce(env, unicode):	# 只分发一次额外文件
+		DistributeExtras(env, basename, examples, docs)
+
+def BuildPlugin(target, source, libs, examples = None, docs = None,
+                entry = 'DllMain', res = None, resources = None,
+                defines = None, flags = None, nodeflib = True,
+                cppused = False):
+	unicodetarget = 'UNICODE' in exports['env']['CPPDEFINES']
+	BuildPluginWorker(target, source, libs, examples, docs, entry, res, resources, defines, flags, nodeflib, cppused, unicodetarget)
+
+
+for plugin in plugin_libs + plugins:
+	if plugin in defenv['SKIPPLUGINS']:
+		continue
+	
+	srcpath = 'Contrib/' + plugin
+	build_dir = '$BUILD_PREFIX/' + plugin
+	pvariants = []
+	if GetArcCPU(defenv) == 'x86':
+		pvariants += [{'e':plugin_env.Clone()}]
+	if defenv['UNICODE']:
+		pvariants += [{'e':plugin_uenv.Clone()}]
+	for pvariant in pvariants:
+		exports = {
+		  'env' : pvariant['e'],
+		  'BuildPlugin' : BuildPlugin, 'GetArcSuffix' : GetArcSuffix, 
+		  'PerformPluginExtrasDistOperationOnce' : PerformPluginExtrasDistOperationOnce 
+		}
+		vdir = build_dir + '/' + GetArcSuffix(pvariant['e'])
+		defenv.SConscript(dirs = srcpath, variant_dir = vdir, duplicate = False, exports = exports)
+
+
+
+######################################################################
+#######  实用工具                                                   ###
+######################################################################
+
+Import('AddZLib')
+
+def BuildUtilEnv(defines = None, flags = None, libs = None,
+                 entry = None, nodeflib = None,
+                 cross_platform = False, cli = False):
+	if not cross_platform:
+		env = util_env.Clone()
+		platform = 'win32'
+	else:
+		env = cp_util_env.Clone()
+		platform = env['PLATFORM']
+
+	if libs and 'z' in libs:
+		libs.remove('z')
+		AddZLib(env, platform)
+
+	if platform == 'win32':
+		if cli:
+			env.Append(LINKFLAGS = env['SUBSYS_CON'])
+		else:
+			env.Append(LINKFLAGS = env['SUBSYS_WIN'])
+
+	AddEnvStandardFlags(env, defines, flags, libs, entry, nodeflib)
+
+	return env
+
+def BuildUtil(target, source, libs, entry = None, res = None, 
+              resources = None, defines = None, flags = None,
+              nodeflib = False, file_name = '', path='', contrib = False,
+              examples = None, docs = None, cross_platform = False,
+              root_util = False, cli = False, noinstall = False):
+	env = BuildUtilEnv(defines, flags, libs, entry, nodeflib, cross_platform, cli)
+
+	AppendRES(env, source, res, resources)
+
+	if file_name != '':
+		target = "%s/%s" % (target, file_name)
+
+	# 确保环境后缀匹配
+	if env['PROGSUFFIX'] not in target:
+		if '.' in target:
+			env['PROGSUFFIX'] = target[target.rindex('.'):]
+
+	util = env.Program(target, source)
+	defenv.Alias(target, util)
+	defenv.Alias('utils', util)
+
+	if (str(target)[:7]).lower() == 'RegTool'.lower():
+		defenv.SetTargetPEMinOS(util)
+	defenv.MakeReproducible(util)
+	defenv.Sign(util)
+
+	CleanMap(env, util, target)
+
+	if not noinstall:
+		if contrib:
+			ins = env.DistributeContrib(util, path=path, alias='install-utils')
+		elif cross_platform and not env['PLATFORM'] == 'win32' or root_util and env['PLATFORM'] == 'win32':
+			ins = env.DistributeBin(util, path=path, alias='install-utils')
+		else:
+			ins = env.DistributeW32Bin(util, path=path, alias='install-utils')
+		
+		DistributeExtras(env, target, examples, docs)
+
+	return util
+
+for util in utils:
+	if util in defenv['SKIPUTILS']:
+		continue
+
+	path = 'Contrib/' + util
+	build_dir = '$BUILD_PREFIX/' + util
+	exports = {'BuildUtil' : BuildUtil, 'BuildUtilEnv' : BuildUtilEnv, 'env' : util_env, 'GetArcCPU' : GetArcCPU}
+
+	defenv.SConscript(dirs = path, variant_dir = build_dir, duplicate = False, exports = exports)
+
+######################################################################
+#######  文档                                                      ###
+######################################################################
+
+if str(defenv['DOCTYPES']) != 'none':
+	halibut = defenv.SConscript(
+		dirs = 'Docs/src/bin/halibut',
+		variant_dir = '$BUILD_PREFIX/halibut',
+		duplicate = False,
+		exports = {'env' : defenv.Clone()}
+	)
+
+	for doctype in defenv['DOCTYPES']:
+	
+		defenv.SConscript(
+			dirs = 'Docs/src',
+			variant_dir = '$BUILD_PREFIX/Docs/' + doctype,
+			duplicate = False,
+			exports = {'halibut' : halibut, 'env' : defenv.Clone(), 'build_doctype' : doctype}
+		)
+
+######################################################################
+#######  示例                                                       ###
+######################################################################
+
+defenv.SConscript(
+	dirs = 'Examples',
+	exports = {'env': defenv.Clone()}
+)
+
+######################################################################
+#######  包含文件                                                   ###
+######################################################################
+
+defenv.SConscript(
+	dirs = 'Include',
+	exports = {'env': defenv.Clone()}
+)
+
+######################################################################
+#######  杂项                                                      ###
+######################################################################
+
+for i in misc:
+	if i in defenv['SKIPMISC']:
+		continue
+
+	defenv.SConscript(dirs = 'Contrib/%s' % i)
+
+######################################################################
+#######  测试                                                      ###
+######################################################################
+
+# 测试代码
+
+build_dir = '$BUILD_PREFIX/tests'
+exports = {'env' : test_env.Clone()}
+
+defenv.SConscript(
+	dirs = 'Source/Tests',
+	duplicate = False,
+	exports = exports,
+	variant_dir = build_dir
+)
+
+defenv.Ignore('$BUILD_PREFIX', '$BUILD_PREFIX/tests')
+
+# 测试脚本
+
+test_scripts_env = defenv.Clone(ENV = os.environ) # 某些脚本需要环境变量
+test_scripts_env['ENV']['NSISDIR'] = os.path.abspath(str(defenv['TESTDISTDIR']))
+test_scripts_env['ENV']['NSISCONFDIR'] = os.path.abspath(str(defenv['TESTDISTDIR']))
+test_scripts_env.PrependENVPath('PATH', os.path.abspath(str(defenv['TESTDISTDIR'])))
+
+def test_scripts(target, source, env):
+	from os import walk, sep
+
+	instdir = source[0].path
+
+	tdlen = len(env.subst('$TESTDISTDIR'))
+	skipped_tests = env['SKIPTESTS'].split(',')
+	ignored_tests = env['IGNORETESTS'].split(',')
+	skipped_tests += ['Examples' + sep + 'AppGen.nsi'] # 永远不测试这个，它不是真正的安装脚本
+
+	compiler = FindMakeNSIS(env, env.subst('$TESTDISTDIR'))
+
+	for root, dirs, files in walk(instdir):
+		for file in files:
+			if file[-4:] == '.nsi':
+				nsi = root + sep + file
+				nsif = nsi[tdlen + 1:]
+
+				if nsif in skipped_tests:
+					continue
+
+				if nsif in ignored_tests:
+					cmd = env.Command(None, nsi, '-' + compiler + ' $SOURCE')
+				else:
+					cmd = env.Command(None, nsi, compiler + ' $SOURCE')
+				AlwaysBuild(cmd)
+				env.Alias('test-scripts', cmd)
+
+	return None
+
+test = test_scripts_env.Command('test-scripts.log', '$TESTDISTDIR', test_scripts)
+test_scripts_env.Alias('test-scripts', test)
+
+# 测试所有
+
+defenv.Alias('test', ['test-code', 'test-scripts'])

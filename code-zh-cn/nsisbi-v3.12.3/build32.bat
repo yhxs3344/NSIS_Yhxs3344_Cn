@@ -1,0 +1,1 @@
+scons PREFIX="C:\NSIS\nsis-binary-7496-3" install ZLIB_W32="C:\NSIS\zlib128-dll-win32"
