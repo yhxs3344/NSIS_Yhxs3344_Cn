@@ -14,7 +14,9 @@
 ## 演示
 
 **面板预览**
+
 ![面板预览图](images/SublimeCodeNSIS.png)
+
 ![面板预览图](images/VNISEdit.jpg)
 
 ---
