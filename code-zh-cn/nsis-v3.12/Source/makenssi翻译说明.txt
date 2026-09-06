@@ -1,0 +1,213 @@
+Processing config:  
+正在处理配置:
+
+Processing script file: 
+处理脚本文件:
+
+Error in script 
+脚本出现错误
+
+on line 33 -- aborting creation process
+在第 33 行 -- 终止脚本处理
+Command line defined: 
+命令行已经定义:
+
+Aborting on Ctrl+C  
+终止在 Ctrl+C...
+
+Note: you may have one or two (large) stale temporary file
+注意: 您可能有有一个或两个(大)的旧临时文件
+
+left in your temporary directory (Generally this only happens on Windows 9x
+残留在临时目录文件夹中 (通常这种情况只会发生在 Windows 9x 系统中)
+
+{
+  _ftprintf(g_output,_T("MakeNSIS %") NPRIs _T(" - Copyright ") NSIS_COPYYEARS _T(" Contributors\n")
+         _T("See the file COPYING for license details.\n")
+         _T("Credits can be found in the Users Manual.\n\n"), NSIS_VERSION);
+  fflush(g_output);
+}
+
+MakeNSIS %s - 版权所有 1995-2009 所有贡献者
+查看文件 COPYING 获取许可信息的细节.
+荣誉可在用户手册中查找到.
+
+{
+  _ftprintf(g_output,_T("Copyright (C) ") NSIS_COPYYEARS _T(" Nullsoft and Contributors\n\n")
+       _T("This license applies to everything in the NSIS package, except where otherwise\n")
+       _T("noted.\n\n")
+       _T("This software is provided 'as-is', without any express or implied warranty.\n")
+       _T("In no event will the authors be held liable for any damages arising from the\n")
+       _T("use of this software.\n\n")
+       _T("Permission is granted to anyone to use this software for any purpose, including\n")
+       _T("commercial applications, and to alter it and redistribute it freely, subject to\n")
+       _T("the following restrictions:\n")
+       _T("  1. The origin of this software must not be misrepresented; you must not claim\n")
+       _T("     that you wrote the original software. If you use this software in a\n")
+       _T("     product, an acknowledgment in the product documentation would be\n")
+       _T("     appreciated but is not required.\n")
+       _T("  2. Altered source versions must be plainly marked as such, and must not be\n")
+       _T("     misrepresented as being the original software.\n")
+       _T("  3. This notice may not be removed or altered from any source distribution.\n\n")
+       _T("In addition to this license, different licenses apply to the included\n")
+       _T("compression modules. See the file COPYING for details.\n"));
+  fflush(g_output);
+
+版权所有 (C) 1999-2009 Nullsoft 与 所有贡献者
+
+除非有另外的说明本授权适用于 NSIS 安装包的所有相关事宜。
+
+本软件遵循“概不保证”的原则，没有其它任何的说明和暗示。
+作者不承担任何由于使用本软件所造成的损害的责任。
+
+允许任何人使用本软件用于任何的目的，包括商业软件，
+修改、自由重新发布，需遵守下列条款:
+  1. 本软件的原始版本不允许被误传；您不具有撰写软件的原始版本的任何权利。
+     如果您要在产品中使用本软件，希望您能在您的产品中加入相关的书面承认，
+     但这并不是必须的。
+  2. 修改过源代码的版本必须在显著的位置注明，并且不允许有任何相对于
+     原始软件的欺骗性质的语句。
+  3. 本说明不能在任何发布版本中被删除或更改。
+
+除本协议外, 还有其他许可协议对所包含的压缩模块起作用.
+查看 COPYING 文件获取细节.
+
+
+{
+  _ftprintf(g_output,_T("Usage:\n")
+         _T("  ")         _T("makensis [ option | script.nsi | - ] [...]\n")
+         _T("\n")
+         _T("Options:\n")
+         _T("  ") OPT_STR _T("CMDHELP [item] prints out help for 'item', or lists all commands\n")
+         _T("  ") OPT_STR _T("HDRINFO prints information about what options makensis was compiled with\n")
+         _T("  ") OPT_STR _T("LICENSE prints the makensis software license\n")
+         _T("  ") OPT_STR _T("VERSION prints the makensis version and exits\n")
+#ifdef _WIN32
+         _T("  ") OPT_STR _T("Px sets the compiler process priority, where x is 5=realtime,4=high,\n")
+         _T("  ")         _T("  3=above normal,2=normal,1=below normal,0=idle\n")
+#endif
+         _T("  ") OPT_STR _T("Vx verbosity where x is 4=all,3=no script,2=no info,1=no warnings,0=none\n")
+         _T("  ") OPT_STR _T("WX treat warnings as errors\n")
+         _T("  ") OPT_STR _T("Ofile specifies a text file to log compiler output (default is stdout)\n")
+         _T("  ") OPT_STR _T("PAUSE pauses after execution\n")
+         _T("  ") OPT_STR _T("NOCONFIG disables inclusion of <path to makensis.exe>") PLATFORM_PATH_SEPARATOR_STR _T("nsisconf.nsh\n")
+         _T("  ") OPT_STR _T("NOCD disables the current directory change to that of the .nsi file\n")
+         _T("  ") OPT_STR _T("INPUTCHARSET <") TSTR_INPUTCHARSET _T(">\n")
+#ifdef _WIN32
+         _T("  ") OPT_STR _T("OUTPUTCHARSET <") TSTR_OUTPUTCHARSET _T(">\n")
+#endif
+         _T("  ") OPT_STR _T("[SAFE]PPO preprocess to stdout/file\n")
+         _T("  ") OPT_STR _T("Ddefine[=value] defines the symbol \"define\" for the script [to value]\n")
+         _T("  ") OPT_STR _T("Xscriptcmd executes scriptcmd in script (i.e. \"") OPT_STR _T("XOutFile inst.exe\")\n")
+         _T("  ")         _T("  parameters are processed by order (") OPT_STR _T("Ddef ins.nsi != ins.nsi ") OPT_STR _T("Ddef)\n")
+         _T("\n")
+         _T("For script file name, you can use - to read from the standard input\n")
+#ifdef _WIN32
+         _T("You can also use - as an option character: -PAUSE as well as /PAUSE\n")
+#endif
+         _T("You can use a double-dash to end options processing: makensis -- -ins.nsi\n"));
+  fflush(g_output);
+
+用法:
+  makensis [选项 | 脚本.nsi | - [...]]
+   选项为:
+    /CMDHELP 项吧“项”的帮助打印出来, 或列出所有命令
+    /HDRINFO 打印关于 makensis 编译的选项信息
+    /LICENSE 输出 makensis 软件许可协议
+    /VERSION 输出 makensis 版本并退出
+    /Px 设置编译器进程的优先级, 其中 x 为 5=实时,4=高,
+        3=高于标准,2=标准,1=低于标准,0=低
+    /Vx 冗长, 其中 x 为 4=全部输出,3=信息、警告和错误,2=警告和错误,1=仅错误,0=无输出
+    /Ofile 指定一个文本文件来记录编译器输出 (默认为标准输出)
+    /PAUSE 执行后暂停
+    /NOCONFIG 禁止包含 <makensis.exe 路径>\nsisconf.nsh
+    /NOCD 禁止把当前目录定位到 .nsi 文件
+    安全地PPO预处理输出到stdout/文件
+    /Ddefine[=值] 为脚本文件 [值] 定义一个赋值号 "define"
+    /Xscriptcmd 在脚本执行脚本命令 (如: "/XOutFile poop.exe")
+   参数按照先后顺处理 (/Ddef ins.nsi != ins.nsi /Ddef)
+   对于脚本文件名称, 您可以使用 - 从标准输入读取
+   您也可以将 - 作为一个选项字符: -PAUSE 等价于 /PAUSE
+   您可以使用双短线 -- 来中止选项处理 -- -ins.nsi
+   
+   
+
+  {
+    _ftprintf(g_output,_T("Size of first header is %lu bytes.\n"),(unsigned long)sizeof(firstheader));
+    _ftprintf(g_output,_T("Size of main header is %lu bytes.\n"),(unsigned long)build.get_header_size());
+    _ftprintf(g_output,_T("Size of each section is %lu bytes.\n"),(unsigned long)sizeof(section));
+    _ftprintf(g_output,_T("Size of each page is %lu bytes.\n"),(unsigned long)sizeof(page));
+    _ftprintf(g_output,_T("Size of each instruction is %lu bytes.\n"),(unsigned long)sizeof(entry));
+    int x=build.definedlist.getnum();
+    _ftprintf(g_output,_T("\nDefined symbols: "));
+    for (int i=0; i<x; i++)
+    
+
+ {
+    _ftprintf(g_output,_T("首个头部大小 %lu 字节.\n"),(unsigned long)sizeof(firstheader));
+    _ftprintf(g_output,_T("主头部大小 %lu 字节.\n"),(unsigned long)build.get_header_size());
+    _ftprintf(g_output,_T("每个区段大小 %lu 字节.\n"),(unsigned long)sizeof(section));
+    _ftprintf(g_output,_T("每个页面大小 %lu 字节.\n"),(unsigned long)sizeof(page));
+    _ftprintf(g_output,_T("每个指令大小 %lu 字节.\n"),(unsigned long)sizeof(entry));
+    int x=build.definedlist.getnum();
+    _ftprintf(g_output,_T("\n已定义的标记符号: "));
+    for (int i=0; i<x; i++)
+
+Changing directory to:
+切换目录:
+Error changing directory to
+切换目录时出错
+Error: Missing required parameter!
+错误:缺少所需的参数!
+
+NSISRT_Initialize failed!
+NSISRT_Initialize 初始化失败!
+
+Error opening output log for writing! Using stdout.
+打开输出日志的错误！使用标准输出.
+
+Error initalizing CEXEBuild
+初始化 CEXEBuild 时出错
+
+is disabled for non Win32 platforms.
+已禁用非Win 32平台.
+
+INPUTCHARSET: Ignoring invalid charset
+inputcharset：忽略无效的字符
+
+makensis is running in REALTIME priority mode!
+makensis 运行在 实时 优先级模式下!
+
+Can't open script
+无法打开脚本文件
+
+  {
+    _ftprintf(g_output,_T("\nProcessed "));
+    if (files_processed) _ftprintf(g_output,_T("%d file%") NPRIs _T(", "),files_processed,files_processed==1?_T(""):_T("s"));
+    if (cmds_processed) _ftprintf(g_output,_T("%d command line command%") NPRIs _T(", "),cmds_processed,cmds_processed==1?_T(""):_T("s"));
+    _ftprintf(g_output,_T("writing output (%") NPRIs _T("):\n"),build.get_target_suffix());
+    fflush(g_output);
+  }
+  
+  
+  {
+    _ftprintf(g_output,_T("\n处理 "));
+    if (files_processed) _ftprintf(g_output,_T("%d 文件%") NPRIs _T(", "),files_processed,files_processed==1?_T(""):_T("s"));
+    if (cmds_processed) _ftprintf(g_output,_T("%d 命令行命令%") NPRIs _T(", "),cmds_processed,cmds_processed==1?_T(""):_T("s"));
+    _ftprintf(g_output,_T("写入输出 (%") NPRIs _T("):\n"),build.get_target_suffix());
+    fflush(g_output);
+  }  
+
+MakeNSIS done - hit enter to close...
+制作完成 - 按回车后关闭
+
+
+
+
+
+
+
+
+
+
+

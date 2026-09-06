@@ -1,0 +1,200 @@
+Error (process_script): write_output already called, can't continue
+错误 (处理脚本): write_output 已经调用, 无法继续
+
+Error: invalid script: last line ended with
+错误: 脚本错误: 最后一行以 \ 结尾
+
+!if[macro][n]def: open at EOF - need !endif
+!if[macro][n]def: 在 EOF 处打开 - 需要 !endif
+
+comment contains line-continuation character, following line will be ignored
+
+注释包含换行符, 下一行将忽略
+
+ {
+    if (res==-2) ERROR_MSG(_T("Error: unterminated string parsing line at %") NPRIs _T(":%d\n"),curfilename,linecnt);
+    else ERROR_MSG(_T("Error: error parsing line (%") NPRIs _T(":%d)\n"),curfilename,linecnt);
+    return PS_ERROR;
+  }
+
+
+  {
+    if (res==-2) ERROR_MSG(_T("错误: 解析行在 %") NPRIs _T(":%d\n 处存在未结束的字串"),curfilename,linecnt);
+    else ERROR_MSG(_T("错误: 解析行在 (%") NPRIs _T(":%d)\n 时出错"),curfilename,linecnt);
+    return PS_ERROR;
+  }
+
+
+      {
+        ERROR_MSG(_T("Invalid label: %") NPRIs _T(" (labels cannot begin with !, $, -, +, or 0-9)\n"),tokstr0);
+        return PS_ERROR;
+      }
+
+      {
+        ERROR_MSG(_T("标签错误: %") NPRIs _T(" (标签不能以 !, $, -, +, 或 0-9 开头)\n"),tokstr0);
+        return PS_ERROR;
+      }
+
+
+
+ERROR_MSG(_T("Plugin not found, cannot call %") NPRIs _T("\n"),tokstr0);
+ERROR_MSG(_T("无法初始化插件目录 %") NPRIs _T("\n"),tokstr0);
+
+
+ERROR_MSG(_T("!else: no if block open (!if[macro][n][def])\n"));
+ERROR_MSG(_T("!else: 没有 if 区块打开 (!if[macro][n][def])\n"));
+
+ERROR_MSG(_T("!else: else already used in current if block\n"));
+ERROR_MSG(_T("!else: 当前 if 区块中已经有 else\n"));
+
+ERROR_MSG(_T("!include: could not open file: \"%") NPRIs _T("\"\n"),f);
+ERROR_MSG(_T("!include: 无法打开文件: \"%") NPRIs _T("\"\n"),f);
+
+ERROR_MSG(_T("!include: too many levels of includes (%d max).\n"),MAX_INCLUDEDEPTH);
+ERROR_MSG(_T("!include: 包含太多的 include (最多 %d).\n"),MAX_INCLUDEDEPTH);
+
+ERROR_MSG(_T("Internal compiler error #12345: %") NPRIs _T(" malloc(%d) failed.\n"),cmdname,cbTotalData);
+ERROR_MSG(_T("内部编译器错误 #12345: %") NPRIs _T(" 内存分配(%d) 失败.\n"),cmdname,cbTotalData);
+
+ERROR_MSG(_T("Error: Goto targets beginning with '+' or '-' must be followed by nonzero integer (relative jump)\n"));
+ERROR_MSG(_T("错误: Goto 跳转目标以 '+' 或 '-' 开头时后面必须跟随非零整数 (相对跳转)\n"));
+
+ERROR_MSG(_T("Error: Goto targets cannot begin with 0-9, $, !\n"));
+ERROR_MSG(_T("错误: Goto 跳转目标不能以 0-9, $, ! 开头\n"));
+
+ERROR_MSG(_T("!macro: macro named \"%") NPRIs _T("\" already found!\n"),macroname);
+ERROR_MSG(_T("!macro: 宏 \"%") NPRIs _T("\" 已经存在!\n"),macroname);
+
+ERROR_MSG(_T("!macro: macro parameter %d is empty, not valid!\n"),pc-1);
+ERROR_MSG(_T("!macro: 宏参数 %d 为空, 跳过!\n"),pc-1);
+
+ERROR_MSG(_T("!macro: macro parameter named %") NPRIs _T(" is used multiple times!\n"),
+ERROR_MSG(_T("!macro: 宏参数 %") NPRIs _T(" 重复使用!\n"),
+
+ERROR_MSG(_T("!macro \"%") NPRIs _T("\": unterminated (no !macroend found in file)!\n"),macroname);
+ERROR_MSG(_T("!macro \"%") NPRIs _T("\": 未关闭宏 (在文件中没有找到 !macroend)!\n"),macroname);
+
+ERROR_MSG(_T("Error: can't define a macro inside a macro!\n"));
+ERROR_MSG(_T("错误: 不能在一个宏中再定义另外一个宏!\n"));
+
+ERROR_MSG(_T("!macroend: no macro currently open.\n"));
+ERROR_MSG(_T("!macroend: 该处没有宏打开.\n"));
+
+ERROR_MSG(_T("!macroundef: \"%") NPRIs _T("\" does not exist!\n"),mname);
+ERROR_MSG(_T("!macroundef: \"%") NPRIs _T("\" 不存在!\n"),mname);
+
+
+ERROR_MSG(_T("!insertmacro: macro named \"%") NPRIs _T("\" not found!\n"),macroname);
+ERROR_MSG(_T("!insertmacro: 宏 \"%") NPRIs _T("\" 未找到!\n"),macroname);
+
+ERROR_MSG(_T("!insertmacro: macro \"%") NPRIs _T("\" requires %d parameter(s), passed %d!\n"),
+ERROR_MSG(_T("!insertmacro: 宏 \"%") NPRIs _T("\" 需要 %d 个参数, 但得到 %d 个!\n"),
+
+ERROR_MSG(_T("!insertmacro: insert depth is limited to %u macros!\n"),MAX_MACRORECURSION);
+ERROR_MSG(_T("!insertmacro: 已经插入 %u 宏!\n"),MAX_MACRORECURSION);
+
+ERROR_MSG(_T("Error in macro %") NPRIs _T(" on macroline %d\n"),macroname,lp);
+ERROR_MSG(_T("宏出现错误 %") NPRIs _T(" 在第 %d 行\n"),macroname,lp);
+
+ERROR_MSG(_T("!tempfile: unable to create temporary file.\n"));
+ERROR_MSG(_T("!tempfile: 无法创建临时文件.\n"));
+
+
+ERROR_MSG(_T("!tempfile: \"%") NPRIs _T("\" already defined!\n"), symbol);
+ERROR_MSG(_T("!tempfile: \"%") NPRIs _T("\" 已经定义!\n"), symbol);
+
+ERROR_MSG(_T("!delfile: \"%") NPRIs _T("\" couldn't be deleted.\n"), file.c_str());
+ERROR_MSG(_T("!delfile: \"%") NPRIs _T("\" 无法删除.\n"), file.c_str());
+
+SCRIPT_MSG(_T("!delfile: deleted \"%") NPRIs _T("\"\n"), file.c_str());
+SCRIPT_MSG(_T("!delfile: 已经删除 \"%") NPRIs _T("\"\n"), file.c_str());
+
+ERROR_MSG(_T("!appendfile: Invalid parameter \"%") NPRIs _T("\"!\n"), param);
+ERROR_MSG(_T("!appendfile: 参数无效 \"%") NPRIs _T("\"!\n"), param);
+
+ERROR_MSG(_T("!appendfile: \"%") NPRIs _T("\" couldn't be opened.\n"), param);
+ERROR_MSG(_T("!appendfile: \"%") NPRIs _T("\" 无法打开.\n"), param);
+
+ERROR_MSG(_T("!appendfile: error writing to \"%") NPRIs _T("\".\n"), param);
+ERROR_MSG(_T("!appendfile: 写入出错 \"%") NPRIs _T("\".\n"), param);
+
+ERROR_MSG(_T("Error: custom page specified, NSIS_SUPPORT_CODECALLBACKS not defined.\n"));
+ERROR_MSG(_T("错误: 自定义页面, NSIS_SUPPORT_CODECALLBACKS 没有定义.\n"));
+
+ERROR_MSG(_T("Error: custom page must have a creator function!\n"));
+ERROR_MSG(_T("错误：自定义页面必须有一个创建函数!\n"));
+
+ERROR_MSG(_T("\nError: function names must start with \"un.\" in an uninstall page.\n"));
+ERROR_MSG(_T("\n错误: 在卸载页面卸载函数名称必须以 "un." 开头.\n"));
+
+ERROR_MSG(_T("Error: %") NPRIs _T(" specified, NSIS_SUPPORT_CODECALLBACKS not defined.\n"),  line.gettoken_str(0));
+ERROR_MSG(_T("错误: %") NPRIs _T(" 指定的NSIS_SUPPORT_CODECALLBACKS 未定义.\n"),  line.gettoken_str(0));
+
+warning_fl(_T("LangString \"%") NPRIs _T("\" set multiple times for %d, wasting space"), name, lang);
+warning_fl(_T("LangString \"%") NPRIs _T("\" 对 %d 重复设置, 浪费空间"), name, lang);
+
+SCRIPT_MSG(_T("Error: LangStringUP is obsolete, there are no more unprocessed strings. Use LangString.\n"));
+SCRIPT_MSG(_T("错误: LangStringUP 已废弃, 不会再有非处理的字串. 请使用 LangString.\n"));
+
+warning_fl(_T("%") NPRIs _T(": SilentInstall enabled, wasting space"), cmdnam);
+warning_fl(_T("%") NPRIs _T(": SilentInstall 启用, 浪费空间"), cmdnam);
+
+warning_fl(_T("%") NPRIs _T(": specified multiple times, wasting space"),line.gettoken_str(0));
+warning_fl(_T("%") NPRIs _T(": 重复指定, 浪费空间"),line.gettoken_str(0));
+
+ERROR_MSG(_T("Error while loading icon from \"%") NPRIs _T("\": %") NPRIs _T("\n"), line.gettoken_str(1), CtoTStrParam(err.what()));
+ERROR_MSG(_T("载入图标出错 \"%") NPRIs _T("\": %") NPRIs _T("\n"), line.gettoken_str(1), CtoTStrParam(err.what()));
+
+ERROR_MSG(_T("Error: can't find bitmap\n"));
+ERROR_MSG(_T("未找到位图文件\n"));
+
+ERROR_MSG(_T("Error: invalid bitmap file - corrupted or not a bitmap\n"));
+ERROR_MSG(_T("无效的位图文件 - 存在错误或不是位图\n"));
+
+ERROR_MSG(_T("Error: bitmap isn't 96x16 in size\n"));
+ERROR_MSG(_T("位图大小不是 96x16\n"));
+
+ERROR_MSG(_T("Error: bitmap has more than 8bpp\n"));
+ERROR_MSG(_T("位图位数高于 8bpp\n"));
+
+ERROR_MSG(_T("Error while replacing bitmap: %") NPRIs _T("\n"), CtoTStrParam(err.what()));
+ERROR_MSG(_T("替换位图出错: %") NPRIs _T("\n"), CtoTStrParam(err.what()));
+
+ERROR_MSG(_T("Error: DirText can only be used inside PageEx directory.\n"));
+ERROR_MSG(_T("错误: DirText 只能在 PageEx directory 页面中使用.\n"));
+
+ERROR_MSG(_T("Error: can't use DirVar outside of PageEx directory|uninstConfirm.\n"));
+ERROR_MSG(_T("错误: 不能在 PageEx directory|uninstConfirm 页面以外使用 DirVar.\n"));
+
+ERROR_MSG(_T("Error: can't use DirVerify outside of PageEx directory.\n"));
+ERROR_MSG(_T("错误: 不能在 PageEx directory 页面以外使用 DirVerify.\n"));
+
+ERROR_MSG(_T("Error: ComponentText can only be used inside PageEx components.\n"));
+ERROR_MSG(_T("错误: ComponentText 只能在 PageEx components 页面中使用.\n"));
+
+ERROR_MSG(_T("%") NPRIs _T(": error reading version info from \"%") NPRIs _T("\"\n"), cmdname, line.gettoken_str(1));
+ERROR_MSG(_T("%") NPRIs _T(": 读取版本信息时出错 \"%") NPRIs _T("\"\n"), cmdname, line.gettoken_str(1));
+
+ERROR_MSG(_T("InstType: no more than %d install types allowed. %d specified\n"), NSIS_MAX_INST_TYPES, NSIS_MAX_INST_TYPES + 1);
+ ERROR_MSG(_T("InstType: 安装类型总数不能超过 %d 个. 现已指定 %d 个\n"), NSIS_MAX_INST_TYPES, NSIS_MAX_INST_TYPES + 1);
+
+ERROR_MSG(_T("Error: LicenseText can only be used inside PageEx license.\n"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

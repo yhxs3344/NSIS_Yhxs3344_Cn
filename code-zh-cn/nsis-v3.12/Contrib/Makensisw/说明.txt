@@ -1,0 +1,8 @@
+需要汉化的有
+makensisw.cpp
+makensisw.h
+resource.rc
+update.cpp
+utils.cpp
+version.cpp
+
